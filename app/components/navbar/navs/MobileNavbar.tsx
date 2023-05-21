@@ -136,7 +136,7 @@ const MobileNavbar: React.FC = () => {
                         </li>
                     </motion.div>
                 </motion.li>
-                <div className="flex flex-col pb-[150px]">
+                <div className="flex flex-col pb-[190px]">
             
                 </div>
             </motion.ul>
