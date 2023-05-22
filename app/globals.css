@@ -11,6 +11,7 @@ html, body:root {
   .scrollAdd {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    border-style: dashed;
   }
 
   .scrollAdd::-webkit-scrollbar {
