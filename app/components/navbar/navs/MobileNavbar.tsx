@@ -53,7 +53,7 @@ const MobileNavbar: React.FC = () => {
     }    
 
     return (
-        <div className="flex gap-x-3 gap-y-0 items-center justify-around ">
+        <div className="flex gap-x-3 gap-y-0 items-center justify-around -z-40">
             <div onClick={toggleDarkMode} className="sm:block sm:hidden z-40">
                 {darkMode ? (
                     <BiSun size={27} style={{ color: `${textColor}` }} onClick={toggleDarkMode} />
@@ -62,7 +62,7 @@ const MobileNavbar: React.FC = () => {
                 )}
             </div>
             <Logo />
-            <motion.div onClick={handleNav} className='sm:block sm:hidden z-40'>
+            <motion.div onClick={handleNav} className='sm:block sm:hidden -z-40'>
                 {nav ? (
                     <AiOutlineClose size={25} style={{ color: `${textColor}` }} onClick={handleNav}/>
                 ) : (
