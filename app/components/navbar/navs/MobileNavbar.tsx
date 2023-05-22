@@ -75,8 +75,8 @@ const MobileNavbar: React.FC = () => {
             <div
                 className={
                     nav
-                        ? 'sm:hidden z-30 absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-full text-center ease-in duration-300'
-                        : 'sm:hidden z-30 absolute top-0 left-[100%] right-0 bottom-0 flex justify-center pt-[80px] w-full h-full text-center ease-in duration-300'
+                        ? 'sm:hidden z-30 absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-fit text-center ease-in duration-300'
+                        : 'sm:hidden z-30 absolute top-0 left-[100%] right-0 bottom-0 flex justify-center pt-[80px] w-full h-fit text-center ease-in duration-300'
             }
             >
             <motion.ul
