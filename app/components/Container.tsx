@@ -9,9 +9,9 @@ const Container: React.FC<ContainerProps> = ({
 }) => {
 
     return (
-        <div>
+        <>
             {children}
-        </div>
+        </>
     );
 }
  
