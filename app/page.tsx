@@ -5,9 +5,6 @@ export default function Home() {
         className="
           text-rose-500
           text-2xl
-          bg-dark-50
-          border-b-[2px]
-          border-light-50
         "
       >
         HTest Project!
