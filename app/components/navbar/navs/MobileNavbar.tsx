@@ -53,7 +53,7 @@ const MobileNavbar: React.FC = () => {
     }    
 
     return (
-        <div className="flex gap-3 items-center justify-around ">
+        <div className="flex gap-x-3 gap-y-0 items-center justify-around ">
             <div onClick={toggleDarkMode} className="sm:block sm:hidden z-40">
                 {darkMode ? (
                     <BiSun size={27} style={{ color: `${textColor}` }} onClick={toggleDarkMode} />
