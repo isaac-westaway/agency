@@ -85,7 +85,7 @@ const MobileNavbar: React.FC = () => {
                 variants={list}
                 className="overflow-y-auto overflow-x-hidden scrollAdd"
             >
-                <motion.li variants={item} onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50 bg-dark-50 rounded-t-lg'>
+                <motion.li variants={item} onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50 bg-dark-50 rounded-t-lg border-t-[3px]'>
                     <Link href='/'>Home</Link>
                 </motion.li>
 
@@ -114,10 +114,9 @@ const MobileNavbar: React.FC = () => {
                     <Link href='/'>Pricing</Link>
                 </motion.li>
 
-                <motion.li variants={item} onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 pb-8 bg-dark-50'>
+                <motion.li variants={item} onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 bg-dark-50'>
                     <Link href='/'>Request A demo</Link>
                 </motion.li>
-                <br className="bg-dark-50"/>
                 <motion.li>
                     <motion.div variants={item} className="flex flex-row gap-8 items-center justify-center pt-4 pb-4 border-b-[3px] border-t-[3px] border-light-50 bg-dark-50">
                         <li className="cursor-pointer">
@@ -136,7 +135,7 @@ const MobileNavbar: React.FC = () => {
                         </li>
                     </motion.div>
                 </motion.li>
-                <div className="flex flex-col pb-[190px]">
+                <div className="flex flex-col pb-[180px]">
             
                 </div>
             </motion.ul>
