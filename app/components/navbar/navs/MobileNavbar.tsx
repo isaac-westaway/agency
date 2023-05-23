@@ -85,11 +85,11 @@ const MobileNavbar: React.FC = () => {
                 variants={list}
                 className="overflow-y-auto overflow-x-hidden scrollAdd"
             >
-                <motion.li variants={item} onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50'>
+                <motion.li variants={item} onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50 bg-dark-50'>
                     <Link href='/'>Home</Link>
                 </motion.li>
 
-                <motion.li variants={item} onClick={handleNav} className='flex flex-row gap-3 justify-center p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50 cursor-pointer'>
+                <motion.li variants={item} onClick={handleNav} className='flex flex-row gap-3 justify-center p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50 cursor-pointer bg-dark-50'>
                     <Link href='/about-us'>Gallery</Link>
                     {/*
                     <div className="justify-center flex flex-row cursor">
@@ -98,7 +98,7 @@ const MobileNavbar: React.FC = () => {
                     */}
                 </motion.li>
 
-                <motion.li variants={item} onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50'>
+                <motion.li variants={item} onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50 bg-dark-50'>
                     <Link href='/'>Work</Link>
                 </motion.li>
 
