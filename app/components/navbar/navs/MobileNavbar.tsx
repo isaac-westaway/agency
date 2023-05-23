@@ -117,7 +117,7 @@ const MobileNavbar: React.FC = () => {
                 <motion.li variants={item} onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 pb-8 bg-dark-50'>
                     <Link href='/'>Request A demo</Link>
                 </motion.li>
-                <br />
+                <br className="bg-dark-50"/>
                 <motion.li>
                     <motion.div variants={item} className="flex flex-row gap-8 items-center justify-center pt-4 pb-4 border-b-[3px] border-t-[3px] border-light-50 bg-dark-50">
                         <li className="cursor-pointer">
