@@ -83,7 +83,7 @@ const MobileNavbar: React.FC = () => {
                 initial="hidden"
                 animate="visible"
                 variants={list}
-                className="overflow-y-auto overflow-x-hidden scrollAdd"
+                className="overflow-y-auto overflow-x-hidden scrollAdd rounded-t-lg rounded-b-lg"
             >
                 <motion.li variants={item} onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50 bg-dark-50 rounded-t-lg border-t-[3px]'>
                     <Link href='/'>Home</Link>
