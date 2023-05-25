@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
 
     return (
         <div className="fixed w-full z-50 bg-dark-50 text-blue-400">
-            <div className="py-4 border-b-[3px] border-light-50">
+            <div className="py-6 border-b-[3px] border-light-50">
                 <Container>
                     {Desktop && <DesktopNavbar />}
                     {Tablet && <TabletNavbar />}
