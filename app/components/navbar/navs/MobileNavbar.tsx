@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
@@ -61,7 +61,9 @@ const MobileNavbar: React.FC = () => {
                     <BiMoon size={27} style={{ color: `${textColor}`}} onClick={toggleDarkMode} />
                 )}
             </div>
-            <Logo />
+            <Suspense fallback={<p>Loading Image...</p>}>
+                <Logo />
+            </Suspense>
             <motion.div onClick={handleNav} className='sm:block sm:hidden z-40'>
                 {nav ? (
                     <AiOutlineClose size={25} style={{ color: `${textColor}` }} onClick={handleNav}/>
