@@ -1,14 +1,14 @@
 import { useState, useCallback, useEffect, Suspense } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
+import { motion, useAnimate } from 'framer-motion';
 
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import{ BiSun, BiMoon } from 'react-icons/bi';
 
+
 import Logo from '../Logo';
-
-import Image from 'next/image';
-
-import { motion, useAnimate } from 'framer-motion';
 
 const MobileNavbar: React.FC = () => {
 
@@ -121,15 +121,21 @@ const MobileNavbar: React.FC = () => {
                         </motion.li>
                         <br />
                         <motion.li>
-                            <motion.div variants={item} className="flex flex-row gap-8 items-center justify-center pt-4 pb-4 border-b-[3px] border-t-[3px] border-light-50">
+                            <motion.div variants={item} className="flex flex-row gap-8 items-center text-center justify-center pt-4 pb-4 border-stone-800 border-b-[3px] border-t-[3px]">
                                 <li className="cursor-pointer">
-                                    Contact Us
+                                    Facebook
+                                </li>
+                                <li className="cursor-pointer">
+                                    Instagram
+                                </li>
+                                <li className="cursor-pointer">
+                                    LinkedIn
                                 </li>
                                 <li className="cursor-pointer">
                                     Github
                                 </li>
                             </motion.div>
-                            <motion.div variants={item} className="flex flex-row gap-8 items-center justify-center pt-4 pb-4 border-b-[3px] border-light-50">
+                            <motion.div variants={item} className="flex flex-row gap-8 items-center text-justify justify-center pt-4 pb-4 border-b-stone-800 border-b-[3px]">
                                 <li className="cursor-pointer">
                                     Terms & Conditions
                                 </li>
