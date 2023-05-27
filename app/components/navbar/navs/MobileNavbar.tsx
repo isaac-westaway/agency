@@ -122,7 +122,7 @@ const MobileNavbar: React.FC = () => {
                         </motion.li>
                         <br />
                         <motion.li>
-                            <motion.div variants={item} className="flex flex-row gap-8 items-center text-center justify-center pt-4 pb-4 border-stone-800 border-b-[3px] border-t-[3px]">
+                            <motion.div variants={item} className="flex flex-row gap-8 items-center text-center justify-evenly pt-4 pb-4 border-stone-800 border-b-[3px] border-t-[3px]">
                                 <li className="cursor-pointer">
                                     <BsInstagram size={18}/>
                                 </li>
