@@ -107,7 +107,7 @@ const MobileNavbar: React.FC = () => {
                         </motion.li>
 
                         <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-stone-800 border-b-[3px]'>
-                            <Link href='/'>Business Solutions</Link>
+                            <Link href='/'>Business</Link>
                         </motion.li>
 
                         <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-stone-800 border-b-[3px]'>
@@ -138,7 +138,7 @@ const MobileNavbar: React.FC = () => {
                                 </li>
                             </motion.div>
                         </motion.li>
-                        <div className="flex flex-col pb-[190px]">
+                        <div className="flex flex-col pb-[170px]">
                     
                         </div>
                     </motion.ul>)}

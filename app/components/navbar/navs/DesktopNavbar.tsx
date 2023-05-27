@@ -13,7 +13,7 @@ const DesktopNavbar = () => {
     const router = useRouter();
 
     return (
-        <div className="">
+        <div className="py-4 z1000 border-b-white border-b-[3px]">
             <div className="relative">
                 <div 
                     className="          
