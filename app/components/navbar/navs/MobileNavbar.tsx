@@ -6,6 +6,7 @@ import { motion, useAnimate } from 'framer-motion';
 
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import{ BiSun, BiMoon } from 'react-icons/bi';
+import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
 
 
 import Logo from '../Logo';
@@ -123,16 +124,16 @@ const MobileNavbar: React.FC = () => {
                         <motion.li>
                             <motion.div variants={item} className="flex flex-row gap-8 items-center text-center justify-center pt-4 pb-4 border-stone-800 border-b-[3px] border-t-[3px]">
                                 <li className="cursor-pointer">
-                                    Facebook
+                                    <BsInstagram size={18}/>
                                 </li>
                                 <li className="cursor-pointer">
-                                    Instagram
+                                    <BsFacebook size={18} />
                                 </li>
                                 <li className="cursor-pointer">
-                                    LinkedIn
+                                    <BsLinkedin size={18}/>
                                 </li>
                                 <li className="cursor-pointer">
-                                    Github
+                                    <BsGithub size={18}/>
                                 </li>
                             </motion.div>
                             <motion.div variants={item} className="flex flex-row gap-8 items-center text-justify justify-center pt-4 pb-4 border-b-stone-800 border-b-[3px]">
