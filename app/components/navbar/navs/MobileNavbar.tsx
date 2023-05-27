@@ -28,7 +28,9 @@ const MobileNavbar: React.FC = () => {
     };
 
     const toggleOpen = useCallback(() => {
-        setNavOpen((value) => !value);
+        setTimeout(() => {       
+            setNavOpen((value) => !value);
+        }, 0);
     }, []);
 
     const list = {
@@ -53,7 +55,7 @@ const MobileNavbar: React.FC = () => {
     }    
 
     return (
-        <div className="flex gap-3 items-center justify-around ">
+        <div className="flex gap-3 items-center justify-around pt-[8px]">
             <div onClick={toggleDarkMode} className="sm:block sm:hidden z-40">
                 {darkMode ? (
                     <BiSun size={27} style={{ color: `${textColor}` }} onClick={toggleDarkMode} />
@@ -73,76 +75,78 @@ const MobileNavbar: React.FC = () => {
                     </motion.div>
                 )}
             </motion.div>
-
             <div
                 className={
                     NavOpen
-                        ? 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-center ease-in duration-300 bg-black'
-                        : 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center pt-[80px] w-full h-screen text-center ease-in duration-300'
-            }
+                        ? 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-center ease-in duration-200 bg-black overflow-hidden transition'
+                        : 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center pt-[80px] w-full h-screen text-center ease-in duration-200 transition overflow-hidden '
+                    }
             >
                 {NavOpen && (
-            <motion.ul
-                initial="hidden"
-                animate="visible"
-                variants={list}
-                className="overflow-y-auto overflow-x-hidden scrollAdd"
-            >
-                <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50'>
-                    <Link href='/'>Home</Link>
-                </motion.li>
-
-                <motion.li variants={item} onClick={toggleOpen} className='flex flex-row gap-3 justify-center p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50 cursor-pointer'>
-                    <Link href='/about-us'>Gallery</Link>
-                    {/*
-                    <div className="justify-center flex flex-row cursor">
-                        <Image src="/chevron-left.svg" alt="chev-down" width="30" height="30"  onClick={toggleProjDropdown}/>
-                    </div>
-                    */}
-                </motion.li>
-
-                <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50'>
-                    <Link href='/'>Work</Link>
-                </motion.li>
-
-                <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50'>
-                    <Link href='/'>Contact</Link>
-                </motion.li>
-
-                <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50'>
-                    <Link href='/'>Business Solutions</Link>
-                </motion.li>
-
-                <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-[3px] border-light-50'>
-                    <Link href='/'>Pricing</Link>
-                </motion.li>
-
-                <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 pb-8 '>
-                    <Link href='/'>Request A demo</Link>
-                </motion.li>
-                <br />
-                <motion.li>
-                    <motion.div variants={item} className="flex flex-row gap-8 items-center justify-center pt-4 pb-4 border-b-[3px] border-t-[3px] border-light-50">
-                        <li className="cursor-pointer">
-                            Contact Us
+                    <motion.ul
+                        /*animate="visible"
+                        variants={list}*/
+                        className="overflow-y-auto overflow-x-hidden scrollAdd w-10/12"
+                    >
+                        <li onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-[2px] rounded-2xl border-stone-800 py-3 ease-in duration-200 transition'>
+                            <Link href='/'>Contact</Link>
                         </li>
-                        <li className="cursor-pointer">
-                            Github
-                        </li>
-                    </motion.div>
-                    <motion.div variants={item} className="flex flex-row gap-8 items-center justify-center pt-4 pb-4 border-b-[3px] border-light-50">
-                        <li className="cursor-pointer">
-                            Terms & Conditions
-                        </li>
-                        <li className="cursor-pointer">
-                            Privacy Policy
-                        </li>
-                    </motion.div>
-                </motion.li>
-                <div className="flex flex-col pb-[190px]">
-            
-                </div>
-            </motion.ul>)}
+                        <div className="border-b-stone-800 border-b-[3px]">
+                            <br/>
+                        </div>
+                        <motion.li variants={item} onClick={toggleOpen} className='flex flex-row gap-3 ease-in duration-200 transition justify-center p-4 text-4xl hover:text-gray-500 border-b-stone-800 border-b-[3px] cursor-pointer'>
+                            <Link href='/about-us'>Gallery</Link>
+                            {/*
+                            <div className="justify-center flex flex-row cursor">
+                                <Image src="/chevron-left.svg" alt="chev-down" width="30" height="30"  onClick={toggleProjDropdown}/>
+                            </div>
+                            */}
+                        </motion.li>
+
+                        <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-stone-800 border-b-[3px]'>
+                            <Link href='/'>Work</Link>
+                        </motion.li>
+
+                        <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-stone-800 border-b-[3px]'>
+                            <Link href='/'>Contact</Link>
+                        </motion.li>
+
+                        <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-stone-800 border-b-[3px]'>
+                            <Link href='/'>Business Solutions</Link>
+                        </motion.li>
+
+                        <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-stone-800 border-b-[3px]'>
+                            <Link href='/'>Pricing</Link>
+                        </motion.li>
+
+                        <br />
+
+                        <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-[2px] rounded-2xl border-stone-800 py-3'>
+                            <Link href='/'>Request A demo</Link>
+                        </motion.li>
+                        <br />
+                        <motion.li>
+                            <motion.div variants={item} className="flex flex-row gap-8 items-center justify-center pt-4 pb-4 border-b-[3px] border-t-[3px] border-light-50">
+                                <li className="cursor-pointer">
+                                    Contact Us
+                                </li>
+                                <li className="cursor-pointer">
+                                    Github
+                                </li>
+                            </motion.div>
+                            <motion.div variants={item} className="flex flex-row gap-8 items-center justify-center pt-4 pb-4 border-b-[3px] border-light-50">
+                                <li className="cursor-pointer">
+                                    Terms & Conditions
+                                </li>
+                                <li className="cursor-pointer">
+                                    Privacy Policy
+                                </li>
+                            </motion.div>
+                        </motion.li>
+                        <div className="flex flex-col pb-[190px]">
+                    
+                        </div>
+                    </motion.ul>)}
             </div>
         </div>
     );
