@@ -1,11 +1,9 @@
 const AboutUs = () => {
-    return (
-        <div className="bg-white">
-            <footer>
-                JAMES
-            </footer>
-        </div>
-    );
+  return (
+    <div>
+      
+    </div>
+  );
 }
  
 export default AboutUs;

@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-          <div className="bg-zinc-900">
+          <div className="">
             <ClientOnly>
               <Navbar />
             </ClientOnly>              

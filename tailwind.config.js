@@ -8,6 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        screens: {
+          'sm': '200px',   // Custom value for small screens (sm)
+          'md': '640px',   // Custom value for medium screens (md)
+          'lg': '1024px',  // Custom value for large screens (lg)
+          'xl': '1280px',  // Custom value for extra large screens (xl)
+          '2xl': '1440px', // Custom value for 2 extra large screens (2xl)
+        },
         dark: {
             50: '#323232',
             100: '#212121'
