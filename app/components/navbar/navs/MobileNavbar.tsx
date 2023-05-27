@@ -81,6 +81,7 @@ const MobileNavbar: React.FC = () => {
                         : 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center pt-[80px] w-full h-screen text-center ease-in duration-300'
             }
             >
+                {NavOpen && (
             <motion.ul
                 initial="hidden"
                 animate="visible"
@@ -141,7 +142,7 @@ const MobileNavbar: React.FC = () => {
                 <div className="flex flex-col pb-[190px]">
             
                 </div>
-            </motion.ul>
+            </motion.ul>)}
             </div>
         </div>
     );
