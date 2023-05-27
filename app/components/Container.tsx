@@ -9,7 +9,7 @@ const Container: React.FC<ContainerProps> = ({
 }) => {
 
     return (
-        <div className="z-40">
+        <div>
             {children}
         </div>
     );
