@@ -21,10 +21,10 @@ const Navbar: React.FC = () => {
 
     return (
         <div className="fixed w-full bg-dark-50 z-50 shadow-sm text-neutral-500">
-            <div className="py-4 border-b-stone-800 border-b-[3px] z1000">
+            <div className="">
                 <Container>
-                    {Desktop && <DesktopNavbar />}
-                    {Tablet && <TabletNavbar />}
+                    {Desktop && <DesktopNavbar /> && <div className="py-4 z1000 border-b-white border-b-[3px]"></div>}
+                    {Tablet && <TabletNavbar /> && <div className="py-4 z1000"></div>}
                     {Mobile && <MobileNavbar />}
                 </Container>
             </div>

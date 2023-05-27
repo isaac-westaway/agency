@@ -33,21 +33,16 @@ const MobileNavbar: React.FC = () => {
         }, 0);
     }, []);
 
-    const list = {
-        visible: {
-          opacity: 1,
-          transition: {
-            when: "beforeChildren",
-            staggerChildren: 0.5,
-          },
-        },
-        hidden: {
-          opacity: 0,
-          transition: {
-            when: "afterChildren",
-          },
-        },
-      }
+    useEffect(() => {
+        if(NavOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [NavOpen])
       
     const item = {
     visible: { opacity: 1, x: 0 },
@@ -55,7 +50,7 @@ const MobileNavbar: React.FC = () => {
     }    
 
     return (
-        <div className="flex gap-3 items-center justify-around pt-[8px]">
+        <div className="flex gap-3 items-center justify-around pt-4 py-4">
             <div onClick={toggleDarkMode} className="sm:block sm:hidden z-40">
                 {darkMode ? (
                     <BiSun size={27} style={{ color: `${textColor}` }} onClick={toggleDarkMode} />
