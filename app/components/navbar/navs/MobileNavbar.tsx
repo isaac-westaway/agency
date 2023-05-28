@@ -52,7 +52,7 @@ const MobileNavbar: React.FC = () => {
 
     return (
         <div className="flex gap-3 items-center justify-around pt-4 py-4">
-            <div onClick={toggleDarkMode} className="sm:block sm:hidden z-40">
+            <div onClick={toggleDarkMode} className="sm:block sm:hidden z-40 cursor-pointer">
                 {darkMode ? (
                     <BiSun size={27} style={{ color: `${textColor}` }} onClick={toggleDarkMode} />
                 ) : (
@@ -62,7 +62,7 @@ const MobileNavbar: React.FC = () => {
             <div className="z-50">
                 <Logo />
             </div>
-            <motion.div onClick={toggleOpen} className='sm:block sm:hidden z-40'>
+            <motion.div onClick={toggleOpen} className='sm:block sm:hidden z-40 cursor-pointer'>
                 {NavOpen ? (
                     <AiOutlineClose size={25} style={{ color: `${textColor}` }}/>
                 ) : (
@@ -74,7 +74,7 @@ const MobileNavbar: React.FC = () => {
             <div
                 className={
                     NavOpen
-                        ? 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-center ease-in duration-200 bg-black overflow-hidden transition'
+                        ? 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-start ease-in duration-200 bg-black overflow-hidden transition'
                         : 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center pt-[80px] w-full h-screen text-center ease-in duration-200 transition overflow-hidden '
                     }
             >
@@ -84,40 +84,38 @@ const MobileNavbar: React.FC = () => {
                         variants={list}*/
                         className="overflow-y-auto overflow-x-hidden scrollAdd w-10/12"
                     >
-                        <li onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-[2px] rounded-2xl border-stone-800 py-3 ease-in duration-200 transition'>
+                        <li onClick={toggleOpen} className='cursor-pointer p-4 text-2xl border-[2px] hover:text-white rounded-2xl text-center hover:border-white hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
                             <Link href='/'>Contact</Link>
                         </li>
+
                         <div className="border-b-stone-800 border-b-[3px]">
                             <br/>
                         </div>
-                        <motion.li variants={item} onClick={toggleOpen} className='flex flex-row gap-3 ease-in duration-200 transition justify-center p-4 text-4xl hover:text-gray-500 border-b-stone-800 border-b-[3px] cursor-pointer'>
+
+                            <motion.li variants={item} onClick={toggleOpen} className='flex flex-row ease-in duration-200 transition p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/about-us'>Gallery</Link>
-                            {/*
-                            <div className="justify-center flex flex-row cursor">
-                                <Image src="/chevron-left.svg" alt="chev-down" width="30" height="30"  onClick={toggleProjDropdown}/>
-                            </div>
-                            */}
+                            
                         </motion.li>
 
-                        <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-stone-800 border-b-[3px]'>
+                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/'>Work</Link>
                         </motion.li>
 
-                        <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-stone-800 border-b-[3px]'>
+                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/'>Contact</Link>
                         </motion.li>
 
-                        <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-stone-800 border-b-[3px]'>
+                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/'>Business</Link>
                         </motion.li>
 
-                        <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-b-stone-800 border-b-[3px]'>
+                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/'>Pricing</Link>
                         </motion.li>
 
                         <br />
 
-                        <motion.li variants={item} onClick={toggleOpen} className='p-4 text-4xl hover:text-gray-500 border-[2px] rounded-2xl border-stone-800 py-3'>
+                        <motion.li variants={item} onClick={toggleOpen} className='cursor-pointer p-4 text-2xl border-[2px] hover:text-white rounded-2xl text-center hover:border-white hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
                             <Link href='/'>Request A demo</Link>
                         </motion.li>
                         <br />

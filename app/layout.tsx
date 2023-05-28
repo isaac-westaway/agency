@@ -1,6 +1,6 @@
 import './globals.css'
 
-import { Nunito } from "next/font/google"
+import { Caveat } from "next/font/google"
 import { Analytics } from '@vercel/analytics/react';
 
 import ClientOnly from './components/ClientOnly'
@@ -11,7 +11,7 @@ export const metadata = {
   description: 'Testing Purpooses',
 }
 
-const font = Nunito({
+const font = Caveat({
   subsets: ["latin"]
 })
 
