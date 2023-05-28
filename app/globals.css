@@ -33,4 +33,16 @@ html, body:root {
   .z1000 {
     z-index: 1000;
   }
+
+  .tabletBorder {
+    border-bottom-width: 0;
+    padding-bottom: 1px;
+    text-align: center;
+  }
+
+  .tabletBorder:hover {
+    border-bottom-width: 3px;
+    border-color: transparent;
+    cursor: pointer;
+  }
 }

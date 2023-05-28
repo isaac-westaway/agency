@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
     });
     const Mobile = useMediaQuery({
         minWidth: 0,
-        maxWidth: 640
+        maxWidth: 639.9
     });
 
     return (
