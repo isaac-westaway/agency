@@ -21,10 +21,10 @@ const TabletNavbar = () => {
                         <a className="tabletBorder text-2xl hover:border-white">Business</a>
                     </li>
                     <li className="inline-block">
-                        <a className="tabletBorder text-2xl border-stone-800 border-[2px] rounded-2xl px-4 hover:border-white hover:text-white">Contact</a>
+                        <a className="tabletBorder text-2xl border-stone-800 border-[2px] rounded-2xl px-4 hover:border-white hover:text-white z-50 hover:z-50">Contact</a>
                     </li>
                     <li className="inline-block">
-                        <a className="tabletBorder text-2xl border-stone-800 border-[2px] rounded-2xl px-4 hover:border-white hover:text-white">Request a demo</a>
+                        <a className="tabletBorder text-2xl border-stone-800 border-[2px] rounded-2xl px-4 hover:border-white hover:text-white z-50 hover:z-50">Request a demo</a>
                     </li>
                 </ul>
             </div>
