@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 import Logo from "../Logo";
+import Link from 'next/link';
 
 const TabletNavbar = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -15,26 +16,24 @@ const TabletNavbar = () => {
                         <Logo />
                     </div>
                     <li className="inline-block">
-                        <a href="/about-us" className="text-2xl pt-1 animatedUnderline">Home</a>
+                        <Link href={'/about-us'} className="text-2xl pt-1 animatedUnderline">Home</Link>
                     </li>
                     <li className="inline-block">
-                        <a className="text-2xl pt-1 animatedUnderline cursor-pointer">Gallery</a>
+                        <Link className="text-2xl pt-1 animatedUnderline cursor-pointer" href={'/test'}>Gallery</Link>
                     </li>
                     <li className="inline-block">
-                        <a className="text-2xl pt-1 animatedUnderline cursor-pointer">Pricing</a>
+                        <Link className="text-2xl pt-1 animatedUnderline cursor-pointer" href={'/about-us'}>Pricing</Link>
                     </li>
                     <li className="inline-block">
-                        <a className="text-2xl pt-1 animatedUnderline cursor-pointer">Business</a>
+                        <Link className="text-2xl pt-1 animatedUnderline cursor-pointer" href={'/test'}>Business</Link>
                     </li>
                     <li className="inline-block">
-                        <a 
-                            className="tabletBorder text-2xl border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl px-4 hover:border-[#FBFAF6] hover:text-[#FBFAF6] z-50"    
-                        >
+                        <Link className="tabletBorder text-2xl border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl px-4 hover:border-[#FBFAF6] hover:text-[#FBFAF6] z-50 " href={'/'}>
                             Contact
-                        </a>
+                        </Link>
                     </li>
                     <li className="inline-block">
-                        <a className="tabletBorder text-2xl border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl px-4 hover:border-[#FBFAF6] hover:text-[#FBFAF6] z-50">Request a demo</a>
+                        <Link className="tabletBorder text-2xl border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl px-4 hover:border-[#FBFAF6] hover:text-[#FBFAF6] z-50" href={'/test'}>Request a demo</Link>
                     </li>
                 </ul>
             </div>
