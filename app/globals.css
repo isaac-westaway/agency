@@ -42,7 +42,6 @@ html, body:root {
 
   .tabletBorder:hover {
     border-bottom-width: 3px;
-    border-color: transparent;
     cursor: pointer;
   }
 }
