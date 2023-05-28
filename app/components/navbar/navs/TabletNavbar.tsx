@@ -1,6 +1,12 @@
+"use client";
+
+import { useState } from 'react';
+
 import Logo from "../Logo";
 
 const TabletNavbar = () => {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <div className="flex flex-row pt-4 py-4">
             <div className="h-full w-full">
@@ -9,22 +15,26 @@ const TabletNavbar = () => {
                         <Logo />
                     </div>
                     <li className="inline-block">
-                        <a href="/about-us" className="tabletBorder text-2xl pt-1 hover:border-white">Home</a>
+                        <a href="/about-us" className="text-2xl pt-1 animatedUnderline">Home</a>
                     </li>
                     <li className="inline-block">
-                        <a className="tabletBorder text-2xl hover:border-white">Gallery</a>
+                        <a className="text-2xl pt-1 animatedUnderline cursor-pointer">Gallery</a>
                     </li>
                     <li className="inline-block">
-                        <a className="tabletBorder text-2xl hover:border-white">Pricing</a>
+                        <a className="text-2xl pt-1 animatedUnderline cursor-pointer">Pricing</a>
                     </li>
                     <li className="inline-block">
-                        <a className="tabletBorder text-2xl hover:border-white">Business</a>
+                        <a className="text-2xl pt-1 animatedUnderline cursor-pointer">Business</a>
                     </li>
                     <li className="inline-block">
-                        <a className="tabletBorder text-2xl border-stone-800 border-[2px] rounded-2xl px-4 hover:border-white hover:text-white z-50 hover:z-50">Contact</a>
+                        <a 
+                            className="tabletBorder text-2xl border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl px-4 hover:border-[#FBFAF6] hover:text-[#FBFAF6] z-50"    
+                        >
+                            Contact
+                        </a>
                     </li>
                     <li className="inline-block">
-                        <a className="tabletBorder text-2xl border-stone-800 border-[2px] rounded-2xl px-4 hover:border-white hover:text-white z-50 hover:z-50">Request a demo</a>
+                        <a className="tabletBorder text-2xl border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl px-4 hover:border-[#FBFAF6] hover:text-[#FBFAF6] z-50">Request a demo</a>
                     </li>
                 </ul>
             </div>

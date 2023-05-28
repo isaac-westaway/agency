@@ -35,13 +35,31 @@ html, body:root {
   }
 
   .tabletBorder {
-    border-bottom-width: 0;
     padding-bottom: 1px;
     text-align: center;
   }
 
   .tabletBorder:hover {
-    border-bottom-width: 3px;
     cursor: pointer;
   }
+
+  .animatedUnderline {
+    position: relative;
+  }
+  
+  .animatedUnderline::after {
+    content: "";
+    position: absolute;
+    bottom: -1px; /* Adjust the value to move the underline down */
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust the value to change the height of the underline */
+    background-color: #FBFAF6;
+    transition: width 0.2s ease-in-out;
+  }
+  
+  .animatedUnderline:hover::after {
+    width: 100%;
+  }
+  
 }

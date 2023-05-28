@@ -74,17 +74,17 @@ const MobileNavbar: React.FC = () => {
             <div
                 className={
                     NavOpen
-                        ? 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-start ease-in duration-200 bg-black overflow-hidden transition'
-                        : 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center pt-[80px] w-full h-screen text-center ease-in duration-200 transition overflow-hidden '
+                        ? 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-start ease-in duration-150 bg-black overflow-hidden transition'
+                        : 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center pt-[80px] w-full h-screen text-center ease-in duration-150 transition overflow-hidden '
                     }
             >
                 {NavOpen && (
                     <motion.ul
                         /*animate="visible"
                         variants={list}*/
-                        className="overflow-y-auto overflow-x-hidden scrollAdd w-10/12"
+                        className="overflow-y-auto overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000"
                     >
-                        <li onClick={toggleOpen} className='cursor-pointer p-4 text-2xl border-[2px] hover:text-white rounded-2xl text-center hover:border-white hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
+                        <li onClick={toggleOpen} className='cursor-pointer p-4 text-2xl border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
                             <Link href='/'>Contact</Link>
                         </li>
 
@@ -92,30 +92,30 @@ const MobileNavbar: React.FC = () => {
                             <br/>
                         </div>
 
-                            <motion.li variants={item} onClick={toggleOpen} className='flex flex-row ease-in duration-200 transition p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                            <motion.li variants={item} onClick={toggleOpen} className='flex flex-row transition ease-in duration-150 p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/about-us'>Gallery</Link>
                             
                         </motion.li>
 
-                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/'>Work</Link>
                         </motion.li>
 
-                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/'>Contact</Link>
                         </motion.li>
 
-                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/'>Business</Link>
                         </motion.li>
 
-                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/'>Pricing</Link>
                         </motion.li>
 
                         <br />
 
-                        <motion.li variants={item} onClick={toggleOpen} className='cursor-pointer p-4 text-2xl border-[2px] hover:text-white rounded-2xl text-center hover:border-white hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
+                        <motion.li variants={item} onClick={toggleOpen} className='cursor-pointer p-4 text-2xl border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
                             <Link href='/'>Request A demo</Link>
                         </motion.li>
                         <br />
@@ -135,10 +135,10 @@ const MobileNavbar: React.FC = () => {
                                 </li>
                             </motion.div>
                             <motion.div variants={item} className="flex flex-row gap-8 items-center text-justify justify-center pt-4 pb-4 border-b-stone-800 border-b-[3px]">
-                                <li className="cursor-pointer">
+                                <li className="cursor-pointer hover:text-[#FBFAF6] transition ease-in-out">
                                     Terms & Conditions
                                 </li>
-                                <li className="cursor-pointer">
+                                <li className="cursor-pointer hover:text-[#FBFAF6] transition ease-in-out">
                                     Privacy Policy
                                 </li>
                             </motion.div>
