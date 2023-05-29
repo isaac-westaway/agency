@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import { motion, useAnimate } from 'framer-motion';
 
+import { FaExternalLinkAlt } from 'react-icons/fa'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import{ BiSun, BiMoon } from 'react-icons/bi';
 import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
@@ -93,7 +94,7 @@ const MobileNavbar: React.FC = () => {
                         </div>
 
                             <motion.li variants={item} onClick={toggleOpen} className='flex flex-row transition ease-in duration-150 p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
-                            <Link href='/about-us'>Gallery</Link>
+                            <Link href='https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE' className="flex flex-row justify-end place-items-end items-center">Pay an invoice <span className="flex flex-row items-center place-items-end justify-end"><FaExternalLinkAlt size={24} className="place-items-end justify0end items-end w-full" /></span></Link>
                             
                         </motion.li>
 
@@ -115,8 +116,8 @@ const MobileNavbar: React.FC = () => {
 
                         <br />
 
-                        <motion.li variants={item} onClick={toggleOpen} className='cursor-pointer p-4 text-2xl border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
-                            <Link href='/'>Request A demo</Link>
+                        <motion.li variants={item} onClick={toggleOpen} className=' items-center cursor-pointer p-4 text-2xl border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
+                            <Link href='/' className="items-center">Request A demo</Link>
                         </motion.li>
                         <br />
                         <motion.li>
