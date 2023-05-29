@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     });
 
     return (
-        <div className="fixed w-full bg-dark-50 z-50 shadow-sm text-neutral-500">
+        <div className="fixed w-full bg-black z-50 shadow-sm text-neutral-500">
             <div className="">
                 <Container>
                     {Desktop && <DesktopNavbar />}
