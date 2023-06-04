@@ -1,8 +1,7 @@
 "use client";
 
 import detectEthereumProvider from '@metamask/detect-provider'
-
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const DApp = () => {
     const [hasProvider, setHasProvider] = useState<boolean | null>(null)
@@ -10,13 +9,34 @@ const DApp = () => {
     const [wallet, setWallet] = useState(initialState)
 
     useEffect(() => {
-      const getProvider = async () => {
-        const provider = await detectEthereumProvider({ silent: true })
-        console.log(provider)
-        setHasProvider(Boolean(provider))
-      }
-      getProvider()
-    }, [])
+        const refreshAccounts = (accounts: any) => {                
+          if (accounts.length > 0) {                                
+            updateWallet(accounts)                                  
+          } else {                                                  
+            // if length 0, user is disconnected                    
+            setWallet(initialState)                                 
+          }                                                         
+        }                                                           
+    
+        const getProvider = async () => {
+          const provider = await detectEthereumProvider({ silent: true })
+          setHasProvider(Boolean(provider))
+    
+          if (provider) {                                           
+            const accounts = await window.ethereum.request(         
+              { method: 'eth_accounts' }                            
+            )                                                       
+            refreshAccounts(accounts)                               
+            window.ethereum.on('accountsChanged', refreshAccounts)  
+          }                                                         
+        }
+    
+        getProvider()
+        return () => {                                              
+          window.ethereum?.removeListener('accountsChanged', refreshAccounts)
+        }                                                           
+      }, [])
+
     const updateWallet = async (accounts:any) => {
         setWallet({ accounts })
     }
@@ -36,7 +56,7 @@ const DApp = () => {
           <div className='absolute top-0 left-0 right-0 bottom-0 bg-[#323232] z-[2]' />
           <div className='p-5 text-[#FFFFF7] z-[2] mt-[-10rem]'>
           <h2 className="text-4xl text-center">Injected Provider { hasProvider ? 'DOES' : 'DOES NOT'} Exist</h2>
-                { hasProvider && 
+                { window.ethereum?.isMetaMask && wallet.accounts.length < 1 &&
                     <>
                         <div className="pt-3">
                             <button onClick={handleConnect} className='px-8 py-2 border justify-center items-center w-full rounded-xl hover:bg-white hover:text-black transition ease-in-out duration-300'>Connect Wallet</button>
