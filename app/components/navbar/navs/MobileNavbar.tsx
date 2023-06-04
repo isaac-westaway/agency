@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect, Suspense } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 import { motion } from 'framer-motion';
 
@@ -11,22 +12,12 @@ import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
 import Logo from '../Logo';
 import React from 'react';
 
-function billingRedirect() {
-    window.location.href = "https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE";
-}
-
 const MobileNavbar = () => {
 
     const [NavOpen, setNavOpen] = useState(false);
     const [textColor, setTextColor] = useState('white');
 
     const [darkMode, setDarkMode] = useState(false);
-
-    const [projDropdown, setProjDropdown] = useState(false);
-
-    const toggleProjDropdown = () => {
-        setProjDropdown(!projDropdown);
-    };
 
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
@@ -53,6 +44,17 @@ const MobileNavbar = () => {
         visible: { opacity: 1, x: 0 },
         hidden: { opacity: 0, x: -100 },
     };
+
+    const Router = useRouter();
+
+    function billingRedirect() {
+        Router.push("https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE");
+    }
+
+    function handleDappRedirect() {
+        Router.push("/d-app");
+        toggleOpen()
+    }
 
     return (
         <div className="flex gap-3 items-center justify-around pt-4 py-4">
@@ -96,11 +98,16 @@ const MobileNavbar = () => {
                             <br/>
                         </div>
 
-                            <motion.li variants={item} onClick={billingRedirect} className='flex flex-row transition ease-in duration-150 p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
-                                <Link href='https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE' className="flex flex-row justify-end place-items-end items-center whitespace-nowrap">Billing Portal</Link>
-                                <div className="flex flex-row items-center justify-end w-full">
-                                    <FiExternalLink />
-                                </div>
+                        
+                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                            <Link href='/'>Home</Link>
+                        </motion.li>
+
+                        <motion.li variants={item} onClick={billingRedirect} className='flex flex-row transition ease-in duration-150 p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                            <Link href='https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE' className="flex flex-row justify-end place-items-end items-center whitespace-nowrap">Billing Portal</Link>
+                            <div className="flex flex-row items-center justify-end w-full">
+                                <FiExternalLink />
+                            </div>
                         </motion.li>
 
                         <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
@@ -120,19 +127,15 @@ const MobileNavbar = () => {
                                 </Accordion>
                             
                             </ThemeProvider>*/}
-                            <Link href='/'>Gallery</Link>
+                            <Link href='/test' className="w-full">Gallery</Link>
                         </motion.li>
 
-                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
-                            <Link href='/'>Contact</Link>
+                        <motion.li variants={item} onClick={handleDappRedirect} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                            <Link href='/d-app'>D-App</Link>
                         </motion.li>
 
                         <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/'>Business</Link>
-                        </motion.li>
-
-                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
-                            <Link href='/'>Pricing</Link>
                         </motion.li>
 
                         <br />
