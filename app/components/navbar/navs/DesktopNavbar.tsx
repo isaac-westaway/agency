@@ -12,8 +12,8 @@ export function MouseOverTest() {
 const DesktopNavbar = () => {
     return (
         <div className="text-2xl">
-            <div className="w-full flex fixed top-0 bg-black z1000 pt-4 py-4">
-                <div className="">
+            <div className="w-full flex fixed items-center bg-black z1000 pt-4 py-4">
+                <div className="ml-5">
                     <Logo />
                 </div>
                 <div className="flex flex-row">
@@ -30,7 +30,7 @@ const DesktopNavbar = () => {
                         Business
                     </div>
                 </div>
-                <div className="flex flex-row">
+                <div className="flex flex-row w-full justify-end mr-5">
                     <motion.div className="cursor-pointer">
                         <span className="">Billing Portal</span>
                     </motion.div>
