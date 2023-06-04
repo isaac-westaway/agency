@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import { motion } from "framer-motion";
 
 import { AiFillLinkedin, AiFillGithub, AiOutlineTwitter, } from 'react-icons/ai';
+import Logo from '../Logo';
 
 export function MouseOverTest() {
     console.log('Hi')
@@ -10,8 +11,37 @@ export function MouseOverTest() {
 
 const DesktopNavbar = () => {
     return (
-        <div className="py-4 z1000 border-b-white border-b-[3px] w-full flex items-center justify-around">
-
+        <div className="text-2xl">
+            <div className="w-full flex fixed top-0 bg-black z1000 pt-4 py-4">
+                <div className="">
+                    <Logo />
+                </div>
+                <div className="flex flex-row">
+                    <div className="cursor-pointer">
+                        Home
+                    </div>
+                    <div className="cursor-pointer">
+                        Gallery
+                    </div>
+                    <div className="cursor-pointer">
+                        Pricing
+                    </div>
+                    <div className="cursor-pointer">
+                        Business
+                    </div>
+                </div>
+                <div className="flex flex-row">
+                    <motion.div className="cursor-pointer">
+                        <span className="">Billing Portal</span>
+                    </motion.div>
+                    <motion.div className="cursor-pointer">
+                        <span className="">Contact</span>
+                    </motion.div>
+                    <motion.div className="cursor-pointer">
+                        <span className="">Request a demo</span>
+                    </motion.div>
+                </div>
+            </div>
         </div>
     );
 }

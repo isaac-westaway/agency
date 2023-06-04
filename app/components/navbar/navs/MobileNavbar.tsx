@@ -8,71 +8,8 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import{ BiSun, BiMoon } from 'react-icons/bi';
 import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
 
-import { styled } from '@mui/material/styles';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
-import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-
-
 import Logo from '../Logo';
 import React from 'react';
-
-const Accordion = styled((props: AccordionProps) => (
-    <MuiAccordion disableGutters elevation={0} square {...props} />
-  ))(({ theme }) => ({
-    border: `1px solid ${theme.palette.divider}`,
-    '&:not(:last-child)': {
-      borderBottom: 0,
-    },
-    '&:before': {
-      display: 'none',
-    },
-}));
-  
-const AccordionSummary = styled((props: AccordionSummaryProps) => (
-    <MuiAccordionSummary
-      expandIcon={<ArrowForwardIosSharpIcon sx={{/* fontSize: '0.9rem' */}} />}
-      {...props}
-    />
-  ))(({ theme }) => ({
-    backgroundColor:
-      theme.palette.mode === 'dark'
-        ? 'rgba(255, 255, 255, .05)'
-        : 'rgba(255, 255, 255, .03)',
-    flexDirection: 'row',
-    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-      transform: 'rotate(90deg)',
-    },
-    '& .MuiAccordionSummary-content': {
-      marginLeft: theme.spacing(1),
-    },
-}));
-  
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-    padding: theme.spacing(2),
-    borderTop: '1px solid rgba(255, 255, 255, .125)',
-}));
-
-const theme = createTheme({
-    components: {
-        MuiAccordion: {
-            styleOverrides: {
-                root: {
-                    fontSize: '1.5rem',
-                }
-            }
-        },
-        MuiAccordionSummary: {
-            styleOverrides: {
-                root: {
-                    fontSize: '1.5rem',
-                }
-            }
-        }
-    }
-})
 
 function billingRedirect() {
     window.location.href = "https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE";
@@ -115,13 +52,6 @@ const MobileNavbar = () => {
     const item = {
         visible: { opacity: 1, x: 0 },
         hidden: { opacity: 0, x: -100 },
-    };
-
-    const [expanded, setExpanded] = React.useState<string | true>('panel0');
-
-    const handleChange =
-      (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
-        setExpanded(newExpanded ? panel : true);
     };
 
     return (
