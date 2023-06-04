@@ -33,7 +33,7 @@ const DApp = () => {
         w-full
         '>
           {/* Overlay */}
-          <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]' />
+          <div className='absolute top-0 left-0 right-0 bottom-0 bg-[#323232] z-[2]' />
           <div className='p-5 text-[#FFFFF7] z-[2] mt-[-10rem]'>
           <h2 className="text-4xl text-center">Injected Provider { hasProvider ? 'DOES' : 'DOES NOT'} Exist</h2>
                 { hasProvider && 
