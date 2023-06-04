@@ -94,8 +94,10 @@ const MobileNavbar: React.FC = () => {
                         </div>
 
                             <motion.li variants={item} onClick={toggleOpen} className='flex flex-row transition ease-in duration-150 p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
-                            <Link href='https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE' className="flex flex-row justify-end place-items-end items-center">Pay an invoice <span className="flex flex-row items-center place-items-end justify-end"><FaExternalLinkAlt size={24} className="place-items-end justify0end items-end w-full" /></span></Link>
-                            
+                                <Link href='https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE' className="flex flex-row justify-end place-items-end items-center whitespace-nowrap">Billing Portal</Link>
+                                <div className="flex flex-row items-center justify-end w-full">
+                                    <FaExternalLinkAlt />
+                                </div>
                         </motion.li>
 
                         <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>

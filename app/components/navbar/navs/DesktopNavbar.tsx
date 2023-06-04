@@ -9,45 +9,33 @@ export function MouseOverTest() {
 }
 
 const DesktopNavbar = () => {
-
-    const router = useRouter();
-
     return (
-        <div className="py-4 z1000 border-b-white border-b-[3px]">
-            <div className="relative">
-                <div 
-                    className="          
-                    "
-                >
-                    <div 
-                        className="flex flex-row items-center gap-3 px-4"
-                    >
-                        <motion.div
-                            onMouseOver={MouseOverTest}
-                            onClick={() => {router.push('/about-us')}}
-                            whileHover={{ scale: [null, 1.5, 1.4] }}
-                            transition={{ duration: 0.3}}                    
-                        >
-                            <AiFillGithub size={35} className="cursor-pointer"/>
-                        </motion.div>
-                        <motion.div
-                            onClick={() => {router.push('/')}}
-                            whileHover={{ scale: [null, 1.5, 1.4] }}
-                            transition={{ duration: 0.3}}                     
-                        >
-                            <AiFillLinkedin size={35} className="cursor-pointer"/>
-                        </motion.div>
-                        <motion.div
-                            whileHover={{ scale: [null, 1.5, 1.4] }}
-                            transition={{ duration: 0.3}}                     
-                        >
-                            <AiOutlineTwitter size={35} className="cursor-pointer"/>
-                        </motion.div>
-                    </div>
-                </div>
-            </div>
+        <div className="py-4 z1000 border-b-white border-b-[3px] w-full flex items-center justify-around">
+
         </div>
     );
 }
  
-export default DesktopNavbar;
+export default DesktopNavbar; 
+/*                       
+<motion.div
+    onMouseOver={MouseOverTest}
+    onClick={() => {router.push('/about-us')}}
+    whileHover={{ scale: [null, 1.5, 1.4] }}
+    transition={{ duration: 0.3}}                    
+>
+    <AiFillGithub size={35} className="cursor-pointer"/>
+</motion.div>
+<motion.div
+    onClick={() => {router.push('/')}}
+    whileHover={{ scale: [null, 1.5, 1.4] }}
+    transition={{ duration: 0.3}}                     
+>
+    <AiFillLinkedin size={35} className="cursor-pointer"/>
+</motion.div>
+<motion.div
+    whileHover={{ scale: [null, 1.5, 1.4] }}
+    transition={{ duration: 0.3}}                     
+>
+    <AiOutlineTwitter size={35} className="cursor-pointer"/>
+</motion.div>*/
