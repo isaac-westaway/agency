@@ -92,4 +92,7 @@ html, body {
       padding: 7.2rem 2.4rem;
     }
   }
+  .userSelect {
+    user-select: text;
+  }
 }
