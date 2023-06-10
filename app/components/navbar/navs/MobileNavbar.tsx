@@ -28,6 +28,18 @@ const MobileNavbar = () => {
             setNavOpen((value) => !value);
         }, 0);
     }, []);
+
+    useEffect(() => {
+        if(NavOpen) {
+            document.body.style.overflow = '';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [NavOpen]);
+      
       
     const item = {
         visible: { opacity: 1, x: 0 },
@@ -46,31 +58,33 @@ const MobileNavbar = () => {
     }
 
     return (
-        <div className="flex gap-3 items-center justify-evenly pt-4 py-4">
-            <div onClick={toggleDarkMode} className="sm:block sm:hidden z-50 cursor-pointer">
-                {darkMode ? (
-                    <BiSun size={27} style={{ color: `${textColor}` }} onClick={toggleDarkMode} />
-                ) : (
-                    <BiMoon size={27} style={{ color: `${textColor}`}} onClick={toggleDarkMode} />
-                )}
+        <div className="pt-4 py-4 w-full">
+            <div className="flex flex-row justify-around w-full">
+                <div onClick={toggleDarkMode} className="sm:block sm:hidden z-50 cursor-pointer">
+                    {darkMode ? (
+                        <BiSun size={27} style={{ color: `${textColor}` }} onClick={toggleDarkMode} />
+                    ) : (
+                        <BiMoon size={27} style={{ color: `${textColor}`}} onClick={toggleDarkMode} />
+                    )}
+                </div>
+                <div className="z-50">
+                    <Logo />
+                </div>
+                <motion.div onClick={toggleOpen} className='sm:block sm:hidden z-50 cursor-pointer'>
+                    {NavOpen ? (
+                        <AiOutlineClose size={25} style={{ color: `${textColor}` }}/>
+                    ) : (
+                        <motion.div>
+                            <AiOutlineMenu size={25} style={{ color: `${textColor}` }} />
+                        </motion.div>
+                    )}
+                </motion.div>
             </div>
-            <div className="z-50">
-                <Logo />
-            </div>
-            <motion.div onClick={toggleOpen} className='sm:block sm:hidden z-50 cursor-pointer'>
-                {NavOpen ? (
-                    <AiOutlineClose size={25} style={{ color: `${textColor}` }}/>
-                ) : (
-                    <motion.div>
-                        <AiOutlineMenu size={25} style={{ color: `${textColor}` }} />
-                    </motion.div>
-                )}
-            </motion.div>
             <div
                 className={
                     NavOpen
-                        ? 'sm:hidden z-40 absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-start ease-in duration-150 bg-black overflow-hidden transition'
-                        : 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center pt-[80px] w-full h-screen text-center ease-in duration-150 transition overflow-hidden '
+                        ? 'absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-start ease-in duration-150 bg-black transition'
+                        : ''
                     }
             >
                 {NavOpen && (
