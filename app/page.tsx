@@ -7,10 +7,12 @@ export default function Home() {
   return (
     <div>
       <Navbar/>
-      <Hero heading="Brisbane's go-to in the digital world" 
-            message="We design, develop & deploy websites for small businesses throughout Australia" 
-            action="Let's talk!"
-      />
+      <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]'>
+        <div className='p-5 text-[#FFFFF7] z-[2] mt-[-10rem]'>
+          <h2 className='text-5xl font-bold'>test</h2>
+          <p className='py-5 text-xl'>test</p>
+        </div>
+      </div>
     </div>
   )
 }
