@@ -2,9 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body:root {
+:root {
+  --background: rgb(17, 17, 17);
+  --bg-opaque: rgb(17, 17, 17, 0.25);
+  --background-light: rgb(35, 35, 35);
+  --background-dark: rgb(8, 8, 8);
+
+  --text: rgb(235, 236, 243);
+  --brand: rgb(10, 255, 157);
+
+}
+
+*::selection {
+  background: var(--brand);
+  color: var(--background);
+}
+
+html, body {
   height: 100%;
-  background-color: #323232;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -63,4 +79,17 @@ html, body:root {
     width: 100%;
   }
   
+  .sectionWrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 1150px;
+    margin: auto;
+    padding: 9.6rem;
+    overflow: hidden;
+  }
+  @media (max-width: 768px) {
+    .section-wrapper {
+      padding: 7.2rem 2.4rem;
+    }
+  }
 }

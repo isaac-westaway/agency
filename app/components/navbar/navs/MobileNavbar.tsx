@@ -9,7 +9,7 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import{ BiSun, BiMoon } from 'react-icons/bi';
 import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
 
-import Logo from '../Logo';
+import Logo from '../../Logo';
 import React from 'react';
 
 const MobileNavbar = () => {
@@ -57,8 +57,8 @@ const MobileNavbar = () => {
     }
 
     return (
-        <div className="flex gap-3 items-center justify-around pt-4 py-4">
-            <div onClick={toggleDarkMode} className="sm:block sm:hidden z-40 cursor-pointer">
+        <div className="flex gap-3 items-center justify-evenly pt-4 py-4">
+            <div onClick={toggleDarkMode} className="sm:block sm:hidden z-50 cursor-pointer">
                 {darkMode ? (
                     <BiSun size={27} style={{ color: `${textColor}` }} onClick={toggleDarkMode} />
                 ) : (
@@ -68,7 +68,7 @@ const MobileNavbar = () => {
             <div className="z-50">
                 <Logo />
             </div>
-            <motion.div onClick={toggleOpen} className='sm:block sm:hidden z-40 cursor-pointer'>
+            <motion.div onClick={toggleOpen} className='sm:block sm:hidden z-50 cursor-pointer'>
                 {NavOpen ? (
                     <AiOutlineClose size={25} style={{ color: `${textColor}` }}/>
                 ) : (
@@ -80,7 +80,7 @@ const MobileNavbar = () => {
             <div
                 className={
                     NavOpen
-                        ? 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-start ease-in duration-150 bg-black overflow-hidden transition'
+                        ? 'sm:hidden z-40 absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-start ease-in duration-150 bg-black overflow-hidden transition'
                         : 'sm:hidden z-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center pt-[80px] w-full h-screen text-center ease-in duration-150 transition overflow-hidden '
                     }
             >

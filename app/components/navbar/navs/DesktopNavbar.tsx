@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import { motion } from "framer-motion";
 
 import { AiFillLinkedin, AiFillGithub, AiOutlineTwitter, } from 'react-icons/ai';
-import Logo from '../Logo';
+import Logo from '../../Logo';
 
 export function MouseOverTest() {
     console.log('Hi')

@@ -1,4 +1,4 @@
-import Hero from "./components/Hero"
+import Hero from "./components/hero/Hero"
 
 export default function Home() {
   return (
@@ -7,11 +7,6 @@ export default function Home() {
             message="We design, develop & deploy websites for small businesses throughout Australia" 
             action="Let's talk!"
       />
-      <div className="justify-center items-center text-[#FFFFF7] w-full h-[calc((100vh)/1.1)]">
-        <p>
-          Bob
-        </p>
-      </div>
     </div>
   )
 }
