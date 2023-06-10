@@ -30,12 +30,13 @@ const MobileNavbar = () => {
     }, []);
 
     useEffect(() => {
-        if(NavOpen) {
-            document.body.style.overflow = 'hidden';
+        if (NavOpen) {
+          document.body.classList.add('overflow-hidden');
         } else {
-            document.body.style.overflow = '';
+          document.body.classList.remove('overflow-hidden');
         }
-    }, [NavOpen]);
+      }, [NavOpen]);
+      
       
     const item = {
         visible: { opacity: 1, x: 0 },
