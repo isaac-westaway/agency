@@ -23,10 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-          <div className="">
-            <ClientOnly>
-              <Navbar />
-            </ClientOnly>              
+          <div className="">        
             {children}
             <Analytics />
           </div>
