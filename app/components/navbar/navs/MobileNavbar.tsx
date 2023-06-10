@@ -35,9 +35,6 @@ const MobileNavbar = () => {
         } else {
             document.body.style.overflow = '';
         }
-        return () => {
-            document.body.style.overflow = '';
-        };
     }, [NavOpen]);
       
     const item = {
