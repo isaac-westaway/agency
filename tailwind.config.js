@@ -6,15 +6,24 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      '2xl': {'max': '1535px'},
+      // => @media (max-width: 1535px) { ... }
+
+      'xl': {'max': '1279px'},
+      // => @media (max-width: 1279px) { ... }
+
+      'lg': {'max': '1023px'},
+      // => @media (max-width: 1023px) { ... }
+
+      'md': {'max': '767px'},
+      // => @media (max-width: 767px) { ... }
+
+      'sm': {'max': '639px'},
+      // => @media (max-width: 639px) { ... }
+    },
     extend: {
       colors: {
-        screens: {
-          'sm': '200px',   // Custom value for small screens (sm)
-          'md': '640px',   // Custom value for medium screens (md)
-          'lg': '1024px',  // Custom value for large screens (lg)
-          'xl': '1280px',  // Custom value for extra large screens (xl)
-          '2xl': '1440px', // Custom value for 2 extra large screens (2xl)
-        },
         gray: {
           '0.6': 'rgba(69, 69, 69, 0.2)',
         },

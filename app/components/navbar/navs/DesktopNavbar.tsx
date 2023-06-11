@@ -19,7 +19,7 @@ const DesktopNavbar = () => {
                         <span className="cursor-pointer animatedUnderline hover:text-white hover:transition hover:duration-200">Blog</span>
                         <span className="cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">Contact</span>
                         <span className="cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">Request a demo</span>
-                        <span className="cursor-pointer flex items-center special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">Billing portal&nbsp;<FiExternalLink /></span>
+                        <span className="cursor-pointer flex items-center special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">Billing portal&nbsp;<span className="flex flex-row items-center pb-1"><FiExternalLink /></span></span>
                 </div>
             </div>
         </div>

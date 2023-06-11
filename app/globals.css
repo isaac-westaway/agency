@@ -74,4 +74,28 @@ html, body {
   .animatedUnderline:hover::after {
     width: 100%;
   }
+
+  @keyframes border-animation {
+    0% { border-image: linear-gradient(orange, blue) 0%; };
+    25% { border-image: linear-gradient(blue, green) 0%; };
+    50% { border-image: linear-gradient(green, yellow) 0%; };
+    75% { border-image: linear-gradient(yellow, red) 0%; };
+    100% { border-image: linear-gradient(red, orange) 0%; };
+  }
+  
+  .animate-border {
+    animation: border-animation 4s infinite;
+  }
+
+  @keyframes colorAnimation {
+    0% {
+      color: #ff0000; /* Start color */
+    }
+    50% {
+      color: #00ff00; /* Mid color */
+    }
+    100% {
+      color: #0000ff; /* End color */
+    }
+  }
 }
