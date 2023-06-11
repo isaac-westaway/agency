@@ -1,45 +1,25 @@
 import { useRouter } from 'next/navigation';
+import { FiExternalLink } from 'react-icons/fi'
 
 import { motion } from "framer-motion";
 
 import { AiFillLinkedin, AiFillGithub, AiOutlineTwitter, } from 'react-icons/ai';
 import Logo from '../../Logo';
 
-export function MouseOverTest() {
-    console.log('Hi')
-}
-
 const DesktopNavbar = () => {
     return (
-        <div className="text-2xl">
-            <div className="w-full flex fixed items-center bg-black z1000 pt-4 py-4">
-                <div className="ml-5">
+        <div className="w-full bg-black z1000 pt-4 py-4 text-xl  text-neutral-500">
+            <div className="flex items-center pl-11 pr-11 justify-between w-full">
+                <div className="shrink-0">
                     <Logo />
                 </div>
-                <div className="flex flex-row">
-                    <div className="cursor-pointer">
-                        Home
-                    </div>
-                    <div className="cursor-pointer">
-                        Gallery
-                    </div>
-                    <div className="cursor-pointer">
-                        Pricing
-                    </div>
-                    <div className="cursor-pointer">
-                        Business
-                    </div>
-                </div>
-                <div className="flex flex-row w-full justify-end mr-5">
-                    <motion.div className="cursor-pointer">
-                        <span className="">Billing Portal</span>
-                    </motion.div>
-                    <motion.div className="cursor-pointer">
-                        <span className="">Contact</span>
-                    </motion.div>
-                    <motion.div className="cursor-pointer">
-                        <span className="">Request a demo</span>
-                    </motion.div>
+                <div className="flex flex-row gap-11 items-center">
+                        <span className="cursor-pointer animatedUnderline hover:text-white hover:transition hover:duration-200">Pricing</span>
+                        <span className="cursor-pointer animatedUnderline hover:text-white hover:transition hover:duration-200">Gallery</span>
+                        <span className="cursor-pointer animatedUnderline hover:text-white hover:transition hover:duration-200">Blog</span>
+                        <span className="cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">Contact</span>
+                        <span className="cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">Request a demo</span>
+                        <span className="cursor-pointer flex items-center special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">Billing portal&nbsp;<FiExternalLink /></span>
                 </div>
             </div>
         </div>

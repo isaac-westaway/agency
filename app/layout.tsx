@@ -1,6 +1,6 @@
 import './globals.css'
 
-import { Caveat } from "next/font/google"
+import { Inter } from "next/font/google"
 import { Analytics } from '@vercel/analytics/react';
 
 import ClientOnly from './components/ClientOnly'
@@ -11,7 +11,7 @@ export const metadata = {
   description: 'Testing Purpooses',
 }
 
-const font = Caveat({
+const font = Inter({
   subsets: ["latin"]
 })
 
