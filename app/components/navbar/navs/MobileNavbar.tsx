@@ -27,6 +27,7 @@ const MobileNavbar = () => {
             setNavOpen((value) => !value);
         }, 0);
     }, []);
+    
 
     useEffect(() => {
         if(NavOpen) {
