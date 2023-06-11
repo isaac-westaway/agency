@@ -20,7 +20,6 @@ module.exports = {
       // => @media (max-width: 767px) { ... }
 
       'sm': {'max': '639px'},
-      'sm': {'min': '120px'},
       // => @media (max-width: 639px) { ... }
     },
     extend: {
