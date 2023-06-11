@@ -1,7 +1,8 @@
 export const pricingPlans = [
     {
         title: 'freelancer',
-        price: '24',
+        price: '20',
+        upfront: '80',
         currency: 'AUD',
         frequency: '/month',
         description: 'The essentials to provide your best work for clients.',
@@ -15,7 +16,8 @@ export const pricingPlans = [
     },
     {
         title: 'advanced',
-        price: '24',
+        price: '35',
+        upfront: '120',
         currency: 'AUD',
         frequency: '/month',
         description: 'The essentials to provide your best work for clients.',
@@ -32,7 +34,8 @@ export const pricingPlans = [
     },
     {
         title: 'enterprise',
-        price: '24',
+        price: '100+',
+        upfront: '80',
         currency: 'AUD',
         frequency: '/month',
         description: 'The essentials to provide your best work for clients.',

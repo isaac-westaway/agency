@@ -4,7 +4,6 @@ import { pricingPlans } from "./index";
 const PricingCards = () => {
     return (
         <div>
-            <FramerReveal>
                 <div className="grid lg:grid-cols-1 grid-cols-3 gap-12 lg:gap-8 py-9 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {pricingPlans.map(plan => (
                         <div key={plan.title} className="relative border border-white shadow-lg p-8 bg-[#F9F9F9] rounded-2xl flex flex-col">
@@ -12,14 +11,27 @@ const PricingCards = () => {
                             {plan.mostPopular && (
                                 <p className="absolute top-0 -translate-y-1/2 bg-black border-[2px] text-white px-3 py-0.5 text-sm font-semibold tracking-wide rounded-full shadow-md">Most Popular</p>
                             )}
-                            <p className="mt-4 text-slate-700 text-sm leading-6">{plan.description}</p>
-                            <div className="mt-4 bg-black rounded-lg text-white -mx-6 p-6">
-                                <p className="flex items-center text-sm font-semibold">
-                                    <span>{plan.currency}</span>
-                                    <span className="ml-3 text-4xl">${plan.price}</span>
-                                    <span className="ml-1.5">{plan.frequency}</span>
-                                </p>
-                            </div>
+                            {plan.mostPopular ? (
+                            <>
+                                <p className="mt-4 text-slate-700 text-sm leading-6">{plan.description}</p><div className="mt-4 bg-black rounded-2xl text-white -mx-6 p-6">
+                                    <p className="flex items-center text-sm font-semibold">
+                                        <span>{plan.currency}</span>
+                                        <span className="ml-1.5 text-3xl">${plan.price}</span>
+                                        <span className="ml-1.5">{plan.frequency}</span>
+                                    </p>
+                                </div>
+                            </>
+                            ) : 
+                            <>
+                                <p className="mt-4 text-slate-700 text-sm leading-6">{plan.description}</p><div className="mt-4 bg-[#20262E] rounded-2xl text-white -mx-6 p-6">
+                                    <p className="flex items-center text-sm font-semibold">
+                                        <span>{plan.currency}</span>
+                                        <span className="ml-1.5 text-3xl">${plan.price}</span>
+                                        <span className="ml-1.5">{plan.frequency}</span>
+                                    </p>
+                                </div>
+                            </>
+                            }
                             <ul className="mt-6 space-y-4 flex-1">
                                 {plan.features.map(feature=> (
                                     <li key={feature} className="flex text-sm leading-6">
@@ -32,11 +44,11 @@ const PricingCards = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <a href="#" className={`text-white mt-8 block px-6 py-4 text-sm font-semibold leading-4 text-center rounded-lg shadow-md ${plan.mostPopular? 'bg-black shadow-md' : 'bg-[#20262E]'}`}>{plan.cta}</a>
+                            <span className="my-5 text-slate-700 block px-5 py-3 text-center leading-4 text-md underline cursor-pointer hover:text-black hover:bg-slate-500 hover:rounded-2xl hover:transition hover:ease-in-out hover:duration-200">Compare plans</span>
+                            <a href="#" className={`text-white block px-6 py-4 text-sm font-semibold leading-4 text-center rounded-2xl shadow-md ${plan.mostPopular? 'bg-black shadow-md' : 'bg-[#20262E]'}`}>{plan.cta}</a>
                         </div>
                     ))}
                 </div>
-            </FramerReveal>
         </div>
     );
 }
