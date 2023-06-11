@@ -22,17 +22,20 @@ const FramerReveal: React.FC<FramerRevealProps> = ({ children }) => {
       },
       { rootMargin: '0px', threshold: 0.2 } // Adjust the threshold and rootMargin as desired
     );
-
-    if (ref.current) {
-      observer.observe(ref.current);
+  
+    const element = ref.current;
+  
+    if (element) {
+      observer.observe(element);
     }
-
+  
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (element) {
+        observer.unobserve(element);
       }
     };
-  }, []);
+  }, [controls]);
+  
 
   const variants = {
     hidden: {
