@@ -4,7 +4,7 @@ const PricingCards = () => {
     return (
         <div className="grid lg:grid-cols-1 grid-cols-3 gap-12 lg:gap-8 py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {pricingPlans.map(plan => (
-                <div key={plan.title} className="relative border border-white shadow-lg p-8 bg-white rounded-2xl flex flex-col">
+                <div key={plan.title} className="relative border border-white shadow-lg p-8 bg-[#F9F9F9] rounded-2xl flex flex-col">
                     <h3 className="text-lg font-semibold leading-5">{plan.title}</h3>
                     {plan.mostPopular && (
                         <p className="absolute top-0 -translate-y-1/2 bg-black border-[2px] text-white px-3 py-0.5 text-sm font-semibold tracking-wide rounded-full shadow-md">Most Popular</p>
