@@ -16,9 +16,7 @@ const PricingPlans = () => {
                 </p>           
             </FramerReveal>
         </div>
-        <FramerReveal>
-            <PricingCards />
-        </FramerReveal>
+        <PricingCards />
         </>
     );
 }
