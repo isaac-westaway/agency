@@ -32,7 +32,7 @@ const Hero: React.FC<Hero> = ({
   return (
     <div className='flex items-center text-center justify-center h-screen w-full border'>
       <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]' />
-      <div className='p-5 text-[#FFFFF7] z-[2] mt-[-18rem] sm:mt-[-9rem] text-7xl sm:text-7xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-8xl '>
+      <div className='p-5 text-[#FFFFF7] z-[2] mt-[-18rem] sm:mt-[-1rem] md:mt-[-30rem] lg:mt-[-60rem] text-7xl sm:text-7xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-8xl '>
         <span /*id="animated-text"**/ className='font-bold'>{heading}</span>
         <span /*id="animated-text"**/ className='font-bold'>{heading2}</span>
         <span /*id="animated-text"**/ className='font-bold'>{heading3}</span>

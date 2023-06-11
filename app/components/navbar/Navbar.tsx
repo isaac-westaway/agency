@@ -29,10 +29,10 @@ const Navbar: React.FC = () => {
         };
     }, []);
 
-    const Desktop = useMediaQuery({ minWidth: 1100});
+    const Desktop = useMediaQuery({ minWidth: 1300});
     const Tablet = useMediaQuery({
         minWidth: 850,
-        maxWidth: 1099.9
+        maxWidth: 1299.9
     });
     const Mobile = useMediaQuery({
         minWidth: 0,

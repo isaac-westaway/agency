@@ -17,21 +17,21 @@ const TabletNavbar = () => {
                         <Logo />
                     </div>
                     <li className="inline-block">
-                        <Link className="text-2xl animatedUnderline cursor-pointer hover:text-white hover:transition hover:duration-200 flex" href={'/test'}>Pricing</Link>
+                        <Link className="text-lg animatedUnderline cursor-pointer hover:text-white hover:transition hover:duration-200 flex" href={'/test'}>Pricing</Link>
                     </li>
                     <li className="inline-block">
-                        <Link className="text-2xl animatedUnderline cursor-pointer hover:text-white hover:transition hover:duration-200 flex" href={'/about-us'}>Gallery</Link>
+                        <Link className="text-lg animatedUnderline cursor-pointer hover:text-white hover:transition hover:duration-200 flex" href={'/about-us'}>Gallery</Link>
                     </li>
                     <li className="inline-block">
-                        <Link className="text-2xl animatedUnderline cursor-pointer hover:text-white hover:transition hover:duration-200 flex" href={'/test'}>Blog</Link>
+                        <Link className="text-lg animatedUnderline cursor-pointer hover:text-white hover:transition hover:duration-200 flex" href={'/test'}>Blog</Link>
                     </li>
                     <li className="inline-block">
-                        <Link className="special-border-name text-2xl border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6] z-50 flex" href={'/'}>
+                        <Link className="special-border-name text-lg border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6] z-50 flex" href={'/'}>
                             Contact
                         </Link>
                     </li>
                     <li className="inline-block">
-                        <Link className="special-border-name text-2xl border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6] flex" href={'/test'}>Billing Portal&nbsp;<span className="flex flex-row items-center pb-1"><FiExternalLink /></span></Link>
+                        <Link className="special-border-name text-lg border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6] flex" href={'/test'}>Billing Portal&nbsp;<span className="flex flex-row items-center pb-1"><FiExternalLink /></span></Link>
                     </li>
                 </ul>
             </div>
