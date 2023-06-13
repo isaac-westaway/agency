@@ -39,13 +39,15 @@ const Hero: React.FC<HeroProps> = ({
 
   return (
     <div className='h-screen mx-auto max-w-7xl px-4'>
-      <div className='grid grid-cols-3 lg:grid-cols-1 translate-y-36'>
+      <div className='grid grid-cols-3 lg:grid-cols-1 translate-y-36 w-full'>
       {HeroText.map((item, index) => (
           <div key={item.title} 
             className='
               font-semibold 
               text-center 
               text-8xl
+              sm:text-6xl
+
             '>
             {index === 0 && 
               <span>{heading}</span>
