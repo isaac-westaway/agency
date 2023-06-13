@@ -46,17 +46,17 @@ const Hero: React.FC<HeroProps> = ({
               font-semibold 
               text-center 
               text-8xl
-              sm:text-6xl
+              sm:text-7xl
 
             '>
             {index === 0 && 
-              <span>{heading}</span>
+              <span className=''>{heading}</span>
             }
             {index === 1 && 
-              <span>{heading2}</span>
+              <span className=''>{heading2}</span>
             }
             {index === 2 && 
-              <span>{heading3}</span>
+              <span className=''>{heading3}</span>
             }
           </div>
         ))}
