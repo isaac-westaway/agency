@@ -8,7 +8,7 @@ export default function Home() {
       <FramerReveal>
         <span className="text-white">
           <Hero heading="Design." heading2="Develop." heading3="Deploy."/>
-]        </span>
+        </span>
       </FramerReveal>
       <PricingPlans/>
     </>
