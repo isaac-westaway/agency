@@ -47,7 +47,6 @@ const Hero: React.FC<HeroProps> = ({
               text-center 
               text-8xl
               sm:text-7xl
-
             '>
             {index === 0 && 
               <span className=''>{heading}</span>
