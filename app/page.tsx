@@ -7,8 +7,8 @@ export default function Home() {
     <>
       <FramerReveal>
         <span className="text-white">
-          <Hero heading="Design." heading2="Develop." heading3="Deploy." message="Spark Local is the #1 choice for small businesses looking for affordable website production."/>
-        </span>
+          <Hero />
+]        </span>
       </FramerReveal>
       <PricingPlans/>
     </>
