@@ -117,7 +117,7 @@ const MobileNavbar = () => {
                         <motion.li variants={item} onClick={handleDappRedirect} className='flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <div className="">Pricing</div>
                             <div className="flex flex-row items-center justify-end w-full">
-                                {accordionPricingOpen ? <FiChevronDown size={25}/> : <FiChevronLeft size={25}/>}
+                                {accordionPricingOpen ? <FiChevronDown size={21}/> : <FiChevronLeft size={21}/>}
                             </div>
                         </motion.li>
                         <li>
