@@ -1,17 +1,20 @@
 "use client"
 
 import { useState, useEffect } from 'react';
-import { useMediaQuery } from 'react-responsive';
 
 import DesktopNavbar from './navs/DesktopNavbar';
 import MobileNavbar from './navs/MobileNavbar';
 import TabletNavbar from './navs/TabletNavbar';
 import Container from '../Container';
 
+import { useDesktop, useTablet, useMobile } from '@/app/components/utils/mediaQueries';
 import { motion } from 'framer-motion';
 
 const Navbar: React.FC = () => {
     const [scrolled, setScrolled] = useState(false);
+    const Desktop = useDesktop();
+    const Tablet = useTablet();
+    const Mobile = useMobile();
 
     const handleScroll = () => {
         const scrollTop = window.pageYOffset;
@@ -28,16 +31,6 @@ const Navbar: React.FC = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
-    const Desktop = useMediaQuery({ minWidth: 1300});
-    const Tablet = useMediaQuery({
-        minWidth: 850,
-        maxWidth: 1299.9
-    });
-    const Mobile = useMediaQuery({
-        minWidth: 0,
-        maxWidth: 849.9
-    });
 
     return (
         <div className={`fixed w-full bg-black z-50 shadow-2xl ${scrolled ? 'border-b-[1px] border-dark-50 transition duration-500 ease-in-out' : 'transition duration-500 ease-in-out border-b-[1px] border-transparent'}`}>

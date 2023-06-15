@@ -39,26 +39,26 @@ const Hero: React.FC<HeroProps> = ({
 
   return (
     <div className='h-screen mx-auto max-w-7xl px-4'>
-      <div className='grid grid-cols-3 lg:grid-cols-1 translate-y-36 w-full'>
-      {HeroText.map((item, index) => (
-          <div key={item.title} 
-            className='
-              font-semibold 
-              text-center 
-              text-8xl
-              sm:text-7xl
-            '>
-            {index === 0 && 
-              <span className=''>{heading}</span>
-            }
-            {index === 1 && 
-              <span className=''>{heading2}</span>
-            }
-            {index === 2 && 
-              <span className=''>{heading3}</span>
-            }
-          </div>
-        ))}
+      <div className='grid grid-cols-3 lg:grid-cols-1 translate-y-36 sm:translate-y-32 w-full'>
+        {HeroText.map((item, index) => (
+            <div key={item.title} 
+              className='
+                font-semibold 
+                text-center 
+                text-8xl
+                sm:text-7xl
+              '>
+              {index === 0 && 
+                <span className=''>{heading}</span>
+              }
+              {index === 1 && 
+                <span className=''>{heading2}</span>
+              }
+              {index === 2 && 
+                <span className=''>{heading3}</span>
+              }
+            </div>
+          ))}
       </div>
     </div>
   );

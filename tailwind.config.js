@@ -23,6 +23,10 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
     },
     extend: {
+      backgroundColor: {
+        'custom-color': 'rgba(0, 0, 0, 0.7)',
+        'dark-custom': 'rgba(125, 125, 125,0.4)'
+      },
       colors: {
         gray: {
           '0.6': 'rgba(69, 69, 69, 0.2)',

@@ -9,6 +9,10 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import{ BiSun, BiMoon } from 'react-icons/bi';
 import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
 
+import { Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+
 import Logo from '../../Logo';
 import React from 'react';
 
@@ -51,9 +55,11 @@ const MobileNavbar = () => {
     }
 
     function handleDappRedirect() {
-        Router.push("/d-app");
-        toggleOpen()
-    }
+        setAccordionPricingOpen(!accordionPricingOpen);
+      }
+
+    const [accordionPricingOpen, setAccordionPricingOpen] = useState(false);
+
 
     return (
         <div className="pt-4 py-4 w-full  text-neutral-500">
@@ -107,8 +113,19 @@ const MobileNavbar = () => {
                         </motion.li>
 
                         <motion.li variants={item} onClick={handleDappRedirect} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
-                            <Link href='/d-app'>Pricing</Link>
+                            <div className="">Pricing</div>
+                            {accordionPricingOpen && (
+                                <>
+                                    <motion.div variants={item} onClick={toggleOpen} className='p-2 text-2xl transition cursor-pointer hover:bg-gray-0.6 '>
+                                    <Link href='/pricing/business'>Business</Link>
+                                    </motion.div>
+                                    <motion.div variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6'>
+                                    <Link href='/pricing/personal'>Personal</Link>
+                                    </motion.div>
+                                </>
+                                )}
                         </motion.li>
+                        
 
                         <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             {/*<ThemeProvider theme={theme}>
