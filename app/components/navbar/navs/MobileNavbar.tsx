@@ -117,7 +117,7 @@ const MobileNavbar = () => {
                         <motion.li variants={item} onClick={handleDappRedirect} className='flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <div className="">Pricing</div>
                             <div className="flex flex-row items-center justify-end w-full">
-                                {accordionPricingOpen ? <FiChevronDown/> : <FiChevronLeft/>}
+                                {accordionPricingOpen ? <FiChevronDown size={25}/> : <FiChevronLeft size={25}/>}
                             </div>
                         </motion.li>
                         <li>
@@ -168,6 +168,9 @@ const MobileNavbar = () => {
                             <Link href='/' className="items-center">Request A demo</Link>
                         </motion.li>
                         <br />
+                        <motion.li variants={item} onClick={toggleOpen} className='p-2 transition ease-in duration-150 border-t-stone-800 border-t-[3px] cursor-pointer hover:bg-gray-0.6'>
+                            <div className="text-[#fffafa] font-semibold text-lg text-center">Our Links</div>
+                        </motion.li>
                         <motion.li>
                             <motion.div variants={item} className="flex flex-row gap-8 items-center text-center justify-evenly pt-4 pb-4 border-stone-800 border-b-[3px] border-t-[3px]">
                                 <li className="cursor-pointer">
@@ -181,14 +184,6 @@ const MobileNavbar = () => {
                                 </li>
                                 <li className="cursor-pointer">
                                     <BsGithub size={18} className="hover:text-white hover:transition hover:duration-300"/>
-                                </li>
-                            </motion.div>
-                            <motion.div variants={item} className="flex flex-row gap-8 text-lg items-center text-justify justify-center pt-4 pb-4 border-b-stone-800 border-b-[3px]">
-                                <li className="cursor-pointer hover:text-[#FBFAF6] transition ease-in-out">
-                                    Terms & Conditions
-                                </li>
-                                <li className="cursor-pointer hover:text-[#FBFAF6] transition ease-in-out">
-                                    Privacy Policy
                                 </li>
                             </motion.div>
                         </motion.li>
