@@ -1,10 +1,12 @@
+"use client"
+
 import { useState, useCallback, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 import { motion } from 'framer-motion';
 
-import { FiExternalLink } from 'react-icons/fi'
+import { FiChevronDown, FiChevronLeft, FiExternalLink } from 'react-icons/fi'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import{ BiSun, BiMoon } from 'react-icons/bi';
 import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
@@ -95,9 +97,9 @@ const MobileNavbar = () => {
                     <motion.ul
                         /*animate="visible"
                         variants={list}*/
-                        className="overflow-y-auto overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000"
+                        className="overflow-y-auto overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl"
                     >
-                        <li onClick={toggleOpen} className='cursor-pointer p-4 text-2xl border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
+                        <li onClick={toggleOpen} className='cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
                             <Link href='/'>Contact</Link>
                         </li>
 
@@ -105,29 +107,34 @@ const MobileNavbar = () => {
                             <br/>
                         </div>
 
-                        <motion.li variants={item} onClick={billingRedirect} className='flex flex-row transition ease-in duration-150 p-2 text-2xl border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                        <motion.li variants={item} onClick={billingRedirect} className='flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE' className="flex flex-row justify-end place-items-end items-center whitespace-nowrap">Billing Portal</Link>
                             <div className="flex flex-row items-center justify-end w-full">
                                 <FiExternalLink />
                             </div>
                         </motion.li>
 
-                        <motion.li variants={item} onClick={handleDappRedirect} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                        <motion.li variants={item} onClick={handleDappRedirect} className='flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <div className="">Pricing</div>
-                            {accordionPricingOpen && (
-                                <>
-                                    <motion.div variants={item} onClick={toggleOpen} className='p-2 text-2xl transition cursor-pointer hover:bg-gray-0.6 '>
-                                    <Link href='/pricing/business'>Business</Link>
-                                    </motion.div>
-                                    <motion.div variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6'>
-                                    <Link href='/pricing/personal'>Personal</Link>
-                                    </motion.div>
-                                </>
-                                )}
+                            <div className="flex flex-row items-center justify-end w-full">
+                                {accordionPricingOpen ? <FiChevronDown/> : <FiChevronLeft/>}
+                            </div>
                         </motion.li>
+                        <li>
+                                {accordionPricingOpen && (
+                                    <>
+                                        <motion.div variants={item} onClick={toggleOpen} className='p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]'>
+                                            <Link href='/pricing/business'>|&nbsp;&nbsp;Business</Link>
+                                        </motion.div>
+                                        <motion.div variants={item} onClick={toggleOpen} className='p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]'>
+                                            <Link href='/pricing/personal'>|&nbsp;&nbsp;Personal</Link>
+                                        </motion.div>
+                                    </>
+                                    )}
+                            </li>
                         
 
-                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                        <motion.li variants={item} onClick={toggleOpen} className='p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             {/*<ThemeProvider theme={theme}>
                                 <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} className="border-green-50">
                                     <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
@@ -147,17 +154,17 @@ const MobileNavbar = () => {
                             <Link href='/test' className="w-full">Gallery</Link>
                         </motion.li>
 
-                        <motion.li variants={item} onClick={handleDappRedirect} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                        <motion.li variants={item} onClick={handleDappRedirect} className='p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/d-app'>D-App</Link>
                         </motion.li>
 
-                        <motion.li variants={item} onClick={toggleOpen} className='p-2 text-2xl transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
+                        <motion.li variants={item} onClick={toggleOpen} className='p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6'>
                             <Link href='/'>Business</Link>
                         </motion.li>
 
                         <br />
 
-                        <motion.li variants={item} onClick={toggleOpen} className=' items-center cursor-pointer p-4 text-2xl border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
+                        <motion.li variants={item} onClick={toggleOpen} className=' items-center cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
                             <Link href='/' className="items-center">Request A demo</Link>
                         </motion.li>
                         <br />
@@ -176,7 +183,7 @@ const MobileNavbar = () => {
                                     <BsGithub size={18} className="hover:text-white hover:transition hover:duration-300"/>
                                 </li>
                             </motion.div>
-                            <motion.div variants={item} className="flex flex-row gap-8 items-center text-justify justify-center pt-4 pb-4 border-b-stone-800 border-b-[3px]">
+                            <motion.div variants={item} className="flex flex-row gap-8 text-lg items-center text-justify justify-center pt-4 pb-4 border-b-stone-800 border-b-[3px]">
                                 <li className="cursor-pointer hover:text-[#FBFAF6] transition ease-in-out">
                                     Terms & Conditions
                                 </li>

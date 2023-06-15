@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useState } from "react";
 import { FiExternalLink, FiChevronDown, FiChevronUp } from "react-icons/fi";
 
@@ -48,7 +50,7 @@ const DesktopNavbar = () => {
     visible: { opacity: 1, y: 0 },
   };
   return (
-    <div className="w-full bg-black z-1000 pt-4 py-4 text-xl text-neutral-500">
+    <div className="w-full bg-black z-1000 pt-4 py-4 text-lg text-neutral-500">
       <div className="flex items-center pl-11 pr-11 justify-between w-full">
         <div className="shrink-0">
           <Logo />
