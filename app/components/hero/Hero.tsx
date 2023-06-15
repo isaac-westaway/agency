@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { HeroText } from './HeroProps';
 
-import Background from '@/public/Polygon Luminary.svg'
+import FramerReveal from '../utils/Reveal';
 
 interface HeroProps {
   heading: string;
@@ -44,30 +44,34 @@ const Hero: React.FC<HeroProps> = ({
     <div className='h-screen mx-auto max-w-7xl px-4 backgroundImg'>
       <div className='grid grid-cols-3 lg:grid-cols-1 translate-y-36 sm:translate-y-32 w-full'>
         {HeroText.map((item, index) => (
-            <div key={item.title} 
-              className='
-                font-semibold 
-                text-center 
-                text-8xl
-                sm:text-7xl
-              '>
-              {index === 0 && 
-                <span className=''>{heading}</span>
-              }
-              {index === 1 && 
-                <span className=''>{heading2}</span>
-              }
-              {index === 2 && 
-                <span className=''>{heading3}</span>
-              }
-            </div>
+            <FramerReveal key={""}>
+              <div key={item.title}
+                className='
+                  font-semibold
+                  text-center
+                  text-8xl
+                  sm:text-7xl
+                '>
+                {index === 0 &&
+                  <span className=''>{heading}</span>
+                }
+                {index === 1 &&
+                  <span className=''>{heading2}</span>
+                }
+                {index === 2 &&
+                  <span className=''>{heading3}</span>
+                }
+              </div>
+            </FramerReveal>
           ))}
       </div>
-      <div className='col-span-3 text-center mt-44 leading-10'>
-          <span>Elevate Your Digital Presence with DigiSpark: Empowering Businesses through Expert Website Design, Development, and Seamless Deployment.</span>
-          <br />
-          <span className=""><code>/* we also develop personal websites */</code></span>
-      </div>
+      <FramerReveal>
+        <div className='col-span-3 text-center mt-44 leading-10 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10'>
+            <span>Elevate Your Digital Presence with DigiSpark: Empowering Businesses through Expert Website Design, Development, and Seamless Deployment.</span>
+            <br />
+            <span className=""><code>/* we also develop personal websites */</code></span>
+        </div>
+      </FramerReveal>
     </div>
   );
 };
