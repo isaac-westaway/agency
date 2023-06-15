@@ -1,6 +1,9 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 "use client"
 import React, { useEffect } from 'react';
 import { HeroText } from './HeroProps';
+
+import Background from '@/public/Polygon Luminary.svg'
 
 interface HeroProps {
   heading: string;
@@ -38,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({
   }));
 
   return (
-    <div className='h-screen mx-auto max-w-7xl px-4'>
+    <div className='h-screen mx-auto max-w-7xl px-4 backgroundImg'>
       <div className='grid grid-cols-3 lg:grid-cols-1 translate-y-36 sm:translate-y-32 w-full'>
         {HeroText.map((item, index) => (
             <div key={item.title} 
@@ -60,8 +63,13 @@ const Hero: React.FC<HeroProps> = ({
             </div>
           ))}
       </div>
+      <div className='col-span-3 text-center mt-44 leading-10'>
+          <span>Elevate Your Digital Presence with DigiSpark: Empowering Businesses through Expert Website Design, Development, and Seamless Deployment.</span>
+          <br />
+          <span className=""><code>/* we also develop personal websites */</code></span>
+      </div>
     </div>
   );
 };
 
-export default Hero;
+export default Hero;      

@@ -5,11 +5,9 @@ import FramerReveal from "./components/utils/Reveal";
 export default function Home() {
   return (
     <>
-      <FramerReveal>
         <span className="text-white">
-          <Hero heading="Design." heading2="Develop." heading3="Deploy."/>
+          <Hero heading="Design." heading2="Develop." heading3="Deploy." message="this is a test"/>
         </span>
-      </FramerReveal>
       <PricingPlans/>
     </>
   )

@@ -3,6 +3,7 @@ export interface HeroText {
   heading?: string;
   heading2?: string;
   heading3?: string;
+  message?: string;
 }
 
 export const HeroText: HeroText[] = [

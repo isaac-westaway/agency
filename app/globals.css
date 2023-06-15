@@ -75,6 +75,10 @@ html, body {
     width: 100%;
   }
 
+  .backgroundImg {
+    background-color: #000000;
+  }
+  
   @keyframes border-animation {
     0% { border-image: linear-gradient(orange, blue) 0%; };
     25% { border-image: linear-gradient(blue, green) 0%; };
