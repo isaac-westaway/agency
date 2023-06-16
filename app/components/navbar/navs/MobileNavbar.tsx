@@ -45,8 +45,6 @@ const MobileNavbar = () => {
             document.body.style.overflow = '';
         };
     }, [NavOpen]);
-      
-      
     const item = {
         visible: { opacity: 1, x: 0 },
         hidden: { opacity: 0, x: -100 },
@@ -58,7 +56,7 @@ const MobileNavbar = () => {
 
     function handleDappRedirect() {
         setAccordionPricingOpen(!accordionPricingOpen);
-      }
+    }
 
     const [accordionPricingOpen, setAccordionPricingOpen] = useState(false);
 

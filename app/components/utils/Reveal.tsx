@@ -53,14 +53,14 @@ const FramerReveal: React.FC<FramerRevealProps> = ({ children }) => {
   };
 
   return (
-    <motion.div
+    <motion.span
       ref={ref}
       initial="hidden"
       animate={controls}
       variants={variants}
     >
       {children}
-    </motion.div>
+    </motion.span>
   );
 };
 

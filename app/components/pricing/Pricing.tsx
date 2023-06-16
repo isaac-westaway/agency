@@ -5,7 +5,7 @@ import PricingCards from './PricingCards'
 const PricingPlans = () => {
     return (
         <>
-        <div className="mx-auto max-w-7xl px-4 pt-24 sm:px-6 lg:px-8 text-white">
+        <div className="mx-auto max-w-7xl px-4 pt-0 sm:px-6 lg:px-8 text-white">
             <FramerReveal>
                 <span className="text-3xl sm:text-xl font-extrabold sm:leading-tight sm:tracking-tight">
                     Pricing Plans for teams of all sizes
