@@ -3,8 +3,8 @@ import './globals.css'
 import { Inter } from "next/font/google"
 import { Analytics } from '@vercel/analytics/react';
 
-import ClientOnly from './components/ClientOnly'
-import Navbar from './components/navbar/Navbar'
+import ClientOnly from '@/app/components/ClientOnly'
+import Navbar from '@/app/components/navbar/Navbar'
 
 export const metadata = {
   title: 'Test Project',

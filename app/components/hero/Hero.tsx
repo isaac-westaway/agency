@@ -1,79 +1,55 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
-"use client"
-import React, { useEffect } from 'react';
-import { HeroText } from './HeroProps';
+import FramerReveal from '../utils/Reveal'
 
-import FramerReveal from '../utils/Reveal';
-
-interface HeroProps {
-  heading: string;
-  heading2?: string;
-  heading3?: string;
-  message?: string;
-}
-const Hero: React.FC<HeroProps> = ({
-    heading,
-    heading2,
-    heading3,
-    message,
-}) => {
-  useEffect(() => {
-    const text = document.getElementById('animated-text');
-
-    const timeoutId = setTimeout(() => {
-      if (text) {
-        text.style.opacity = '1';
-        text.style.transform = 'translateY(0)';
-        text.style.animation = 'colorAnimation 5s infinite alternate';
-      }
-    }, 500); // Adjust the delay as needed
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
-  const modifiedHeroText: HeroText[] = HeroText.map((item) => ({
-    ...item,
-    heading,
-    heading2,
-    heading3,
-  }));
-
+const Hero =() => {
   return (
-    <div className='h-screen mx-auto max-w-7xl px-4 backgroundImg'>
-      <div className='grid grid-cols-3 lg:grid-cols-1 translate-y-36 sm:translate-y-32 w-full'>
-        {HeroText.map((item, index) => (
-            <FramerReveal key={""}>
-              <div key={item.title}
-                className='
-                  font-semibold
-                  text-center
-                  text-8xl
-                  sm:text-7xl
-                '>
-                {index === 0 &&
-                  <span className=''>{heading}</span>
-                }
-                {index === 1 &&
-                  <span className=''>{heading2}</span>
-                }
-                {index === 2 &&
-                  <span className=''>{heading3}</span>
-                }
+    <div className="bg-black">
+      <div className="relative isolate px-6 pt-4 sm:pt-1 sm:-translate-y-20 md:pt-3 lg:pt-6">
+        <FramerReveal>
+          <div className="mx-auto py-32 sm:py-48 lg:py-56">
+            <div className="text-center">
+              <h1 className="text-5xl font-bold text-[#F7F7F7] sm:text-6xl tracking-wider">
+                Design. Develop. Deploy.
+              </h1>
+              <div className="mt-6 text-lg leading-8 text-gray-400 font-medium">
+                DigiSpark is Australia&#8217;s top-ranking web services
+                provider.
+                <br />
+                <span className="font-light">
+                  We specialise in the full production lifecycle, from designing
+                  your site to the deployment of it.
+                </span>
               </div>
-            </FramerReveal>
-          ))}
+              <div className="mt-8 flex items-center justify-center gap-x-6">
+                <a
+                  href="#"
+                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Get started
+                </a>
+                <a
+                  href="#"
+                  className="text-sm font-semibold leading-6 text-white"
+                >
+                  Learn more <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </FramerReveal> 
       </div>
-      <FramerReveal>
-        <div className='col-span-3 text-center mt-44 leading-10 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10'>
-            <span>Elevate Your Digital Presence with DigiSpark: Empowering Businesses through Expert Website Design, Development, and Seamless Deployment.</span>
-            <br />
-            <span className=""><code>/* we also develop personal websites */</code></span>
+      <div className="mx-auto max-w-7xl px-4 pt-24 sm:px-6 lg:px-8 text-white -translate-y-20 sm:-translate-y-72">
+        <FramerReveal>
+          <span className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight ">
+            See what Australian small businesses are saying about us
+          </span>
+        </FramerReveal>
+        <div className="">
+          <div className="mt-4 max-w-3xl text-lg text-slate-500">
+          </div>    
         </div>
-      </FramerReveal>
+      </div>
     </div>
   );
-};
+}
 
-export default Hero;      
+export default Hero;
