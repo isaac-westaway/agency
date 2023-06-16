@@ -1,10 +1,11 @@
+import Testimonials from '../testimonials/Testimonials';
 import FramerReveal from '../utils/Reveal'
 
 const Hero =() => {
   return (
     <div className="bg-black">
       <div className="px-6 pt-4 sm:pt-1 sm:-translate-y-20 md:pt-3 lg:pt-6">
-        <div className="mx-auto py-32 sm:py-48 lg:pt-56">
+        <div className="mx-auto py-28 sm:py-48 lg:pt-56">
           <div className="text-center">
             <span className="text-5xl font-bold text-[#F7F7F7] sm:text-6xl tracking-wider">
               Design. Develop. Deploy.
@@ -35,14 +36,12 @@ const Hero =() => {
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-7xl px-4 pt-24 sm:px-6 lg:px-8 text-white -translate-y-20 sm:-translate-y-72 ">
+      <div className="mx-auto max-w-7xl px-4 pt-24 sm:px-6 lg:px-8 text-white -translate-y-28 sm:-translate-y-72 ">
         <span className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight">
           See what Australian small businesses are saying about us
         </span>
-        <div className="mt-4 max-w-3xl text-lg text-slate-500">
-          <span>GUYS</span>
-          <br />
-          <span>GUYS</span>
+        <div className="flex justify-center mt-4 text-lg text-slate-500 w-full">
+            <Testimonials />
         </div>    
       </div>
     </div>
