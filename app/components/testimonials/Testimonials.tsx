@@ -49,7 +49,6 @@ const Testimonials = () => {
                   width="200"
                   alt=""
                   placeholder="blur"
-                  priority={true}
                   loading="lazy"
                 />
                 <div className="text-center text-xl sm:text-md font-semibold leading-8 text-white sm:leading-4 h-full">
@@ -63,7 +62,6 @@ const Testimonials = () => {
                     src={testimonial.profile}
                     alt=""
                     placeholder="blur"
-                    priority={true}
                     loading="lazy"
                   />
                   <div className="mt-4 flex items-center justify-center space-x-3 text-base mb-5">
