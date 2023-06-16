@@ -32,16 +32,15 @@ const Testimonials = () => {
 
     return (
       <div className="relative w-5/6 mx-auto overflow-hidden" {...swipeHandlers}>
-        <div
-          className="flex transition-transform duration-300"
-          style={{
-            transform: `translateX(-${slideNumber * (100 / testimonialData.length)}%)`,
-            width: `${testimonialData.length * 100}%`,
-          }}
-        >
+      <div
+        className="flex transition-transform duration-300"
+        style={{
+          transform: `translateX(-${slideNumber * (100 / testimonialData.length)}%)`,
+          width: `${testimonialData.length * 100}%`,
+        }}
+      >
           {testimonialData.map((testimonial, index) => (
-            <div key={index} className="w-full">
-              {/* Testimonial content */}
+          <div key={index} className="w-full sm:w-full">
               <div className="flex flex-col items-center mt-5">
                 <Image
                   className="mx-auto h-12 mb-5"
@@ -50,8 +49,8 @@ const Testimonials = () => {
                   width="200"
                   alt=""
                 />
-                <div className="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                  <p>{testimonial.quote}</p>
+                <div className="text-center text-xl sm:text-sm font-semibold leading-8 text-white sm:leading-4">
+                  <p className="text-center overflow-clip">{testimonial.quote}</p>
                 </div>
                 <div className="mt-5">
                   <Image
@@ -62,11 +61,11 @@ const Testimonials = () => {
                     alt=""
                   />
                   <div className="mt-4 flex items-center justify-center space-x-3 text-base mb-5">
-                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="sm:text-sm text-white">{testimonial.name}</div>
                     <svg viewBox="0 0 2 2" width={3} height={3} aria-hidden="true" className="fill-white">
                       <circle cx={1} cy={1} r={1} />
                     </svg>
-                    <div className="font-light text-white">{testimonial.position}</div>
+                    <div className="font-light text-white sm:text-sm">{testimonial.position}</div>
                   </div>
                 </div>
               </div>
@@ -75,13 +74,13 @@ const Testimonials = () => {
         </div>
         {/* Arrow buttons */}
         <button
-          className="absolute top-1/2 left-0 transform -translate-y-1/2"
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 sm:-translate-y-1/10"
           onClick={goBackward}
         >
           <FiChevronLeft className="w-6 h-6 text-white" />
         </button>
         <button
-          className="absolute top-1/2 right-0 transform -translate-y-1/2"
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 sm:-translate-y-1/10"
           onClick={goForward}
         >
           <FiChevronRight className="w-6 h-6 text-white" />

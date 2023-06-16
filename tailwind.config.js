@@ -26,6 +26,10 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
     },
     extend: {
+      translate: {
+        '1/8': '12.5%',
+        '1/10': '-80%'
+      },
       backgroundColor: {
         'custom-color': 'rgba(0, 0, 0, 0.7)',
         'dark-custom': 'rgba(125, 125, 125,0.4)'
