@@ -49,7 +49,7 @@ const Testimonials = () => {
                   width="200"
                   alt=""
                 />
-                <div className="text-center text-xl sm:text-sm font-semibold leading-8 text-white sm:leading-4 h-full">
+                <div className="text-center text-xl sm:text-md font-semibold leading-8 text-white sm:leading-4 h-full">
                 <p className="text-center overflow-clip h-20 flex-1 flex items-center justify-center">{testimonial.quote}</p>
                 </div>
                 <div className="mt-5">

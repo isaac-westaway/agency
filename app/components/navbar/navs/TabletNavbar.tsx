@@ -11,6 +11,10 @@ const TabletNavbar = () => {
     const [showDropdown, setShowDropdown] = useState(false);
     const [pricingHovered, setPricingHovered] = useState(false);
     const [dropdownHovered, setDropdownHovered] = useState(false);
+
+    const toggleDropDown = () => {
+      setShowDropdown(showDropdown)
+    }
   
     useEffect(() => {
       let timeoutId: NodeJS.Timeout | null = null;
@@ -62,7 +66,7 @@ const TabletNavbar = () => {
             className="relative cursor-pointer hover:text-white ease-in transition"
             onMouseEnter={handlePricingHover}
             onMouseLeave={handlePricingLeave}
-            onClick={() => setShowDropdown(true)}
+            onClick={toggleDropDown}
           >
             Pricing
             <FiChevronDown className="inline-block" />
