@@ -41,9 +41,9 @@ const Testimonials = () => {
       >
           {testimonialData.map((testimonial, index) => (
           <div key={index} className="w-full sm:w-full">
-              <div className="flex flex-col items-center mt-5">
+              <div className="flex flex-col items-center mb-5">
                 <Image
-                  className="mx-auto h-12 mb-5"
+                  className="mx-auto mt-5"
                   src={testimonial.logo}
                   height="200"
                   width="200"
