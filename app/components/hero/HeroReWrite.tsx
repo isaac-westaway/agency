@@ -3,7 +3,7 @@ import FramerReveal from '../utils/Reveal'
 export default function Example() {
   return (
     <div className="bg-black">
-      <div className="relative isolate px-6 pt-4 sm:pt-1 sm:-translate-y-12 md:pt-3 lg:pt-6">
+      <div className="relative isolate px-6 pt-4 sm:pt-1 sm:-translate-y-16 md:pt-3 lg:pt-6">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
