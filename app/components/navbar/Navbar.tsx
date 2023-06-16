@@ -37,29 +37,18 @@ const Navbar: React.FC = () => {
             <header className="backdrop-blur-3xl">
                 <Container>
                     {Tablet &&
-                        <motion.div                             
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                        >
+                        <motion.div>
                             <TabletNavbar />
                         </motion.div>
                     }
                     {Mobile &&                         
                         <motion.div                             
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
                         >
                             <MobileNavbar />
                         </motion.div>
                     }
-                                        {Desktop && 
-                        <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                        >
+                    {Desktop && 
+                        <motion.div>
                             <DesktopNavbar />
                         </motion.div>
                     }

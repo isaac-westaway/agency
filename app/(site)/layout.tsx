@@ -1,6 +1,7 @@
 import './globals.css'
 
 import { Inter } from "next/font/google"
+
 import { Analytics } from '@vercel/analytics/react';
 
 import ClientOnly from '@/app/components/ClientOnly'
@@ -20,8 +21,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
-    <html lang="en">
+    <html lang="en" className="smooth-scrolling">
       <body className={font.className }>
           <header>
             <ClientOnly>

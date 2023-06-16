@@ -11,6 +11,13 @@ export default function Home() {
         </section>
           <section id="pricing" className="scroll-p-60">
             <PricingPlans />
+            <PricingPlans />
+            <PricingPlans />
+            <PricingPlans />
+            <PricingPlans />
+            <PricingPlans />
+            <PricingPlans />
+            
           </section>
       </div>
     </>

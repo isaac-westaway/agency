@@ -2,31 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --text: rgb(15, 255, 248);
-  --brand: rgb(51, 23, 154);
-
-}
-
-*::selection {
-  background: var(--brand);
-  color: var(--background);
-  scroll-behavior: smooth;
-
-}
-
 html {
   scroll-behavior: smooth;
 }
 
-html, body {
+body {
   background-color: black;
   height: 100%;
-  scroll-behavior: smooth;
 }
 
 
 @layer components {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .smooth-scrolling {
+    scroll-behavior: smooth;
+  }
+
   .z1000 {
     z-index: 1000;
   }
