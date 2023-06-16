@@ -48,6 +48,9 @@ const Testimonials = () => {
                   height="200"
                   width="200"
                   alt=""
+                  placeholder="blur"
+                  priority={true}
+                  loading="lazy"
                 />
                 <div className="text-center text-xl sm:text-md font-semibold leading-8 text-white sm:leading-4 h-full">
                 <p className="text-center overflow-clip h-20 flex-1 flex items-center justify-center">{testimonial.quote}</p>
@@ -59,6 +62,9 @@ const Testimonials = () => {
                     className="mx-auto h-10 w-10 rounded-full"
                     src={testimonial.profile}
                     alt=""
+                    placeholder="blur"
+                    priority={true}
+                    loading="lazy"
                   />
                   <div className="mt-4 flex items-center justify-center space-x-3 text-base mb-5">
                     <div className="sm:text-sm text-white">{testimonial.name}</div>
