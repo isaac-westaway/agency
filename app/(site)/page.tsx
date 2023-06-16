@@ -5,8 +5,10 @@ import FramerReveal from "@/app/components/utils/Reveal";
 export default function Home() {
   return (
     <>
-      <Hero />
-      <PricingPlans />
+      <div className="scroll-smooth	">
+        <Hero />
+        <PricingPlans />
+      </div>
     </>
   )
 }
