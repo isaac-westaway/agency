@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="">
       <div className="relative z-10 px-6 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
         <div className="mx-auto py-28 sm:py-48 lg:pt-56">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="sm:hidden md:hidden lg:hidden absolute top-0 -left-36 w-full h-full -z-10">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="sm:hidden md:hidden lg:hidden xl:hidden absolute top-0 -left-36 w-full h-full -z-10">
             <path fill="#FF0066" d="M27,-43C33.7,-32.2,37,-22.7,36.7,-14.1C36.4,-5.6,32.5,1.8,34.2,15.6C35.9,29.3,43.1,49.3,38.3,58.8C33.5,68.3,16.8,67.3,-0.6,68.1C-17.9,68.9,-35.8,71.4,-41.1,62.1C-46.4,52.7,-39.1,31.5,-45.2,14.3C-51.4,-3,-71.1,-16.2,-75.2,-30.8C-79.2,-45.3,-67.6,-61.2,-52.4,-69.2C-37.3,-77.2,-18.6,-77.5,-4.3,-71.6C10.1,-65.7,20.3,-53.8,27,-43Z" transform="translate(100 100)" />
           </svg>
           <div className="text-center">
@@ -37,7 +37,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="relative z-10 mx-auto max-w-7xl px-4 pt-24 sm:px-6 lg:px-8 text-white translate-y-[8.5rem] lg:-translate-y-52 sm:-translate-y-[17.5rem]">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 pt-24 sm:px-6 lg:px-8 text-white translate-y-[8.5rem] lg:-translate-y-2 xl:translate-y-14 sm:-translate-y-[17.5rem]">
         <span className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight">
           See what Australian small businesses are saying about us
         </span>

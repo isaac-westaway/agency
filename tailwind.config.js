@@ -28,7 +28,8 @@ module.exports = {
     extend: {
       translate: {
         '1/8': '12.5%',
-        '1/10': '-60%'
+        '1/10': '-60%',
+        '95': '95%',
       },
       backgroundColor: {
         'custom-color': 'rgba(0, 0, 0, 0.7)',

@@ -31,7 +31,7 @@ const Testimonials = () => {
   }, [slideNumber]);
 
     return (
-      <div className="relative w-5/6 mx-auto overflow-hidden" {...swipeHandlers}>
+      <div className="relative w-95 mx-auto overflow-hidden border" {...swipeHandlers}>
       <div
         className="flex transition-transform duration-300"
         style={{
