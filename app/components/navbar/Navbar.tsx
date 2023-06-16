@@ -33,8 +33,8 @@ const Navbar: React.FC = () => {
     }, []);
 
     return (
-        <div className={`fixed w-full bg-black z-50 shadow-2xl ${scrolled ? 'border-b-[1px] border-dark-50 transition duration-500 ease-in-out' : 'transition duration-500 ease-in-out border-b-[1px] border-transparent'}`}>
-            <div className="">
+        <div className={`fixed w-full bg-custom-color backdrop-blur-lg z-50 shadow-2xl ${scrolled ? 'border-b-[1px] border-dark-50 transition duration-500 ease-in-out' : 'transition duration-500 ease-in-out border-b-[1px] border-transparent'}`}>
+            <div className="backdrop-blur-3xl">
                 <Container>
                     {Tablet &&
                         <motion.div                             

@@ -50,8 +50,8 @@ const DesktopNavbar = () => {
     visible: { opacity: 1, y: 0 },
   };
   return (
-    <div className="w-full bg-black z-1000 pt-4 py-4 text-lg text-neutral-500">
-      <div className="flex items-center pl-11 pr-11 justify-between w-full">
+    <div className="w-full z-1000 pt-4 py-4 text-lg text-neutral-500 backdrop-blur-lg">
+      <div className="flex items-center pl-11 pr-11 justify-between w-full backdrop-blur-lg">
         <div className="shrink-0">
           <Logo />
         </div>
@@ -67,7 +67,7 @@ const DesktopNavbar = () => {
             <AnimatePresence>
               {showDropdown && (
                 <motion.div
-                  className="absolute w-96 backdrop-blur-sm bg-custom-color text-white rounded-2xl mt-4 transform translate-x-[-50%] border"
+                  className="absolute w-96 text-white rounded-2xl mt-4 transform translate-x-[-50%] border bg-custom-color"
                   initial="hidden"
                   animate="visible"
                   exit="hidden"

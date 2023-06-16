@@ -78,6 +78,10 @@ html, body {
   .backgroundImg {
     background-color: #000000;
   }
+
+  .backdropFilter {
+    backdrop-filter: blur(10px);
+  }
   
   @keyframes border-animation {
     0% { border-image: linear-gradient(orange, blue) 0%; };

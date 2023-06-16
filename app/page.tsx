@@ -1,4 +1,4 @@
-import Hero from "./components/hero/Hero";
+import Hero from "./components/hero/HeroReWrite";
 import PricingPlans from "./components/pricing/Pricing";
 import FramerReveal from "./components/utils/Reveal";
 
@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <section>
         <span className="text-white">
-          <Hero heading="Design." heading2="Develop." heading3="Deploy." message="this is a test"/>
+          <Hero/>
         </span>
       </section>
       <section>
