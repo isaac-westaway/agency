@@ -71,7 +71,7 @@ const toBase64 = (str: string) =>
                   loading="lazy"
                   blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
                 />
-                <div className="text-center text-xl sm:text-md font-semibold leading-8 text-white sm:leading-4 h-full">
+                <div className="text-center text-md sm:text-md leading-8 text-white sm:leading-5 h-full">
                 <p className="text-center overflow-clip h-20 flex-1 flex items-center justify-center">{testimonial.quote}</p>
                 </div>
                 <div className="mt-5">
