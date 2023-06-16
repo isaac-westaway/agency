@@ -5,6 +5,7 @@ import { FiExternalLink, FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 import Logo from "../../Logo";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const DesktopNavbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -50,7 +51,7 @@ const DesktopNavbar = () => {
     visible: { opacity: 1, y: 0 },
   };
   return (
-    <div className="w-full z-1000 pt-4 py-4 text-lg text-neutral-500 backdrop-blur-lg">
+    <header className="w-full z-1000 pt-4 py-4 text-lg text-neutral-500 backdrop-blur-lg scroll-smooth">
       <div className="flex items-center pl-11 pr-11 justify-between w-full backdrop-blur-lg">
         <div className="shrink-0">
           <Logo />
@@ -94,10 +95,10 @@ const DesktopNavbar = () => {
             </AnimatePresence>
           </div>
           <span className="cursor-pointer animatedUnderline hover:text-white hover:transition hover:duration-200">
-            Gallery
+            <Link href="#pricing">Gallery</Link>
           </span>
           <span className="cursor-pointer animatedUnderline hover:text-white hover:transition hover:duration-200">
-            Blog
+            <Link href="#top">Blog</Link>
           </span>
           <span className="shrink-0 cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">
             Contact
@@ -113,7 +114,7 @@ const DesktopNavbar = () => {
           </span>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

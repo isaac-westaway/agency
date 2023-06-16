@@ -5,9 +5,13 @@ import FramerReveal from "@/app/components/utils/Reveal";
 export default function Home() {
   return (
     <>
-      <div className="scroll-smooth	">
-        <Hero />
-        <PricingPlans />
+      <div className="scroll-smooth	snap-x">
+        <section id="top" className="snap-start">
+          <Hero />
+        </section>
+          <section id="pricing" className="scroll-p-60">
+            <PricingPlans />
+          </section>
       </div>
     </>
   )
