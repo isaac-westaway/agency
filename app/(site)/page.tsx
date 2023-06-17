@@ -91,7 +91,7 @@ export default function Home() {
         </section>
         <section>
           <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white translate-y-60 sm:-translate-y-48 pb-20">
-              <div className="border-dark-50 border-t-[1px] mt-5">
+              <div className="border-dark-50 border-t-[1px] sm:mt-5 mt-14">
                 <FramerReveal>
                   <div className="w-full justify-end">
                     <FramerReveal>
