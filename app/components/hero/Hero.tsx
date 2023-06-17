@@ -1,4 +1,5 @@
 import Testimonials from "../testimonials/Testimonials";
+import FramerReveal from "../utils/Reveal";
 
 const Hero = () => {
   return (
@@ -261,6 +262,11 @@ const Hero = () => {
           </defs>
         </svg>
       </div>
+      <div className="absolute top-[26.8rem] left-1/2 sm:hidden md:hidden lg:hidden xl:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="2" height="350">
+          <line x1="1" y1="0" x2="1" y2="290" stroke="#212121" stroke-width="2" />
+        </svg>
+      </div>
       <div className="relative z-10 px-6 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
         <div className="mx-auto py-44 sm:py-48 lg:pt-56">
           <div className="text-center">
@@ -293,14 +299,16 @@ const Hero = () => {
         </div>
       </div>
       <div className="relative z-10 mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8 text-white translate-y-[12rem] lg:-translate-y-2 xl:translate-y-[6.3rem] sm:-translate-y-[12rem]">
-        <div className="border-y-[1px] sm:w-95 mx-auto pt-[1.2rem] border-dark-50">
-          <span className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight">
-            See what Australian small businesses are saying about us
-          </span>
-          <div className="flex justify-center mt-4 text-lg text-gray-500 w-full border rounded-2xl border-dark-50 mb-[2.5rem] relative ">
-              <Testimonials />
+        <FramerReveal>
+          <div className="border-y-[1px] sm:w-95 mx-auto pt-[1.2rem] border-dark-50">
+            <span className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight">
+              See what Australian small businesses are saying about us
+            </span>
+            <div className="flex justify-center mt-4 text-lg text-gray-500 w-full border rounded-2xl border-dark-50 mb-[2.5rem] relative ">
+                <Testimonials />
+            </div>
           </div>
-        </div>
+        </FramerReveal>
       </div>
     </div>
   );

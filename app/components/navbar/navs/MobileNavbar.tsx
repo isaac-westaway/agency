@@ -63,7 +63,7 @@ const MobileNavbar = () => {
 
     return (
         <div className="pt-4 py-4 w-full  text-neutral-500">
-            <div className="flex flex-row justify-around w-full">
+            <div className="flex flex-row justify-around w-full items-center">
                 <div onClick={toggleDarkMode} className="z-50 cursor-pointer">
                     {darkMode ? (
                         <BiSun size={27} style={{ color: 'white'}} onClick={toggleDarkMode} />

@@ -46,7 +46,7 @@ const FramerReveal: React.FC<FramerRevealProps> = ({ children }) => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.7, // Adjust the duration as desired (in seconds)
+        duration: 1.2, // Adjust the duration as desired (in seconds)
         ease: 'easeOut', // Adjust the easing function as desired
       },
     },
