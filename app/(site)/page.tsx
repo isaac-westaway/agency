@@ -65,7 +65,7 @@ export default function Home() {
               </defs>
             </svg>
           </div>
-          <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white translate-y-60 xl:translate-y-52 sm:-translate-y-48 grid grid-cols-2 sm:grid-cols-1 grid-row">
+          <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white translate-y-60 xl:translate-y-48 sm:-translate-y-48 grid grid-cols-2 sm:grid-cols-1 grid-row">
             <FramerReveal>
               <div className="w-full justify-end pt-5">
                 <span className="text-3xl sm:text-xl font-extrabold sm:leading-tight sm:tracking-tight">
