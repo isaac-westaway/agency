@@ -6,13 +6,13 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="scroll-smooth	snap-x h-[1920px]">
+      <div className="scroll-smooth	snap-x h-[1920px] overflow-hidden">
         <section id="top" className="snap-start">
           <Hero />
         </section>
         <section id="body" className="snap-start px-2">
           <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white translate-y-60 sm:-translate-y-48 grid grid-cols-2 sm:grid-cols-1 grid-row">
-            <div className="absolute -top-11 -right-28">
+            <div className="absolute -top-11 -right-28 overflow-hidden object-none">
               <svg
                 width="238"
                 height="531"
