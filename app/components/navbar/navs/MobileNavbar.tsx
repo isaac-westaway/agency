@@ -95,7 +95,7 @@ const MobileNavbar = () => {
                     <motion.ul
                         /*animate="visible"
                         variants={list}*/
-                        className="overflow-y-hidden overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl"
+                        className="overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl"
                     >
                         <li onClick={toggleOpen} className='cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition'>
                             <Link href='/'>Contact</Link>

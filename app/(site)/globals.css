@@ -17,6 +17,15 @@ body {
     scroll-behavior: smooth;
   }
 
+  .scrollAdd {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollAdd::-webkit-scrollbar {
+    display: none;
+  }
+
   .testimonial-container {
     transition: transform 0.3s ease;
   }
