@@ -91,18 +91,24 @@ export default function Home() {
         </section>
         <section>
           <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white translate-y-60 sm:-translate-y-48 pb-20">
-            <FramerReveal>
               <div className="w-full justify-end mt-12 border-t-[1px] border-dark-50">
-                <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-9">
-                  A full tech and creative team
-                </div>
-                <div className="grid grid-cols-3 sm:grid-cols-1 text-center p-3 gap-2 h-56">
-                  <div className="relative text-2xl border">Hi Guys</div>
-                  <div className="relative text-2xl border">Hi Guys</div>
-                  <div className="relative text-2xl border">Hi Guys</div>
+                <FramerReveal>
+                  <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-9">
+                    A full tech and creative team
+                  </div>
+                </FramerReveal>
+                <div className="grid grid-cols-3 sm:grid-cols-1 text-center p-3 gap-2">
+                  <FramerReveal>
+                    <div className="relative text-2xl border h-56">Hi Guys</div>
+                  </FramerReveal>
+                  <FramerReveal>
+                    <div className="relative text-2xl border h-56">Hi Guys</div>
+                  </FramerReveal>
+                  <FramerReveal>
+                    <div className="relative text-2xl border h-56">Hi Guys</div>
+                  </FramerReveal>
                 </div>
               </div>
-            </FramerReveal>
           </div>
         </section>
       </div>
