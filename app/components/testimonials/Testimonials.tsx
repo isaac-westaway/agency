@@ -52,7 +52,7 @@ const toBase64 = (str: string) =>
     return (
       <div className="relative w-95 mx-auto overflow-hidden" {...swipeHandlers}>
       <div
-        className="flex transition-transform duration-300"
+        className="flex transition transform duration-300 w-full"
         style={{
           transform: `translateX(-${slideNumber * (100 / testimonialData.length)}%)`,
           width: `${testimonialData.length * 100}%`,
@@ -71,8 +71,8 @@ const toBase64 = (str: string) =>
                   loading="lazy"
                   blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
                 />
-                <div className="text-center text-md sm:text-md leading-8 text-white sm:leading-5 h-full">
-                <p className="text-center overflow-clip h-20 flex-1 flex items-center justify-center">{testimonial.quote}</p>
+                <div className="text-center text-xl sm:text-sm leading-8 text-white sm:leading-5 h-full">
+                <span className="text-center overflow-clip h-20 flex-1 flex items-center justify-center p-1">{testimonial.quote}</span>
                 </div>
                 <div className="mt-5">
                   <Image
@@ -85,12 +85,12 @@ const toBase64 = (str: string) =>
                     loading="lazy"
                     blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
                   />
-                  <div className="mt-4 flex items-center justify-center space-x-3 text-base mb-5">
-                    <div className="sm:text-sm text-white">{testimonial.name}</div>
-                    <svg viewBox="0 0 2 2" width={3} height={3} aria-hidden="true" className="fill-white">
+                  <div className="mt-4 flex items-center justify-center space-x-3 text-base mb-1">
+                    <span className="sm:text-sm sm:text-center text-white">{testimonial.name}</span>
+                    <svg viewBox="0 0 2 2" width={3} height={3} aria-hidden="true" className="fill-white text-center">
                       <circle cx={1} cy={1} r={1} />
                     </svg>
-                    <div className="font-light text-white sm:text-sm">{testimonial.position}</div>
+                    <span className="font-light text-white sm:text-sm sm:text-center">{testimonial.position}</span>
                   </div>
                 </div>
               </div>
@@ -99,13 +99,13 @@ const toBase64 = (str: string) =>
         </div>
         {/* Arrow buttons */}
         <button
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 sm:-translate-y-1/10"
+          className="absolute top-1/2 transform -translate-y-95 sm:-translate-y-1/10"
           onClick={goBackward}
         >
-          <FiChevronLeft className="w-6 h-6 text-white" />
+          <FiChevronLeft className="w-6 h-6 text-white items-center" />
         </button>
         <button
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 sm:-translate-y-1/10"
+          className="absolute top-1/2 right-0 -translate-y-95 transform sm:-translate-y-1/10"
           onClick={goForward}
         >
           <FiChevronRight className="w-6 h-6 text-white" />

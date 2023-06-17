@@ -1,14 +1,268 @@
-import Testimonials from '../testimonials/Testimonials';
-import FramerReveal from '../utils/Reveal';
+import Testimonials from "../testimonials/Testimonials";
 
 const Hero = () => {
   return (
-    <div className="">
+    <div className="bg-black px-2">
+      <div className="absolute top-0 right-0">
+        <svg
+          width="450"
+          height="556"
+          viewBox="0 0 450 556"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="277"
+            cy="63"
+            r="225"
+            fill="url(#paint0_linear_25:217)"
+          ></circle>
+          <circle
+            cx="17.9997"
+            cy="182"
+            r="18"
+            fill="url(#paint1_radial_25:217)"
+          ></circle>
+          <circle
+            cx="76.9997"
+            cy="288"
+            r="34"
+            fill="url(#paint2_radial_25:217)"
+          ></circle>
+          <circle
+            cx="325.486"
+            cy="302.87"
+            r="180"
+            transform="rotate(-37.6852 325.486 302.87)"
+            fill="url(#paint3_linear_25:217)"
+          ></circle>
+          <circle
+            opacity="0.8"
+            cx="184.521"
+            cy="315.521"
+            r="132.862"
+            transform="rotate(114.874 184.521 315.521)"
+            stroke="url(#paint4_linear_25:217)"
+          ></circle>
+          <circle
+            opacity="0.8"
+            cx="356"
+            cy="290"
+            r="179.5"
+            transform="rotate(-30 356 290)"
+            stroke="url(#paint5_linear_25:217)"
+          ></circle>
+          <circle
+            opacity="0.8"
+            cx="191.659"
+            cy="302.659"
+            r="133.362"
+            transform="rotate(133.319 191.659 302.659)"
+            fill="url(#paint6_linear_25:217)"
+          ></circle>
+          <defs>
+            <linearGradient
+              id="paint0_linear_25:217"
+              x1="-54.5003"
+              y1="-178"
+              x2="222"
+              y2="288"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#4A6CF7"></stop>
+              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
+            </linearGradient>
+            <radialGradient
+              id="paint1_radial_25:217"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(17.9997 182) rotate(90) scale(18)"
+            >
+              <stop
+                offset="0.145833"
+                stop-color="#4A6CF7"
+                stop-opacity="0"
+              ></stop>
+              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0.08"></stop>
+            </radialGradient>
+            <radialGradient
+              id="paint2_radial_25:217"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(76.9997 288) rotate(90) scale(34)"
+            >
+              <stop
+                offset="0.145833"
+                stop-color="#4A6CF7"
+                stop-opacity="0"
+              ></stop>
+              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0.08"></stop>
+            </radialGradient>
+            <linearGradient
+              id="paint3_linear_25:217"
+              x1="226.775"
+              y1="-66.1548"
+              x2="292.157"
+              y2="351.421"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#4A6CF7"></stop>
+              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
+            </linearGradient>
+            <linearGradient
+              id="paint4_linear_25:217"
+              x1="184.521"
+              y1="182.159"
+              x2="184.521"
+              y2="448.882"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#4A6CF7"></stop>
+              <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+            </linearGradient>
+            <linearGradient
+              id="paint5_linear_25:217"
+              x1="356"
+              y1="110"
+              x2="356"
+              y2="470"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#4A6CF7"></stop>
+              <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+            </linearGradient>
+            <linearGradient
+              id="paint6_linear_25:217"
+              x1="118.524"
+              y1="29.2497"
+              x2="166.965"
+              y2="338.63"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#4A6CF7"></stop>
+              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div className="absolute top-[34rem] xl:top-[28rem] left-0 sm:hidden">
+        <svg
+          width="364"
+          height="201"
+          viewBox="0 0 364 201"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
+            stroke="url(#paint0_linear_25:218)"
+          ></path>
+          <path
+            d="M-22.1107 72.3303C5.65989 66.4798 73.3965 64.9086 122.178 105.427C183.155 156.076 201.59 162.093 236.333 166.607C271.076 171.12 309.718 183.657 334.889 212.24"
+            stroke="url(#paint1_linear_25:218)"
+          ></path>
+          <path
+            d="M-53.1107 72.3303C-25.3401 66.4798 42.3965 64.9086 91.1783 105.427C152.155 156.076 170.59 162.093 205.333 166.607C240.076 171.12 278.718 183.657 303.889 212.24"
+            stroke="url(#paint2_linear_25:218)"
+          ></path>
+          <path
+            d="M-98.1618 65.0889C-68.1416 60.0601 4.73364 60.4882 56.0734 102.431C120.248 154.86 139.905 161.419 177.137 166.956C214.37 172.493 255.575 186.165 281.856 215.481"
+            stroke="url(#paint3_linear_25:218)"
+          ></path>
+          <circle
+            opacity="0.8"
+            cx="214.505"
+            cy="60.5054"
+            r="49.7205"
+            transform="rotate(-13.421 214.505 60.5054)"
+            stroke="url(#paint4_linear_25:218)"
+          ></circle>
+          <circle
+            cx="220"
+            cy="63"
+            r="43"
+            fill="url(#paint5_radial_25:218)"
+          ></circle>
+          <defs>
+            <linearGradient
+              id="paint0_linear_25:218"
+              x1="184.389"
+              y1="69.2405"
+              x2="184.389"
+              y2="212.24"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#4A6CF7" stop-opacity="0"></stop>
+              <stop offset="1" stop-color="#4A6CF7"></stop>
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear_25:218"
+              x1="156.389"
+              y1="69.2405"
+              x2="156.389"
+              y2="212.24"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#4A6CF7" stop-opacity="0"></stop>
+              <stop offset="1" stop-color="#4A6CF7"></stop>
+            </linearGradient>
+            <linearGradient
+              id="paint2_linear_25:218"
+              x1="125.389"
+              y1="69.2405"
+              x2="125.389"
+              y2="212.24"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#4A6CF7" stop-opacity="0"></stop>
+              <stop offset="1" stop-color="#4A6CF7"></stop>
+            </linearGradient>
+            <linearGradient
+              id="paint3_linear_25:218"
+              x1="93.8507"
+              y1="67.2674"
+              x2="89.9278"
+              y2="210.214"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#4A6CF7" stop-opacity="0"></stop>
+              <stop offset="1" stop-color="#4A6CF7"></stop>
+            </linearGradient>
+            <linearGradient
+              id="paint4_linear_25:218"
+              x1="214.505"
+              y1="10.2849"
+              x2="212.684"
+              y2="99.5816"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#4A6CF7"></stop>
+              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
+            </linearGradient>
+            <radialGradient
+              id="paint5_radial_25:218"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(220 63) rotate(90) scale(43)"
+            >
+              <stop
+                offset="0.145833"
+                stop-color="white"
+                stop-opacity="0"
+              ></stop>
+              <stop offset="1" stop-color="white" stop-opacity="0.08"></stop>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
       <div className="relative z-10 px-6 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
-        <div className="mx-auto py-28 sm:py-48 lg:pt-56">
-          {/*<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="sm:hidden md:hidden lg:hidden xl:hidden hidden absolute top-0 -left-36 w-full h-full -z-10">
-            <path fill="#FF0066" d="M27,-43C33.7,-32.2,37,-22.7,36.7,-14.1C36.4,-5.6,32.5,1.8,34.2,15.6C35.9,29.3,43.1,49.3,38.3,58.8C33.5,68.3,16.8,67.3,-0.6,68.1C-17.9,68.9,-35.8,71.4,-41.1,62.1C-46.4,52.7,-39.1,31.5,-45.2,14.3C-51.4,-3,-71.1,-16.2,-75.2,-30.8C-79.2,-45.3,-67.6,-61.2,-52.4,-69.2C-37.3,-77.2,-18.6,-77.5,-4.3,-71.6C10.1,-65.7,20.3,-53.8,27,-43Z" transform="translate(100 100)" />
-          </svg>*/}
+        <div className="mx-auto py-44 sm:py-48 lg:pt-56">
           <div className="text-center">
             <span className="text-5xl font-bold text-white sm:text-6xl tracking-wider">
               Design. Develop. Deploy.
@@ -17,13 +271,14 @@ const Hero = () => {
               DigiSpark is Australia&#8217;s top-ranking web services provider.
               <br />
               <span className="font-light">
-                We specialize in the full production lifecycle, from designing your site to the deployment of it.
+                We specialize in the full production lifecycle, from designing
+                your site to the deployment of it.
               </span>
             </div>
             <div className="mt-8 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-[#4A6CF7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get started
               </a>
@@ -37,16 +292,18 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="relative z-10 mx-auto max-w-7xl px-4 pt-24 sm:px-6 lg:px-8 text-white translate-y-[8.5rem] lg:-translate-y-2 xl:translate-y-14 sm:-translate-y-[17.5rem]">
-        <span className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight">
-          See what Australian small businesses are saying about us
-        </span>
-        <div className="flex justify-center mt-4 text-lg text-gray-500 w-full">
-          <Testimonials />
+      <div className="relative z-10 mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8 text-white translate-y-[12rem] lg:-translate-y-2 xl:translate-y-[6.3rem] sm:-translate-y-[12rem]">
+        <div className="border-y-[1px] sm:w-95 mx-auto pt-[1.2rem] border-dark-50">
+          <span className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight">
+            See what Australian small businesses are saying about us
+          </span>
+          <div className="flex justify-center mt-4 text-lg text-gray-500 w-full border rounded-2xl border-dark-50 mb-[2.5rem] relative ">
+              <Testimonials />
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Hero;
