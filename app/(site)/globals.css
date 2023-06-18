@@ -17,6 +17,12 @@ body {
     scroll-behavior: smooth;
   }
 
+  .prevent-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
   .scrollAdd {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -27,11 +33,28 @@ body {
   }
 
   .testimonial-container {
-    transition: transform 0.3s ease;
+    transition: transform;
   }
   
   .testimonial-container:hover {
     transform: scale(1.05);
+  }
+
+  .grabCursor {
+    cursor: grab;
+  }
+  
+  .grabCursor:active {
+    cursor: grabbing;
+  }
+
+  .blur-effect {
+    backdrop-filter: blur(10px);
+    pointer-events: none;
+  }
+  
+  .testimonial-container:hover .blur-effect {
+    opacity: 1;
   }
 
   .smooth-scrolling {

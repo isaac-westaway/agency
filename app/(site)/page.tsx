@@ -1,7 +1,12 @@
-import Hero from "@/app/components/hero/Hero";
-import PricingPlans from "@/app/components/pricing/Pricing";
-import FramerReveal from "@/app/components/utils/Reveal";
 import Image from "next/image";
+import Design from "@/public/design.svg";
+import Develop from "@/public/develop.svg";
+import Deploy from "@/public/deploy.svg";
+
+import Timeline from "@/public/timeline.svg"
+
+import Hero from "@/app/components/hero/Hero";
+import FramerReveal from "@/app/components/utils/Reveal";
 
 export default function Home() {
   return (
@@ -72,9 +77,9 @@ export default function Home() {
                   View our exceptional range of services
                 </span>
                 <p className="mt-4 max-w-3xl text-lg text-slate-500">
-                  Choose an affordable plan that is packed with the best features
-                  for enganging your audience, creating customer loyalty and
-                  driving sales.
+                  Choose an affordable plan that is packed with the best
+                  features for enganging your audience, creating customer
+                  loyalty and driving sales.
                 </p>
               </div>
             </FramerReveal>
@@ -89,32 +94,120 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
+        <section className="relative">
+          <div className="absolute top-1/3 left-0">
+            <Image src={Timeline} alt=""/>
+          </div>
           <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white translate-y-60 sm:-translate-y-48 pb-20">
-              <div className="border-dark-50 border-t-[1px] sm:mt-5 mt-14">
-                <FramerReveal>
-                  <div className="w-full justify-end">
+            <div className="border-dark-50 border-t-[1px] sm:mt-5 mt-14">
+              <FramerReveal>
+                <div className="w-full justify-end">
+                  <FramerReveal>
+                    <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-9 pb-9">
+                      A full tech and creative team
+                    </div>
+                  </FramerReveal>
+                  <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
                     <FramerReveal>
-                      <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-9">
-                        A full tech and creative team
+                      <div className="testimonial-container relative shadow-lg p-8 flex flex-col text-2xl border-[2px] border-dark-50 overflow-hidden rounded-2xl hover:border-[#FBFAF6] hover:text-[#FBFAF6] transition ease-in-out duration-500 h-[26rem]">
+                        <div className="absolute top-5 right-12">
+                          <Image src={Design} alt="" className="w-10 h-10" />
+                        </div>
+                        <div className="absolute -mx-8 bottom-0 w-full">
+                        </div>
+                        <h3 className="text-2xl font-semibold leading-5 z-50">
+                          Design
+                        </h3>
+                        <ul className="mt-4 space-y-4 flex-1 z-50">
+                          <li className="flex text-lg leading-8  xl:text-base">
+                            <span className="text-start">
+                              <span className="flex border-b-[1px] border-dark-50 w-full p-2 mb-1 justify-center">
+                                Just the beginning!
+                              </span>
+                              <div className="mt-2">
+                                Send us your design ideas for your website and our
+                                UI/UX team will turn them into a reality!
+                              </div>
+                            </span>
+                          </li>
+                        </ul>
+                        <div className="mt-4 items-center text-center z-50">
+                          <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white hover:text-orange-600 hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
+                            READ MORE
+                          </span>
+                        </div>
                       </div>
                     </FramerReveal>
-                    <div className="grid grid-cols-3 sm:grid-cols-1 text-center pt-9 p-3 gap-6">
-                      <FramerReveal>
-                        <div className="relative text-2xl border border-dark-50 rounded-2xl h-56">Hi Guys</div>
-                      </FramerReveal>
-                      <FramerReveal>
-                        <div className="relative text-2xl border border-dark-50 rounded-2xl h-56">Hi Guys</div>
-                      </FramerReveal>
-                      <FramerReveal>
-                        <div className="relative text-2xl border border-dark-50 rounded-2xl h-56">Hi Guys</div>
-                      </FramerReveal>
-                    </div>
+                    <FramerReveal>
+                      <div className="testimonial-container shadow-lg p-8 overflow-hidden flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[26rem]">
+                        <div className="absolute top-[1.2rem] right-11">
+                          <Image src={Develop} alt="" className="w-12 h-12" />
+                        </div>
+                        <div className="absolute -mx-8 bottom-0 w-full"></div>
+                        <h3 className="text-2xl font-semibold leading-5 z-50">
+                          Development
+                        </h3>
+                        <ul className="mt-4 space-y-4 flex-1 z-50">
+                          <li className="flex flex-1 text-lg xl:text-base leading-8">
+                            <span className="text-start">
+                              <span className="flex border-b-[1px] border-dark-50 w-full p-2 mb-1 justify-center">
+                                Onto the development!
+                              </span>
+                              <div className="mt-2">
+                                Our expert team of designers will create a
+                                visually stunning and user-friendly website that
+                                aligns with your brand and captures the attention
+                                of your target audience.
+                              </div>
+                              {/*<br />
+                              Monthly Website Search Engine Optimization (SEO) also come standard with every pricing plan! Rest assured knowing your website will make it into peoples searches*/}
+                            </span>
+                          </li>
+                        </ul>
+                        <div className="mt-4 items-center text-center z-50">
+                          <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white hover:text-orange-600 hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
+                            READ MORE
+                          </span>
+                        </div>
+                      </div>
+                    </FramerReveal>
+                    <FramerReveal>
+                      <div className="testimonial-container shadow-lg p-8 flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[26rem]">
+                        <div className="absolute top-[1.3rem] right-11">
+                          <Image src="deploy.svg" alt="" className="hover:fill-white fill" width="48" height="48"/>
+                        </div>
+                        <h3 className="text-2xl font-semibold leading-5 z-50">
+                          Deployment
+                        </h3>
+                        <ul className="mt-4 flex-1 z-50">
+                          <li className="flex flex-col text-lg leading-8  xl:text-base">
+                            <span className="text-start">
+                              <span className="flex border-b-[1px] border-dark-50 w-full p-2 mb-1 justify-center">
+                                The final step!
+                              </span>
+                              <div className="mt-2">
+                                We&#39;ll handle the seamless deployment of your
+                                website, ensuring it&#39;s optimized for
+                                performance, security, and accessibility across
+                                different platforms and devices.
+                              </div>
+                            </span>
+                          </li>
+                        </ul>
+                        <div className="mt-4 items-center text-center z-50">
+                          <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white hover:text-orange-600 hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
+                            READ MORE
+                          </span>
+                        </div>
+                      </div>
+                    </FramerReveal>
                   </div>
-                </FramerReveal>
-              </div>
+                </div>
+              </FramerReveal>
+            </div>
           </div>
         </section>
+        <div className="h-[1920px]"></div>
       </div>
     </>
   );

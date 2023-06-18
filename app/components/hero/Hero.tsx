@@ -1,6 +1,9 @@
 import Testimonials from "../testimonials/Testimonials";
 import FramerReveal from "../utils/Reveal";
 
+import Image from 'next/image';
+import Hero1 from '@/public/hero-shape-1.svg'
+
 const Hero = () => {
   return (
     <div className="bg-black px-2">
@@ -266,6 +269,9 @@ const Hero = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="2" height="350">
           <line x1="1" y1="0" x2="1" y2="290" stroke="#212121" stroke-width="2" />
         </svg>
+      </div>
+      <div className="absolute top-12 left-0 sm:hidden">
+        <Image src={Hero1} alt=""/>
       </div>
       <div className="relative z-10 px-6 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
         <div className="mx-auto py-44 sm:py-48 lg:pt-56">
