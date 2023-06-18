@@ -111,7 +111,7 @@ export default function Home() {
                       </div>
                       <div className="absolute -mx-8 bottom-0 w-full"></div>
                       <h3 className="text-2xl font-semibold leading-5 z-50">
-                        Development
+                        Develop
                       </h3>
                       <ul className="mt-4 space-y-4 flex-1 z-50">
                         <li className="flex flex-1 text-lg xl:text-base leading-8">
@@ -149,7 +149,7 @@ export default function Home() {
                         />
                       </div>
                       <h3 className="text-2xl font-semibold leading-5 z-50">
-                        Deployment
+                        Deploy
                       </h3>
                       <ul className="mt-4 flex-1 z-50">
                         <li className="flex flex-col text-lg leading-8  xl:text-base">
@@ -253,6 +253,12 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="">
+        <span>Design Develop Deploy &#123;bonus iterate&#125;</span>
+        <span>Who Are We?</span>
+        <span>Why we stand out from the rest</span>
+        <span>Get in contact with us</span>
       </section>
     </div>
   );
