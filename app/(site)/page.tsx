@@ -171,7 +171,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="translate-y-64 sm:-translate-y-52">
+      <section className="translate-y-64 sm:-translate-y-52 xl:translate-y-24">
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
             <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
