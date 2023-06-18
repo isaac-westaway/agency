@@ -1,6 +1,4 @@
-import FramerReveal from '../utils/RevealOnce';
 import PricingCards from './PricingCards'
-
 
 const PricingPlans = () => {
     return (

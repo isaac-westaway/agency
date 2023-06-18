@@ -10,6 +10,7 @@ import Hero from "@/app/components/hero/Hero";
 import RevealOnce from "@/app/components/utils/RevealOnce";
 import FlyIn from "@/app/components/utils/FlyIn";
 import RevealAlways from "@/app/components/utils/RevealAlways";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
