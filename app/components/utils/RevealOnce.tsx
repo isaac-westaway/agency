@@ -1,6 +1,5 @@
 "use client"
 
-import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 interface RevealAlwaysProps {
@@ -8,17 +7,15 @@ interface RevealAlwaysProps {
 }
 
 const RevealOnce: React.FC<RevealAlwaysProps> = ({ children }) => {
-  const controls = useAnimation();
+  const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
-        if (entry.isIntersecting && !hasAnimated) {
-          controls.start("visible");
-          setHasAnimated(true);
+        if (entry.isIntersecting) {
+          setIsVisible(true);
           observer.unobserve(entry.target);
         }
       },
@@ -36,32 +33,17 @@ const RevealOnce: React.FC<RevealAlwaysProps> = ({ children }) => {
         observer.unobserve(element);
       }
     };
-  }, [controls, hasAnimated]);
-
-  const variants = {
-    hidden: {
-      opacity: 0,
-      y: 40,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1.2,
-        ease: "easeOut",
-      },
-    },
-  };
+  }, []);
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={variants}
+      className={`transition-opacity transition-transform duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 

@@ -4,6 +4,7 @@ import RevealOnce from "../utils/RevealOnce";
 
 import Image from 'next/image';
 import Hero1 from '@/public/hero-shape-1.svg'
+import FlyIn from "@/app/components/utils/FlyIn";
 
 const Hero = () => {
   return (
@@ -267,9 +268,11 @@ const Hero = () => {
         </svg>
       </div>
       <div className="absolute top-[26.8rem] left-1/2 sm:hidden md:hidden lg:hidden xl:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" width="2" height="350">
-          <line x1="1" y1="0" x2="1" y2="290" stroke="#212121" stroke-width="2" />
-        </svg>
+        <RevealAlways>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1" height="350">
+            <line x1="1" y1="0" x2="1" y2="290" stroke="#212121" stroke-width="2" />
+          </svg>
+        </RevealAlways>
       </div>
       <div className="absolute top-12 left-0 sm:hidden">
         <Image src={Hero1} alt=""/>

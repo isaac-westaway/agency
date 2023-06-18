@@ -29,6 +29,7 @@ module.exports = {
       translate: {
         '1/8': '12.5%',
         '1/10': '-60%',
+        '1/12': '0.083%',
         '95': '95%',
       },
       backgroundColor: {

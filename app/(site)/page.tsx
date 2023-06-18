@@ -16,31 +16,34 @@ export default function Home() {
     <div className="scroll-smooth	snap-x overscroll-x-none">
       <Head>
         <title>Digispark Home</title>
-        <meta name="google-site-verification" content="dZjgHKcLiYVkCgM61GF57iRGjhh9j1wzVlfQmaGmLL0" />
+        <meta
+          name="google-site-verification"
+          content="dZjgHKcLiYVkCgM61GF57iRGjhh9j1wzVlfQmaGmLL0"
+        />
       </Head>
       <section id="top" className="snap-start">
         <Hero />
       </section>
       <section className="snap-start px-2 relative">
-        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white translate-y-60 xl:translate-y-48 sm:-translate-y-48 grid grid-cols-2 sm:grid-cols-1 grid-row">
-          <RevealAlways>
+        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white translate-y-60 xl:translate-y-7 sm:-translate-y-48 grid grid-cols-2 sm:grid-cols-1 grid-row">
+          <RevealOnce>
             <div className="w-full justify-end pt-5">
               <span className="text-3xl sm:text-xl font-extrabold sm:leading-tight sm:tracking-tight">
                 View our exceptional range of services
               </span>
-              <div className="mt-4 max-w-3xl text-lg text-slate-500 z-50">
-                Choose an affordable plan that is packed with the best
-                features for enganging your audience, creating customer
-                loyalty and driving sales.
+              <div className="mt-4 max-w-3xl text-lg text-gray-400 text-opacity-80 z-50">
+                Choose an affordable plan that is packed with the best features
+                for enganging your audience, creating customer loyalty and
+                driving sales.
               </div>
             </div>
-          </RevealAlways>
+          </RevealOnce>
           <div className="overflow-x-hidden">
             <FlyIn flyInRight={true}>
               <div className="relative flex justify-center sm:justify-center sm:pt-10 top-0 left-0 w-full">
                 <Image
                   src="/about-image.svg"
-                  alt=""
+                  alt="Website Design Services"
                   height="300"
                   width="300"
                   className="cursor-pointer p-2"
@@ -50,12 +53,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative select-all pointer-events-none">
-        <div className="absolute top-1/4 left-0 pointer-events-none">
+      <section className="relative translate-y-72 xl:translate-y-20 sm:-translate-y-48 ">
+        <div className="absolute top-1/12 left-0 -z-50">
           <Image src={Timeline} alt="" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white translate-y-60 sm:-translate-y-48 pb-20 pointer-events-auto">
-          <div className="border-dark-50 border-t-[1px] sm:mt-5 mt-14">
+        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white pb-20 pointer-events-auto z-50">
+          <div className="border-dark-50 border-t-[1px] sm:mt-5">
             <RevealOnce>
               <div className="w-full justify-end">
                 <RevealOnce>
@@ -67,7 +70,7 @@ export default function Home() {
                   <RevealOnce>
                     <div className="testimonial-container relative shadow-lg p-8 flex flex-col text-2xl border-[2px] border-dark-50 overflow-hidden rounded-2xl hover:border-[#FBFAF6] hover:text-[#FBFAF6] transition ease-in-out duration-500 h-[26rem] backdrop-blur-sm">
                       <div className="absolute top-5 right-12">
-                        <Image src={Design} alt="" className="w-10 h-10" />
+                        <Image src={Design} alt="Design Symbol" className="w-10 h-10" />
                       </div>
                       <div className="absolute -mx-8 bottom-0 w-full"></div>
                       <h3 className="text-2xl font-semibold leading-5 z-50">
@@ -79,9 +82,9 @@ export default function Home() {
                             <span className="flex border-b-[1px] border-dark-50 w-full p-2 mb-1 justify-center">
                               Just the beginning!
                             </span>
-                            <div className="mt-2">
-                              Send us your design ideas for your website and
-                              our UI/UX team will turn them into a reality!
+                            <div className="mt-2 text-gray-200 text-opacity-95">
+                              Send us your design ideas for your website and our
+                              UI/UX team will turn them into a reality!
                             </div>
                           </span>
                         </li>
@@ -96,7 +99,7 @@ export default function Home() {
                   <RevealOnce>
                     <div className="testimonial-container shadow-lg p-8 overflow-hidden flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[26rem] backdrop-blur-sm">
                       <div className="absolute top-[1.2rem] right-11">
-                        <Image src={Develop} alt="" className="w-12 h-12" />
+                        <Image src={Develop} alt="Develop Symbol" className="w-12 h-12" />
                       </div>
                       <div className="absolute -mx-8 bottom-0 w-full"></div>
                       <h3 className="text-2xl font-semibold leading-5 z-50">
@@ -108,11 +111,11 @@ export default function Home() {
                             <span className="flex border-b-[1px] border-dark-50 w-full p-2 mb-1 justify-center">
                               Onto the development!
                             </span>
-                            <div className="mt-2">
+                            <div className="mt-2 text-gray-200 text-opacity-95">
                               Our expert team of designers will create a
                               visually stunning and user-friendly website that
-                              aligns with your brand and captures the
-                              attention of your target audience.
+                              aligns with your brand and captures the attention
+                              of your target audience.
                             </div>
                             {/*<br />
   Monthly Website Search Engine Optimization (SEO) also come standard with every pricing plan! Rest assured knowing your website will make it into peoples searches*/}
@@ -131,7 +134,7 @@ export default function Home() {
                       <div className="absolute top-[1.3rem] right-11">
                         <Image
                           src="deploy.svg"
-                          alt=""
+                          alt="Deploy Symbol"
                           className="hover:fill-white fill"
                           width="48"
                           height="48"
@@ -146,7 +149,7 @@ export default function Home() {
                             <span className="flex border-b-[1px] border-dark-50 w-full p-2 mb-1 justify-center">
                               The final step!
                             </span>
-                            <div className="mt-2">
+                            <div className="mt-2 text-gray-200 text-opacity-95">
                               We&#39;ll handle the seamless deployment of your
                               website, ensuring it&#39;s optimized for
                               performance, security, and accessibility across
@@ -168,7 +171,76 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="h-[1920px]"></div>
+      <section className="translate-y-64 sm:-translate-y-52">
+        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white pb-20 pointer-events-auto">
+          <div className="border-dark-50 border-t-[1px]">
+            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
+              <div className="mt-5 p-4">
+                <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold">
+                  The design process.
+                </div>
+                <div className="p-1 pt-2 font-medium leading-relaxed text-[#F7F7F7]">
+                  <RevealOnce>
+                    <span>
+                      We specialize in transforming digital experiences through
+                      exceptional UI/UX design for Web, Mobile App, and beyond.
+                      Our talented team creates visually captivating and
+                      user-friendly interfaces that make a lasting impression.
+                    </span>
+                  </RevealOnce>
+                  <br />
+                  <RevealOnce>
+                    <span>
+                      We carefully consider every detail, from intuitive
+                      navigation to eye-catching visuals, ensuring seamless
+                      interactions across platforms.
+                    </span>
+                  </RevealOnce>
+                  <br />
+                  <RevealOnce>
+                    <span>
+                      Our goal is to deliver designs that not only look great
+                      but also enhance usability and engagement. Whether you
+                      need a Website revamp, or a comprehensive UI/UX solution,
+                      we have the skills to exceed your expectations.
+                    </span>
+                  </RevealOnce>
+                  <br />
+                  <RevealOnce>
+                    You can submit design ideas for your website or product
+                    through our email
+                  </RevealOnce>
+                  <br />
+                  <RevealOnce>
+                    <span className="justify-center w-full flex font-semibold">
+                      example@gmail.com
+                    </span>
+                  </RevealOnce>
+                  <br />
+                  <RevealOnce>
+                    <span>
+                      Just tell us your project name (so we can verify
+                      you&#39;re project actually exists) and attach the design
+                      files in the email!
+                    </span>
+                  </RevealOnce>
+                  <br />
+                  <RevealOnce>
+                    <span>
+                      Your submissions can be in the form of Microsoft Word
+                      documents, PowerPoint, Adobe Illustrator, Photoshop or
+                      Google Sheets & Slides.
+                    </span>
+                  </RevealOnce>
+                </div>
+              </div>
+              <div className="mt-5 flex items-center translate-y-2 justify-center">
+                <Image src="/design.webp" height="1034" width="1080" alt="UI/UX" className=""/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
