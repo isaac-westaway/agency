@@ -123,12 +123,14 @@ const Testimonials = () => {
       <button
         className="absolute top-1/2 transform -translate-y-95 sm:-translate-y-1/10"
         onClick={goBackward}
+        aria-label="Slider left button"
       >
         <FiChevronLeft className="w-6 h-6 text-white items-center" />
       </button>
       <button
         className="absolute top-1/2 right-0 -translate-y-95 transform sm:-translate-y-1/10"
         onClick={goForward}
+        aria-label="Slider right button"
       >
         <FiChevronRight className="w-6 h-6 text-white" />
       </button>

@@ -77,18 +77,22 @@ const DesktopNavbar = () => {
                   onMouseLeave={handleDropdownLeave}
                 >
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mt-[10px]">
-                    Business
-                    <br />
-                    <span className="text-gray-400 w-fit text-sm">
-                      Business solutions for your business needs
-                    </span>
+                    <Link href="/pricing/business">
+                      Business
+                      <br />
+                      <span className="text-gray-400 w-fit text-sm">
+                        Business solutions for your business needs
+                      </span>
+                    </Link>
                   </div>
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mb-[10px]">
-                    Personal
-                    <br />
-                    <span className="text-gray-400 w-fit text-sm">
-                      Business solutions for your business needs
-                    </span>
+                    <Link href="/pricing/personal">
+                      Personal
+                      <br />
+                      <span className="text-gray-400 w-fit text-sm">
+                        Business solutions for your business needs
+                      </span>
+                    </Link>
                   </div>
                 </motion.div>
               )}
