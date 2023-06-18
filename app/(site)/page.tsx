@@ -12,7 +12,7 @@ import RevealAlways from "@/app/components/utils/RevealOnce";
 
 export default function Home() {
   return (
-    <div className="scroll-smooth	snap-x">
+    <div className="scroll-smooth	snap-x overscroll-x-none">
       <section id="top" className="snap-start">
         <Hero />
       </section>
@@ -30,17 +30,19 @@ export default function Home() {
               </div>
             </div>
           </RevealAlways>
-            <FlyIn flyInRight={true}>
-              <div className="relative flex justify-center sm:justify-center sm:pt-10 top-0 left-0 w-full">
-                <Image
-                  src="/about-image.svg"
-                  alt=""
-                  height="300"
-                  width="300"
-                  className="cursor-pointer p-2"
-                />
-              </div>
-            </FlyIn>
+            <div className="overflow-x-hidden">
+              <FlyIn flyInRight={true}>
+                <div className="relative flex justify-center sm:justify-center sm:pt-10 top-0 left-0 w-full">
+                  <Image
+                    src="/about-image.svg"
+                    alt=""
+                    height="300"
+                    width="300"
+                    className="cursor-pointer p-2"
+                  />
+                </div>
+              </FlyIn>
+            </div>
         </div>
       </section>
       <section className="relative select-all pointer-events-none">
