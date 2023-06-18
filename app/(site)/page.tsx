@@ -25,7 +25,7 @@ export default function Home() {
       <section id="top" className="snap-start">
         <Hero />
       </section>
-      <section className="snap-start px-2 relative translate-y-60 xl:translate-y-28 sm:-translate-y-48">
+      <section className="snap-start px-2 relative translate-y-60 xl:translate-y-28 sm:-translate-y-48 md:translate-y-4 lg:translate-y-8">
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white  grid grid-cols-2 sm:grid-cols-1 grid-row">
           <RevealOnce>
             <div className="w-full justify-end pt-5">
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative translate-y-72 xl:translate-y-32 sm:-translate-y-48 ">
+      <section className="relative translate-y-72 xl:translate-y-32 sm:-translate-y-48 md:translate-y-14 lg:translate-y-[4.4rem]">
         <div className="absolute top-1/12 left-0 -z-50">
           <Image src={Timeline} alt="" />
         </div>
@@ -178,11 +178,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="translate-y-64 sm:-translate-y-52 xl:translate-y-24">
+      <section className="translate-y-64 sm:-translate-y-52 xl:translate-y-24 md:translate-y-6 lg:translate-y-8">
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
             <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
-              <div className="mt-5 p-4">
+              <div className="mt-5 md:mt-2 lg:mt-1 p-4">
                 <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold">
                   The design process.
                 </div>
