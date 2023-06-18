@@ -97,8 +97,8 @@ const DesktopNavbar = () => {
           <span className="cursor-pointer animatedUnderline hover:text-white hover:transition hover:duration-200">
             <Link href="#pricing">Gallery</Link>
           </span>
-          <span className="cursor-pointer animatedUnderline hover:text-white hover:transition hover:duration-200">
-            <Link href="#top">Blog</Link>
+          <span className="cursor-pointer animatedUnderline hover:text-white hover:transition hover:duration-200 scroll-smooth">
+            <Link href="#top" className="scroll-smooth">Blog</Link>
           </span>
           <span className="shrink-0 cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">
             Contact
