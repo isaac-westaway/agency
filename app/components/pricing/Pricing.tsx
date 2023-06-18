@@ -1,4 +1,4 @@
-import FramerReveal from '../utils/Reveal';
+import FramerReveal from '../utils/RevealOnce';
 import PricingCards from './PricingCards'
 
 

@@ -1,12 +1,12 @@
-"use client"
-import { motion, useAnimation } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+"use client";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
 
-interface FramerRevealProps {
+interface RevealAlwaysProps {
   children: React.ReactNode;
 }
 
-const FramerReveal: React.FC<FramerRevealProps> = ({ children }) => {
+const RevealAlways: React.FC<RevealAlwaysProps> = ({ children }) => {
   const controls = useAnimation();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -15,27 +15,26 @@ const FramerReveal: React.FC<FramerRevealProps> = ({ children }) => {
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
-          controls.start('visible');
+          controls.start("visible");
         } else {
-          controls.start('hidden');
+          controls.start("hidden");
         }
       },
-      { rootMargin: '0px', threshold: 0.2 } // Adjust the threshold and rootMargin as desired
+      { rootMargin: "0px", threshold: 0.2 } // Adjust the threshold and rootMargin as desired
     );
-  
+
     const element = ref.current;
-  
+
     if (element) {
       observer.observe(element);
     }
-  
+
     return () => {
       if (element) {
         observer.unobserve(element);
       }
     };
   }, [controls]);
-  
 
   const variants = {
     hidden: {
@@ -47,7 +46,7 @@ const FramerReveal: React.FC<FramerRevealProps> = ({ children }) => {
       y: 0,
       transition: {
         duration: 1.2, // Adjust the duration as desired (in seconds)
-        ease: 'easeOut', // Adjust the easing function as desired
+        ease: "easeOut", // Adjust the easing function as desired
       },
     },
   };
@@ -64,4 +63,4 @@ const FramerReveal: React.FC<FramerRevealProps> = ({ children }) => {
   );
 };
 
-export default FramerReveal;
+export default RevealAlways;

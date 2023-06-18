@@ -1,5 +1,5 @@
 import { pricingPlans } from "./data";
-import FramerReveal from "@/app/components/utils/Reveal";
+import FramerReveal from "@/app/components/utils/RevealOnce";
 
 const PricingCards = () => {
     return (
