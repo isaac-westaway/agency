@@ -60,7 +60,6 @@ export default function Home() {
         </div>
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white pb-20 pointer-events-auto z-50">
           <div className="border-dark-50 border-t-[1px] sm:mt-5">
-            <RevealOnce>
               <div className="w-full justify-end">
                 <RevealOnce>
                   <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-9 pb-9 select-text">
@@ -71,7 +70,11 @@ export default function Home() {
                   <RevealOnce>
                     <div className="testimonial-container relative shadow-lg p-8 flex flex-col text-2xl border-[2px] border-dark-50 overflow-hidden rounded-2xl hover:border-[#FBFAF6] hover:text-[#FBFAF6] transition ease-in-out duration-500 h-[26rem] backdrop-blur-sm">
                       <div className="absolute top-5 right-12">
-                        <Image src={Design} alt="Design Symbol" className="w-10 h-10" />
+                        <Image
+                          src={Design}
+                          alt="Design Symbol"
+                          className="w-10 h-10"
+                        />
                       </div>
                       <div className="absolute -mx-8 bottom-0 w-full"></div>
                       <h3 className="text-2xl font-semibold leading-5 z-50">
@@ -100,7 +103,11 @@ export default function Home() {
                   <RevealOnce>
                     <div className="testimonial-container shadow-lg p-8 overflow-hidden flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[26rem] backdrop-blur-sm">
                       <div className="absolute top-[1.2rem] right-11">
-                        <Image src={Develop} alt="Develop Symbol" className="w-12 h-12" />
+                        <Image
+                          src={Develop}
+                          alt="Develop Symbol"
+                          className="w-12 h-12"
+                        />
                       </div>
                       <div className="absolute -mx-8 bottom-0 w-full"></div>
                       <h3 className="text-2xl font-semibold leading-5 z-50">
@@ -168,7 +175,6 @@ export default function Home() {
                   </RevealOnce>
                 </div>
               </div>
-            </RevealOnce>
           </div>
         </div>
       </section>
@@ -236,7 +242,13 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-5 flex items-center translate-y-2 justify-center">
-                <Image src="/design.webp" height="1034" width="1080" alt="UI/UX" className=""/>
+                <Image
+                  src="/design.webp"
+                  height="1034"
+                  width="1080"
+                  alt="UI/UX"
+                  className=""
+                />
               </div>
             </div>
           </div>
