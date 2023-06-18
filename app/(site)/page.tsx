@@ -1,18 +1,23 @@
 import Image from "next/image";
+import Head from "next/head";
+
 import Design from "@/public/design.svg";
 import Develop from "@/public/develop.svg";
 
 import Timeline from "@/public/timeline.svg";
 
 import Hero from "@/app/components/hero/Hero";
-
 import RevealOnce from "@/app/components/utils/RevealOnce";
 import FlyIn from "@/app/components/utils/FlyIn";
-import RevealAlways from "@/app/components/utils/RevealOnce";
+import RevealAlways from "@/app/components/utils/RevealAlways";
 
 export default function Home() {
   return (
     <div className="scroll-smooth	snap-x overscroll-x-none">
+      <Head>
+        <title>Digispark Home</title>
+        <meta name="google-site-verification" content="dZjgHKcLiYVkCgM61GF57iRGjhh9j1wzVlfQmaGmLL0" />
+      </Head>
       <section id="top" className="snap-start">
         <Hero />
       </section>
@@ -24,25 +29,25 @@ export default function Home() {
                 View our exceptional range of services
               </span>
               <div className="mt-4 max-w-3xl text-lg text-slate-500 z-50">
-                Choose an affordable plan that is packed with the best features
-                for enganging your audience, creating customer loyalty and
-                driving sales.
+                Choose an affordable plan that is packed with the best
+                features for enganging your audience, creating customer
+                loyalty and driving sales.
               </div>
             </div>
           </RevealAlways>
-            <div className="overflow-x-hidden">
-              <FlyIn flyInRight={true}>
-                <div className="relative flex justify-center sm:justify-center sm:pt-10 top-0 left-0 w-full">
-                  <Image
-                    src="/about-image.svg"
-                    alt=""
-                    height="300"
-                    width="300"
-                    className="cursor-pointer p-2"
-                  />
-                </div>
-              </FlyIn>
-            </div>
+          <div className="overflow-x-hidden">
+            <FlyIn flyInRight={true}>
+              <div className="relative flex justify-center sm:justify-center sm:pt-10 top-0 left-0 w-full">
+                <Image
+                  src="/about-image.svg"
+                  alt=""
+                  height="300"
+                  width="300"
+                  className="cursor-pointer p-2"
+                />
+              </div>
+            </FlyIn>
+          </div>
         </div>
       </section>
       <section className="relative select-all pointer-events-none">
@@ -75,8 +80,8 @@ export default function Home() {
                               Just the beginning!
                             </span>
                             <div className="mt-2">
-                              Send us your design ideas for your website and our
-                              UI/UX team will turn them into a reality!
+                              Send us your design ideas for your website and
+                              our UI/UX team will turn them into a reality!
                             </div>
                           </span>
                         </li>
@@ -106,11 +111,11 @@ export default function Home() {
                             <div className="mt-2">
                               Our expert team of designers will create a
                               visually stunning and user-friendly website that
-                              aligns with your brand and captures the attention
-                              of your target audience.
+                              aligns with your brand and captures the
+                              attention of your target audience.
                             </div>
                             {/*<br />
-                            Monthly Website Search Engine Optimization (SEO) also come standard with every pricing plan! Rest assured knowing your website will make it into peoples searches*/}
+  Monthly Website Search Engine Optimization (SEO) also come standard with every pricing plan! Rest assured knowing your website will make it into peoples searches*/}
                           </span>
                         </li>
                       </ul>

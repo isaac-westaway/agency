@@ -1,40 +1,48 @@
-import './globals.css'
+import "./globals.css";
 
-import { Inter } from "next/font/google"
+import { Inter } from "next/font/google";
 
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
-import ClientOnly from '@/app/components/ClientOnly'
-import Navbar from '@/app/components/navbar/Navbar'
+import ClientOnly from "@/app/components/ClientOnly";
+import Navbar from "@/app/components/navbar/Navbar";
+import Head from "next/head";
 
 export const metadata = {
-  title: 'Test Project',
-  description: 'Testing Purpooses',
-}
+  title: "DigiSpark",
+  description:
+    "Affordable website design, development & deployment for small businesses and personal projects.",
+};
 
 const font = Inter({
-  subsets: ["latin"]
-})
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  
   return (
     <html lang="en" className="smooth-scrolling">
-      <body className={font.className }>
-          <header>
-            <ClientOnly>
-              <Navbar />
-            </ClientOnly>
-          </header>
-          <div className="">        
-            {children}
-            <Analytics />
-          </div>
+      <Head>
+        <title>Digispark Home</title>
+        <meta
+          name="google-site-verification"
+          content="dZjgHKcLiYVkCgM61GF57iRGjhh9j1wzVlfQmaGmLL0"
+        />
+      </Head>
+      <body className={font.className}>
+        <header>
+          <ClientOnly>
+            <Navbar />
+          </ClientOnly>
+        </header>
+        <div className="">
+          {children}
+          <Analytics />
+        </div>
       </body>
     </html>
-  )
+  );
 }
