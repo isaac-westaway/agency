@@ -1,5 +1,11 @@
 import Image from "next/image";
 import Head from "next/head";
+import {
+  BsSpeedometer2,
+  BsArrowsFullscreen,
+  BsArrowDownUp,
+  BsFillTerminalFill,
+} from "react-icons/bs";
 
 import Design from "@/public/design.svg";
 import Develop from "@/public/develop.svg";
@@ -74,7 +80,7 @@ export default function Home() {
               </RevealOnce>
               <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
                 <RevealOnce>
-                  <div className="testimonial-container relative shadow-lg p-8 flex flex-col text-2xl border-[2px] border-dark-50 overflow-hidden rounded-2xl hover:border-[#FBFAF6] hover:text-[#FBFAF6] transition ease-in-out duration-500 h-[26rem] backdrop-blur-sm">
+                  <div className="testimonial-container group relative shadow-lg p-8 flex flex-col text-2xl border-[2px] border-dark-50 overflow-hidden rounded-2xl hover:border-[#FBFAF6] hover:text-[#FBFAF6] transition ease-in-out duration-500 h-[26rem] backdrop-blur-sm">
                     <div className="absolute top-5 right-12">
                       <Image
                         src={Design}
@@ -100,14 +106,16 @@ export default function Home() {
                       </li>
                     </ul>
                     <div className="mt-4 items-center text-center z-50">
-                      <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white hover:text-orange-600 hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
-                        READ MORE
+                      <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white group-hover:text-orange-600 group-hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
+                        <span className="hover:text-orange-400 hover:border-b-orange-400 hover:border-b-[2px]">
+                          READ MORE
+                        </span>
                       </span>
                     </div>
                   </div>
                 </RevealOnce>
                 <RevealOnce>
-                  <div className="testimonial-container shadow-lg p-8 overflow-hidden flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[26rem] backdrop-blur-sm">
+                  <div className="testimonial-container group shadow-lg p-8 overflow-hidden flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[26rem] backdrop-blur-sm">
                     <div className="absolute top-[1.2rem] right-11">
                       <Image
                         src={Develop}
@@ -135,14 +143,16 @@ export default function Home() {
                       </li>
                     </ul>
                     <div className="mt-4 items-center text-center z-50">
-                      <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white hover:text-orange-600 hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
-                        READ MORE
+                      <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white group-hover:text-orange-600 group-hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
+                        <span className="hover:text-orange-400 hover:border-b-orange-400 hover:border-b-[2px]">
+                          READ MORE
+                        </span>
                       </span>
                     </div>
                   </div>
                 </RevealOnce>
                 <RevealOnce>
-                  <div className="testimonial-container shadow-lg p-8 flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[26rem] backdrop-blur-sm">
+                  <div className="testimonial-container group shadow-lg p-8 flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[26rem] backdrop-blur-sm">
                     <div className="absolute top-[1.3rem] right-11">
                       <Image
                         src="deploy.svg"
@@ -171,8 +181,10 @@ export default function Home() {
                       </li>
                     </ul>
                     <div className="mt-4 items-center text-center z-50">
-                      <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white hover:text-orange-600 hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
-                        READ MORE
+                      <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white group-hover:text-orange-600 group-hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
+                        <span className="hover:text-orange-400 hover:border-b-orange-400 hover:border-b-[2px]">
+                          READ MORE
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -329,11 +341,133 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <span>Design Develop Deploy &#123;bonus iterate&#125;</span>
-        <span>Who Are We?</span>
-        <span>Why we stand out from the rest</span>
-        <span>Get in contact with us</span>
+      </section>
+      <section className="translate-y-[12.4rem] sm:-translate-y-[15rem] xl:translate-y-24 md:-translate-y-1 lg:translate-y-[0.3rem] relative">
+        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
+          <div className="border-dark-50 border-t-[1px]">
+            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
+              <div className="mt-5 md:mt-2 lg:mt-1 p-4">
+                <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4]">
+                  The deployment process
+                </div>
+                <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95">
+                  <RevealOnce>We&#39;ll keep things short here.</RevealOnce>
+                  <br />
+                  <RevealOnce>
+                    Cloud hosting is the future of web technologies. The cost
+                    effectiveness, performance and scalability far outweigh the
+                    cons of using managed hosting, such as WordPress, Drupal, or
+                    Wix.
+                  </RevealOnce>
+                  <br />
+                  <RevealOnce>
+                    Some of the <b>pros</b> of cloud hosting:
+                  </RevealOnce>
+                  <RevealOnce>
+                    <li className="flex items-center ml-5 mt-3">
+                      <span className="items-center">
+                        <BsSpeedometer2 size={30} style={{ color: "green" }} />
+                      </span>
+                      <span className="ml-3">High performance</span>
+                    </li>
+                    <li className="flex items-center ml-5 mt-3">
+                      <span className="items-center">
+                        <BsArrowsFullscreen
+                          size={27}
+                          style={{ color: "green" }}
+                        />
+                      </span>
+                      <span className="ml-3">Flexible</span>
+                    </li>
+                    <li className="flex items-center ml-5 mt-3 mb-3">
+                      <span className="items-center">
+                        <BsArrowDownUp size={27} style={{ color: "green" }} />
+                      </span>
+                      <span className="ml-3">Scalable</span>
+                    </li>
+                  </RevealOnce>
+                  <RevealOnce>
+                    Some of the <b>cons</b> of cloud hosting:
+                  </RevealOnce>
+                  <RevealOnce>
+                    <li className="flex items-center ml-5 mt-3">
+                      <span className="items-center">
+                        <BsFillTerminalFill
+                          size={30}
+                          style={{ color: "red" }}
+                        />
+                      </span>
+                      <span className="ml-3">Complex</span>
+                    </li>
+                  </RevealOnce>
+                  <RevealOnce>
+                    <div className="mt-3">
+                      We&#39;ll you&#39;ve read this far, so shoot us an email
+                      to begin the process of launching your website!
+                    </div>
+                  </RevealOnce>
+                  <RevealAlways>
+                    <div className="flex justify-center translate-y-9">
+                      <span className="px-4 py-2 rounded-2xl cursor-pointer bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
+                        Let&#39;s Go!
+                      </span>
+                    </div>
+                  </RevealAlways>
+                </div>
+              </div>
+              <div className="border sm:hidden"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="translate-y-[12.4rem] sm:-translate-y-[17rem] xl:translate-y-24 md:-translate-y-5 lg:-translate-y-6 relative w-full">
+        <div className="absolute top-6 w-full pointer-events-none sm:hidden">
+          <Image
+            src="/wave-haikei.svg"
+            alt=""
+            width="1480"
+            height="600"
+            className="w-full absolute-select-none"
+          />
+        </div>
+        <div className="absolute top-6 w-full pointer-events-none hidden sm:block">
+        <Image
+            src="/wave-haikei-small.svg"
+            alt=""
+            width="14800"
+            height="6000"
+            className="w-full absolute-select-none"
+          />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
+          <div className="border-dark-50 border-t-[1px]">
+            <RevealOnce>
+              <div className="text-white p-4 mx-4 mt-[5rem] sm:mt-[3rem] backdrop-blur-sm border-[1px] border-dark-50 rounded-2xl shadow-2xl drop-shadow-2xl">
+                <div className="flex justify-center font-semibold text-3xl">
+                  Who Are We?
+                </div>
+                <div className="text-gray-400 mt-4 px-1 text-center">
+                  We are a dynamic team of creative minds specializing in UI/UX
+                  design, Web development, and Software Solutions. With a passion
+                  for innovation and a commitment to excellence, we bring your
+                  ideas to life in the digital realm. Despite being a small team,
+                  our expertise and dedication ensure that every project we
+                  undertake receives the attention it deserves. From crafting
+                  intuitive user experiences to building robust web and software
+                  applications, we strive to exceed your expectations and deliver
+                  results that truly stand out.
+                </div>
+              </div>
+            </RevealOnce>
+          </div>
+        </div>
       </section>
     </div>
   );
+}
+
+{
+  /**        <span>Who Are We?</span>
+        <span>Why we stand out from the rest</span>
+        <span>Get in contact with us</span> */
 }

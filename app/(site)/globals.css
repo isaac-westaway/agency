@@ -49,6 +49,13 @@ body {
     cursor: grabbing;
   }
 
+  .absolute-select-none {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
   .blur-effect {
     backdrop-filter: blur(10px);
     pointer-events: none;
