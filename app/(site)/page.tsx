@@ -12,6 +12,13 @@ import FlyIn from "@/app/components/utils/FlyIn";
 import RevealAlways from "@/app/components/utils/RevealAlways";
 
 export default function Home() {
+  function rotate(
+    arg0: number,
+    deg: any
+  ): import("csstype").Property.Transform | undefined {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <div className="scroll-smooth	snap-x overscroll-x-none">
       <Head>
@@ -124,8 +131,6 @@ export default function Home() {
                             your brand and captures the attention of your target
                             audience.
                           </div>
-                          {/*<br />
-        Monthly Website Search Engine Optimization (SEO) also come standard with every pricing plan! Rest assured knowing your website will make it into peoples searches*/}
                         </span>
                       </li>
                     </ul>
@@ -178,38 +183,33 @@ export default function Home() {
         </div>
       </section>
       <section className="translate-y-64 sm:-translate-y-52 xl:translate-y-24 md:translate-y-6 lg:translate-y-8">
-        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white pb-20 pointer-events-auto">
+        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
             <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
               <div className="mt-5 md:mt-2 lg:mt-1 p-4">
-                <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold">
+                <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4]">
                   The design process.
                 </div>
-                <div className="p-1 pt-2 font-medium leading-relaxed text-[#F7F7F7]">
+                <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95">
                   <RevealOnce>
-                    <span>
-                      We specialize in transforming digital experiences through
-                      exceptional UI/UX design for Web, Mobile App, and beyond.
-                      Our talented team creates visually captivating and
-                      user-friendly interfaces that make a lasting impression.
-                    </span>
+                    We specialize in transforming digital experiences
+                    through&nbsp;
+                    <b>exceptional UI/UX design</b> for Web, Mobile App, and
+                    beyond. Our talented team creates visually captivating and
+                    user-friendly interfaces that make a lasting impression.
                   </RevealOnce>
                   <br />
                   <RevealOnce>
-                    <span>
-                      We carefully consider every detail, from intuitive
-                      navigation to eye-catching visuals, ensuring seamless
-                      interactions across platforms.
-                    </span>
+                    We carefully consider every detail, from intuitive
+                    navigation to eye-catching visuals, ensuring seamless
+                    interactions across platforms.
                   </RevealOnce>
                   <br />
                   <RevealOnce>
-                    <span>
-                      Our goal is to deliver designs that not only look great
-                      but also enhance usability and engagement. Whether you
-                      need a Website revamp, or a comprehensive UI/UX solution,
-                      we have the skills to exceed your expectations.
-                    </span>
+                    Our goal is to deliver designs that not only look great but
+                    also enhance usability and engagement. Whether you need a
+                    Website revamp, or a comprehensive UI/UX solution, we have
+                    the skills to exceed your expectations.
                   </RevealOnce>
                   <br />
                   <RevealOnce>
@@ -218,26 +218,29 @@ export default function Home() {
                   </RevealOnce>
                   <br />
                   <RevealOnce>
-                    <span className="justify-center w-full flex font-semibold">
+                    <span className="justify-center w-full flex font-bold">
                       example@gmail.com
                     </span>
                   </RevealOnce>
                   <br />
                   <RevealOnce>
-                    <span>
-                      Just tell us your project name (so we can verify
-                      you&#39;re project actually exists) and attach the design
-                      files in the email!
-                    </span>
+                    Just tell us your project name (so we can verify you&#39;re
+                    project actually exists) and attach the design files in the
+                    email!
                   </RevealOnce>
                   <br />
                   <RevealOnce>
-                    <span>
-                      Your submissions can be in the form of Microsoft Word
-                      documents, PowerPoint, Adobe Illustrator, Photoshop or
-                      Google Sheets & Slides.
-                    </span>
+                    Your submissions can be in the form of Microsoft Word
+                    documents, PowerPoint, Adobe Illustrator, Photoshop or
+                    Google Sheets & Slides.
                   </RevealOnce>
+                  <RevealAlways>
+                    <div className="flex justify-center translate-y-9">
+                      <span className="px-4 py-2 rounded-2xl cursor-pointer bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
+                        I&#39;m Interested!
+                      </span>
+                    </div>
+                  </RevealAlways>
                 </div>
               </div>
               <div className="mt-5 flex items-center translate-y-2 justify-center overflow-x-hidden">
@@ -255,7 +258,77 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="">
+      <section className="translate-y-56 sm:-translate-y-52 xl:translate-y-24 md:translate-y-6 lg:translate-y-8 relative">
+        <div className="overflow-hidden absolute"></div>
+        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
+          <div className="border-dark-50 border-t-[1px]">
+            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
+              <div className="mt-5 md:mt-2 lg:mt-1 p-4 h-full">
+                <div className="mt-5 flex items-center translate-y-2 justify-center overflow-x-hidden h-full">
+                  <FlyIn flyInRight={false}>
+                    <Image
+                      src="/develop.webp"
+                      width="1920"
+                      height="1796"
+                      alt="Develop"
+                    />
+                  </FlyIn>
+                </div>
+              </div>
+              <div className="mt-5 md:mt-2 lg:mt-1 p-4">
+                <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4]">
+                  The development process.
+                </div>
+                <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95">
+                  <RevealOnce>
+                    As a leading provider of web development services, we
+                    specialize in delivering exceptional online solutions
+                    tailored to meet the unique needs of our clients.
+                  </RevealOnce>
+                  <br />
+                  <RevealOnce>
+                    Our team of skilled developers and designers work
+                    collaboratively to create visually stunning and highly
+                    functional websites that captivate audiences and drive
+                    business growth. We leverage the latest technologies and
+                    industry best practices to ensure that your website is not
+                    only aesthetically appealing but also optimized for
+                    performance, speed, and user experience.
+                  </RevealOnce>
+                  <br />
+                  <RevealOnce>
+                    From&nbsp;
+                    <b>responsive design</b> and seamless navigation to
+                    e-commerce integration and content management systems, we
+                    offer end-to-end web development services that empower
+                    businesses to thrive in the digital landscape. With a keen
+                    eye for detail, a commitment to quality, and a focus on
+                    delivering measurable results, we are your trusted partner
+                    in building a strong online presence and achieving your
+                    digital goals.
+                  </RevealOnce>
+                  <br />
+                  <RevealOnce>
+                    Our proficiency extends beyond mere web development,
+                    encompassing essential technical facets such as Search
+                    Engine Optimization (SEO) to enhance your website&#39;s
+                    visibility, organic traffic, and search engine rankings. By
+                    implementing robust SEO strategies, we ensure that your
+                    online platform receives the recognition it deserves and
+                    attains a competitive edge in the digital realm.
+                  </RevealOnce>
+                  <RevealAlways>
+                    <div className="flex justify-center translate-y-9">
+                      <span className="px-4 py-2 rounded-2xl cursor-pointer bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
+                        I&#39;m Interested!
+                      </span>
+                    </div>
+                  </RevealAlways>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <span>Design Develop Deploy &#123;bonus iterate&#125;</span>
         <span>Who Are We?</span>
         <span>Why we stand out from the rest</span>

@@ -295,7 +295,7 @@ const Hero = () => {
               <div className="mt-8 flex items-center justify-center gap-x-6">
                 <a
                   href="#"
-                  className="rounded-md bg-[#4A6CF7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="rounded-lg bg-[#4A6CF7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition ease-in-out duration-200"
                 >
                   Get started
                 </a>
