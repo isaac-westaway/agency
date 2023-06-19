@@ -43,12 +43,10 @@ export default function RootLayout({
             <Navbar />
           </ClientOnly>
         </header>
-        <AnimatePresenceProvider>
           <div className="">
             {children}
             <Analytics />
           </div>
-        </AnimatePresenceProvider>
       </body>
     </html>
   );
