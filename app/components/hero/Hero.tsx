@@ -4,7 +4,6 @@ import RevealOnce from "../utils/RevealOnce";
 
 import Image from 'next/image';
 import Hero1 from '@/public/hero-shape-1.svg'
-import FlyIn from "@/app/components/utils/FlyIn";
 
 const Hero = () => {
   return (

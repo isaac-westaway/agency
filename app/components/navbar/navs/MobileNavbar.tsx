@@ -76,15 +76,15 @@ const MobileNavbar = () => {
         <div className="z-50">
           <Logo />
         </div>
-        <motion.div onClick={toggleOpen} className="z-50 cursor-pointer">
+        <div onClick={toggleOpen} className="z-50 cursor-pointer">
           {NavOpen ? (
             <AiOutlineClose size={25} style={{ color: "white" }} />
           ) : (
-            <motion.div>
+            <div>
               <AiOutlineMenu size={25} style={{ color: "white" }} />
-            </motion.div>
+            </div>
           )}
-        </motion.div>
+        </div>
       </div>
       <div
         className={
@@ -94,7 +94,7 @@ const MobileNavbar = () => {
         }
       >
         {NavOpen && (
-          <motion.ul
+          <ul
             /*animate="visible"
                         variants={list}*/
             className="overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl"
@@ -110,8 +110,7 @@ const MobileNavbar = () => {
               <br />
             </div>
 
-            <motion.li
-              variants={item}
+            <li
               onClick={billingRedirect}
               className="flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
             >
@@ -124,10 +123,9 @@ const MobileNavbar = () => {
               <div className="flex flex-row items-center justify-end w-full">
                 <FiExternalLink />
               </div>
-            </motion.li>
+            </li>
 
-            <motion.li
-              variants={item}
+            <li
               onClick={handleDappRedirect}
               className="flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
             >
@@ -139,30 +137,27 @@ const MobileNavbar = () => {
                   <FiChevronLeft size={21} />
                 )}
               </div>
-            </motion.li>
+            </li>
             <li>
               {accordionPricingOpen && (
                 <>
-                  <motion.div
-                    variants={item}
+                  <div
                     onClick={toggleOpen}
                     className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]"
                   >
                     <Link href="/pricing/business">|&nbsp;&nbsp;Business</Link>
-                  </motion.div>
-                  <motion.div
-                    variants={item}
+                  </div>
+                  <div
                     onClick={toggleOpen}
                     className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]"
                   >
                     <Link href="/pricing/personal">|&nbsp;&nbsp;Personal</Link>
-                  </motion.div>
+                  </div>
                 </>
               )}
             </li>
 
-            <motion.li
-              variants={item}
+            <li
               onClick={toggleOpen}
               className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
             >
@@ -185,50 +180,43 @@ const MobileNavbar = () => {
               <Link href="/test" className="w-full">
                 Gallery
               </Link>
-            </motion.li>
+            </li>
 
-            <motion.li
-              variants={item}
+            <li
               onClick={handleDappRedirect}
               className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/d-app">D-App</Link>
-            </motion.li>
+            </li>
 
-            <motion.li
-              variants={item}
+            <li
               onClick={toggleOpen}
               className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/">Business</Link>
-            </motion.li>
+            </li>
 
             <br />
 
-            <motion.li
-              variants={item}
+            <li
               onClick={toggleOpen}
               className=" items-center cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition"
             >
               <Link href="/" className="items-center">
                 Request A demo
               </Link>
-            </motion.li>
+            </li>
             <br />
-            <motion.li
-              variants={item}
+            <li
               onClick={toggleOpen}
               className="p-2 transition ease-in duration-150 border-t-stone-800 border-t-[3px] cursor-pointer hover:bg-gray-0.6"
             >
               <div className="text-[#fffafa] font-semibold text-lg text-center">
                 Our Links
               </div>
-            </motion.li>
-            <motion.li>
-              <motion.div
-                variants={item}
-                className="flex flex-row gap-8 items-center text-center justify-evenly pt-4 pb-4 border-stone-800 border-b-[3px] border-t-[3px]"
-              >
+            </li>
+            <li>
+              <div className="flex flex-row gap-8 items-center text-center justify-evenly pt-4 pb-4 border-stone-800 border-b-[3px] border-t-[3px]">
                 <li className="cursor-pointer">
                   <BsInstagram
                     size={18}
@@ -253,10 +241,10 @@ const MobileNavbar = () => {
                     className="hover:text-white hover:transition hover:duration-300"
                   />
                 </li>
-              </motion.div>
-            </motion.li>
+              </div>
+            </li>
             <div className="flex flex-col pb-[170px]"></div>
-          </motion.ul>
+          </ul>
         )}
       </div>
     </div>

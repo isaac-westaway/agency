@@ -1,8 +1,6 @@
 "use client"
 
-import { FC, ReactNode, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 
 interface AnimatedImageProps {
   children: ReactNode;
@@ -10,50 +8,64 @@ interface AnimatedImageProps {
 }
 
 const AnimatedImage: FC<AnimatedImageProps> = ({ children, flyInRight = false }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (inView) {
-      // Element is scrolled into view, perform any additional actions if needed
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      });
+    };
+
+    const options = {
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    const currentContainerRef = containerRef.current;
+
+    if (currentContainerRef) {
+      observer.observe(currentContainerRef);
     }
-  }, [inView]);
 
-  const variants = {
-    hidden: { opacity: 0, x: flyInRight ? '100%' : '-100%' },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
+    return () => {
+      if (currentContainerRef) {
+        observer.unobserve(currentContainerRef);
+      }
+    };
+  }, []);
 
-  const containerStyles = {
+  const containerStyles: React.CSSProperties = {
     overflow: 'hidden',
-    width: '100%', // Set container width to 100% by default
+    width: '100%',
   };
 
-  const containerStylesMobile = {
+  const containerStylesMobile: React.CSSProperties = {
     ...containerStyles,
-    '@media (max-width: 640px)': {
-      width: 'auto', // Adjust container width for mobile devices
-    },
+    // Media query styles
+    ...(isVisible && {
+      '@media (max-width: 640px)': {
+        width: 'auto',
+      },
+    }),
+  };
+
+  const animationStyles: React.CSSProperties = {
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? 'translateX(0)' : `translateX(${flyInRight ? '100%' : '-100%'})`,
+    transition: 'opacity 1s, transform 1s',
   };
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={inView ? 'visible' : 'hidden'}
-      variants={variants}
-      style={containerStylesMobile}
-    >
-      {inView && children}
-    </motion.div>
+    <div ref={containerRef} style={containerStylesMobile}>
+      <div style={animationStyles}>
+        {children}
+      </div>
+    </div>
   );
 };
 

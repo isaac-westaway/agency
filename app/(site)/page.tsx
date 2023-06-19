@@ -188,7 +188,7 @@ export default function Home() {
             <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
               <div className="mt-5 md:mt-2 lg:mt-1 p-4">
                 <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4]">
-                  The design process.
+                  The design process
                 </div>
                 <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95">
                   <RevealOnce>
@@ -277,7 +277,7 @@ export default function Home() {
               </div>
               <div className="mt-5 md:mt-2 lg:mt-1 p-4">
                 <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4]">
-                  The development process.
+                  The development process
                 </div>
                 <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95">
                   <RevealOnce>

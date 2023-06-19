@@ -1,13 +1,12 @@
-"use client";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
+"use client"
+
+import React, { FC, ReactNode, useEffect, useRef } from 'react';
 
 interface RevealAlwaysProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const RevealAlways: React.FC<RevealAlwaysProps> = ({ children }) => {
-  const controls = useAnimation();
+const RevealAlways: FC<RevealAlwaysProps> = ({ children }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -15,9 +14,9 @@ const RevealAlways: React.FC<RevealAlwaysProps> = ({ children }) => {
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
-          controls.start("visible");
+          animateIn();
         } else {
-          controls.start("hidden");
+          animateOut();
         }
       },
       { rootMargin: "0px", threshold: 0.2 } // Adjust the threshold and rootMargin as desired
@@ -34,32 +33,32 @@ const RevealAlways: React.FC<RevealAlwaysProps> = ({ children }) => {
         observer.unobserve(element);
       }
     };
-  }, [controls]);
+  }, []);
 
-  const variants = {
-    hidden: {
-      opacity: 0,
-      y: 40,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1.2, // Adjust the duration as desired (in seconds)
-        ease: "easeOut", // Adjust the easing function as desired
-      },
-    },
+  const animateIn = () => {
+    const element = ref.current;
+
+    if (element) {
+      element.style.opacity = "1";
+      element.style.transform = "translateY(0)";
+      element.style.transition = "opacity 1.2s, transform 1.2s";
+    }
+  };
+
+  const animateOut = () => {
+    const element = ref.current;
+
+    if (element) {
+      element.style.opacity = "0";
+      element.style.transform = "translateY(40px)";
+      element.style.transition = "opacity 1.2s, transform 1.2s";
+    }
   };
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={variants}
-    >
+    <div ref={ref} style={{ opacity: 0, transform: "translateY(40px)" }}>
       {children}
-    </motion.div>
+    </div>
   );
 };
 

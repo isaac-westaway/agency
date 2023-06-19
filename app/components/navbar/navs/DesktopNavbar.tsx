@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FiExternalLink, FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { FiExternalLink, FiChevronDown } from "react-icons/fi";
 
 import Logo from "../../Logo";
 import { motion, AnimatePresence } from "framer-motion";
@@ -70,7 +70,9 @@ const DesktopNavbar = () => {
               >
                 Pricing
               </Link>
-              <span className="items-center justify-center flex mt-1"><FiChevronDown/></span>
+              <span className="items-center justify-center flex mt-1">
+                <FiChevronDown />
+              </span>
             </span>
             <AnimatePresence>
               {showDropdown && (

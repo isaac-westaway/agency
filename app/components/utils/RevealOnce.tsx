@@ -1,14 +1,12 @@
 "use client"
 
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import React, { FC, ReactNode, useEffect, useRef, useState } from 'react';
 
-interface RevealAlwaysProps {
-  children: React.ReactNode;
+interface RevealOnceProps {
+  children: ReactNode;
 }
 
-const RevealOnce: React.FC<RevealAlwaysProps> = ({ children }) => {
-  const controls = useAnimation();
+const RevealOnce: FC<RevealOnceProps> = ({ children }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -17,7 +15,7 @@ const RevealOnce: React.FC<RevealAlwaysProps> = ({ children }) => {
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting && !hasAnimated) {
-          controls.start("visible");
+          animateIn();
           setHasAnimated(true);
           observer.unobserve(entry.target);
         }
@@ -36,32 +34,22 @@ const RevealOnce: React.FC<RevealAlwaysProps> = ({ children }) => {
         observer.unobserve(element);
       }
     };
-  }, [controls, hasAnimated]);
+  }, [hasAnimated]);
 
-  const variants = {
-    hidden: {
-      opacity: 0,
-      y: 40,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1.2,
-        ease: "easeOut",
-      },
-    },
+  const animateIn = () => {
+    const element = ref.current;
+
+    if (element) {
+      element.style.opacity = "1";
+      element.style.transform = "translateY(0)";
+      element.style.transition = "opacity 1.2s, transform 1.2s";
+    }
   };
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={variants}
-    >
+    <div ref={ref} style={{ opacity: 0, transform: "translateY(40px)" }}>
       {children}
-    </motion.div>
+    </div>
   );
 };
 
