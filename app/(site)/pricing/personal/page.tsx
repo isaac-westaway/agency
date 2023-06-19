@@ -1,9 +1,14 @@
+import Link from "next/link";
+
 const PricingPage = () => {
     return (
         <div className="text-center">
             <span className="text-5xl font-bold text-white sm:text-6xl tracking-wider">
                 Personal Pricing
             </span>
+            <div>
+                <Link href="/pricing">Back</Link>
+            </div>
         </div>
     );
 }

@@ -10,7 +10,6 @@ import Hero from "@/app/components/hero/Hero";
 import RevealOnce from "@/app/components/utils/RevealOnce";
 import FlyIn from "@/app/components/utils/FlyIn";
 import RevealAlways from "@/app/components/utils/RevealAlways";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -126,7 +125,7 @@ export default function Home() {
                             audience.
                           </div>
                           {/*<br />
-  Monthly Website Search Engine Optimization (SEO) also come standard with every pricing plan! Rest assured knowing your website will make it into peoples searches*/}
+        Monthly Website Search Engine Optimization (SEO) also come standard with every pricing plan! Rest assured knowing your website will make it into peoples searches*/}
                         </span>
                       </li>
                     </ul>

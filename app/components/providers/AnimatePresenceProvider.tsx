@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { usePathname } from "next/navigation";
 
@@ -11,26 +11,13 @@ interface AnimatePresenceProps {
 const AnimatePresenceProvider: React.FC<AnimatePresenceProps> = ({
   children,
 }) => {
-    const pathname = usePathname();
+  const pathname = usePathname();
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={pathname}
-        initial="initialState"
-        animate="animateState"
-        exit="exitState"
-        variants={{ 
-            initialState: {
-                opacity: 0,
-            }, 
-            animateState: { 
-                opacity: 1,
-            },  
-            existState: {
-
-            } }}
       >
-        {children}
+      {children}
       </motion.div>
     </AnimatePresence>
   );
