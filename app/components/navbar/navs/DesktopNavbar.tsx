@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import { FiExternalLink, FiChevronDown, FiChevronUp } from "react-icons/fi";
@@ -58,13 +58,20 @@ const DesktopNavbar = () => {
         </div>
         <div className="flex flex-row gap-11 items-center">
           <div
-            className="relative cursor-pointer hover:text-white ease-in transition"
+            className="cursor-pointer hover:text-white hover:transition hover:duration-200 relative"
             onMouseEnter={handlePricingHover}
             onMouseLeave={handlePricingLeave}
             onClick={() => setShowDropdown(true)}
           >
-            Pricing
-            <FiChevronDown className="inline-block" />
+            <span className="cursor-pointer hover:text-white hover:transition hover:duration-200 flex">
+              <Link
+                href="/pricing"
+                className="animatedUnderline h-10 items-center flex justify-center"
+              >
+                Pricing
+              </Link>
+              <span className="items-center justify-center flex mt-1"><FiChevronDown/></span>
+            </span>
             <AnimatePresence>
               {showDropdown && (
                 <motion.div
@@ -98,11 +105,21 @@ const DesktopNavbar = () => {
               )}
             </AnimatePresence>
           </div>
-          <span className="cursor-pointer animatedUnderline hover:text-white hover:transition hover:duration-200">
-            <Link href="#pricing">Gallery</Link>
+          <span className="cursor-pointer hover:text-white hover:transition hover:duration-200">
+            <Link
+              href="/gallery"
+              className="animatedUnderline h-10 items-center flex justify-center"
+            >
+              Gallery
+            </Link>
           </span>
-          <span className="cursor-pointer animatedUnderline hover:text-white hover:transition hover:duration-200 scroll-smooth">
-            <Link href="#top" className="scroll-smooth">Blog</Link>
+          <span className="cursor-pointer hover:text-white hover:transition hover:duration-200">
+            <Link
+              href="/blog"
+              className="animatedUnderline h-10 items-center flex justify-center"
+            >
+              Blog
+            </Link>
           </span>
           <span className="shrink-0 cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">
             Contact

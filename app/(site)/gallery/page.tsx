@@ -241,16 +241,14 @@ export default function Home() {
                   </RevealOnce>
                 </div>
               </div>
-              <div className="mt-5 flex items-center translate-y-2 justify-center overflow-x-hidden">
-                <FlyIn flyInRight={true}>
-                  <Image
-                    src="/design.webp"
-                    height="1034"
-                    width="1080"
-                    alt="UI/UX"
-                    className=""
-                  />
-                </FlyIn>
+              <div className="mt-5 flex items-center translate-y-2 justify-center">
+                <Image
+                  src="/design.webp"
+                  height="1034"
+                  width="1080"
+                  alt="UI/UX"
+                  className=""
+                />
               </div>
             </div>
           </div>

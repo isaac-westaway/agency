@@ -8,6 +8,8 @@ import ClientOnly from "@/app/components/ClientOnly";
 import Navbar from "@/app/components/navbar/Navbar";
 import Head from "next/head";
 
+import AnimatePresenceProvider from "@/app/components/providers/AnimatePresenceProvider";
+
 export const metadata = {
   title: "DigiSpark",
   description:
@@ -33,6 +35,9 @@ export default function RootLayout({
         />
       </Head>
       <body className={font.className}>
+        <span className="text-white">
+          <noscript>Please enable javascript!</noscript>
+        </span>
         <header>
           <ClientOnly>
             <Navbar />
