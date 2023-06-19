@@ -356,7 +356,7 @@ export default function Home() {
                   <RevealOnce>
                     Cloud hosting is the future of web technologies. The cost
                     effectiveness, performance and scalability far outweigh the
-                    cons of using managed hosting, such as WordPress, Drupal, or
+                    benefits of using managed hosting, such as WordPress, Drupal, or
                     Wix.
                   </RevealOnce>
                   <br />
