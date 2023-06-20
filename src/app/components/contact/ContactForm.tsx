@@ -1,5 +1,4 @@
 "use client";
-
 import {
   Button,
   Container,
@@ -11,37 +10,46 @@ import {
   Text,
   Textarea,
   useToast,
-  Select,
 } from "@chakra-ui/react";
-import { ChangeEvent, useState } from "react";
+import { useState, ChangeEvent, FocusEvent } from "react";
+
+import { sendContactForm } from "@/src/app/components/libs/api";
 import { ChakraProviderClient } from "../providers/ChakraProvider";
 
-type TouchedState = {
-  name?: boolean;
-  email?: boolean;
-  subject?: boolean;
-  message?: boolean;
+interface FormValues {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+interface FormState {
+  isLoading: boolean;
+  error: string;
+  values: FormValues;
+}
+
+const initValues: FormValues = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
 };
 
-const initValues = { name: "", email: "", subject: "", message: "" };
+const initState: FormState = {
+  isLoading: false,
+  error: "",
+  values: initValues,
+};
 
-const initState = { isLoading: false, error: "", values: initValues };
-
-const initTouched: TouchedState = {};
-
-export default function ContactForm() {
-  const [state, setState] = useState(initState);
-  const [touched, setTouched] = useState<TouchedState>(initTouched);
-
-  const handleSelectBlur = () =>
-    setTouched((prev) => ({
-      ...prev,
-      subject: true,
-    }));
+export default function Home() {
+  const toast = useToast();
+  const [state, setState] = useState<FormState>(initState);
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
 
   const { values, isLoading, error } = state;
 
-  const onBlur = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+  const onBlur = (event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setTouched((prev) => ({ ...prev, [event.target.name]: true }));
 
   const handleChange = (
@@ -52,29 +60,42 @@ export default function ContactForm() {
       values: {
         ...prev.values,
         [event.target.name]: event.target.value,
-      } as typeof prev.values,
-    }));
-
-  const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) =>
-    setState((prev) => ({
-      ...prev,
-      values: {
-        ...prev.values,
-        [event.target.name]: event.target.value,
       },
     }));
 
   const onSubmit = async () => {
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
+    try {
+      await sendContactForm(values);
+      setTouched({});
+      setState(initState);
+      toast({
+        title: "Message sent.",
+        status: "success",
+        duration: 2000,
+        position: "top",
+      });
+    } catch (error: any) {
       setState((prev) => ({
         ...prev,
-        isLoading: true,
+        isLoading: false,
+        error: error.message,
       }));
+    }
   };
 
   return (
     <ChakraProviderClient>
-      <Container maxW="450px" mt={12} className="text-white">
+      <Container maxW="450px" mt={12} className="text-white bg-black">
         <Heading>Contact</Heading>
+        {error && (
+          <Text color="red.300" my={4} fontSize="xl">
+            {error}
+          </Text>
+        )}
         <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
           <FormLabel>Name</FormLabel>
           <Input
@@ -100,25 +121,19 @@ export default function ContactForm() {
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
         <FormControl
+          mb={5}
           isRequired
           isInvalid={touched.subject && !values.subject}
-          className="text-white"
-          mb={5}
         >
-          <FormLabel>Service Inquiry</FormLabel>
-          <Select
-            placeholder="Select service"
-            className="text-white"
-            onChange={handleSelectChange}
+          <FormLabel>Subject</FormLabel>
+          <Input
+            type="text"
+            name="subject"
             errorBorderColor="red.300"
             value={values.subject}
-            name="subject"
-            onBlur={handleSelectBlur}
-          >
-            <option className="text-black">Website Production (Business)</option>
-            <option className="text-black">Website Production (Personal)</option>
-            <option className="text-black">UI/UX Design</option>
-          </Select>
+            onChange={handleChange}
+            onBlur={onBlur}
+          />
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
         <FormControl
@@ -134,6 +149,7 @@ export default function ContactForm() {
             value={values.message}
             onChange={handleChange}
             onBlur={onBlur}
+            className="text-white"
           />
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>

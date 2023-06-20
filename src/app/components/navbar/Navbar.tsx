@@ -11,7 +11,7 @@ import {
   useDesktop,
   useTablet,
   useMobile,
-} from "@/app/components/utils/mediaQueries";
+} from "@/src/app/components/utils/mediaQueries";
 import { motion } from "framer-motion";
 
 const Navbar: React.FC = () => {

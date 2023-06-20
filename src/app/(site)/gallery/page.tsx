@@ -6,10 +6,10 @@ import Develop from "@/public/develop.svg";
 
 import Timeline from "@/public/timeline.svg";
 
-import Hero from "@/app/components/hero/Hero";
-import RevealOnce from "@/app/components/utils/RevealOnce";
-import FlyIn from "@/app/components/utils/FlyIn";
-import RevealAlways from "@/app/components/utils/RevealAlways";
+import Hero from "@/src/app/components/hero/Hero";
+import RevealOnce from "@/src/app/components/utils/RevealOnce";
+import FlyIn from "@/src/app/components/utils/FlyIn";
+import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import { motion } from "framer-motion";
 
 export default function Home() {

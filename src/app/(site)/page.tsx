@@ -11,16 +11,16 @@ import Design from "@/public/design.svg";
 import Develop from "@/public/develop.svg";
 import Timeline from "@/public/timeline.svg";
 
-import Hero from "@/app/components/hero/Hero";
-import RevealOnce from "@/app/components/utils/RevealOnce";
-import FlyIn from "@/app/components/utils/FlyIn";
-import RevealAlways from "@/app/components/utils/RevealAlways";
-import ContactForm from "@/app/components/contact/ContactForm";
-import { Slider } from "@/app/components/slider/Slider";
+import Hero from "@/src/app/components/hero/Hero";
+import RevealOnce from "@/src/app/components/utils/RevealOnce";
+import FlyIn from "@/src/app/components/utils/FlyIn";
+import RevealAlways from "@/src/app/components/utils/RevealAlways";
+import ContactForm from "@/src/app/components/contact/ContactForm";
+import { Slider } from "@/src/app/components/slider/Slider";
 
 export default function Home() {
   return (
-    <div className="scroll-smooth	snap-x overscroll-x-none">
+    <div className="scroll-smooth	snap-x overscroll-x-none bg-black">
       <Head>
         <title>Digispark Home</title>
         <meta
@@ -64,7 +64,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative translate-y-72 xl:translate-y-32 sm:-translate-y-48 md:translate-y-14 lg:translate-y-[4.4rem]">
+      <section className="relative translate-y-72 xl:translate-y-32 sm:-translate-y-48 md:translate-y-14 lg:translate-y-[4.4rem] bg-black">
         <div className="absolute top-1/12 left-0 -z-50">
           <Image src={Timeline} alt="" />
         </div>
@@ -466,10 +466,10 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="translate-y-[20.4rem] sm:-translate-y-[15rem] xl:translate-y-28 md:-translate-y-2 lg:translate-y-[5rem] relative"
+        className="translate-y-[20.4rem] sm:-translate-y-[15rem] xl:translate-y-28 md:-translate-y-2 lg:translate-y-[5rem] relative bg-black"
         id=""
       >
-        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
+        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto bg-black">
           <div className="border-dark-50 border-t-[1px]">
             <div className="mt-4">
               <ContactForm />

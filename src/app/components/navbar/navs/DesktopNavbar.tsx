@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { FiExternalLink, FiChevronDown } from "react-icons/fi";
 
-import Logo from "../../Logo";
+import Logo from "@/src/app/components/Logo";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 

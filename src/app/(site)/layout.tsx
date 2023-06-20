@@ -4,12 +4,12 @@ import { Inter } from "next/font/google";
 
 import { Analytics } from "@vercel/analytics/react";
 
-import ClientOnly from "@/app/components/ClientOnly";
-import Navbar from "@/app/components/navbar/Navbar";
+import ClientOnly from "@/src/app/components/ClientOnly";
+import Navbar from "@/src/app/components/navbar/Navbar";
 import Head from "next/head";
 
-import AnimatePresenceProvider from "@/app/components/providers/AnimatePresenceProvider";
-import { ChakraProviderClient } from "@/app/components/providers/ChakraProvider";
+import AnimatePresenceProvider from "@/src/app/components/providers/AnimatePresenceProvider";
+import { ChakraProviderClient } from "@/src/app/components/providers/ChakraProvider";
 
 export const metadata = {
   title: "DigiSpark",
@@ -45,7 +45,7 @@ export default function RootLayout({
           </ClientOnly>
         </header>
         <div className="">
-{children}
+          {children}
           <Analytics />
         </div>
       </body>

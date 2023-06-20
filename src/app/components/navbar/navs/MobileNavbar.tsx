@@ -4,8 +4,6 @@ import { useState, useCallback, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-import { motion } from "framer-motion";
-
 import { FiChevronDown, FiChevronLeft, FiExternalLink } from "react-icons/fi";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { BiSun, BiMoon } from "react-icons/bi";
@@ -18,7 +16,6 @@ const MobileNavbar = () => {
   const Router = useRouter();
   const [NavOpen, setNavOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);

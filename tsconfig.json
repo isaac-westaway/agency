@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/contact/ContactForm.tsx", "app/components/config/nodemailer.js", "app/components/config/theme.js", "app/api/contact/route.js", "app/components/lib/api.js", "app/api/contact/contact.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts",],
   "exclude": ["node_modules"]
 }
