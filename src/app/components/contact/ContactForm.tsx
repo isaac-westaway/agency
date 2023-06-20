@@ -97,7 +97,11 @@ export default function Home() {
               {error}
             </Text>
           )}
-          <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
+          <FormControl
+            isRequired
+            isInvalid={touched.name && !values.name}
+            mb={5}
+          >
             <FormLabel>Name</FormLabel>
             <Input
               type="text"
@@ -110,11 +114,16 @@ export default function Home() {
             />
             <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
-          <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
+          <FormControl
+            isRequired
+            isInvalid={touched.email && !values.email}
+            mb={5}
+          >
             <FormLabel>Email</FormLabel>
             <Input
               type="email"
               name="email"
+              placeholder="johndoe@gmail.com"
               errorBorderColor="red.300"
               value={values.email}
               onChange={handleChange}
@@ -131,6 +140,7 @@ export default function Home() {
             <Input
               type="text"
               name="subject"
+              placeholder="Business Website Inquiry"
               errorBorderColor="red.300"
               value={values.subject}
               onChange={handleChange}
@@ -148,6 +158,7 @@ export default function Home() {
               name="message"
               rows={4}
               errorBorderColor="red.300"
+              placeholder="Hey I'm liking the looks of your services, and my business could really do with a website. Please reply ASAP."
               value={values.message}
               onChange={handleChange}
               onBlur={onBlur}
@@ -160,7 +171,10 @@ export default function Home() {
             colorScheme="blue"
             isLoading={isLoading}
             isDisabled={
-              !values.name || !values.email || !values.subject || !values.message
+              !values.name ||
+              !values.email ||
+              !values.subject ||
+              !values.message
             }
             onClick={onSubmit}
           >
