@@ -101,6 +101,7 @@ export default function Home() {
             <FormLabel>Name</FormLabel>
             <Input
               type="text"
+              placeholder="John Doe"
               name="name"
               errorBorderColor="red.300"
               value={values.name}

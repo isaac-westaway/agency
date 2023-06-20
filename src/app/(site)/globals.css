@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  background-color: black;
+}
+
 html {
   scroll-behavior: smooth;
   will-change: auto;
+  background-color: black;
 }
 
 body {
