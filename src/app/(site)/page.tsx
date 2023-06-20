@@ -477,8 +477,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="translate-y-[20.4rem] sm:-translate-y-[15rem] xl:translate-y-28 md:-translate-y-2 lg:translate-y-[5rem] relative bg-black">
-      </section>
     </div>
   );
 }
