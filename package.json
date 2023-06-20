@@ -10,6 +10,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.1.4",
+    "@chakra-ui/react": "^2.7.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@splidejs/react-splide": "^0.7.12",
     "@types/node": "20.2.1",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
@@ -17,8 +22,9 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.41.0",
     "eslint-config-next": "^13.4.5",
-    "framer-motion": "^9.0.0",
+    "framer-motion": "^9.1.7",
     "next": "^13.4.5",
+    "nodemailer": "^6.9.3",
     "postcss": "8.4.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -31,6 +37,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.8",
     "cross-env": "^7.0.3",
     "next-sitemap": "^4.1.3"
   }

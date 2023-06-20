@@ -9,6 +9,7 @@ import Navbar from "@/app/components/navbar/Navbar";
 import Head from "next/head";
 
 import AnimatePresenceProvider from "@/app/components/providers/AnimatePresenceProvider";
+import { ChakraProviderClient } from "@/app/components/providers/ChakraProvider";
 
 export const metadata = {
   title: "DigiSpark",
@@ -43,10 +44,10 @@ export default function RootLayout({
             <Navbar />
           </ClientOnly>
         </header>
-          <div className="">
-            {children}
-            <Analytics />
-          </div>
+        <div className="">
+{children}
+          <Analytics />
+        </div>
       </body>
     </html>
   );

@@ -9,22 +9,16 @@ import {
 
 import Design from "@/public/design.svg";
 import Develop from "@/public/develop.svg";
-
 import Timeline from "@/public/timeline.svg";
 
 import Hero from "@/app/components/hero/Hero";
 import RevealOnce from "@/app/components/utils/RevealOnce";
 import FlyIn from "@/app/components/utils/FlyIn";
 import RevealAlways from "@/app/components/utils/RevealAlways";
+import ContactForm from "@/app/components/contact/ContactForm";
+import { Slider } from "@/app/components/slider/Slider";
 
 export default function Home() {
-  function rotate(
-    arg0: number,
-    deg: any
-  ): import("csstype").Property.Transform | undefined {
-    throw new Error("Function not implemented.");
-  }
-
   return (
     <div className="scroll-smooth	snap-x overscroll-x-none">
       <Head>
@@ -42,12 +36,16 @@ export default function Home() {
           <RevealOnce>
             <div className="w-full justify-end pt-5">
               <span className="text-3xl sm:text-xl font-extrabold sm:leading-tight sm:tracking-tight">
-                View our exceptional range of services
+                Who are we? What do we do?
               </span>
               <div className="mt-4 max-w-3xl text-lg text-gray-400 text-opacity-80 z-50">
-                Choose an affordable plan that is packed with the best features
-                for enganging your audience, creating customer loyalty and
-                driving sales.
+                We are Digispark, an Australian web services provider
+                specializing in website production, UI/UX design, and software
+                solutions. We create visually stunning websites, design seamless
+                user experiences, and develop innovative software solutions to
+                help your business thrive in the digital realm. Let us transform
+                your online presence and elevate your digital journey. Contact
+                us today to unlock your full potential.
               </div>
             </div>
           </RevealOnce>
@@ -107,9 +105,12 @@ export default function Home() {
                     </ul>
                     <div className="mt-4 items-center text-center z-50">
                       <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white group-hover:text-orange-600 group-hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
-                        <span className="hover:text-orange-400 hover:border-b-orange-400 hover:border-b-[2px]">
+                        <a
+                          className="hover:text-orange-400 hover:border-b-orange-400 hover:border-b-[2px] scroll-pt-96 snap-start"
+                          href="#design"
+                        >
                           READ MORE
-                        </span>
+                        </a>
                       </span>
                     </div>
                   </div>
@@ -144,9 +145,12 @@ export default function Home() {
                     </ul>
                     <div className="mt-4 items-center text-center z-50">
                       <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white group-hover:text-orange-600 group-hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
-                        <span className="hover:text-orange-400 hover:border-b-orange-400 hover:border-b-[2px]">
+                        <a
+                          className="hover:text-orange-400 hover:border-b-orange-400 hover:border-b-[2px]"
+                          href="#develop"
+                        >
                           READ MORE
-                        </span>
+                        </a>
                       </span>
                     </div>
                   </div>
@@ -182,9 +186,12 @@ export default function Home() {
                     </ul>
                     <div className="mt-4 items-center text-center z-50">
                       <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white group-hover:text-orange-600 group-hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
-                        <span className="hover:text-orange-400 hover:border-b-orange-400 hover:border-b-[2px]">
+                        <a
+                          className="hover:text-orange-400 hover:border-b-orange-400 hover:border-b-[2px]"
+                          href="#deploy"
+                        >
                           READ MORE
-                        </span>
+                        </a>
                       </span>
                     </div>
                   </div>
@@ -194,7 +201,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="translate-y-64 sm:-translate-y-52 xl:translate-y-24 md:translate-y-6 lg:translate-y-8">
+      <section
+        className="translate-y-64 sm:-translate-y-52 xl:translate-y-24 md:translate-y-6 lg:translate-y-8 scroll-pt-96 snap-start"
+        id="design"
+      >
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
             <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
@@ -270,7 +280,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="translate-y-56 sm:-translate-y-52 xl:translate-y-24 md:translate-y-6 lg:translate-y-8 relative">
+      <section
+        className="translate-y-56 sm:-translate-y-52 xl:translate-y-24 md:translate-y-6 lg:translate-y-8 relative"
+        id="develop"
+      >
         <div className="overflow-hidden absolute"></div>
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
@@ -342,7 +355,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="translate-y-[12.4rem] sm:-translate-y-[15rem] xl:translate-y-24 md:-translate-y-1 lg:translate-y-[0.3rem] relative">
+      <section
+        className="translate-y-[12.4rem] sm:-translate-y-[15rem] xl:translate-y-24 md:-translate-y-1 lg:translate-y-[0.3rem] relative"
+        id="deploy"
+      >
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
             <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
@@ -356,8 +372,8 @@ export default function Home() {
                   <RevealOnce>
                     Cloud hosting is the future of web technologies. The cost
                     effectiveness, performance and scalability far outweigh the
-                    benefits of using managed hosting, such as WordPress, Drupal, or
-                    Wix.
+                    benefits of using managed hosting, such as WordPress,
+                    Drupal, or Wix.
                   </RevealOnce>
                   <br />
                   <RevealOnce>
@@ -431,7 +447,7 @@ export default function Home() {
           />
         </div>
         <div className="absolute top-6 w-full pointer-events-none hidden sm:block">
-        <Image
+          <Image
             src="/wave-haikei-small.svg"
             alt=""
             width="14800"
@@ -443,22 +459,21 @@ export default function Home() {
           <div className="border-dark-50 border-t-[1px]">
             <RevealOnce>
               <div className="text-white p-4 mx-4 mt-[5rem] sm:mt-[3rem] backdrop-blur-sm border-[1px] border-dark-50 rounded-2xl shadow-2xl drop-shadow-2xl">
-                <div className="flex justify-center font-semibold text-3xl">
-                  Who Are We?
-                </div>
-                <div className="text-gray-400 mt-4 px-1 text-center">
-                  We are a dynamic team of creative minds specializing in UI/UX
-                  design, Web development, and Software Solutions. With a passion
-                  for innovation and a commitment to excellence, we bring your
-                  ideas to life in the digital realm. Despite being a small team,
-                  our expertise and dedication ensure that every project we
-                  undertake receives the attention it deserves. From crafting
-                  intuitive user experiences to building robust web and software
-                  applications, we strive to exceed your expectations and deliver
-                  results that truly stand out.
-                </div>
+                <Slider />
               </div>
             </RevealOnce>
+          </div>
+        </div>
+      </section>
+      <section
+        className="translate-y-[20.4rem] sm:-translate-y-[15rem] xl:translate-y-28 md:-translate-y-2 lg:translate-y-[5rem] relative"
+        id=""
+      >
+        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
+          <div className="border-dark-50 border-t-[1px]">
+            <div className="mt-4">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>
