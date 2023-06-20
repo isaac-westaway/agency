@@ -20,7 +20,7 @@ import { Slider } from "@/src/app/components/slider/Slider";
 
 export default function Home() {
   return (
-    <div className="scroll-smooth	snap-x overscroll-x-none bg-black">
+    <div className="scroll-smooth	snap-x overscroll-x-none">
       <Head>
         <title>Digispark Home</title>
         <meta

@@ -7,7 +7,7 @@ import Hero1 from '@/public/hero-shape-1.svg'
 
 const Hero = () => {
   return (
-    <div className="bg-black px-2">
+    <div className=" px-2">
       <div className="absolute top-0 right-0">
         <svg
           width="450"

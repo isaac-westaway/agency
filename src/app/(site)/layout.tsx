@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="smooth-scrolling bg-black">
+    <html lang="en" className="smooth-scrolling">
       <Head>
         <title>Digispark Home</title>
         <meta
