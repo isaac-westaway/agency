@@ -1,6 +1,4 @@
-import Testimonials from "../testimonials/Testimonials";
 import RevealAlways from "../utils/RevealAlways";
-import RevealOnce from "../utils/RevealOnce";
 
 import Image from 'next/image';
 import Hero1 from '@/public/hero-shape-1.svg'
@@ -307,18 +305,6 @@ const Hero = () => {
               </div>
             </div>
           </RevealAlways>
-        </div>
-      </div>
-      <div className="relative z-10 mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8 text-white translate-y-[12rem] lg:-translate-y-2 xl:translate-y-[6.3rem] sm:-translate-y-[12rem]">
-        <div className="border-y-[1px] sm:w-95 mx-auto pt-[1.2rem] border-dark-50">
-          <RevealOnce>
-            <span className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight">
-              See what Australian small businesses are saying about us
-            </span>
-            <div className="flex justify-center mt-4 text-lg text-gray-500 w-full border rounded-2xl border-dark-50 mb-[2.5rem] relative ">
-                <Testimonials />
-            </div>
-          </RevealOnce>
         </div>
       </div>
     </div>

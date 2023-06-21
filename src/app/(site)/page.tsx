@@ -16,7 +16,7 @@ import RevealOnce from "@/src/app/components/utils/RevealOnce";
 import FlyIn from "@/src/app/components/utils/FlyIn";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import ContactForm from "@/src/app/components/contact/ContactForm";
-import { Slider } from "@/src/app/components/slider/Slider";
+import Testimonials from "../components/testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -31,58 +31,29 @@ export default function Home() {
       <section id="top" className="snap-start">
         <Hero />
       </section>
-      <section className="snap-start px-2 relative translate-y-60 xl:translate-y-28 sm:-translate-y-48 md:translate-y-4 lg:translate-y-8">
-        <div className="absolute top-0 sm:top-20 right-0 sm:h-[40rem] sm:w-[40rem]">
-          <Image
-            src="/page-break.svg"
-            width="1000"
-            height="1000"
-            alt=""
-            style={{ transform: "scaleX(-1)" }}
-          />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white  grid grid-cols-2 sm:grid-cols-1 grid-row">
-          <RevealOnce>
-            <div className="w-full justify-end pt-5">
-              <span className="text-3xl sm:text-xl font-extrabold sm:leading-tight sm:tracking-tight">
-                Who are we? What do we do?
-              </span>
-              <div className="mt-4 max-w-3xl text-lg text-gray-400 text-opacity-80 z-50">
-                We are Digispark, an Australian web services provider
-                specializing in website production, UI/UX design, and software
-                solutions. We create visually stunning websites, design seamless
-                user experiences, and develop innovative software solutions to
-                help your business thrive in the digital realm. Let us transform
-                your online presence and elevate your digital journey. Contact
-                us today to unlock your full potential.
-              </div>
-            </div>
-          </RevealOnce>
-          <div className="overflow-x-hidden">
-            <FlyIn flyInRight={true}>
-              <div className="relative flex justify-center sm:justify-center sm:pt-10 top-0 left-0 w-full">
-                <Image
-                  src="/about-image.svg"
-                  alt="Website Design Services"
-                  height="300"
-                  width="300"
-                  className="cursor-pointer p-2"
-                />
-              </div>
-            </FlyIn>
-          </div>
-        </div>
-      </section>
-      <section className="relative translate-y-72 xl:translate-y-32 sm:-translate-y-48 md:translate-y-14 lg:translate-y-[4.4rem]">
+      <section className="relative translate-y-36 xl:translate-y-32 sm:-translate-y-48 md:translate-y-14 lg:translate-y-[4.4rem]">
         <div className="absolute top-1/12 left-0 -z-50">
           <Image src={Timeline} alt="" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white pb-20 pointer-events-auto z-50">
+        <div className="relative mx-auto max-w-7xl px-4 pt-9 sm:px-6 lg:px-8 text-white pb-20 pointer-events-auto z-50">
           <div className="border-dark-50 border-t-[1px] sm:mt-5">
-            <div className="w-full justify-end">
+            <div className="w-full mt-3">
               <RevealOnce>
-                <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-9 pb-9 select-text">
-                  A full tech and creative team
+                <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-9 pb-3 select-text">
+                  <span className="w-1/2 sm:w-full">
+                    A full tech and creative team at your fingertips.
+                  </span>
+                </div>
+              </RevealOnce>
+              <RevealOnce>
+                <div className="flex justify-center text-center items-center font-normal text-lg pt-1 pb-9 select-text">
+                  <span className="w-[30rem] text-gray-400">
+                    We specialise in UI/UX design, website development and
+                    website deployment.
+                    <div className="text-lg leading-8 text-gray-400 font-medium">
+                      The full stack.
+                    </div>
+                  </span>
                 </div>
               </RevealOnce>
               <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
@@ -103,11 +74,11 @@ export default function Home() {
                       <li className="flex text-lg leading-8  xl:text-base">
                         <span className="text-start">
                           <span className="flex border-b-[1px] border-dark-50 w-full p-2 mb-1 justify-center">
-                            Just the beginning!
+                            Professional UI/UX Design
                           </span>
-                          <div className="mt-2 text-gray-200 text-opacity-95">
-                            Send us your design ideas for your website and our
-                            UI/UX team will turn them into a reality!
+                          <div className="mt-2 text-gray-200 text-opacity-95 text-base">
+                            UI/UX is the User Interface (UI) and User Experience
+                            (UX) of an app or a website.
                           </div>
                         </span>
                       </li>
@@ -141,13 +112,10 @@ export default function Home() {
                       <li className="flex flex-1 text-lg xl:text-base leading-8">
                         <span className="text-start">
                           <span className="flex border-b-[1px] border-dark-50 w-full p-2 mb-1 justify-center">
-                            Onto the development!
+                            Industry leading web development
                           </span>
                           <div className="mt-2 text-gray-200 text-opacity-95">
-                            Our expert team of designers will create a visually
-                            stunning and user-friendly website that aligns with
-                            your brand and captures the attention of your target
-                            audience.
+                            We develop
                           </div>
                         </span>
                       </li>
@@ -182,7 +150,7 @@ export default function Home() {
                       <li className="flex flex-col text-lg leading-8  xl:text-base">
                         <span className="text-start">
                           <span className="flex border-b-[1px] border-dark-50 w-full p-2 mb-1 justify-center">
-                            The final step!
+                            Streamlined digital deployment
                           </span>
                           <div className="mt-2 text-gray-200 text-opacity-95">
                             We&#39;ll handle the seamless deployment of your
@@ -208,20 +176,33 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="flex items-center justify-center mt-[3rem]">
+            <button className="text-center px-6 py-3 rounded-2xl bg-[#4A6CF7] hover:bg-white hover:text-black transition duration-200 ease-in-out">
+              Start building your online presence
+            </button>
+          </div>
         </div>
       </section>
-      <section
-        className="translate-y-64 sm:-translate-y-52 xl:translate-y-24 md:translate-y-6 lg:translate-y-8 scroll-pt-96 snap-start"
-        id="design"
-      >
+      {/*Paragraph Design */}
+      <section className="translate-y-[6.4rem] sm:-translate-y-52 xl:translate-y-24 md:translate-y-6 lg:translate-y-8 scroll-pt-96 snap-start relative overflow-x-hidden">
+        <div className="absolute top-32 sm:top-20 -right-10 sm:h-[40rem] sm:w-[40rem] overflow-x-hidden">
+          <Image
+            src="/page-break.svg"
+            width="1000"
+            height="1000"
+            alt=""
+            style={{ transform: "scaleX(-1)" }}
+          />
+        </div>
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
             <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
               <div className="mt-5 md:mt-2 lg:mt-1 p-4">
-                <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4]">
-                  The design process
+                <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4] sm:text-center">
+                  We deliver the
+                  <span className="font-bold"> highest quality</span> work
                 </div>
-                <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95">
+                <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95 sm:text-center">
                   <RevealOnce>
                     We specialize in transforming digital experiences
                     through&nbsp;
@@ -289,15 +270,16 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/*Paragraph Develop */}
       <section
-        className="translate-y-56 sm:-translate-y-52 xl:translate-y-24 md:translate-y-6 lg:translate-y-8 relative"
+        className="translate-y-[5.6rem] sm:-translate-y-64 xl:translate-y-24 md:translate-y-6 lg:translate-y-8 relative"
         id="develop"
       >
-        <div className="overflow-hidden absolute"></div>
+        <div className="overflow-hidden absolute">{/*Image Placeholder */}</div>
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
             <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
-              <div className="mt-5 md:mt-2 lg:mt-1 p-4 h-full">
+              <div className="mt-5 sm:-mt-5 md:mt-2 lg:mt-1 p-4 h-full">
                 <div className="mt-5 flex items-center translate-y-2 justify-center overflow-x-hidden h-full">
                   <FlyIn flyInRight={false}>
                     <Image
@@ -309,11 +291,11 @@ export default function Home() {
                   </FlyIn>
                 </div>
               </div>
-              <div className="mt-5 md:mt-2 lg:mt-1 p-4">
-                <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4]">
+              <div className="mt-5 sm:-mt-3 md:mt-2 lg:mt-1 p-4">
+                <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4] sm:text-center">
                   The development process
                 </div>
-                <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95">
+                <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95 sm:text-center">
                   <RevealOnce>
                     As a leading provider of web development services, we
                     specialize in delivering exceptional online solutions
@@ -364,18 +346,19 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Paragraph Deployment */}
       <section
-        className="translate-y-[12.4rem] sm:-translate-y-[15rem] xl:translate-y-24 md:-translate-y-1 lg:translate-y-[0.3rem] relative"
+        className="translate-y-[4.7rem] sm:-translate-y-[17rem] xl:translate-y-24 md:-translate-y-1 lg:translate-y-[0.3rem] relative"
         id="deploy"
       >
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
             <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
               <div className="mt-5 md:mt-2 lg:mt-1 p-4">
-                <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4]">
+                <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4] sm:text-center">
                   The deployment process
                 </div>
-                <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95">
+                <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95 sm:text-center" >
                   <RevealOnce>We&#39;ll keep things short here.</RevealOnce>
                   <br />
                   <RevealOnce>
@@ -440,42 +423,39 @@ export default function Home() {
                   </RevealAlways>
                 </div>
               </div>
-              <div className="border sm:hidden"></div>
+              <div className="mt-5 sm:-mt-5 md:mt-2 lg:mt-1 p-4 h-full">
+                <div className="mt-5 flex items-center translate-y-2 justify-center overflow-x-hidden h-full">
+                  <FlyIn flyInRight={true}>
+                    <Image
+                      src="/deploy.png"
+                      width="1589"
+                      height="1576"
+                      alt="Deploy"
+                    />
+                  </FlyIn>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="translate-y-[12.4rem] sm:-translate-y-[17rem] xl:translate-y-24 md:-translate-y-5 lg:-translate-y-6 relative w-full">
-        <div className="absolute top-6 w-full pointer-events-none sm:hidden">
-          <Image
-            src="/wave-haikei.svg"
-            alt=""
-            width="1480"
-            height="600"
-            className="w-full absolute-select-none"
-          />
-        </div>
-        <div className="absolute top-6 w-full pointer-events-none hidden sm:block">
-          <Image
-            src="/wave-haikei-small.svg"
-            alt=""
-            width="14800"
-            height="6000"
-            className="w-full absolute-select-none"
-          />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
-          <div className="border-dark-50 border-t-[1px]">
+      {/* Paragraph Slider 1 */}
+      <section className="translate-y-[20.4rem] sm:-translate-y-[9.6rem] xl:translate-y-28 md:-translate-y-2 lg:translate-y-[5rem] relative">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8 text-white translate-y-[12rem] lg:-translate-y-2 xl:translate-y-[6.3rem] sm:-translate-y-[12rem]">
+          <div className="border-t-[1px] sm:w-95 mx-auto pt-[1.2rem] border-dark-50">
             <RevealOnce>
-              <div className="text-white p-4 mx-4 mt-[5rem] sm:mt-[3rem] backdrop-blur-sm border-[1px] border-dark-50 rounded-2xl shadow-2xl drop-shadow-2xl">
-                <Slider />
+              <span className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight flex justify-center">
+                What Our Clients Are Saying
+              </span>
+              <div className="flex justify-center mt-4 text-lg text-gray-500 w-full border rounded-2xl border-dark-50 mb-[2.5rem] relative ">
+                <Testimonials />
               </div>
             </RevealOnce>
           </div>
         </div>
       </section>
       <section
-        className="translate-y-[20.4rem] sm:-translate-y-[15rem] xl:translate-y-28 md:-translate-y-2 lg:translate-y-[5rem] relative"
+        className="translate-y-[20.4rem] sm:-translate-y-[22.5rem] xl:translate-y-28 md:-translate-y-2 lg:translate-y-[5rem] relative"
         id=""
       >
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
@@ -495,6 +475,6 @@ export default function Home() {
 
 {
   /**        <span>Who Are We?</span>
-        <span>Why we stand out from the rest</span>
-        <span>Get in contact with us</span> */
+          <span>Why we stand out from the rest</span>
+          <span>Get in contact with us</span> */
 }
