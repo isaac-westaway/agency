@@ -359,7 +359,7 @@ export default function Home() {
                 <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4] sm:text-center">
                   The deployment process
                 </div>
-                <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95 sm:text-center" >
+                <div className="p-1 pt-2 font-medium leading-relaxed text-gray-200 text-opacity-95 sm:text-center">
                   <RevealOnce>We&#39;ll keep things short here.</RevealOnce>
                   <br />
                   <RevealOnce>

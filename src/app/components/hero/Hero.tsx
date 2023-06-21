@@ -1,7 +1,7 @@
 import RevealAlways from "../utils/RevealAlways";
 
-import Image from 'next/image';
-import Hero1 from '@/public/hero-shape-1.svg'
+import Image from "next/image";
+import Hero1 from "@/public/hero-shape-1.svg";
 
 const Hero = () => {
   return (
@@ -267,12 +267,19 @@ const Hero = () => {
       <div className="absolute top-[26.8rem] left-1/2 sm:hidden md:hidden lg:hidden xl:hidden">
         <RevealAlways>
           <svg xmlns="http://www.w3.org/2000/svg" width="1" height="350">
-            <line x1="1" y1="0" x2="1" y2="290" stroke="#212121" stroke-width="2" />
+            <line
+              x1="1"
+              y1="0"
+              x2="1"
+              y2="290"
+              stroke="#212121"
+              stroke-width="2"
+            />
           </svg>
         </RevealAlways>
       </div>
       <div className="absolute top-12 left-0 sm:hidden">
-        <Image src={Hero1} alt=""/>
+        <Image src={Hero1} alt="" />
       </div>
       <div className="relative z-10 px-6 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
         <div className="mx-auto py-44 sm:py-48 lg:pt-56">
@@ -282,7 +289,8 @@ const Hero = () => {
                 Design. Develop. Deploy.
               </span>
               <div className="mt-6 text-lg leading-8 text-gray-400 font-medium">
-                DigiSpark is Australia&#8217;s top-ranking web services provider.
+                DigiSpark is Australia&#8217;s top-ranking web services
+                provider.
                 <br />
                 <span className="font-light">
                   We specialize in the full production lifecycle, from designing
