@@ -12,7 +12,6 @@ import {
   useTablet,
   useMobile,
 } from "@/src/app/components/utils/mediaQueries";
-import { motion } from "framer-motion";
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -47,19 +46,19 @@ const Navbar: React.FC = () => {
       <header className="backdrop-blur-3xl">
         <Container>
           {Tablet && (
-            <motion.div>
+            <div>
               <TabletNavbar />
-            </motion.div>
+            </div>
           )}
           {Mobile && (
-            <motion.div>
+            <div>
               <MobileNavbar />
-            </motion.div>
+            </div>
           )}
           {Desktop && (
-            <motion.div>
+            <div>
               <DesktopNavbar />
-            </motion.div>
+            </div>
           )}
         </Container>
       </header>

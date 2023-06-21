@@ -6,6 +6,8 @@ import { Analytics } from "@vercel/analytics/react";
 
 import ClientOnly from "@/src/app/components/ClientOnly";
 import Navbar from "@/src/app/components/navbar/Navbar";
+import Footer from "@/src/app/components/footer/Footer";
+
 import Head from "next/head";
 import ToasterProvider from "../components/providers/ToasterProvider";
 
@@ -43,6 +45,7 @@ export default function RootLayout({
         </ClientOnly>
         {children}
         <Analytics />
+        <Footer />
       </body>
     </html>
   );

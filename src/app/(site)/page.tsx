@@ -17,6 +17,7 @@ import FlyIn from "@/src/app/components/utils/FlyIn";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import ContactForm from "@/src/app/components/contact/ContactForm";
 import Testimonials from "../components/testimonials/Testimonials";
+import Footer from "../components/footer/Footer";
 
 export default function Home() {
   return (
