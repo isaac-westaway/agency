@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import ClientOnly from "@/src/app/components/ClientOnly";
 import Navbar from "@/src/app/components/navbar/Navbar";
 import Head from "next/head";
+import ToasterProvider from "../components/providers/ToasterProvider";
 
 export const metadata = {
   title: "DigiSpark",
@@ -33,14 +34,15 @@ export default function RootLayout({
         />
       </Head>
       <body className={font.className}>
-          <span className="text-white">
-            <noscript>Please enable javascript!</noscript>
-          </span>
-          <ClientOnly>
-            <Navbar />
-          </ClientOnly>
-          {children}
-          <Analytics />
+        <span className="text-white">
+          <noscript>Please enable javascript!</noscript>
+        </span>
+        <ClientOnly>
+          <ToasterProvider />
+          <Navbar />
+        </ClientOnly>
+        {children}
+        <Analytics />
       </body>
     </html>
   );

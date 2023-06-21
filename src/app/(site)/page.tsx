@@ -32,6 +32,15 @@ export default function Home() {
         <Hero />
       </section>
       <section className="snap-start px-2 relative translate-y-60 xl:translate-y-28 sm:-translate-y-48 md:translate-y-4 lg:translate-y-8">
+        <div className="absolute top-0 sm:top-20 right-0 sm:h-[40rem] sm:w-[40rem]">
+          <Image
+            src="/page-break.svg"
+            width="1000"
+            height="1000"
+            alt=""
+            style={{ transform: "scaleX(-1)" }}
+          />
+        </div>
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 text-white  grid grid-cols-2 sm:grid-cols-1 grid-row">
           <RevealOnce>
             <div className="w-full justify-end pt-5">
@@ -471,8 +480,11 @@ export default function Home() {
       >
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
-            <div className="mt-4">
-              <ContactForm />
+            <div className="mt-4 grid grid-cols-2 sm:grid-cols-1 text-white gap-6">
+              <div className="text-2xl">Contact Us Today!</div>
+              <div className="flex justify-center bg-[#4a6cf7] bg-opacity-20 rounded-xl">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>

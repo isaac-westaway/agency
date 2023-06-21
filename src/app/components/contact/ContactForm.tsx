@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
 import { useState, ChangeEvent, FocusEvent } from "react";
 import { sendContactForm } from "@/src/app/components/libs/api";
+import toast from "react-hot-toast";
 
 interface FormValues {
   name: string;
@@ -58,93 +59,173 @@ export default function Home() {
       await sendContactForm(values);
       setTouched({});
       setState(initState);
-
+      toast.success("Successfully sent email!", {
+        duration: 4000,
+        position: "top-center",
+      });
     } catch (error: any) {
       setState((prev) => ({
         ...prev,
         isLoading: false,
         error: error.message,
       }));
+      console.log("fail");
     }
   };
 
+
   return (
-    <div className="">
-      <div className="max-w-450px mt-12 text-white">
-        <h1 className="mb-5">Contact</h1>
-        {error && (
-          <p className="text-red-300 my-4 text-xl">{error}</p>
-        )}
-        <div className={`mb-5 ${touched.name && !values.name ? 'border-red-300' : ''}`}>
-          <label className="block">Name</label>
-          <input
-            type="text"
-            placeholder="John Doe"
-            name="name"
-            className={`border ${touched.name && !values.name ? 'border-red-300' : ''}`}
-            value={values.name}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          {touched.name && !values.name && (
-            <p className="text-red-300">Required</p>
-          )}
+    <div className="w-full flex justify-center flex-col">
+      <div className="max-w-450px my-8 text-white w-full flex justify-center items-center flex-col">
+        <div className="flex flex-row sm:flex-col md:flex-col lg:flex-col xl:flex-col gap-3 px-4 sm:w-full md:w-full lg:w-full xl:w-full sm:px-[35px] md:px-[35px] lg:px-[35px] xl:px-[35px]">
+          <div
+            className={`mb-5 ${
+              touched.name && !values.name ? "border-red-300" : ""
+            }`}
+          >
+            <label className="block mb-3 text-2xl font-semibold">
+              Your Name
+            </label>
+            <input
+              type="text"
+              placeholder="Enter your name..."
+              name="name"
+              className={`w-full border border-transparent dark:bg-[#242B51] rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary ${
+                touched.name && !values.name ? "border-red-300" : ""
+              }`}
+              value={values.name}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            {touched.name && !values.name && (
+              <p className="text-red-300">Required</p>
+            )}
+          </div>
+          <div
+            className={`mb-5 ${
+              touched.email && !values.email ? "border-red-300" : ""
+            }`}
+          >
+            <label className="block mb-3 text-2xl font-semibold">
+              Your Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email..."
+              className={`w-full border border-transparent dark:bg-[#242B51] rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary ${
+                touched.email && !values.email ? "border-red-300" : ""
+              }`}
+              value={values.email}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            {touched.email && !values.email && (
+              <p className="text-red-300">Required</p>
+            )}
+          </div>
         </div>
-        <div className={`mb-5 ${touched.email && !values.email ? 'border-red-300' : ''}`}>
-          <label className="block">Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="johndoe@gmail.com"
-            className={`border ${touched.email && !values.email ? 'border-red-300' : ''}`}
-            value={values.email}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          {touched.email && !values.email && (
-            <p className="text-red-300">Required</p>
-          )}
+        <div className="w-full px-[35px]">
+          <div
+            className={`mb-5 ${
+              touched.subject && !values.subject ? "border-red-300" : ""
+            }`}
+          >
+            <label className="block mb-3 text-2xl font-semibold">
+              Your Email Subject
+            </label>
+            <input
+              type="text"
+              name="subject"
+              placeholder="Business Website Inquiry..."
+              className={`w-full border border-transparent dark:bg-[#242B51] rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary ${
+                touched.subject && !values.subject ? "border-red-300" : ""
+              }`}
+              value={values.subject}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            {touched.subject && !values.subject && (
+              <p className="text-red-300">Required</p>
+            )}
+          </div>
         </div>
-        <div className={`mb-5 ${touched.subject && !values.subject ? 'border-red-300' : ''}`}>
-          <label className="block">Subject</label>
-          <input
-            type="text"
-            name="subject"
-            placeholder="Business Website Inquiry"
-            className={`border ${touched.subject && !values.subject ? 'border-red-300' : ''}`}
-            value={values.subject}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          {touched.subject && !values.subject && (
-            <p className="text-red-300">Required</p>
-          )}
+        <div className="w-full px-[35px]">
+          <div
+            className={`mb-5 ${
+              touched.message && !values.message ? "border-red-300" : ""
+            }`}
+          >
+            <label className="block mb-3 text-2xl font-semibold">Message</label>
+            <textarea
+              name="message"
+              rows={4}
+              className={`w-full border border-transparent dark:bg-[#242B51] rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary text-white bg-black flex ${
+                touched.message && !values.message
+                  ? "border-red-300 border-[3px]"
+                  : ""
+              }`}
+              placeholder="Hey I'm liking the looks of your services, and my business could really do with a website..."
+              value={values.message}
+              onChange={handleChange}
+              onBlur={onBlur}
+            ></textarea>
+            {touched.message && !values.message && (
+              <p className="text-red-300">Required</p>
+            )}
+          </div>
         </div>
-        <div className={`mb-5 ${touched.message && !values.message ? 'border-red-300' : ''}`}>
-          <label className="block">Message</label>
-          <textarea
-            name="message"
-            rows={4}
-            className={`border text-white ${touched.message && !values.message ? 'border-red-300' : ''}`}
-            placeholder="Hey I'm liking the looks of your services, and my business could really do with a website. Please reply ASAP."
-            value={values.message}
-            onChange={handleChange}
-            onBlur={onBlur}
-          ></textarea>
-          {touched.message && !values.message && (
-            <p className="text-red-300">Required</p>
-          )}
+        <div className="px-[35px] w-full mt-3">
+          <button
+            className={`bg-blue text-white px-4 py-2 rounded-md w-full text-base font-medium bg-[#4a6cf7] hover:bg-opacity-80 transition duration-200 ease-in-out ${
+              !values.name ||
+              !values.email ||
+              !values.subject ||
+              !values.message
+                ? "cursor-not-allowed hover:bg-red-300 transition duration-200 ease-in-out "
+                : ""
+            }`}
+            disabled={
+              !values.name ||
+              !values.email ||
+              !values.subject ||
+              !values.message
+            }
+            onClick={onSubmit}
+          >
+            {isLoading && (
+              <span className="cursor-not-allowed flex-row flex text-center items-center justify-center">
+                <span className="flex items-center justify-center flex-row mx-3">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 38 38"
+                    xmlns="http://www.w3.org/2000/svg"
+                    stroke="#fff"
+                  >
+                    <g fill="none" fill-rule="evenodd">
+                      <g transform="translate(1 1)" stroke-width="2">
+                        <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+                        <path d="M36 18c0-9.94-8.06-18-18-18">
+                          <animateTransform
+                            attributeName="transform"
+                            type="rotate"
+                            from="0 18 18"
+                            to="360 18 18"
+                            dur="1s"
+                            repeatCount="indefinite"
+                          />
+                        </path>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                Loading...
+              </span>
+            )}
+            {!isLoading && <span className="">Submit</span>}
+          </button>
         </div>
-        <button
-          className="border bg-blue text-white px-4 py-2 rounded-md"
-          disabled={!values.name || !values.email || !values.subject || !values.message}
-          onClick={onSubmit}
-        >
-          {isLoading && (
-            <span className="animate-spin mr-2">Loading...</span>
-          )}
-          Submit
-        </button>
       </div>
     </div>
   );
