@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { ChakraProvider} from "@chakra-ui/react";
+import { CacheProvider } from "@chakra-ui/next-js";
+import { ChakraProvider } from "@chakra-ui/react";
 
-export function ChakraProviderClient({ children }: { children: React.ReactNode }) {
+export function ChakraProviderClient({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <ChakraProvider>
-      {children}
-    </ChakraProvider>
+    <CacheProvider>
+      <ChakraProvider>{children}</ChakraProvider>
+    </CacheProvider>
   );
 }
-
-
-
-
-

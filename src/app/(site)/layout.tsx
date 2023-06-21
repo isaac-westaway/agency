@@ -8,9 +8,6 @@ import ClientOnly from "@/src/app/components/ClientOnly";
 import Navbar from "@/src/app/components/navbar/Navbar";
 import Head from "next/head";
 
-import AnimatePresenceProvider from "@/src/app/components/providers/AnimatePresenceProvider";
-import { ChakraProviderClient } from "@/src/app/components/providers/ChakraProvider";
-
 export const metadata = {
   title: "DigiSpark",
   description:
@@ -36,18 +33,14 @@ export default function RootLayout({
         />
       </Head>
       <body className={font.className}>
-        <span className="text-white">
-          <noscript>Please enable javascript!</noscript>
-        </span>
-        <header>
+          <span className="text-white">
+            <noscript>Please enable javascript!</noscript>
+          </span>
           <ClientOnly>
             <Navbar />
           </ClientOnly>
-        </header>
-        <div className="bg-black">
           {children}
           <Analytics />
-        </div>
       </body>
     </html>
   );

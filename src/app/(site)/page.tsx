@@ -64,7 +64,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative translate-y-72 xl:translate-y-32 sm:-translate-y-48 md:translate-y-14 lg:translate-y-[4.4rem] bg-black">
+      <section className="relative translate-y-72 xl:translate-y-32 sm:-translate-y-48 md:translate-y-14 lg:translate-y-[4.4rem]">
         <div className="absolute top-1/12 left-0 -z-50">
           <Image src={Timeline} alt="" />
         </div>
@@ -466,10 +466,10 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="translate-y-[20.4rem] sm:-translate-y-[15rem] xl:translate-y-28 md:-translate-y-2 lg:translate-y-[5rem] relative bg-black"
+        className="translate-y-[20.4rem] sm:-translate-y-[15rem] xl:translate-y-28 md:-translate-y-2 lg:translate-y-[5rem] relative"
         id=""
       >
-        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto bg-black">
+        <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
             <div className="mt-4">
               <ContactForm />
