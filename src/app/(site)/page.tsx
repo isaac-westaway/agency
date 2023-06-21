@@ -184,7 +184,7 @@ export default function Home() {
         </div>
       </section>
       {/*Paragraph Design */}
-      <section className="translate-y-[6.4rem] sm:-translate-y-52 xl:translate-y-24 md:translate-y-6 lg:translate-y-8 scroll-pt-96 snap-start relative overflow-x-hidden">
+      <section className="translate-y-[6.4rem] sm:-translate-y-[14.5rem] xl:translate-y-24 md:translate-y-6 lg:translate-y-8 scroll-pt-96 snap-start relative overflow-x-hidden">
         <div className="absolute top-32 sm:top-20 -right-10 sm:h-[40rem] sm:w-[40rem] overflow-x-hidden">
           <Image
             src="/page-break.svg"
@@ -196,7 +196,7 @@ export default function Home() {
         </div>
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
-            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
+            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5 sm:mt-2">
               <div className="mt-5 md:mt-2 lg:mt-1 p-4">
                 <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4] sm:text-center">
                   We deliver the
@@ -272,14 +272,14 @@ export default function Home() {
       </section>
       {/*Paragraph Develop */}
       <section
-        className="translate-y-[5.6rem] sm:-translate-y-64 xl:translate-y-24 md:translate-y-6 lg:translate-y-8 relative"
+        className="translate-y-[5.6rem] sm:-translate-y-[17rem] xl:translate-y-[4.5rem] md:-translate-y-[1rem] lg:-translate-y-[1rem] relative"
         id="develop"
       >
         <div className="overflow-hidden absolute">{/*Image Placeholder */}</div>
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
-            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
-              <div className="mt-5 sm:-mt-5 md:mt-2 lg:mt-1 p-4 h-full">
+            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5 sm:-mt-5 lg:-mt-3 xl:mt-2">
+              <div className="mt-5 md:mt-2 lg:mt-1 p-4 h-full">
                 <div className="mt-5 flex items-center translate-y-2 justify-center overflow-x-hidden h-full">
                   <FlyIn flyInRight={false}>
                     <Image
@@ -348,13 +348,13 @@ export default function Home() {
       </section>
       {/* Paragraph Deployment */}
       <section
-        className="translate-y-[4.7rem] sm:-translate-y-[17rem] xl:translate-y-24 md:-translate-y-1 lg:translate-y-[0.3rem] relative"
+        className="translate-y-[4.7rem] sm:-translate-y-[19.1rem] xl:translate-y-[2.7rem] md:-translate-y-1 lg:-translate-y-[3rem] relative"
         id="deploy"
       >
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
           <div className="border-dark-50 border-t-[1px]">
-            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5">
-              <div className="mt-5 md:mt-2 lg:mt-1 p-4">
+            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-5 xl:mt-2">
+              <div className="mt-5 sm:-mt-2 md:mt-2 lg:mt-1 p-4">
                 <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4] sm:text-center">
                   The deployment process
                 </div>
@@ -440,7 +440,7 @@ export default function Home() {
         </div>
       </section>
       {/* Paragraph Slider 1 */}
-      <section className="translate-y-[20.4rem] sm:-translate-y-[9.6rem] xl:translate-y-28 md:-translate-y-2 lg:translate-y-[5rem] relative">
+      <section className="-translate-y-[10rem] sm:-translate-y-[11rem] xl:-translate-y-[5.5rem] md:-translate-y-2 lg:-translate-y-[5.6rem] relative">
         <div className="relative z-10 mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8 text-white translate-y-[12rem] lg:-translate-y-2 xl:translate-y-[6.3rem] sm:-translate-y-[12rem]">
           <div className="border-t-[1px] sm:w-95 mx-auto pt-[1.2rem] border-dark-50">
             <RevealOnce>
@@ -454,8 +454,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/*Contact */}
       <section
-        className="translate-y-[20.4rem] sm:-translate-y-[22.5rem] xl:translate-y-28 md:-translate-y-2 lg:translate-y-[5rem] relative"
+        className="translate-y-[2.6rem] sm:-translate-y-[23.5rem] xl:translate-y-[1.6rem] md:-translate-y-2 lg:-translate-y-[6rem] relative"
         id=""
       >
         <div className="relative mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8 pb-20 pointer-events-auto">
