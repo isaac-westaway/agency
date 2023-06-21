@@ -90,7 +90,7 @@ export default function Home() {
               type="text"
               placeholder="Enter your name..."
               name="name"
-              className={`w-full border border-transparent dark:bg-[#242B51] rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary ${
+              className={`w-full border border-transparent shadow-2xl drop-shadow-2xl dark:bg-[#242B51] rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary ${
                 touched.name && !values.name ? "border-red-300" : ""
               }`}
               value={values.name}
@@ -113,7 +113,7 @@ export default function Home() {
               type="email"
               name="email"
               placeholder="Enter your email..."
-              className={`w-full border border-transparent dark:bg-[#242B51] rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary ${
+              className={`w-full border border-transparent shadow-2xl drop-shadow-2xl dark:bg-[#242B51] rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary ${
                 touched.email && !values.email ? "border-red-300" : ""
               }`}
               value={values.email}
@@ -138,7 +138,7 @@ export default function Home() {
               type="text"
               name="subject"
               placeholder="Business Website Inquiry..."
-              className={`w-full border border-transparent dark:bg-[#242B51] rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary ${
+              className={`w-full border border-transparent shadow-2xl drop-shadow-2xl dark:bg-[#242B51] rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary ${
                 touched.subject && !values.subject ? "border-red-300" : ""
               }`}
               value={values.subject}
@@ -160,7 +160,7 @@ export default function Home() {
             <textarea
               name="message"
               rows={4}
-              className={`w-full border border-transparent dark:bg-[#242B51] rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary text-white bg-black flex ${
+              className={`w-full border border-transparent shadow-2xl drop-shadow-2xl dark:bg-[#242B51] rounded-md shadow-one dark:shadow-signUp py-3 px-6 text-body-color text-base placeholder-body-color outline-none focus-visible:shadow-none focus:border-primary text-white bg-black flex ${
                 touched.message && !values.message
                   ? "border-red-300 border-[3px]"
                   : ""
@@ -177,13 +177,13 @@ export default function Home() {
         </div>
         <div className="px-[35px] w-full mt-3">
           <button
-            className={`bg-blue text-white px-4 py-2 rounded-md w-full text-base font-medium bg-[#4a6cf7] hover:bg-opacity-80 transition duration-200 ease-in-out ${
+            className={`bg-blue text-white px-4 py-2 rounded-md w-full text-base font-medium bg-[#4a6cf7] transition duration-200 ease-in-out ${
               !values.name ||
               !values.email ||
               !values.subject ||
               !values.message
                 ? "cursor-not-allowed hover:bg-red-300 transition duration-200 ease-in-out "
-                : ""
+                : "hover:bg-white hover:text-black"
             }`}
             disabled={
               !values.name ||
@@ -223,7 +223,7 @@ export default function Home() {
                 Loading...
               </span>
             )}
-            {!isLoading && <span className="">Submit</span>}
+            {!isLoading && <span className="shadow-2xl drop-shadow-2xl">Submit</span>}
           </button>
         </div>
       </div>
