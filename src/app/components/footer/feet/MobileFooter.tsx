@@ -94,15 +94,15 @@ const MobileFooter = () => {
             </div>
           </div>
           <div className="relative flex flex-col border-r-[1px] border-dark-50 col-span-2 sm:col-span-1 pb-2">
-          <div className="justify-center text-center flex py-2 border-b-[1px] border-dark-50 mx-12 font-semibold tracking-wider text-sm">
-          &copy; 2023 DigiSpark Australia
+            <div className="justify-center text-center flex py-2 border-b-[1px] border-dark-50 mx-12 font-semibold tracking-wider text-sm">
+              &copy; 2023 DigiSpark Australia
+            </div>
+            <div className="flex flex-row sm:flex-col justify-evenly p-2 tracking-wider font-light mx-12">
+              <div className="my-2">Acknowledgement of Country</div>
+              <div className="my-2">Terms & Conditions</div>
+              <div className="my-2">Privacy Policy</div>
+            </div>
           </div>
-          <div className="flex flex-row sm:flex-col justify-evenly p-2 tracking-wider font-light mx-12">
-            <div className="my-2">Acknowledgement of Country</div>
-            <div className="my-2">Terms & Conditions</div>
-            <div className="my-2">Privacy Policy</div>
-          </div>
-        </div>
         </div>
       </div>
     </div>

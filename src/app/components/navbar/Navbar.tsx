@@ -9,12 +9,15 @@ import Container from "../Container";
 import {
   useDesktop,
   useMobile,
+  useTablet,
 } from "@/src/app/components/utils/mediaQueries";
+import TabletNavbar from "./navs/TabletNavbar";
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const Desktop = useDesktop();
   const Mobile = useMobile();
+  const Tablet = useTablet();
+  const Desktop = useDesktop();
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
@@ -45,6 +48,11 @@ const Navbar: React.FC = () => {
           {Mobile && (
             <div>
               <MobileNavbar />
+            </div>
+          )}
+          {Tablet && (
+            <div>
+              <TabletNavbar />
             </div>
           )}
           {Desktop && (
