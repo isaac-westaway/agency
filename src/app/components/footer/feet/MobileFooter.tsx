@@ -98,7 +98,7 @@ const MobileFooter = () => {
           &copy; 2023 DigiSpark Australia
           </div>
           <div className="flex flex-row sm:flex-col justify-evenly p-2 tracking-wider font-light mx-12">
-            <div className="mb-2">Acknowledgement of Country</div>
+            <div className="my-2">Acknowledgement of Country</div>
             <div className="my-2">Terms & Conditions</div>
             <div className="my-2">Privacy Policy</div>
           </div>
