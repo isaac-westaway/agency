@@ -4,14 +4,16 @@ import Image from "next/image";
 
 import Logo from "../../Logo";
 
+import { FiExternalLink } from "react-icons/fi";
+
 const DesktopFooter = () => {
   return (
     <div className="relative">
-      <div className="absolute -bottom-5 right-0">
-        <Image src="footer-shape-1.svg" alt="" width="187" height="254"/>
+      <div className="absolute -bottom-5 right-0  -z-50 pointer-events-none ">
+        <Image src="footer-shape-1.svg" alt="" width="187" height="254" />
       </div>
-      <div className="absolute -top-10 left-0">
-        <Image src="footer-shape-2.svg" alt="" width="158" height="392"/>
+      <div className="absolute -top-10 left-0  -z-50 pointer-events-none">
+        <Image src="footer-shape-2.svg" alt="" width="158" height="392" />
       </div>
       <div className="border-t-[1px] border-dark-50 w-full py-4">
         <div className="mx-auto py-2 flex items-start justify-between">
@@ -35,14 +37,30 @@ const DesktopFooter = () => {
                   Quick Links
                 </div>
                 <div className="pt-3 leading-6 tracking-wider">
-                  <div className="font-light mb-2">Billing Portal</div>
-                  <div className="font-light my-2">Blog</div>
-                  <div className="font-light my-2">Gallery</div>
+                  <div className="font-light flex flex-row w-full">
+                    <div className="w-max flex items-center animatedUnderline hover:cursor-pointer">
+                      Billing Portal
+                    </div>
+                    <div className="flex items-center w-1/3 justify-end">
+                      <FiExternalLink />
+                    </div>
+                  </div>
+                  <div className="font-light my-2 animatedUnderline w-max hover:cursor-pointer">
+                    Blog
+                  </div>
+                  <div className="font-light my-2  animatedUnderline w-max hover:cursor-pointer">
+                    Gallery
+                  </div>
                 </div>
               </div>
               <div className="border-x-[1px]  border-dark-50 pl-11 pr-11">
-                <div className="font-semibold border-b-[1px] border-dark-50 pb-3  tracking-wider">
-                  Get in touch
+                <div className="font-semibold flex flex-row border-b-[1px] border-dark-50 pb-3  tracking-wider">
+                  <div className="w-full flex items-center">Get in touch</div>
+                  <div className="flex items-center justify-end ">
+                    <FiExternalLink
+                      style={{ stroke: "white", strokeWidth: "3" }}
+                    />
+                  </div>
                 </div>
                 <div className="pt-3 leading-6 tracking-wider">
                   <div className="font-light mb-2">LinkedIn</div>
@@ -99,7 +117,7 @@ const DesktopFooter = () => {
       <div className="">
         <div className="text-center text-neutral-400 px-4 pb-[0.5rem] max-w-7xl mx-auto">
           <div className="border-t-[1px] border-dark-50 ">
-            <div className="flex justify-between items-center my-2 text-normal text-white font-medium">
+            <div className="flex justify-between items-center my-2 text-normal text-white font-medium mt-6">
               <div className="text-neutral-400 font-normal">
                 &copy; 2023 DigiSpark Australia. All rights reserved.
               </div>

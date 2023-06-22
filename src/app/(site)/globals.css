@@ -20,6 +20,11 @@ body {
     scroll-behavior: smooth;
   }
 
+  .border-half {
+    --border-width: 0.5px;
+    border-width: var(--border-width);
+  }
+
   .prevent-select {
     -webkit-user-select: none;
     -ms-user-select: none;
