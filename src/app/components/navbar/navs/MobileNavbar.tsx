@@ -37,10 +37,6 @@ const MobileNavbar = () => {
       document.body.style.overflow = "";
     };
   }, [NavOpen]);
-  const item = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: -100 },
-  };
 
   function billingRedirect() {
     Router.push("https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE");

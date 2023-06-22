@@ -17,11 +17,10 @@ import FlyIn from "@/src/app/components/utils/FlyIn";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import ContactForm from "@/src/app/components/contact/ContactForm";
 import Testimonials from "../components/testimonials/Testimonials";
-import Footer from "../components/footer/Footer";
 
 export default function Home() {
   return (
-    <div className="scroll-smooth	snap-x overscroll-x-none">
+    <div className="scroll-smooth	snap-x overscroll-x-none min-h-screen">
       <Head>
         <title>Digispark Home</title>
         <meta
@@ -48,7 +47,7 @@ export default function Home() {
               </RevealOnce>
               <RevealOnce>
                 <div className="flex justify-center text-center items-center font-normal text-lg pt-1 pb-9 select-text">
-                  <span className="w-[30rem] text-gray-400 font-light">
+                  <span className="w-[30rem] text-gray-400">
                     We specialise in UI/UX design, website development and
                     website deployment.
                     <div className="text-lg leading-8 text-gray-400 font-medium">
@@ -263,7 +262,7 @@ export default function Home() {
                     height="1034"
                     width="1080"
                     alt="UI/UX"
-                    className=""
+                    className="z-[1000]"
                   />
                 </FlyIn>
               </div>

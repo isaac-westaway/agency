@@ -1,10 +1,18 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
+
 import Logo from "../../Logo";
 
 const DesktopFooter = () => {
   return (
-    <div className="">
+    <div className="relative">
+      <div className="absolute -bottom-5 right-0">
+        <Image src="footer-shape-1.svg" alt="" width="187" height="254"/>
+      </div>
+      <div className="absolute -top-10 left-0">
+        <Image src="footer-shape-2.svg" alt="" width="158" height="392"/>
+      </div>
       <div className="border-t-[1px] border-dark-50 w-full py-4">
         <div className="mx-auto py-2 flex items-start justify-between">
           <div className="w-1/2 pl-11">
@@ -47,7 +55,7 @@ const DesktopFooter = () => {
                 <div className="font-semibold border-b-[1px] border-dark-50 pb-3 tracking-wider">
                   News & Posts
                 </div>
-                <div className="mt-[0.75rem] leading-6 tracking-wider rounded-2xl -mx-4 hover:bg-dark-50 duration-200 transition ease-in-out">
+                <div className="mt-[0.75rem] leading-6 tracking-wider rounded-2xl -mx-4 hover:bg-dark-50 hover:backdrop-blur-2xlduration-200 transition ease-in-out">
                   <div className="px-4 py-3">
                     Roll Out New Features Without Hurting Loyal Users
                     <div className="text-sm flex flex-row">

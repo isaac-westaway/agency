@@ -34,6 +34,7 @@ module.exports = {
       },
       backgroundColor: {
         'custom-color': 'rgba(0, 0, 0, 0.7)',
+        'custom-color0.3': 'rgba(0, 0, 0, 0.5)',
         'dark-custom': 'rgba(125, 125, 125,0.4)'
       },
       colors: {
