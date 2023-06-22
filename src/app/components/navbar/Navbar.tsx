@@ -4,19 +4,16 @@ import { useState, useEffect } from "react";
 
 import DesktopNavbar from "./navs/DesktopNavbar";
 import MobileNavbar from "./navs/MobileNavbar";
-import TabletNavbar from "./navs/TabletNavbar";
 import Container from "../Container";
 
 import {
   useDesktop,
-  useTablet,
   useMobile,
 } from "@/src/app/components/utils/mediaQueries";
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const Desktop = useDesktop();
-  const Tablet = useTablet();
   const Mobile = useMobile();
 
   const handleScroll = () => {
@@ -45,11 +42,6 @@ const Navbar: React.FC = () => {
     >
       <header className="backdrop-blur-3xl">
         <Container>
-          {Tablet && (
-            <div>
-              <TabletNavbar />
-            </div>
-          )}
           {Mobile && (
             <div>
               <MobileNavbar />

@@ -36,16 +36,26 @@ export default function RootLayout({
         />
       </Head>
       <body className={font.className}>
-        <span className="text-white">
-          <noscript>Please enable javascript!</noscript>
-        </span>
-        <ClientOnly>
-          <ToasterProvider />
-          <Navbar />
-        </ClientOnly>
-        {children}
-        <Analytics />
-        <Footer />
+        <div className="flex flex-col h-screen justify-between">
+          <header>
+            <ClientOnly>
+              <ToasterProvider />
+              <Navbar />
+            </ClientOnly>
+          </header>
+          <span className="text-white">
+            <noscript>Please enable javascript!</noscript>
+          </span>
+            <div className="mb-auto flex-1 flex-grow">
+              {children}
+            </div>
+            <Analytics />
+            <footer className="static bottom-0">
+              <ClientOnly>
+                <Footer />
+              </ClientOnly>
+            </footer>
+        </div>
       </body>
     </html>
   );

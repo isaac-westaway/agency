@@ -41,14 +41,14 @@ export default function Home() {
             <div className="w-full mt-3">
               <RevealOnce>
                 <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-9 pb-3 select-text">
-                  <span className="w-1/2 sm:w-full">
+                  <span className="w-1/2 sm:w-full tracking-wider">
                     A full tech and creative team at your fingertips.
                   </span>
                 </div>
               </RevealOnce>
               <RevealOnce>
                 <div className="flex justify-center text-center items-center font-normal text-lg pt-1 pb-9 select-text">
-                  <span className="w-[30rem] text-gray-400">
+                  <span className="w-[30rem] text-gray-400 font-light">
                     We specialise in UI/UX design, website development and
                     website deployment.
                     <div className="text-lg leading-8 text-gray-400 font-medium">
