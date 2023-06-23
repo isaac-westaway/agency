@@ -19,12 +19,12 @@ const MobileFooter = () => {
           Phone: +61 490 747 987
         </div>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-1 gap-0 text-white mt-2">
-        <div className="relative flex flex-col border-r-[1px] border-dark-50">
-          <div className="justify-center flex py-2 border-b-[1px] border-dark-50 mx-[31px] font-semibold tracking-wider text-sm">
+      <div className="grid grid-cols-2 sm:grid-cols-1 gap-0 text-white mt-2 ">
+        <div className="relative flex flex-col">
+          <div className="justify-center flex py-2 border-b-[1px] border-dark-50 ml-11 mr-11 font-semibold tracking-wider text-sm">
             Quick Links
           </div>
-          <div className="flex flex-col justify-center p-2 tracking-wider font-light mx-[31px]">
+          <div className="flex flex-col justify-center p-2 tracking-wider font-light ml-11 mr-11">
             <div className="w-full flex flex-row">
               <div className="shrink-0">Billing Portal</div>
               <div className="h-full flex items-center w-full justify-end">
@@ -36,13 +36,13 @@ const MobileFooter = () => {
           </div>
         </div>
         <div className="sm:-mt-4 relative flex flex-col border-l-[0px] border-dark-50">
-          <div className="justify-center flex py-2 border-b-[1px] border-dark-50 mx-[31px] font-semibold tracking-wider text-sm">
+          <div className="justify-center flex py-2 border-b-[1px] border-dark-50 ml-11 mr-11 font-semibold tracking-wider text-sm">
             <div className="mr-3">Get in touch</div>
             <div className="flex items-center justify-end">
               <FiExternalLink style={{ stroke: "white", strokeWidth: "3" }} />
             </div>
           </div>
-          <div className="flex flex-col justify-center p-2 tracking-wider font-light mx-[31px]">
+          <div className="flex flex-col justify-center p-2 tracking-wider font-light ml-11 mr-11">
             <div className="w-full flex flex-row">
               <div className="shrink-0">LinkedIn</div>
             </div>
@@ -52,10 +52,10 @@ const MobileFooter = () => {
           </div>
         </div>
         <div className="sm:-mt-4 relative flex flex-col border-l-[0px] border-dark-50 col-span-2 sm:col-span-1">
-          <div className="justify-center flex py-2 border-b-[1px] border-dark-50 mx-[31px] font-semibold tracking-wider text-sm">
+          <div className="justify-center flex py-2 border-b-[1px] border-dark-50 ml-11 mr-11 font-semibold tracking-wider text-sm">
             <div className="">News & Posts</div>
           </div>
-          <div className="flex flex-col justify-center p-2 tracking-wider font-light mx-[31px]">
+          <div className="flex flex-col justify-center p-2 tracking-wider font-light ml-11 mr-11">
             <div className="leading-6 tracking-wider rounded-2xl hover:bg-dark-50 -mx-4 duration-200 transition ease-in-out">
               <div className="px-4 py-3">
                 Roll Out New Features Without Hurting Loyal Users
@@ -94,10 +94,10 @@ const MobileFooter = () => {
             </div>
           </div>
           <div className="relative flex flex-col col-span-2 sm:col-span-1 pb-2">
-            <div className="justify-center text-center flex py-2 border-b-[1px] border-dark-50 mx-[31px] font-semibold tracking-wider text-sm">
+            <div className="justify-center text-center flex py-2 border-b-[1px] border-dark-50 ml-11 mr-11 font-semibold tracking-wider text-sm">
               &copy; 2023 DigiSpark Australia
             </div>
-            <div className="flex flex-row sm:flex-col justify-evenly p-2 tracking-wider font-light mx-[31px]">
+            <div className="flex flex-row sm:flex-col justify-evenly p-2 tracking-wider font-light ml-11 mr-11">
               <div className="my-2">Acknowledgement of Country</div>
               <div className="my-2">Terms & Conditions</div>
               <div className="my-2">Privacy Policy</div>
