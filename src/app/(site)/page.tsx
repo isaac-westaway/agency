@@ -210,7 +210,7 @@ export default function Home() {
                 </RevealAlways>
               </div>
             </div>
-            <div className="flex items-center justify-center overflow-x-hidden w-full px-4 bg-dark-50 bg-opacity-10 rounded-2xl">
+            <div className="flex items-center justify-center overflow-x-hidden w-full px-4 bg-dark-50 bg-opacity-10 rounded-2xl my-4">
               <FlyIn flyInRight={true}>
                 <Image
                   src="/design.webp"
