@@ -288,18 +288,18 @@ const Hero = () => {
       <div className="relative z-10 px-6 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
         <div className="mx-auto py-44 sm:py-48 lg:pt-56">
           <RevealAlways>
-            <div className="text-center">
-              <span className="text-5xl font-bold text-white sm:text-6xl tracking-wider">
+            <div className="text-center flex flex-col justify-center">
+              <div className="text-5xl font-bold text-white sm:text-6xl tracking-wider">
                 Design. Develop. Deploy.
-              </span>
+              </div>
               <div className="mt-6 text-lg leading-8 text-gray-400 font-medium">
                 DigiSpark is Australia&#8217;s top-ranking web services
                 provider.
                 <br />
-                <span className="font-light">
+                <div className="font-light">
                   We specialize in the full production lifecycle, from designing
                   your site to the deployment of it.
-                </span>
+                </div>
               </div>
               <div className="mt-8 flex items-center justify-center gap-x-6">
                 <a

@@ -31,14 +31,14 @@ export default function Home() {
       <section id="top" className="snap-start">
         <Hero />
       </section>
-      <section className="relative mt-[11rem] sm:-mt-[8.8rem] md:mt-[11rem] lg:mt-[4rem] xl:mt-[5rem] border-t-[1px] border-dark-50 text-white ml-11 mr-11">
+      <section className="relative mt-[11rem] sm:-mt-[8.8rem] md:mt-[0.4rem] lg:mt-[2rem] xl:mt-[5rem] border-t-[1px] border-dark-50 text-white ml-11 mr-11">
         <div className="absolute top-1/12 -left-11 -z-50">
           <Image src={Timeline} alt="" />
         </div>
         <div className="w-full">
           <RevealOnce>
             <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 select-text">
-              <span className="w-1/2 sm:w-full tracking-wider">
+              <span className="sm:w-full md:w-full tracking-wider">
                 A full tech and creative team at your fingertips.
               </span>
             </div>
@@ -173,11 +173,13 @@ export default function Home() {
             </RevealOnce>
           </div>
         </div>
-        <div className="flex items-center justify-center py-8">
-          <button className="text-center sm:text-sm px-6 py-3 rounded-2xl bg-[#4A6CF7] hover:bg-white hover:text-black transition duration-200 ease-in-out">
-            Start building your online presence
-          </button>
-        </div>
+        <RevealAlways>
+            <div className="flex items-center justify-center py-8">
+              <button className="text-center sm:text-sm px-6 py-3 rounded-2xl bg-[#4A6CF7] hover:bg-white hover:text-black transition duration-200 ease-in-out">
+                Start building your online presence
+              </button>
+            </div>
+        </RevealAlways>
       </section>
       <section className="relative text-white overflow-x-hidden">
         <div className="ml-11 mr-11 border-t-[1px] border-dark-50"></div>
@@ -191,7 +193,7 @@ export default function Home() {
             style={{ transform: "scaleX(-1)" }}
           />
         </div>
-        <div className="relative pointer-events-auto py-8 ml-11 mr-11 px-4">
+        <div className="relative overflow-y-hidden py-8 ml-11 mr-11 px-4">
           <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0">
             <div className="">
               <div className="text-3xl border-b-[1px] border-dark-50 pb-2 font-semibold text-[#e5e4e4] sm:text-center">
