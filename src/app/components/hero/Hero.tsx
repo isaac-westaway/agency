@@ -265,22 +265,19 @@ const Hero = () => {
         </svg>
       </div>
       <div className="absolute top-[26.8rem] lg:top-[24.8rem] left-1/2 sm:hidden md:hidden lg:hidden xl:hidden">
-  <RevealAlways>
-    <svg xmlns="http://www.w3.org/2000/svg" width="1" height="350">
-      <line
-        x1="1"
-        y1="0"
-        x2="1"
-        y2="290"
-        stroke="#212121"
-        strokeWidth="2"
-      />
-    </svg>
-  </RevealAlways>
-</div>
-
-
-
+        <RevealAlways>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1" height="350">
+            <line
+              x1="1"
+              y1="0"
+              x2="1"
+              y2="290"
+              stroke="#212121"
+              strokeWidth="2"
+            />
+          </svg>
+        </RevealAlways>
+      </div>
 
       <div className="absolute top-12 left-0 sm:hidden">
         <Image src={Hero1} alt="" />
@@ -301,7 +298,7 @@ const Hero = () => {
                   your site to the deployment of it.
                 </div>
               </div>
-              <div className="mt-8 flex items-center justify-center gap-x-6">
+              <div className="mt-9 flex items-center justify-center gap-x-6">
                 <a
                   href="#"
                   className="rounded-lg bg-[#4A6CF7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition ease-in-out duration-200"
