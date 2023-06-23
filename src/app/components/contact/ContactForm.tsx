@@ -36,6 +36,11 @@ export default function Home() {
 
   const { values, isLoading, error } = state;
 
+  const isValidEmail = (email: string) => {
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
   const onBlur = (event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setTouched((prev) => ({ ...prev, [event.target.name]: true }));
 
@@ -73,7 +78,6 @@ export default function Home() {
     }
   };
 
-
   return (
     <div className="w-full flex justify-center flex-col">
       <div className="max-w-450px my-8 text-white w-full flex justify-center items-center flex-col">
@@ -101,11 +105,7 @@ export default function Home() {
               <p className="text-red-300">Required</p>
             )}
           </div>
-          <div
-            className={`mb-5 ${
-              touched.email && !values.email ? "border-red-300" : ""
-            }`}
-          >
+          <div className="mb-5">
             <label className="block mb-3 text-2xl font-semibold">
               Your Email Address
             </label>
@@ -122,6 +122,9 @@ export default function Home() {
             />
             {touched.email && !values.email && (
               <p className="text-red-300">Required</p>
+            )}
+            {touched.email && values.email && !isValidEmail(values.email) && (
+              <p className="text-red-300">Invalid email format</p>
             )}
           </div>
         </div>
@@ -181,7 +184,8 @@ export default function Home() {
               !values.name ||
               !values.email ||
               !values.subject ||
-              !values.message
+              !values.message ||
+              !isValidEmail(values.email)
                 ? "cursor-not-allowed hover:bg-red-300 transition duration-200 ease-in-out "
                 : "hover:bg-white hover:text-black hover:fill-black hover:stroke-black stroke-[#fff]"
             }`}
@@ -189,28 +193,49 @@ export default function Home() {
               !values.name ||
               !values.email ||
               !values.subject ||
-              !values.message
+              !values.message ||
+              !isValidEmail(values.email)
             }
             onClick={onSubmit}
           >
             {isLoading && (
               <div className="cursor-not-allowed flex items-center justify-center">
-              <span className="relative flex items-center justify-center">
-                <svg width="20" height="20" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" className="-left-9 absolute">
-                  <g fill="none" fill-rule="evenodd">
-                    <g transform="translate(1 1)" stroke-width="2">
-                      <circle className="loader-circle stroke-white stroke-opacity-50" cx="18" cy="18" r="18" />
-                      <path d="M36 18c0-9.94-8.06-18-18-18">
-                        <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite" />
-                      </path>
+                <span className="relative flex items-center justify-center">
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 38 38"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="-left-9 absolute"
+                  >
+                    <g fill="none" fill-rule="evenodd">
+                      <g transform="translate(1 1)" stroke-width="2">
+                        <circle
+                          className="loader-circle stroke-white stroke-opacity-50"
+                          cx="18"
+                          cy="18"
+                          r="18"
+                        />
+                        <path d="M36 18c0-9.94-8.06-18-18-18">
+                          <animateTransform
+                            attributeName="transform"
+                            type="rotate"
+                            from="0 18 18"
+                            to="360 18 18"
+                            dur="1s"
+                            repeatCount="indefinite"
+                          />
+                        </path>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-              </span>
-              <span className="ml-2">Loading...</span>
-            </div>
+                  </svg>
+                </span>
+                <span className="ml-2">Loading...</span>
+              </div>
             )}
-            {!isLoading && <span className="shadow-2xl drop-shadow-2xl">Submit</span>}
+            {!isLoading && (
+              <span className="shadow-2xl drop-shadow-2xl">Submit</span>
+            )}
           </button>
         </div>
       </div>

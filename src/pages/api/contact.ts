@@ -7,7 +7,9 @@ const CONTACT_MESSAGE_FIELDS: { [key: string]: string } = {
   message: "Message",
 };
 
-const generateEmailContent = (data: { [s: string]: unknown; } | ArrayLike<unknown>) => {
+const generateEmailContent = (
+  data: { [s: string]: unknown } | ArrayLike<unknown>
+) => {
   const stringData = Object.entries(data).reduce(
     (str, [key, val]) =>
       (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`),
@@ -23,7 +25,17 @@ const generateEmailContent = (data: { [s: string]: unknown; } | ArrayLike<unknow
   };
 };
 
-const handler = async (req: { method: string; body: any; }, res: { status: (arg0: number) => { (): any; new(): any; send: { (arg0: { message: string; }): any; new(): any; }; json: { (arg0: { success?: boolean; message?: any; }): any; new(): any; }; }; }) => {
+const handler = async (
+  req: { method: string; body: any },
+  res: {
+    status: (arg0: number) => {
+      (): any;
+      new (): any;
+      send: { (arg0: { message: string }): any; new (): any };
+      json: { (arg0: { success?: boolean; message?: any }): any; new (): any };
+    };
+  }
+) => {
   if (req.method === "POST") {
     const data = req.body;
     if (!data || !data.name || !data.email || !data.subject || !data.message) {
@@ -36,7 +48,7 @@ const handler = async (req: { method: string; body: any; }, res: { status: (arg0
         ...generateEmailContent(data),
         subject: data.subject,
       });
-    
+
       return res.status(200).json({ success: true });
     } catch (err) {
       console.log(err);
