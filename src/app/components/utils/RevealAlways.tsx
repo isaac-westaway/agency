@@ -1,5 +1,4 @@
 "use client"
-
 import React, { FC, ReactNode, useEffect, useRef } from 'react';
 
 interface RevealAlwaysProps {
@@ -55,9 +54,17 @@ const RevealAlways: FC<RevealAlwaysProps> = ({ children }) => {
     }
   };
 
+  // Exclude the button container from the animation
+  const childrenWithProps = React.Children.map(children, (child, index) => {
+    if (index === 1) {
+      return child;
+    }
+    return React.cloneElement(child as React.ReactElement);
+  });
+
   return (
     <div ref={ref} style={{ opacity: 0, transform: "translateY(40px)" }}>
-      {children}
+      {childrenWithProps}
     </div>
   );
 };

@@ -24,6 +24,10 @@ body {
     background: linear-gradient(360deg, #080321, #0a0625, #0c0928, #0d0c2c, #0d0f30, #0d1134, #0e1338, #0f153c, #101640, #111845, #121949, #131b4d);
   }
 
+  .test {
+    box-shadow: -4px -4px 30px rgba(254, 225, 64, .2), 4px -4px 30px rgba(250, 112, 154, .2);
+  }
+
   .border-half {
     --border-width: 0.5px;
     border-width: var(--border-width);
