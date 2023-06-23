@@ -32,7 +32,7 @@ export default function Home() {
         <Hero />
       </section>
       <div className="">
-          <section className="relative mt-[11.4rem] sm:-mt-[9.8rem] md:mt-[0.4rem] lg:mt-[2rem] xl:mt-[5rem] border-t-[1px] border-dark-50 text-white ml-11 mr-11">
+          <section className="relative mt-[11.4rem] sm:-mt-[12.8rem] md:mt-[0.4rem] lg:mt-[2rem] xl:mt-[5rem] border-t-[1px] border-dark-50 text-white ml-11 mr-11">
             <div className="absolute top-1/12 -top-12 -right-11 -z-50">
               <Image src={Timeline} style={{ transform: "scaleX(-1)" }} alt="" />
             </div>
