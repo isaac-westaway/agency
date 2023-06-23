@@ -28,10 +28,10 @@ export default function Home() {
           content="dZjgHKcLiYVkCgM61GF57iRGjhh9j1wzVlfQmaGmLL0"
         />
       </Head>
-      <section id="top" className="snap-start h-screen">
+      <section id="top" className="snap-start">
         <Hero />
       </section>
-      <section className="relative -mt-1 md:mt-2 lg:mt-2 xl:mt-2 border-t-[1px] border-dark-50 text-white ml-11 mr-11">
+      <section className="relative mt-[11rem] sm:-mt-[8.8rem] md:mt-[11rem] lg:mt-[4rem] xl:mt-[5rem] border-t-[1px] border-dark-50 text-white ml-11 mr-11">
         <div className="absolute top-1/12 -left-11 -z-50">
           <Image src={Timeline} alt="" />
         </div>
@@ -181,7 +181,7 @@ export default function Home() {
       </section>
       <section className="relative text-white overflow-x-hidden">
         <div className="ml-11 mr-11 border-t-[1px] border-dark-50"></div>
-        <div className="absolute top-32 sm:top-[66rem] md:top-[56rem] lg:top-[56rem] xl:top-40 -right-[4.2rem] md:right-0 lg:right-0 xl:-right-40 overflow-x-hidden">
+        <div className="sm:hidden absolute top-32 sm:top-[66rem] md:top-[56rem] lg:top-[56rem] xl:top-40 -right-[4.2rem] md:right-0 lg:right-0 xl:-right-40 overflow-x-hidden">
           <Image
             src="/page-break.svg"
             width="1000"
