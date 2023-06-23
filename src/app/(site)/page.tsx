@@ -17,7 +17,6 @@ import FlyIn from "@/src/app/components/utils/FlyIn";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import ContactForm from "@/src/app/components/contact/ContactForm";
 import Testimonials from "../components/testimonials/Testimonials";
-import MouseAnimation from "../components/utils/MouseAnimation";
 
 export default function Home() {
   return (
