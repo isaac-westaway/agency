@@ -152,7 +152,7 @@ const Hero = () => {
           </defs>
         </svg>
       </div>
-      <div className="absolute top-[34rem] xl:top-[28rem] left-0 sm:hidden">
+      <div className="absolute top-[34rem] xl:top-[28rem] left-0 sm:hidden md:hidden lg:hidden">
         <svg
           width="364"
           height="201"
