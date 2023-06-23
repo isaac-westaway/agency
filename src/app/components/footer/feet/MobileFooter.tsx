@@ -93,7 +93,7 @@ const MobileFooter = () => {
               </div>
             </div>
           </div>
-          <div className="relative flex flex-col border-r-[1px] border-dark-50 col-span-2 sm:col-span-1 pb-2">
+          <div className="relative flex flex-col col-span-2 sm:col-span-1 pb-2">
             <div className="justify-center text-center flex py-2 border-b-[1px] border-dark-50 mx-[31px] font-semibold tracking-wider text-sm">
               &copy; 2023 DigiSpark Australia
             </div>
