@@ -1,0 +1,8 @@
+.swiper-scrollbar {
+  background-color: unset; /* Set the background color to white */
+}
+
+.swiper-scrollbar-drag {
+  background-color: #4A6CF7; /* Set the scrollbar color to black */
+}
+

@@ -1,4 +1,6 @@
 "use client";
+
+
 import Image from "next/image";
 import { testimonialData } from "./TestimonialData";
 import { useEffect, useRef, useState } from "react";
@@ -64,6 +66,7 @@ const Testimonials = () => {
           width: `${testimonialData.length * 100}%`,
         }}
       >
+        
         {testimonialData.map((testimonial, index) => (
           <div key={index} className="w-full sm:w-full relative">
             <div className="absolute top-4 sm:top-1/10 sm:left-2 left-96">
