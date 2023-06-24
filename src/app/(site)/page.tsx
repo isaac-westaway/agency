@@ -16,7 +16,7 @@ import RevealOnce from "@/src/app/components/utils/RevealOnce";
 import FlyIn from "@/src/app/components/utils/FlyIn";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import ContactForm from "@/src/app/components/contact/ContactForm";
-import Testimonials from "../components/testimonials/TestimonialsNew";
+import Testimonials from "../components/testimonials/Testimonials";
 
 export default function Home() {
   return (
