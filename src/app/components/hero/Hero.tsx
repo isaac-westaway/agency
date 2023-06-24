@@ -278,7 +278,6 @@ const Hero = () => {
           </svg>
         </RevealAlways>
       </div>
-
       <div className="absolute top-12 left-0 sm:hidden">
         <Image src={Hero1} alt="" />
       </div>
@@ -289,11 +288,11 @@ const Hero = () => {
               <div className="text-5xl font-bold text-white sm:text-6xl tracking-wider">
                 Design. Develop. Deploy.
               </div>
-              <div className="mt-6 text-lg leading-8 text-gray-400 font-medium">
+              <div className="mt-6 text-lg leading-8 sm:leading-normal text-gray-400 font-medium">
                 DigiSpark is Australia&#8217;s top-ranking web services
                 provider.
                 <br />
-                <div className="font-light">
+                <div className="font-light mt-1 sm:leading-normal">
                   We specialize in the full production lifecycle, from designing
                   your site to the deployment of it.
                 </div>
