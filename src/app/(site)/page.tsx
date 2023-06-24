@@ -222,8 +222,8 @@ export default function Home() {
       </section>
       <section className="relative text-white overflow-x-hidden border-t-[1px] border-dark-50">
         <div className="relative overflow-y-hidden">
-          <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
-            <div className="flex my-8 items-center justify-center overflow-x-hidden w-full px-4 bg-dark-50 bg-opacity-10 rounded-2xl">
+        <div className="grid grid-cols-2 sm:flex sm:flex-col-reverse md:flex md:flex-col-reverse lg:flex lg:flex-col-reverse gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
+            <div className="flex mt-8 mb-8 sm:mt-0 md:mt-0 lg:mt-0 flex-col items-center justify-center overflow-x-hidden w-full px-4 bg-dark-50 bg-opacity-10 rounded-2xl">
               <FlyIn flyInRight={false}>
                 <Image
                   src="/design.webp"
@@ -234,7 +234,7 @@ export default function Home() {
                 />
               </FlyIn>
             </div>
-            <div className="h-full relative">
+            <div className="flex-col">
               <div className="sm:mt-0 md:mt-0 lg:mt-0 mt-8 py-4 text-3xl sm:text-lg font-semibold border-y-[1px] border-dark-50">
                 We are committed to delivering the highest quality of work
               </div>
@@ -248,7 +248,7 @@ export default function Home() {
                 enterprise, let&#39;s connect and embark on a digital journey
                 together.
               </div>
-              <div className="flex justify-center w-full items-end pt-4 pb-5">
+              <div className="flex justify-center w-full items-end pt-4 pb-5 ">
                 <RevealAlways>
                   <div className="rounded-lg px-3.5 py-2.5 cursor-pointer text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
                     I&#39;m Interested!
