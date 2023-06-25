@@ -1,42 +1,60 @@
-"use client"
+"use client";
+
+import Image from "next/image";
 
 import React, { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel, Navigation, Pagination } from "swiper";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import '@/src/app/styles/swiper.css'
-
-import { Mousewheel, Navigation, Pagination } from "swiper";
+import "@/src/app/styles/swiper.css";
 
 const CaseStudies = () => {
   return (
+    <div className="border border-dark-50 rounded-2xl min-h-[31.25rem] sm:min-h-[200px]">
       <Swiper
+        className="min-h-[31.25rem] sm:min-h-[200px]"
         direction={"vertical"}
         slidesPerView={1}
-        spaceBetween={30}
         grabCursor={true}
         loop={true}
+        autoHeight={true}
+        spaceBetween={30}
+        mousewheel={true}
         pagination={{
           clickable: true,
           dynamicBullets: true,
         }}
-        modules={[Pagination]}
-        className="border border-dark-50 rounded-2xl h-[540px]"
+        modules={[Mousewheel, Pagination]}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide className="h-full sm:h-fit">
+          <div className="h-full sm:h-fit mx-4">
+            <Image
+              src="/images/swiper/card-1.webp"
+              layout="fill"
+              objectFit="contain"
+              alt=""
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="">
+        <div className="h-full mx-4">
+            <Image
+              src="/images/swiper/card-2.webp"
+              layout="fill"
+              objectFit="contain"
+              alt=""
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="">Slide 1</SwiperSlide>
+        <SwiperSlide>Bob</SwiperSlide>
+        <SwiperSlide className="">Slide 1</SwiperSlide>
+        <SwiperSlide>Bob</SwiperSlide>
       </Swiper>
+    </div>
   );
-}
+};
 
-export default CaseStudies
+export default CaseStudies;

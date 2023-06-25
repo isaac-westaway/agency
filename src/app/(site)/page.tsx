@@ -313,14 +313,21 @@ export default function Home() {
       </section>
       <section className="relative text-white border-t-[1px] border-dark-50">
         <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
-          <div className="border-y-[1px] border-dark-50 mt-8 py-4 text-3xl font-semibold">
-            Just some of the stuff weve built
-          </div>
-          <div className="mt-8">
-            <CaseStudies />
+          <RevealOnce>
+            <div className="border-y-[1px] border-dark-50 mt-8 py-4 text-3xl font-semibold">
+              Just some of the stuff weve built
+            </div>
+          </RevealOnce>
+          <div className="h-fit">
+            <FlyIn flyInRight={true}>
+              <div className="mt-8">
+                <CaseStudies />
+              </div>
+            </FlyIn>
           </div>
         </div>
       </section>
+      <section className="border">BOY</section>
     </div>
   );
 }

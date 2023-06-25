@@ -1,15 +1,12 @@
 .swiper-pagination {
+  margin-right: -3px;
 }
 
 .swiper-pagination-bullet {
-  background-color: white;
+  background: #323232;
+  opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #4A6CF7;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: #4A6CF7;
 }
