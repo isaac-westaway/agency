@@ -10,10 +10,10 @@ const DesktopFooter = () => {
   return (
     <div className="relative">
       <div className="absolute -bottom-5 right-0  -z-50 pointer-events-none ">
-        <Image src="footer-shape-1.svg" alt="" width="187" height="254" />
+        <Image src="/svg/footer-shape-1.svg" alt="" width="187" height="254" />
       </div>
       <div className="absolute -top-10 left-0  -z-50 pointer-events-none">
-        <Image src="footer-shape-2.svg" alt="" width="158" height="392" />
+        <Image src="/svg/footer-shape-2.svg" alt="" width="158" height="392" />
       </div>
       <div className="border-t-[1px] border-dark-50 w-full py-4">
         <div className="mx-auto py-2 flex items-start justify-between">

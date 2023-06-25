@@ -8,7 +8,6 @@ import ClientOnly from "@/src/app/components/ClientOnly";
 import Navbar from "@/src/app/components/navbar/Navbar";
 import Footer from "@/src/app/components/footer/Footer";
 
-import Head from "next/head";
 import ToasterProvider from "../components/providers/ToasterProvider";
 
 export const metadata = {
@@ -28,13 +27,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="smooth-scrolling">
-      <Head>
-        <title>Digispark Home</title>
-        <meta
-          name="google-site-verification"
-          content="dZjgHKcLiYVkCgM61GF57iRGjhh9j1wzVlfQmaGmLL0"
-        />
-      </Head>
       <body className={font.className}>
         <div className="flex flex-col h-screen justify-between">
           <header>

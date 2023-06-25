@@ -7,9 +7,11 @@ import {
   BsFillTerminalFill,
 } from "react-icons/bs";
 
-import Design from "@/public/design.svg";
-import Develop from "@/public/develop.svg";
-import Timeline from "@/public/timeline.svg";
+import Design from "@/public/svg/card-design.svg";
+import Develop from "@/public/svg/card-develop.svg";
+import Deploy from "@/public/svg/card-deploy.svg";
+
+import BodyShape1 from "@/public/svg/body-shape-1.svg"
 
 import Hero from "@/src/app/components/hero/Hero";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
@@ -18,21 +20,19 @@ import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import ContactForm from "@/src/app/components/contact/ContactForm";
 import Testimonials from "../components/testimonials/Testimonials";
 
+export const metadata = {
+  title: "Home Digispark",
+}
+
 export default function Home() {
   return (
     <div className="scroll-smooth snap-x overscroll-x-none min-h-screen ml-11 mr-11 sm:ml-6 sm:mr-6 ">
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="dZjgHKcLiYVkCgM61GF57iRGjhh9j1wzVlfQmaGmLL0"
-        />
-      </Head>
       <section id="top" className="snap-start">
         <Hero />
       </section>
       <section className="relative mt-[11.4rem] sm:-mt-[13.7rem] md:mt-[0.4rem] lg:mt-[2rem] xl:mt-[5rem] border-t-[1px] border-dark-50 text-white">
         <div className="absolute top-1/12 -top-12 -right-11 sm:-right-6 -z-50 overflow-x-hidden">
-          <Image src={Timeline} style={{ transform: "scaleX(-1)" }} alt="" />
+          <Image src={BodyShape1} style={{ transform: "scaleX(-1)" }} alt="" />
         </div>
         <div className="w-full">
           <RevealOnce>
@@ -134,7 +134,7 @@ export default function Home() {
               <div className="testimonial-container group shadow-lg p-8 flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[26rem] backdrop-blur-sm">
                 <div className="absolute top-[1.3rem] right-11">
                   <Image
-                    src="deploy.svg"
+                    src={Deploy}
                     alt="Deploy Symbol"
                     className="hover:fill-white fill"
                     width="48"
@@ -209,7 +209,7 @@ export default function Home() {
             <div className="flex mt-8 mb-8 sm:mt-0 md:mt-0 lg:mt-0 items-center justify-center overflow-x-hidden w-full px-4 bg-dark-50 bg-opacity-10 rounded-2xl">
               <FlyIn flyInRight={true}>
                 <Image
-                  src="/design.webp"
+                  src="/images/design.webp"
                   alt="UI/UX"
                   width="600"
                   height="800"
@@ -226,7 +226,7 @@ export default function Home() {
             <div className="flex mt-8 mb-8 sm:mt-0 md:mt-0 lg:mt-0 flex-col items-center justify-center overflow-x-hidden w-full px-4 bg-dark-50 bg-opacity-10 rounded-2xl">
               <FlyIn flyInRight={false}>
                 <Image
-                  src="/design.webp"
+                  src="/images/design.webp"
                   alt="UI/UX"
                   width="600"
                   height="800"
@@ -287,7 +287,7 @@ export default function Home() {
             <div className="flex mt-8 mb-8 sm:mt-0 md:mt-0 lg:mt-0 items-center justify-center overflow-x-hidden w-full px-4 bg-dark-50 bg-opacity-10 rounded-2xl">
               <FlyIn flyInRight={true}>
                 <Image
-                  src="/design.webp"
+                  src="/images/design.webp"
                   alt="UI/UX"
                   width="600"
                   height="800"

@@ -1,7 +1,7 @@
 import RevealAlways from "../utils/RevealAlways";
 
 import Image from "next/image";
-import Hero1 from "@/public/hero-shape-1.svg";
+import Hero1 from "@/public/svg/hero-shape-1.svg";
 
 const Hero = () => {
   return (
@@ -72,8 +72,8 @@ const Hero = () => {
               y2="288"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7"></stop>
-              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
+              <stop stopColor="#4A6CF7"></stop>
+              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0"></stop>
             </linearGradient>
             <radialGradient
               id="paint1_radial_25:217"
@@ -85,10 +85,10 @@ const Hero = () => {
             >
               <stop
                 offset="0.145833"
-                stop-color="#4A6CF7"
-                stop-opacity="0"
+                stopColor="#4A6CF7"
+                stopOpacity="0"
               ></stop>
-              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0.08"></stop>
+              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08"></stop>
             </radialGradient>
             <radialGradient
               id="paint2_radial_25:217"
@@ -100,10 +100,10 @@ const Hero = () => {
             >
               <stop
                 offset="0.145833"
-                stop-color="#4A6CF7"
-                stop-opacity="0"
+                stopColor="#4A6CF7"
+                stopOpacity="0"
               ></stop>
-              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0.08"></stop>
+              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08"></stop>
             </radialGradient>
             <linearGradient
               id="paint3_linear_25:217"
@@ -113,8 +113,8 @@ const Hero = () => {
               y2="351.421"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7"></stop>
-              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
+              <stop stopColor="#4A6CF7"></stop>
+              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0"></stop>
             </linearGradient>
             <linearGradient
               id="paint4_linear_25:217"
@@ -124,8 +124,8 @@ const Hero = () => {
               y2="448.882"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7"></stop>
-              <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+              <stop stopColor="#4A6CF7"></stop>
+              <stop offset="1" stopColor="white" stopOpacity="0"></stop>
             </linearGradient>
             <linearGradient
               id="paint5_linear_25:217"
@@ -135,8 +135,8 @@ const Hero = () => {
               y2="470"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7"></stop>
-              <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+              <stop stopColor="#4A6CF7"></stop>
+              <stop offset="1" stopColor="white" stopOpacity="0"></stop>
             </linearGradient>
             <linearGradient
               id="paint6_linear_25:217"
@@ -146,8 +146,8 @@ const Hero = () => {
               y2="338.63"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7"></stop>
-              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
+              <stop stopColor="#4A6CF7"></stop>
+              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0"></stop>
             </linearGradient>
           </defs>
         </svg>
@@ -199,8 +199,8 @@ const Hero = () => {
               y2="212.24"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7" stop-opacity="0"></stop>
-              <stop offset="1" stop-color="#4A6CF7"></stop>
+              <stop stopColor="#4A6CF7" stopOpacity="0"></stop>
+              <stop offset="1" stopColor="#4A6CF7"></stop>
             </linearGradient>
             <linearGradient
               id="paint1_linear_25:218"
@@ -210,8 +210,8 @@ const Hero = () => {
               y2="212.24"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7" stop-opacity="0"></stop>
-              <stop offset="1" stop-color="#4A6CF7"></stop>
+              <stop stopColor="#4A6CF7" stopOpacity="0"></stop>
+              <stop offset="1" stopColor="#4A6CF7"></stop>
             </linearGradient>
             <linearGradient
               id="paint2_linear_25:218"
@@ -221,8 +221,8 @@ const Hero = () => {
               y2="212.24"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7" stop-opacity="0"></stop>
-              <stop offset="1" stop-color="#4A6CF7"></stop>
+              <stop stopColor="#4A6CF7" stopOpacity="0"></stop>
+              <stop offset="1" stopColor="#4A6CF7"></stop>
             </linearGradient>
             <linearGradient
               id="paint3_linear_25:218"
@@ -232,8 +232,8 @@ const Hero = () => {
               y2="210.214"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7" stop-opacity="0"></stop>
-              <stop offset="1" stop-color="#4A6CF7"></stop>
+              <stop stopColor="#4A6CF7" stopOpacity="0"></stop>
+              <stop offset="1" stopColor="#4A6CF7"></stop>
             </linearGradient>
             <linearGradient
               id="paint4_linear_25:218"
@@ -243,8 +243,8 @@ const Hero = () => {
               y2="99.5816"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#4A6CF7"></stop>
-              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
+              <stop stopColor="#4A6CF7"></stop>
+              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0"></stop>
             </linearGradient>
             <radialGradient
               id="paint5_radial_25:218"
@@ -256,10 +256,10 @@ const Hero = () => {
             >
               <stop
                 offset="0.145833"
-                stop-color="white"
-                stop-opacity="0"
+                stopColor="white"
+                stopOpacity="0"
               ></stop>
-              <stop offset="1" stop-color="white" stop-opacity="0.08"></stop>
+              <stop offset="1" stopColor="white" stopOpacity="0.08"></stop>
             </radialGradient>
           </defs>
         </svg>
