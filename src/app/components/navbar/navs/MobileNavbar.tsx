@@ -42,7 +42,7 @@ const MobileNavbar = () => {
     Router.push("https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE");
   }
 
-  function handleDappRedirect() {
+  function AccordionPricingToggle() {
     setAccordionPricingOpen(!accordionPricingOpen);
   }
 
@@ -119,7 +119,7 @@ const MobileNavbar = () => {
             </li>
 
             <li
-              onClick={handleDappRedirect}
+              onClick={AccordionPricingToggle}
               className="flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
             >
               <div className="">Pricing</div>
@@ -176,7 +176,7 @@ const MobileNavbar = () => {
             </li>
 
             <li
-              onClick={handleDappRedirect}
+              onClick={AccordionPricingToggle}
               className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/d-app">D-App</Link>
