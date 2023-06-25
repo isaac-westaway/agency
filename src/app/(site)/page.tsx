@@ -352,7 +352,7 @@ export default function Home() {
           </div>
         </RevealOnce>
         <div className="flex w-full justify-center mb-8">
-          <div className="w-1/2">
+          <div className="w-1/2 sm:w-3/4 md:w-3/4 lg:w-3/4">
             <Accordion items={items} />
           </div>
         </div>
