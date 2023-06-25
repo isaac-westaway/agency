@@ -19,7 +19,7 @@ import FlyIn from "@/src/app/components/utils/FlyIn";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import ContactForm from "@/src/app/components/contact/ContactForm";
 import Testimonials from "@/src/app/components/testimonials/Testimonials";
-import CaseStudies from "@/src/app/components/casestudies/CaseStudiesNew";
+import CaseStudies from "@/src/app/components/casestudies/CaseStudies";
 
 export const metadata = {
   title: "Home Digispark",
