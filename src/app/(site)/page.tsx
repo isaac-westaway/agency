@@ -1,11 +1,4 @@
 import Image from "next/image";
-import Head from "next/head";
-import {
-  BsSpeedometer2,
-  BsArrowsFullscreen,
-  BsArrowDownUp,
-  BsFillTerminalFill,
-} from "react-icons/bs";
 
 import Design from "@/public/svg/card-design.svg";
 import Develop from "@/public/svg/card-develop.svg";
@@ -13,13 +6,26 @@ import Deploy from "@/public/svg/card-deploy.svg";
 
 import BodyShape1 from "@/public/svg/body-shape-1.svg";
 
-import Hero from "@/src/app/components/hero/Hero";
+import Hero from "@/src/app/components/Hero";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
 import FlyIn from "@/src/app/components/utils/FlyIn";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import ContactForm from "@/src/app/components/contact/ContactForm";
 import Testimonials from "@/src/app/components/testimonials/Testimonials";
-import CaseStudies from "@/src/app/components/casestudies/CaseStudies";
+import CaseStudies from "@/src/app/components/CaseStudies";
+import TypedText from "@/src/app/components/experimental/TypedText";
+import Accordion from "@/src/app/components/Accordion";
+
+const items = [
+  {
+    title: "Item 1",
+    content: "Content for Item 1",
+  },
+  {
+    title: "Item 2",
+    content: "Content for Item 2",
+  },
+];
 
 export const metadata = {
   title: "Home Digispark",
@@ -186,7 +192,7 @@ export default function Home() {
         <div className="relative overflow-y-hidden">
           <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
             <div className="h-full relative">
-              <div className="mt-8 py-4 text-3xl sm:text-lg font-semibold border-y-[1px] border-dark-50">
+              <div className="mt-8 py-4 text-3xl font-semibold border-y-[1px] border-dark-50">
                 We are committed to delivering the highest quality of work
               </div>
               <div className="text-base font-light pt-4 leading-relaxed">
@@ -236,7 +242,7 @@ export default function Home() {
               </FlyIn>
             </div>
             <div className="flex-col">
-              <div className="sm:mt-0 md:mt-0 lg:mt-0 mt-8 py-4 text-3xl sm:text-lg font-semibold border-y-[1px] border-dark-50">
+              <div className="sm:mt-0 md:mt-0 lg:mt-0 mt-8 py-4 text-3xl font-semibold border-y-[1px] border-dark-50">
                 We are committed to delivering the highest quality of work
               </div>
               <div className="text-base font-light pt-4 leading-relaxed">
@@ -264,7 +270,7 @@ export default function Home() {
         <div className="relative overflow-y-hidden">
           <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
             <div className="h-full relative">
-              <div className="mt-8 py-4 text-3xl sm:text-lg font-semibold border-y-[1px] border-dark-50">
+              <div className="mt-8 py-4 text-3xl font-semibold border-y-[1px] border-dark-50">
                 We are committed to delivering the highest quality of work
               </div>
               <div className="text-base font-light pt-4 leading-relaxed">
@@ -301,7 +307,7 @@ export default function Home() {
       </section>
       <section className="relative text-white border-t-[1px] border-dark-50">
         <RevealOnce>
-          <div className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight flex justify-center mt-8 mb-8">
+        <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 pb-8 select-text">
             What Australian businesses are saying about us
           </div>
         </RevealOnce>
@@ -313,13 +319,43 @@ export default function Home() {
       </section>
       <section className="relative text-white border-t-[1px] border-dark-50">
         <RevealOnce>
-          <div className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight flex justify-center mt-8 mb-8 text-white">
+        <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 pb-8 select-text">
             Some of the companies weve developed for
           </div>
         </RevealOnce>
         <RevealOnce>
           <CaseStudies />
         </RevealOnce>
+      </section>
+      <section className="relative text-white border-t-[1px] border-dark-50">
+        <RevealOnce>
+          <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 select-text">
+            <span className="sm:w-full md:w-full">Get in touch with us! </span>
+          </div>
+        </RevealOnce>
+        <RevealOnce>
+          <div className="flex justify-center text-center items-center font-normal text-lg pt-7 select-text">
+            <div className="text-lg leading-8 text-gray-400 font-medium">
+              We will endeavour to respond as fast as possible. Usually this
+              means 6 - 18 Hours.
+            </div>
+          </div>
+        </RevealOnce>
+        <div className="px-4">
+          <ContactForm />
+        </div>
+      </section>
+      <section className="relative text-white border-t-[1px] border-dark-50">
+        <RevealOnce>
+          <div className="text-3xl font-extrabold sm:leading-tight sm:tracking-tight flex justify-center mt-8 mb-8 text-white">
+            Frequently Asked Questions (FAQ)
+          </div>
+        </RevealOnce>
+        <div className="flex w-full justify-center mb-8">
+          <div className="w-1/2">
+            <Accordion items={items} />
+          </div>
+        </div>
       </section>
     </div>
   );

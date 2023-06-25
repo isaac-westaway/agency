@@ -81,7 +81,7 @@ export default function Home() {
   return (
     <div className="w-full flex justify-center flex-col">
       <div className="max-w-450px my-8 text-white w-full flex justify-center items-center flex-col">
-        <div className="flex flex-row sm:flex-col md:flex-col lg:flex-col xl:flex-col gap-3 px-4 sm:w-full md:w-full lg:w-full xl:w-full sm:px-[35px] md:px-[35px] lg:px-[35px] xl:px-[35px]">
+        <div className="flex flex-row sm:flex-col md:flex-row lg:flex-row xl:flex-row gap-3 sm:w-full md:w-full lg:w-full xl:w-full">
           <div
             className={`mb-5 ${
               touched.name && !values.name ? "border-red-300" : ""
@@ -128,7 +128,7 @@ export default function Home() {
             )}
           </div>
         </div>
-        <div className="w-full px-[35px]">
+        <div className="w-full">
           <div
             className={`mb-5 ${
               touched.subject && !values.subject ? "border-red-300" : ""
@@ -153,7 +153,7 @@ export default function Home() {
             )}
           </div>
         </div>
-        <div className="w-full px-[35px]">
+        <div className="w-full">
           <div
             className={`mb-5 ${
               touched.message && !values.message ? "border-red-300" : ""

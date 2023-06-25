@@ -1,4 +1,4 @@
-import RevealAlways from "../utils/RevealAlways";
+import RevealAlways from "./utils/RevealAlways";
 
 import Image from "next/image";
 import Hero1 from "@/public/svg/hero-shape-1.svg";
