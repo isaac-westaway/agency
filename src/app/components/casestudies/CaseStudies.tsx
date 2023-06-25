@@ -12,9 +12,9 @@ import "@/src/app/styles/swiper.css";
 
 const CaseStudies = () => {
   return (
-    <div className="border border-dark-50 rounded-2xl min-h-[31.25rem] sm:min-h-[200px]">
+    <div className="border border-dark-50 rounded-2xl h-96">
       <Swiper
-        className="min-h-[31.25rem] sm:min-h-[200px]"
+        className="h-96"
         direction={"vertical"}
         slidesPerView={1}
         grabCursor={true}
@@ -28,8 +28,8 @@ const CaseStudies = () => {
         }}
         modules={[Mousewheel, Pagination]}
       >
-        <SwiperSlide className="h-full sm:h-fit">
-          <div className="h-full sm:h-fit mx-4">
+        <SwiperSlide className="h-96">
+          <div className="mx-4 h-96">
             <Image
               src="/images/swiper/card-1.webp"
               layout="fill"

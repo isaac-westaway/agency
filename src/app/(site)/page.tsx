@@ -19,7 +19,7 @@ import FlyIn from "@/src/app/components/utils/FlyIn";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import ContactForm from "@/src/app/components/contact/ContactForm";
 import Testimonials from "@/src/app/components/testimonials/Testimonials";
-import CaseStudies from "@/src/app/components/casestudies/CaseStudies";
+import CaseStudies from "@/src/app/components/casestudies/CaseStudiesNew";
 
 export const metadata = {
   title: "Home Digispark",
@@ -312,22 +312,15 @@ export default function Home() {
         </RevealOnce>
       </section>
       <section className="relative text-white border-t-[1px] border-dark-50">
-        <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
-          <RevealOnce>
-            <div className="border-y-[1px] border-dark-50 mt-8 py-4 text-3xl font-semibold">
-              Just some of the stuff weve built
-            </div>
-          </RevealOnce>
-          <div className="h-fit">
-            <FlyIn flyInRight={true}>
-              <div className="mt-8">
-                <CaseStudies />
-              </div>
-            </FlyIn>
+        <RevealOnce>
+          <div className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight flex justify-center mt-8 mb-8 text-white">
+            Some of the companies weve developed for
           </div>
-        </div>
+        </RevealOnce>
+        <RevealOnce>
+          <CaseStudies />
+        </RevealOnce>
       </section>
-      <section className="border">BOY</section>
     </div>
   );
 }
