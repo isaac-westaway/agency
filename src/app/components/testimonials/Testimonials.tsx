@@ -53,7 +53,7 @@ const Testimonials = () => {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                className="mx-auto mt-8 prevent-select"
+                className="mx-auto mt-4 prevent-select"
                 src={testimonial.logo}
                 height="200"
                 width="200"
