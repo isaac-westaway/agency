@@ -11,18 +11,19 @@ import Design from "@/public/svg/card-design.svg";
 import Develop from "@/public/svg/card-develop.svg";
 import Deploy from "@/public/svg/card-deploy.svg";
 
-import BodyShape1 from "@/public/svg/body-shape-1.svg"
+import BodyShape1 from "@/public/svg/body-shape-1.svg";
 
 import Hero from "@/src/app/components/hero/Hero";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
 import FlyIn from "@/src/app/components/utils/FlyIn";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import ContactForm from "@/src/app/components/contact/ContactForm";
-import Testimonials from "../components/testimonials/Testimonials";
+import Testimonials from "@/src/app/components/testimonials/Testimonials";
+import CaseStudies from "@/src/app/components/casestudies/CaseStudies";
 
 export const metadata = {
   title: "Home Digispark",
-}
+};
 
 export default function Home() {
   return (
@@ -222,7 +223,7 @@ export default function Home() {
       </section>
       <section className="relative text-white overflow-x-hidden border-t-[1px] border-dark-50">
         <div className="relative overflow-y-hidden">
-        <div className="grid grid-cols-2 sm:flex sm:flex-col-reverse md:flex md:flex-col-reverse lg:flex lg:flex-col-reverse gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
+          <div className="grid grid-cols-2 sm:flex sm:flex-col-reverse md:flex md:flex-col-reverse lg:flex lg:flex-col-reverse gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
             <div className="flex mt-8 mb-8 sm:mt-0 md:mt-0 lg:mt-0 flex-col items-center justify-center overflow-x-hidden w-full px-4 bg-dark-50 bg-opacity-10 rounded-2xl">
               <FlyIn flyInRight={false}>
                 <Image
@@ -299,16 +300,26 @@ export default function Home() {
         </div>
       </section>
       <section className="relative text-white border-t-[1px] border-dark-50">
-          <RevealOnce>
-            <div className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight flex justify-center mt-8 mb-8">
-              What Australian businesses are saying about us
-            </div>
-          </RevealOnce>
-          <RevealOnce>
-              <div className="mb-8">
-                <Testimonials />
-              </div>
-          </RevealOnce>
+        <RevealOnce>
+          <div className="text-3xl font-extrabold sm:text-xl sm:leading-tight sm:tracking-tight flex justify-center mt-8 mb-8">
+            What Australian businesses are saying about us
+          </div>
+        </RevealOnce>
+        <RevealOnce>
+          <div className="mb-8">
+            <Testimonials />
+          </div>
+        </RevealOnce>
+      </section>
+      <section className="relative text-white border-t-[1px] border-dark-50">
+        <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
+          <div className="border-y-[1px] border-dark-50 mt-8 py-4 text-3xl font-semibold">
+            Just some of the stuff weve built
+          </div>
+          <div className="mt-8">
+            <CaseStudies />
+          </div>
+        </div>
       </section>
     </div>
   );

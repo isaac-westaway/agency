@@ -1,8 +1,15 @@
-.swiper-scrollbar {
-    background-color: rgba(50, 50, 50, 0.1);
+.swiper-pagination {
 }
 
-.swiper-scrollbar-drag {
+.swiper-pagination-bullet {
+  background-color: white;
+}
+
+.swiper-pagination-bullet-active {
   background-color: #4A6CF7;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: #4A6CF7;
+}

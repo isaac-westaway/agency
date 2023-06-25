@@ -1,27 +1,38 @@
 // import Swiper core and required modules
 "use client";
 
+import React, { useRef, useState } from "react";
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+
 import Image from "next/image";
 
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "@/src/app/styles/swiper.css"
-
+// import required modules
+import { Pagination, Navigation } from "swiper";
 import { testimonialData } from "./TestimonialData";
+
+import '@/src/app/styles/swiper.css'
 
 const Testimonials = () => {
   return (
-    <Swiper
-      className="border border-dark-50 rounded-2xl"
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={1}
-      scrollbar={{ draggable: true }}
-    >
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        grabCursor={true}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
+        modules={[Pagination]}
+        className="border border-dark-50 rounded-2xl"
+      >
       {testimonialData.map((testimonial, index) => (
         <SwiperSlide key={index} className="">
           <div key={index} className="w-full sm:w-full relative">
@@ -48,7 +59,7 @@ const Testimonials = () => {
                 width="200"
                 alt=""
               />
-              <div className="text-center text-xl sm:text-sm leading-8 text-white sm:leading-5 h-full px-4">
+              <div className="text-center text-xl sm:text-sm leading-8 sm:leading-5 h-full px-4">
                 <span className="text-center overflow-clip h-20 flex-1 flex items-center justify-center p-1 prevent-select">
                   {testimonial.quote}
                 </span>
@@ -62,7 +73,7 @@ const Testimonials = () => {
                   alt=""
                 />
                 <div className="mt-5 flex items-center justify-center space-x-3 text-base mb-8">
-                  <span className="sm:text-sm sm:text-center text-white prevent-select">
+                  <span className="sm:text-sm sm:text-center prevent-select">
                     {testimonial.name}
                   </span>
                   <svg
@@ -74,7 +85,7 @@ const Testimonials = () => {
                   >
                     <circle cx={1} cy={1} r={1} />
                   </svg>
-                  <span className="font-light text-white sm:text-sm sm:text-center prevent-select">
+                  <span className="font-light sm:text-sm sm:text-center prevent-select">
                     {testimonial.position}
                   </span>
                 </div>

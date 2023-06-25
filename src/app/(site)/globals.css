@@ -10,8 +10,9 @@ html {
 body {
   background-color: black;
   height: 100%;
+
 }
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 
