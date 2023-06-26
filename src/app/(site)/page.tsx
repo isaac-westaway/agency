@@ -18,8 +18,22 @@ import Accordion from "@/src/app/components/Accordion";
 
 const items = [
   {
-    title: "Item 1",
-    content: "Content for Item 1",
+    title: "Why are websites important for small businesses?",
+    content: `
+      <p>Websites are important for several reasons:</p>
+      <br />
+      <p>
+      <b>Online Presence:</b> A professionally crafted website acts as a virtual storefront, 
+      ensuring your business is discoverable to potential customers.
+      </p>
+      <p class="mt-1">
+      <b>Credibility and Trust: </b>A well-designed website establishes trust and credibility, enhancing your business's reputation.
+      </p>
+      <p class="mt-1">
+      <b>Expanded Reach:</b> Websites break geographical barriers, allowing customers to access your
+      </p>
+    `,
+    contentClassName: "my-custom-class",
   },
   {
     title: "Item 2",
@@ -307,7 +321,7 @@ export default function Home() {
       </section>
       <section className="relative text-white border-t-[1px] border-dark-50">
         <RevealOnce>
-        <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 pb-8 select-text">
+          <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 pb-8 select-text">
             What Australian businesses are saying about us
           </div>
         </RevealOnce>
@@ -319,7 +333,7 @@ export default function Home() {
       </section>
       <section className="relative text-white border-t-[1px] border-dark-50">
         <RevealOnce>
-        <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 pb-8 select-text">
+          <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 pb-8 select-text">
             Some of the companies weve developed for
           </div>
         </RevealOnce>
