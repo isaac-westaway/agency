@@ -88,7 +88,7 @@ export default function Home() {
               type="text"
               name="name"
               className={`
-              w-full ring-dark-50 ring-1 sm:ring-8 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+              w-full ring-dark-50 border-dark-50 border ring-1 sm:ring-8 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${touched.name && !values.name ? "ring-red-300 ring-inset" : ""}
             `}
               value={values.name}
@@ -107,7 +107,7 @@ export default function Home() {
               type="email"
               name="email"
               className={`
-              w-full ring-dark-50 ring-1 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+              w-full ring-dark-50 ring-1 mt-1 border-dark-50 border-[1px] ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${touched.email && !values.email ? "ring-red-300 ring-inset" : ""}
             `}
               value={values.email}
@@ -130,7 +130,7 @@ export default function Home() {
                 type="text"
                 name="business"
                 className={`
-              w-full ring-dark-50 ring-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+              w-full ring-dark-50 ring-1 ring-inset border-dark-50 border focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${
                 touched.business && !values.business
                   ? "ring-red-300 ring-inset"
@@ -155,7 +155,7 @@ export default function Home() {
                 name="message"
                 rows={4}
                 className={`
-              w-full ring-dark-50 ring-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl bg-black py-3 px-6 text-base
+              w-full ring-dark-50 ring-1 ring-inset border-dark-50 border focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl bg-black py-3 px-6 text-base
               ${
                 touched.message && !values.message
                   ? "ring-red-300 ring-inset"

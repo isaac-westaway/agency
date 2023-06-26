@@ -152,7 +152,7 @@ const handler = async (
       await transporter.sendMail({
         ...mailOptions,
         ...generateEmailContent(data),
-        subject: data.subject,
+        subject: "New contact message",
       });
 
       return res.status(200).json({ success: true });
