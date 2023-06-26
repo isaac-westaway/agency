@@ -88,7 +88,7 @@ export default function Home() {
               type="text"
               name="name"
               className={`
-              w-full ring-dark-50 sm:ring-white ring-1 sm:ring-8 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+              w-full ring-white ring-1 sm:ring-8 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${touched.name && !values.name ? "ring-red-300 ring-inset" : ""}
             `}
               value={values.name}
