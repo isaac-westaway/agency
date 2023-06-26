@@ -32,7 +32,7 @@ const DesktopFooter = () => {
           </div>
           <div className="w-full mr-[2.75rem]">
             <div className="grid grid-cols-4 text-white">
-              <div className="border-x-[1px]  border-dark-50 pl-11 pr-11">
+              <div className="border-l-[1px]  border-dark-50 pl-11 pr-11">
                 <div className="font-semibold border-b-[1px] border-dark-50 pb-3 tracking-wider">
                   Quick Links
                 </div>
