@@ -10,7 +10,7 @@ import Hero from "@/src/app/components/Hero";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
 import FlyIn from "@/src/app/components/utils/FlyIn";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
-import ContactForm from "@/src/app/components/contact/ContactForm";
+import ContactForm from "@/src/app/components/ContactForm";
 import Testimonials from "@/src/app/components/testimonials/Testimonials";
 import CaseStudies from "@/src/app/components/CaseStudies";
 import TypedText from "@/src/app/components/experimental/TypedText";
