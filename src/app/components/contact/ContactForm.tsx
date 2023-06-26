@@ -88,7 +88,7 @@ export default function Home() {
               type="text"
               name="name"
               className={`
-              w-full ring-dark-50 border-dark-50 border ring-1 sm:ring-8 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+              w-full ring-dark-50 border-dark-50 border ring-1 sm:ring-1 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${touched.name && !values.name ? "ring-red-300 ring-inset" : ""}
             `}
               value={values.name}
@@ -147,7 +147,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full col-span-2 sm:mb-3">
-            <div className="mt-4 relative">
+            <div className="mt-4 sm:mt-0 relative">
               <label className="block mb-3 text-lg font-semibold">
                 Message
               </label>
