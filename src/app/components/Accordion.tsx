@@ -1,9 +1,10 @@
-"use client"
+"use client";
+
 import React, { useState } from "react";
 
 interface AccordionItem {
   title: string;
-  content: string;
+  content: React.ReactNode;
   contentClassName?: string;
 }
 
@@ -39,14 +40,14 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
           onClick={() => handleClick(index)}
         >
           <h3
-            className={`text-lg font-medium py-4 px-4 ${
+            className={`text-lg sm:text-md font-medium py-4 px-4 ${
               isActive ? "text-[#4463e2]" : "text-white"
             }`}
           >
             {item.title}
           </h3>
           <svg
-            className={`w-4 h-4 transition-transform transform ${
+            className={`w-4 h-4 shrink-0 transition-transform transform ${
               isActive ? "rotate-180" : ""
             }`}
             viewBox="0 0 24 24"
@@ -55,7 +56,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
           </svg>
         </div>
         <div
-          className={`overflow-hidden transition-all duration-500 ease-in-out ${
+          className={`overflow-hidden transition-all duration-[1200ms] ease-in-out ${
             isActive ? "max-h-[1000px]" : "max-h-0"
           }`}
           style={{ pointerEvents: isActive ? "auto" : "none" }}
@@ -64,8 +65,9 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
             className={`mx-4 py-4 border-t-[1px] text-white cursor-text ${
               item.contentClassName || ""
             }`}
-            dangerouslySetInnerHTML={{ __html: item.content }}
-          ></div>
+          >
+            {item.content}
+          </div>
         </div>
       </div>
     );
