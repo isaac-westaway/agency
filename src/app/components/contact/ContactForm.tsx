@@ -142,12 +142,12 @@ export default function Home() {
                 onBlur={onBlur}
               />
               {touched.business && !values.business && (
-                <p className="text-red-300">Required</p>
+                <p className="text-red-300 absolute">Required</p>
               )}
             </div>
           </div>
           <div className="w-full col-span-2 sm:mb-3">
-            <div className="mt-4 sm:mt-0 relative">
+            <div className="mt-8 sm:mt-0 relative">
               <label className="block mb-3 text-lg font-semibold">
                 Message
               </label>
