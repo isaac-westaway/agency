@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 interface FormValues {
   name: string;
   email: string;
-  subject: string;
+  business: string;
   message: string;
 }
 
@@ -20,7 +20,7 @@ interface FormState {
 const initValues: FormValues = {
   name: "",
   email: "",
-  subject: "",
+  business: "",
   message: "",
 };
 
@@ -83,12 +83,12 @@ export default function Home() {
       <div className="max-w-450px text-white w-full justify-center items-center">
         <div className="grid grid-cols-2 sm:grid-cols-1 gap-x-11 sm:gap-0 sm:w-full md:w-full lg:w-full xl:w-full">
           <div className="relative w-full sm:col-span-2 sm:mb-3">
-            <label className="block text-lg font-semibold">Your Name</label>
+            <label className="block text-lg font-semibold">Name</label>
             <input
               type="text"
               name="name"
               className={`
-              w-full ring-white ring-1 sm:ring-8 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+              w-full ring-dark-50 ring-1 sm:ring-8 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${touched.name && !values.name ? "ring-red-300 ring-inset" : ""}
             `}
               value={values.name}
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
           <div className="relative w-full sm:col-span-2 sm:mt-4 sm:mb-3">
             <label className="block text-lg font-semibold">
-              Your Email Address
+              Email Address
             </label>
             <input
               type="email"
@@ -124,34 +124,30 @@ export default function Home() {
           <div className="w-full col-span-2 sm:mb-3">
             <div className="mt-8 sm:mt-4 sm:mb-4 relative">
               <label className="block mb-3 text-lg font-semibold">
-                Your Email Subject
+                Business Name
               </label>
               <input
                 type="text"
-                name="subject"
+                name="business"
                 className={`
               w-full ring-dark-50 ring-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${
-                touched.subject && !values.subject
+                touched.business && !values.business
                   ? "ring-red-300 ring-inset"
                   : ""
               }
             `}
-                value={values.subject}
+                value={values.business}
                 onChange={handleChange}
                 onBlur={onBlur}
               />
-              {touched.subject && !values.subject && (
+              {touched.business && !values.business && (
                 <p className="text-red-300">Required</p>
               )}
             </div>
           </div>
           <div className="w-full col-span-2 sm:mb-3">
-            <div
-              className={` relative ${
-                touched.message && !values.message ? "border-red-300" : ""
-              }`}
-            >
+            <div className="mt-4 relative">
               <label className="block mb-3 text-lg font-semibold">
                 Message
               </label>
@@ -181,7 +177,7 @@ export default function Home() {
               className={`bg-blue text-white px-4 py-2 rounded-md w-full text-base font-medium bg-[#4a6cf7] transition duration-200 ease-in-out ${
                 !values.name ||
                 !values.email ||
-                !values.subject ||
+                !values.business ||
                 !values.message ||
                 !isValidEmail(values.email)
                   ? "cursor-not-allowed hover:bg-red-300 transition duration-200 ease-in-out "
@@ -190,7 +186,7 @@ export default function Home() {
               disabled={
                 !values.name ||
                 !values.email ||
-                !values.subject ||
+                !values.business ||
                 !values.message ||
                 !isValidEmail(values.email)
               }
