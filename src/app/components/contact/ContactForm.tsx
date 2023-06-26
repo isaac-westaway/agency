@@ -148,7 +148,7 @@ export default function Home() {
           </div>
           <div className="w-full col-span-2">
             <div
-              className={` ${
+              className={` relative ${
                 touched.message && !values.message ? "border-red-300" : ""
               }`}
             >
@@ -159,7 +159,7 @@ export default function Home() {
                 name="message"
                 rows={4}
                 className={`
-              w-full ring-dark-50 ring-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+              w-full ring-dark-50 ring-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl bg-black py-3 px-6 text-base
               ${
                 touched.message && !values.message
                   ? "ring-red-300 ring-inset"
@@ -172,7 +172,7 @@ export default function Home() {
                 onBlur={onBlur}
               ></textarea>
               {touched.message && !values.message && (
-                <p className="text-red-300">Required</p>
+                <p className="text-red-300 absolute -mt-[0.4rem]">Required</p>
               )}
             </div>
           </div>
