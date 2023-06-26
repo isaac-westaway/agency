@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import HoverAnimation from "./utils/HoverAnimation";
 import RevealOnce from "./utils/RevealOnce";
+import RevealAlways from "./utils/RevealAlways";
 
 const CaseStudies = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -51,9 +52,8 @@ const CaseStudies = () => {
                 </HoverAnimation>
                 <HoverAnimation speed={0.9}>
                   <div className="absolute top-3/4 flex w-full px-4">
-                  This website was yes
-                  This website was yes
-                  This website was yes
+                    This website was yes This website was yes This website was
+                    yes
                   </div>
                 </HoverAnimation>
               </>
@@ -94,9 +94,8 @@ const CaseStudies = () => {
                 </HoverAnimation>
                 <HoverAnimation speed={0.9}>
                   <div className="absolute top-3/4 flex w-full px-4">
-                  This website was yes
-                  This website was yes
-                  This website was yes
+                    This website was yes This website was yes This website was
+                    yes
                   </div>
                 </HoverAnimation>
               </>
@@ -104,7 +103,6 @@ const CaseStudies = () => {
           </div>
         </div>
       </RevealOnce>
-
       <RevealOnce>
         <div
           className="mx-4 mt-8 flex items-center justify-center"
@@ -138,9 +136,8 @@ const CaseStudies = () => {
                 </HoverAnimation>
                 <HoverAnimation speed={0.9}>
                   <div className="absolute top-3/4 flex w-full px-4">
-                  This website was yes
-                  This website was yes
-                  This website was yes
+                    This website was yes This website was yes This website was
+                    yes
                   </div>
                 </HoverAnimation>
               </>
@@ -181,9 +178,8 @@ const CaseStudies = () => {
                 </HoverAnimation>
                 <HoverAnimation speed={0.9}>
                   <div className="absolute top-3/4 flex w-full px-4">
-                  This website was yes
-                  This website was yes
-                  This website was yes
+                    This website was yes This website was yes This website was
+                    yes
                   </div>
                 </HoverAnimation>
               </>
@@ -224,9 +220,8 @@ const CaseStudies = () => {
                 </HoverAnimation>
                 <HoverAnimation speed={0.9}>
                   <div className="absolute top-3/4 flex w-full px-4">
-                  This website was yes
-                  This website was yes
-                  This website was yes
+                    This website was yes This website was yes This website was
+                    yes
                   </div>
                 </HoverAnimation>
               </>
@@ -267,9 +262,8 @@ const CaseStudies = () => {
                 </HoverAnimation>
                 <HoverAnimation speed={0.9}>
                   <div className="absolute top-3/4 flex w-full px-4">
-                  This website was yes
-                  This website was yes
-                  This website was yes
+                    This website was yes This website was yes This website was
+                    yes
                   </div>
                 </HoverAnimation>
               </>
@@ -277,6 +271,19 @@ const CaseStudies = () => {
           </div>
         </div>
       </RevealOnce>
+      <div className="col-span-3">
+        <RevealOnce>
+          <div className="mt-8">
+            <div className="flex justify-center w-full items-end">
+              <RevealAlways>
+                <div className="rounded-lg px-3.5 py-2.5 cursor-pointer text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
+                  Check out more of our projects&nbsp;<span aria-hidden="true">→</span>
+                </div>
+              </RevealAlways>
+            </div>
+          </div>
+        </RevealOnce>
+      </div>
     </div>
   );
 };

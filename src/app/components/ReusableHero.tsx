@@ -100,7 +100,7 @@ const ReusableHero: React.FC<ReusableHeroProps> = ({
                 <div className="">
                   <div className="w-full">{subText} </div>
                   <div className="font-light mt-1 sm:leading-normal text-gray-400 text-lg leading-8">
-                    {secondarySubText}{" "}
+                    {secondarySubText}
                   </div>
                 </div>
                 <div className="">
@@ -108,7 +108,7 @@ const ReusableHero: React.FC<ReusableHeroProps> = ({
                     <Link href="/" className="hover:text-[#4A6CF7]">
                       Home
                     </Link>
-                    <span className="block w-2 h-2 border-t-2 border-r-2 rotate-45 ml-3 mr-3"></span>
+                    <span className="block w-2 h-2 border-t-2 border-r-2 rotate-45 ml-3 mr-4"></span>
                     <span className="text-[#4A6CF7]">{PageLink}</span>
                   </div>
                 </div>
