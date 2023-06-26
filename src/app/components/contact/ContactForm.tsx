@@ -82,13 +82,13 @@ export default function Home() {
     <div className="w-full justify-center">
       <div className="max-w-450px text-white w-full justify-center items-center">
         <div className="grid grid-cols-2 sm:grid-cols-1 gap-x-11 sm:gap-0 sm:w-full md:w-full lg:w-full xl:w-full">
-          <div className="relative w-full sm:col-span-2">
+          <div className="relative w-full sm:col-span-2 sm:mb-3">
             <label className="block text-lg font-semibold">Your Name</label>
             <input
               type="text"
               name="name"
               className={`
-              w-full ring-dark-50 ring-1 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+              w-full ring-dark-50 ring-1 sm:ring-8 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${touched.name && !values.name ? "ring-red-300 ring-inset" : ""}
             `}
               value={values.name}
@@ -99,7 +99,7 @@ export default function Home() {
               <p className="text-red-300 absolute">Required</p>
             )}
           </div>
-          <div className="relative w-full sm:col-span-2 sm:mt-4">
+          <div className="relative w-full sm:col-span-2 sm:mt-4 sm:mb-3">
             <label className="block text-lg font-semibold">
               Your Email Address
             </label>
@@ -121,8 +121,8 @@ export default function Home() {
               <p className="text-red-300 absolute">Enter a valid email</p>
             )}
           </div>
-          <div className="w-full col-span-2">
-            <div className="mb-8 mt-8 sm:mt-4 sm:mb-4 relative">
+          <div className="w-full col-span-2 sm:mb-3">
+            <div className="mt-8 sm:mt-4 sm:mb-4 relative">
               <label className="block mb-3 text-lg font-semibold">
                 Your Email Subject
               </label>
@@ -146,7 +146,7 @@ export default function Home() {
               )}
             </div>
           </div>
-          <div className="w-full col-span-2">
+          <div className="w-full col-span-2 sm:mb-3">
             <div
               className={` relative ${
                 touched.message && !values.message ? "border-red-300" : ""
