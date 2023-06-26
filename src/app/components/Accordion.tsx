@@ -12,20 +12,26 @@ interface AccordionProps {
 }
 
 const Accordion: React.FC<AccordionProps> = ({ items }) => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndices, setActiveIndices] = useState<number[]>([]);
 
   const handleClick = (index: number) => {
-    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+    setActiveIndices((prevIndices) => {
+      if (prevIndices.includes(index)) {
+        return prevIndices.filter((i) => i !== index);
+      } else {
+        return [...prevIndices, index];
+      }
+    });
   };
 
   const renderedItems = items.map((item, index) => {
-    const isActive = activeIndex === index;
+    const isActive = activeIndices.includes(index);
 
     return (
       <div
         key={index}
         className={`border border-gray-300 rounded p-2 cursor-pointer ${
-          isActive ? 'active' : ''
+          isActive ? 'bg-black' : ''
         }`}
         onClick={() => handleClick(index)}
       >
@@ -40,11 +46,14 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
             <path fill="currentColor" d="M19 9l-7 7-7-7" />
           </svg>
         </div>
-        {isActive && (
-          <div className="overflow-hidden">
-            <div className="p-4 text-gray-700">{item.content}</div>
-          </div>
-        )}
+        <div
+          className={`overflow-hidden transition-all duration-500 ease-in-out ${
+            isActive ? 'max-h-48' : 'max-h-0'
+          }`}
+          style={{ pointerEvents: isActive ? 'auto' : 'none' }}
+        >
+          <div className="p-4 text-gray-700">{item.content}</div>
+        </div>
       </div>
     );
   });
