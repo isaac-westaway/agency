@@ -7,6 +7,7 @@ interface ReusableHeroProps {
   subText?: string;
   secondarySubText?: string;
   PageLink: string;
+  actionButton?: string;
 }
 
 const ReusableHero: React.FC<ReusableHeroProps> = ({
@@ -14,6 +15,7 @@ const ReusableHero: React.FC<ReusableHeroProps> = ({
   subText,
   secondarySubText,
   PageLink,
+  actionButton,
 }) => {
   return (
     <div className="ml-11 mr-11">
@@ -103,13 +105,20 @@ const ReusableHero: React.FC<ReusableHeroProps> = ({
                     {secondarySubText}
                   </div>
                 </div>
-                <div className="">
+                <div className="mr-1">
                   <div className="flex justify-end sm:justify-center sm:pt-4 w-full items-center">
                     <Link href="/" className="hover:text-[#4A6CF7]">
                       Home
                     </Link>
-                    <span className="block w-2 h-2 border-t-2 border-r-2 rotate-45 ml-3 mr-4"></span>
+                    <span className="block w-2 h-2 border-t-2 border-r-2 rotate-45 ml-3 mr-4 border-gray-400"></span>
                     <span className="text-[#4A6CF7]">{PageLink}</span>
+                  </div>
+                  <div className="flex justify-end sm:justify-center sm:pt-4 w-full mt-1">
+                  <RevealAlways>
+                  <div className="rounded-lg cursor-pointer px-3.5 text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
+                    {actionButton}
+                  </div>
+                </RevealAlways>
                   </div>
                 </div>
               </div>

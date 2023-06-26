@@ -4,6 +4,10 @@ import { useState, ChangeEvent, FocusEvent } from "react";
 import { sendContactForm } from "@/src/app/components/libs/api";
 import toast from "react-hot-toast";
 
+interface Placeholders {
+  message: string;
+}
+
 interface FormValues {
   name: string;
   email: string;
@@ -30,7 +34,7 @@ const initState: FormState = {
   values: initValues,
 };
 
-export default function Home() {
+const ContactForm: React.FC<Placeholders> = ({ message }) => {
   const [state, setState] = useState<FormState>(initState);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
 
@@ -162,7 +166,7 @@ export default function Home() {
                   : ""
               }
             `}
-                placeholder="Hey I'm liking the looks of your services, and my business could really do with a website..."
+                placeholder={message}
                 value={values.message}
                 onChange={handleChange}
                 onBlur={onBlur}
@@ -237,3 +241,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default ContactForm

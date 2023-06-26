@@ -16,7 +16,12 @@ const DesktopNavbar = () => {
   useEffect(() => {
     let timeoutId: string | number | NodeJS.Timeout | null | undefined = null;
 
-    if (showPricingDropdown || showAboutDropdown || showServicesDropdown || dropdownHovered) {
+    if (
+      showPricingDropdown ||
+      showAboutDropdown ||
+      showServicesDropdown ||
+      dropdownHovered
+    ) {
       setShowPricingDropdown(showPricingDropdown);
       setShowAboutDropdown(showAboutDropdown);
       setShowServicesDropdown(showServicesDropdown);
@@ -33,7 +38,12 @@ const DesktopNavbar = () => {
         clearTimeout(timeoutId);
       }
     };
-  }, [showPricingDropdown, showAboutDropdown, dropdownHovered, showServicesDropdown]);
+  }, [
+    showPricingDropdown,
+    showAboutDropdown,
+    dropdownHovered,
+    showServicesDropdown,
+  ]);
 
   const handlePricingHover = () => {
     setShowPricingDropdown(true);
@@ -53,11 +63,11 @@ const DesktopNavbar = () => {
 
   const handleServicesHover = () => {
     setShowServicesDropdown(true);
-  }
+  };
 
   const handleServicesLeave = () => {
     setShowServicesDropdown(false);
-  }
+  };
 
   const handleDropdownHover = () => {
     setDropdownHovered(true);
@@ -79,7 +89,7 @@ const DesktopNavbar = () => {
           <Logo />
         </div>
         <div className="flex flex-row gap-11 items-center">
-        <span className="cursor-pointer hover:text-white hover:transition hover:duration-200">
+          <span className="cursor-pointer hover:text-white hover:transition hover:duration-200">
             <Link
               href="/gallery"
               className="animatedUnderline h-10 items-center flex justify-center"
@@ -88,16 +98,7 @@ const DesktopNavbar = () => {
             </Link>
           </span>
 
-          <div
-            className="cursor-pointer hover:text-white hover:transition hover:duration-200 relative"
-            onMouseEnter={handlePricingHover}
-            onMouseLeave={handlePricingLeave}
-            onClick={() => {
-              setShowPricingDropdown(true);
-              setShowServicesDropdown(false);
-              setShowAboutDropdown(false);
-            }}
-          >
+          <div className="cursor-pointer hover:text-white hover:transition hover:duration-200 relative">
             <span className="cursor-pointer hover:text-white hover:transition hover:duration-200 flex">
               <Link
                 href="/pricing"
@@ -105,42 +106,7 @@ const DesktopNavbar = () => {
               >
                 Pricing
               </Link>
-              <span className="items-center justify-center flex mt-1">
-                <FiChevronDown />
-              </span>
             </span>
-            <AnimatePresence>
-              {showPricingDropdown && (
-                <motion.div
-                  className="absolute w-96 text-white rounded-2xl mt-4 transform translate-x-[-50%] border bg-custom-color"
-                  initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                  variants={dropdownVariants}
-                  onMouseEnter={handleDropdownHover}
-                  onMouseLeave={handleDropdownLeave}
-                >
-                  <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mt-[10px]">
-                    <Link href="/pricing/business">
-                      Business
-                      <br />
-                      <span className="text-gray-400 w-fit text-sm">
-                        Business solutions for your business needs
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mb-[10px]">
-                    <Link href="/pricing/personal">
-                      Personal
-                      <br />
-                      <span className="text-gray-400 w-fit text-sm">
-                        Business solutions for your business needs
-                      </span>
-                    </Link>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
           </div>
           <div
             className="cursor-pointer hover:text-white hover:transition hover:duration-200 relative"
@@ -149,7 +115,7 @@ const DesktopNavbar = () => {
             onClick={() => {
               setShowServicesDropdown(true);
               setShowAboutDropdown(false);
-              setShowPricingDropdown(false)
+              setShowPricingDropdown(false);
             }}
           >
             <span className="cursor-pointer hover:text-white hover:transition hover:duration-200 flex">
@@ -216,9 +182,7 @@ const DesktopNavbar = () => {
             }}
           >
             <span className="cursor-pointer hover:text-white hover:transition hover:duration-200 flex">
-              <span
-                className="animatedUnderline h-10 items-center flex justify-center"
-              >
+              <span className="animatedUnderline h-10 items-center flex justify-center">
                 About
               </span>
               <span className="items-center justify-center flex mt-1">
@@ -266,9 +230,9 @@ const DesktopNavbar = () => {
               Blog
             </Link>
           </span>
-          <span className="shrink-0 cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">
+          <a href="#contact" className="shrink-0 cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">
             Contact
-          </span>
+          </a>
           <div className="shrink-0 cursor-pointer flex items-center special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">
             Billing portal&nbsp;
             <span className="flex flex-row items-center h-full pb-1">

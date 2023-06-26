@@ -366,7 +366,7 @@ export default function Home() {
           <CaseStudies />
         </RevealOnce>
       </section>
-      <section className="relative text-white border-t-[1px] border-dark-50">
+      <section className="relative text-white border-t-[1px] border-dark-50" style={{ scrollMarginTop: '100px' }} id="contact">
         <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
           <div>
             <RevealOnce>
@@ -424,7 +424,7 @@ export default function Home() {
             </RevealOnce>
           </div>
           <div className="px-4 mt-6">
-            <ContactForm />
+            <ContactForm message="I like the looks of your services, and my small business really could use a website!"/>
           </div>
         </div>
       </section>
