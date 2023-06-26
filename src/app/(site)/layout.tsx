@@ -21,7 +21,7 @@ const font = Inter({
 });
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
