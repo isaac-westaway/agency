@@ -237,15 +237,15 @@ const TabletNavbar = () => {
               Blog
             </Link>
           </span>
-          <span className="shrink-0 cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[20px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">
+          <a href="#contact" className="shrink-0 cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[20px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">
             Contact
-          </span>
-          <div className="shrink-0 cursor-pointer flex items-center special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[20px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">
+          </a>
+          <a href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE" target="_blank" rel="noopener noreferrer" className="shrink-0 cursor-pointer flex items-center special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[20px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">
             Billing portal&nbsp;
             <span className="flex flex-row items-center h-full pb-1">
               <FiExternalLink />
             </span>
-          </div>
+          </a>
         </div>
       </div>
     </header>

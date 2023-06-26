@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 "use client";
 
 import { useState, useCallback, useEffect, Suspense } from "react";
@@ -42,11 +43,16 @@ const MobileNavbar = () => {
     Router.push("https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE");
   }
 
-  function AccordionPricingToggle() {
-    setAccordionPricingOpen(!accordionPricingOpen);
+  function AccordionServicesToggle() {
+    setAccordionServicesOpen(!accordionServicesOpen);
   }
 
-  const [accordionPricingOpen, setAccordionPricingOpen] = useState(false);
+  function AccordionAboutToggle() {
+    setAccordionAboutOpen(!accordionAboutOpen);
+  }
+
+  const [accordionServicesOpen, setAccordionServicesOpen] = useState(false);
+  const [accordionAboutOpen, setAccordionAboutOpen] = useState(false);
 
   return (
     <div className="pt-4 py-4 w-full  text-neutral-500">
@@ -88,43 +94,40 @@ const MobileNavbar = () => {
       >
         {NavOpen && (
           <ul
-            /*animate="visible"
-                        variants={list}*/
             className="overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl"
           >
             <li
               onClick={toggleOpen}
               className="cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition"
             >
-              <Link href="/">Contact</Link>
+              <a href="#contact">Contact</a>
             </li>
-
             <div className="border-b-stone-800 border-b-[3px]">
               <br />
             </div>
-
             <li
               onClick={billingRedirect}
               className="flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
             >
-              <Link
+              <a
                 href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-row justify-end place-items-end items-center whitespace-nowrap"
               >
                 Billing Portal
-              </Link>
+              </a>
               <div className="flex flex-row items-center justify-end w-full">
                 <FiExternalLink />
               </div>
             </li>
-
             <li
-              onClick={AccordionPricingToggle}
+              onClick={AccordionServicesToggle}
               className="flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
             >
-              <div className="">Pricing</div>
+              <div className="">Services</div>
               <div className="flex flex-row items-center justify-end w-full">
-                {accordionPricingOpen ? (
+                {accordionServicesOpen ? (
                   <FiChevronDown size={21} />
                 ) : (
                   <FiChevronLeft size={21} />
@@ -132,65 +135,89 @@ const MobileNavbar = () => {
               </div>
             </li>
             <li>
-              {accordionPricingOpen && (
+              {accordionServicesOpen && (
                 <>
                   <div
                     onClick={toggleOpen}
                     className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]"
                   >
-                    <Link href="/pricing/business">|&nbsp;&nbsp;Business</Link>
+                    <Link href="/services/ui-ux" className="block w-full">|&nbsp;&nbsp;UI/UX Design</Link>
                   </div>
                   <div
                     onClick={toggleOpen}
                     className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]"
                   >
-                    <Link href="/pricing/personal">|&nbsp;&nbsp;Personal</Link>
+                    <Link href="/services/web-development" className="block w-full">
+                      |&nbsp;&nbsp;Website Development
+                    </Link>
+                  </div>
+                  <div
+                    onClick={toggleOpen}
+                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]"
+                  >
+                    <Link href="/services/web-management" className="block w-full">
+                      |&nbsp;&nbsp;Website Management
+                    </Link>
                   </div>
                 </>
               )}
             </li>
-
+            <li
+              onClick={AccordionAboutToggle}
+              className="flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
+            >
+              <div className="">About</div>
+              <div className="flex flex-row items-center justify-end w-full">
+                {accordionServicesOpen ? (
+                  <FiChevronDown size={21} />
+                ) : (
+                  <FiChevronLeft size={21} />
+                )}
+              </div>
+            </li>
+            <li>
+              {accordionAboutOpen && (
+                <>
+                  <div
+                    onClick={toggleOpen}
+                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]"
+                  >
+                    <Link href="/services/ui-ux" className="block w-full">|&nbsp;&nbsp;Our Agency</Link>
+                  </div>
+                  <div
+                    onClick={toggleOpen}
+                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]"
+                  >
+                    <Link href="/services/web-development" className="block w-full">
+                      |&nbsp;&nbsp;Our Team
+                    </Link>
+                  </div>
+                </>
+              )}
+            </li>
             <li
               onClick={toggleOpen}
               className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
             >
-              {/*<ThemeProvider theme={theme}>
-                                <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} className="border-green-50">
-                                    <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                                        Collapsible Group Item #3
-                                    </AccordionSummary>
-                                    <AccordionDetails className="border-green-50">
-                                        <div className="border-green">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                                            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                            sit amet blandit leo lobortis eget.
-                                        </div>
-                                    </AccordionDetails>
-                                </Accordion>
-                            
-                            </ThemeProvider>*/}
-              <Link href="/test" className="w-full">
+              <Link href="/gallery" className="block w-full">
                 Gallery
               </Link>
             </li>
-
-            <li
-              onClick={AccordionPricingToggle}
-              className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
-            >
-              <Link href="/d-app">D-App</Link>
-            </li>
-
             <li
               onClick={toggleOpen}
               className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
             >
-              <Link href="/">Business</Link>
+              <Link href="/d-app" className="">
+                Blog
+              </Link>
             </li>
-
+            <li
+              onClick={toggleOpen}
+              className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
+            >
+              <Link href="/">/*&nbsp;Experimental&nbsp;*/</Link>
+            </li>
             <br />
-
             <li
               onClick={toggleOpen}
               className=" items-center cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition"

@@ -277,7 +277,7 @@ const CaseStudies = () => {
             <div className="flex justify-center w-full items-end">
               <RevealAlways>
                 <div className="rounded-lg px-3.5 py-2.5 cursor-pointer text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
-                  Check out more of our projects&nbsp;<span aria-hidden="true">→</span>
+                  Check out more of our projects&nbsp;<span aria-hidden="true" className="items-center">→</span>
                 </div>
               </RevealAlways>
             </div>
