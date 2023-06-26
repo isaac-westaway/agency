@@ -220,6 +220,14 @@ const MobileNavbar = () => {
               onClick={toggleOpen}
               className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
             >
+              <Link href="/pricing" className="block w-full">
+                Pricing
+              </Link>
+            </li>
+            <li
+              onClick={toggleOpen}
+              className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
+            >
               <Link href="/d-app" className="">
                 Blog
               </Link>
