@@ -37,7 +37,11 @@ export default function Services() {
           </RevealOnce>
         </div>
       </section>
-      <section className="mr-11 ml-11 border-t-[1px] border-dark-50" id="contact" style={{ scrollMarginTop: '100px' }}>
+      <section
+        className="mr-11 ml-11 border-t-[1px] border-dark-50"
+        id="contact"
+        style={{ scrollMarginTop: "100px" }}
+      >
         <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
           <div>
             <RevealOnce>
@@ -95,9 +99,9 @@ export default function Services() {
             </RevealOnce>
           </div>
           <RevealOnce>
-              <div className="px-4 mt-6">
-                <ContactForm message="I'd like to know more about the digital services you offer!" />
-              </div>
+            <div className="px-4 mt-6">
+              <ContactForm message="I'd like to know more about the digital services you offer!" />
+            </div>
           </RevealOnce>
         </div>
       </section>

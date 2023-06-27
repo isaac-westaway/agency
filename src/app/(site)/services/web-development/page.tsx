@@ -139,7 +139,7 @@ export default function WebDevelopment() {
                 </li>
               </ul>
               <RevealAlways>
-                <div className="rounded-lg mt-10 py-2.5 cursor-pointer">
+                <div className="rounded-lg mt-10 py-2.5 cursor-pointer text-base">
                   <a
                     href="#contact"
                     className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
@@ -192,8 +192,13 @@ export default function WebDevelopment() {
                 </li>
               </ul>
               <RevealAlways>
-                <div className="rounded-lg px-3.5 mt-10 py-2.5 text-white cursor-not-allowed bg-red-300 transition duration-200 ease-in-out ">
-                  Start designing your project
+                <div className="rounded-lg mt-10 py-2.5 cursor-pointer text-base">
+                  <a
+                    href="#"
+                    className="block w-full text-white bg-red-300 cursor-not-allowed hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
+                  >
+                    Start designing your app
+                  </a>
                 </div>
               </RevealAlways>
             </div>
@@ -431,8 +436,8 @@ export default function WebDevelopment() {
             </div>
             <div className="text-base font-light pt-4 leading-relaxed">
               <RevealOnce>
-                As a provider of web development services, we specialize
-                in delivering exceptional online solutions tailored to meet the
+                As a provider of web development services, we specialize in
+                delivering exceptional online solutions tailored to meet the
                 unique needs of our clients. Our team of skilled developers and
                 designers work collaboratively to create visually stunning and
                 highly functional websites that captivate audiences and drive
@@ -451,10 +456,10 @@ export default function WebDevelopment() {
               <br />
               <RevealOnce>
                 <div className="mb-8">
-                  With a keen eye for detail, a commitment to quality, and a focus
-                  on delivering measurable results, we are your trusted partner in
-                  building a strong online presence and achieving your digital
-                  goals.
+                  With a keen eye for detail, a commitment to quality, and a
+                  focus on delivering measurable results, we are your trusted
+                  partner in building a strong online presence and achieving
+                  your digital goals.
                 </div>
               </RevealOnce>
             </div>

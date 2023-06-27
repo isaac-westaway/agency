@@ -216,7 +216,10 @@ export default function WebManagement() {
                 </RevealOnce>
                 <br />
                 <RevealOnce>
-                  <div className="mb-8">If you would like a monthly newsletter of all the changes WE make to your website, just ask!</div>
+                  <div className="mb-8">
+                    If you would like a monthly newsletter of all the changes WE
+                    make to your website, just ask!
+                  </div>
                 </RevealOnce>
               </div>
             </div>
@@ -296,7 +299,7 @@ export default function WebManagement() {
             </RevealOnce>
           </div>
           <RevealOnce>
-            <div className="px-4 mt-6">
+            <div className="px-4 sm:px-0 mt-6">
               <ContactForm message="I think I need someone to proffesionally manage my website :(" />
             </div>
           </RevealOnce>
