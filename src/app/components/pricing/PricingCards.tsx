@@ -5,11 +5,11 @@ const PricingCards = () => {
   return (
     <div>
       <RevealOnce>
-        <div className="grid lg:grid-cols-1 grid-cols-3 gap-12 py-8 px-4">
+        <div className="grid lg:grid-cols-1 grid-cols-3 gap-12 py-8 px-4 z-50">
           {pricingPlans.map((plan) => (
             <div
               key={plan.title}
-              className="relative border border-white shadow-lg p-8 bg-[#F9F9F9] rounded-2xl flex flex-col"
+              className="relative border border-white shadow-lg p-8 bg-[#F9F9F9] rounded-2xl flex flex-col z-50"
             >
               <h3 className="text-lg font-semibold leading-5 text-black">{plan.title}</h3>
               {plan.mostPopular && (

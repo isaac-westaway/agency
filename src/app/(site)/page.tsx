@@ -434,9 +434,11 @@ export default function Home() {
               </div>
             </RevealOnce>
           </div>
-          <div className="px-4 mt-6">
-            <ContactForm message="I like the looks of your services, and my small business really could use a website!"/>
-          </div>
+          <RevealOnce>
+            <div className="px-4 mt-6">
+              <ContactForm message="I like the looks of your services, and my small business really could use a website!"/>
+            </div>
+          </RevealOnce>
         </div>
       </section>
       <section className="relative text-white border-t-[1px] border-dark-50">

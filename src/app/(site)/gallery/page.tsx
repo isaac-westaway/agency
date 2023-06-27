@@ -15,10 +15,10 @@ export default function Gallery() {
         PageLink="Gallery"
         actionButton="Get in touch"
       />
-      <section className="mt-4 lg:-mt-14 md:-mt-16 sm:-mt-14 mr-11 ml-11 border-t-[1px] border-dark-50 text-white">
-        <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 px-4 gap-x-8">
+      <section className="mt-4 lg:-mt-14 md:-mt-16 sm:-mt-14 mr-11 ml-11 border-t-[1px] border-dark-50 text-white z-50">
+        <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 px-4 gap-x-8 z-50">
           <RevealOnce>
-            <div className="mt-8 relative">
+            <div className="mt-8 relative z-50">
               <Image
                 src="/images/gallery/constra.webp"
                 width={100}
@@ -43,7 +43,7 @@ export default function Gallery() {
             </div>
           </RevealOnce>
           <RevealOnce>
-            <div className="mt-8 relative">
+            <div className="mt-8 relative z-50">
               <Image
                 src="/images/gallery/bigspring-light.webp"
                 width={100}
@@ -68,14 +68,14 @@ export default function Gallery() {
             </div>
           </RevealOnce>
           <RevealOnce>
-            <div className="mt-8 relative">
+            <div className="mt-8 relative z-50">
               <Image
                 src="/images/gallery/gymfit.webp"
                 width={100}
                 height={100}
                 alt=""
                 layout="responsive"
-                className={`object-contain transition-opacity duration-200 rounded-2xl`}
+                className={`object-contain transition-opacity duration-200 rounded-2xl z-50`}
               />
               <div className="absolute bottom-0 w-full bg-white rounded-b-2xl border-t-[1px] border-dark-50 text-black px-4 py-4 flex flex-col">
                 <Link
@@ -301,9 +301,11 @@ export default function Gallery() {
               </div>
             </RevealOnce>
           </div>
-          <div className="px-4 mt-6">
-            <ContactForm message="Your digital services look great! I really want to learn more!"/>
-          </div>
+          <RevealOnce>
+            <div className="px-4 mt-6">
+              <ContactForm message="Your digital services look great! I really want to learn more!"/>
+            </div>
+          </RevealOnce>
         </div>
       </section>
     </div>

@@ -1,6 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
+
 import RevealAlways from "./utils/RevealAlways";
 import RevealOnce from "./utils/RevealOnce";
+
+import Hero1 from "@/public/svg/hero-shape-1.svg";
 
 interface ReusableHeroProps {
   heroText: string;
@@ -18,80 +22,14 @@ const ReusableHero: React.FC<ReusableHeroProps> = ({
   actionButton,
 }) => {
   return (
-    <div className="ml-11 mr-11">
+    <div className="ml-11 mr-11 -z-50">
       <div className="relative z-10 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
-        <div className="absolute top-0 -right-11">
-          <svg
-            width="628"
-            height="258"
-            viewBox="0 0 628 258"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              opacity="0.1"
-              d="M669.125 257.002L345.875 31.9983L524.571 -15.8832L669.125 257.002Z"
-              fill="url(#paint0_linear_0:1)"
-            ></path>
-            <path
-              opacity="0.1"
-              d="M0.0716344 182.78L101.988 -15.0769L142.154 81.4093L0.0716344 182.78Z"
-              fill="url(#paint1_linear_0:1)"
-            ></path>
-            <defs>
-              <linearGradient
-                id="paint0_linear_0:1"
-                x1="644"
-                y1="221"
-                x2="429.946"
-                y2="37.0429"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#4A6CF7"></stop>
-                <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_0:1"
-                x1="18.3648"
-                y1="166.016"
-                x2="105.377"
-                y2="32.3398"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#4A6CF7"></stop>
-                <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-              </linearGradient>
-            </defs>
-          </svg>
+        <div className="absolute top-0 -right-11 -z-50"></div>
+        <div className="absolute top-12 -left-11 -z-50">
+        <Image src={Hero1} alt="" />
+
         </div>
-        <div className="absolute top-0 -left-11">
-          <svg
-            width="287"
-            height="254"
-            viewBox="0 0 287 254"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              opacity="0.1"
-              d="M286.5 0.5L-14.5 254.5V69.5L286.5 0.5Z"
-              fill="url(#paint0_linear_111:578)"
-            ></path>
-            <defs>
-              <linearGradient
-                id="paint0_linear_111:578"
-                x1="-40.5"
-                y1="117"
-                x2="301.926"
-                y2="-97.1485"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#4A6CF7"></stop>
-                <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+        <div className="absolute top-0 -left-11"></div>
         <div className="mx-auto pt-44 sm:pt-48 lg:pt-56">
           <RevealAlways>
             <div className="flex flex-col justify-start">
@@ -114,11 +52,11 @@ const ReusableHero: React.FC<ReusableHeroProps> = ({
                     <span className="text-[#4A6CF7]">{PageLink}</span>
                   </div>
                   <div className="flex justify-end sm:justify-center sm:pt-4 w-full mt-1">
-                  <RevealAlways>
-                  <div className="rounded-lg cursor-pointer px-3.5 text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
-                    {actionButton}
-                  </div>
-                </RevealAlways>
+                    <RevealAlways>
+                      <div className="rounded-lg cursor-pointer px-3.5 text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
+                        {actionButton}
+                      </div>
+                    </RevealAlways>
                   </div>
                 </div>
               </div>

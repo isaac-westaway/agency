@@ -1,36 +1,57 @@
 import Link from "next/link";
 import ReusableHero from "../../components/ReusableHero";
-import PricingCards from "../../components/pricing/PricingCards";
 import RevealOnce from "../../components/utils/RevealOnce";
 import ContactForm from "../../components/ContactForm";
 
-export default function Pricing() {
+export default function Services() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen text-white">
       <ReusableHero
-        heroText="Our Pricing Plans"
-        subText="Empowering your business with flexible pricing options."
+        heroText="You shouldn't be here!"
+        subText="You probably meant to visit UI/UX Design Pricing, Website Production Pricing, or Website Management Pricing"
+        secondarySubText="Click to visit those pages:"
         PageLink="Pricing"
       />
-      <section className="mt-4 lg:-mt-14 md:-mt-16 sm:-mt-14 mr-11 ml-11 border-t-[1px] border-dark-50 text-white">
-        <PricingCards />
+      <section className="ml-11 mr-11 text-gray-400 font-light text-lg sm:-mt-[6rem] md:-mt-[5rem] lg:-mt-[5rem]">
+        <div className="grid grid-cols-3 sm:grid-cols-1 justify-between w-full sm:gap-y-4 border-dark-50 border-t-[1px] my-4 pt-4">
+          <RevealOnce>
+            <div className="text-center">
+              <Link href="/pricing/ui-ux" className="hover:underline">
+                UI/UX Design Pricing
+              </Link>
+            </div>
+          </RevealOnce>
+          <RevealOnce>
+            <div className="text-center">
+              <Link href="/pricing/web-production" className="hover:underline">
+                Website Production Pricing
+              </Link>
+            </div>
+          </RevealOnce>
+          <RevealOnce>
+            <div className="text-center">
+              <Link href="/pricing/web-management" className="hover:underline">
+                Website Management Pricing
+              </Link>
+            </div>
+          </RevealOnce>
+        </div>
       </section>
-      <section className="relative text-white border-t-[1px] border-dark-50 ml-11 mr-11" id="contact" style={{ scrollMarginTop: '100px' }}>
+      <section className="mr-11 ml-11 border-t-[1px] border-dark-50" id="contact" style={{ scrollMarginTop: '100px' }}>
         <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
           <div>
             <RevealOnce>
               <div className="h-full relative">
                 <div className="mt-8 py-4 text-3xl font-extrabold border-y-[1px] border-dark-50">
-                  Learn more about our processes!
+                  Get in touch with our team!
                 </div>
               </div>
             </RevealOnce>
             <RevealOnce>
               <div className="flex flex-col pt-4 font-normal text-lg select-text">
                 <div className="text-lg leading-8 text-white font-medium">
-                  Upon contacting, we will provide an email with the onboarding
-                  process. Please state that you would like this email in the
-                  &quot;Message&quot;	 section of the form.
+                  We will endeavour to respond as fast as possible. Usually this
+                  means 6 - 18 Hours.
                 </div>
                 <div className="relative flex flex-row w-full mt-4">
                   <div className="h-7 w-7 mx-4">
@@ -73,9 +94,11 @@ export default function Pricing() {
               </div>
             </RevealOnce>
           </div>
-          <div className="px-4 mt-6">
-            <ContactForm message="I would like to recieve an onboarding Email"/>
-          </div>
+          <RevealOnce>
+              <div className="px-4 mt-6">
+                <ContactForm message="I'd like to know more about the digital services you offer!" />
+              </div>
+          </RevealOnce>
         </div>
       </section>
     </div>

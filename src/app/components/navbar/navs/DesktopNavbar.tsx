@@ -1,85 +1,45 @@
-"use client";
+"use client"
 
 import { useEffect, useState } from "react";
 import { FiExternalLink, FiChevronDown } from "react-icons/fi";
-
-import Logo from "@/src/app/components/Logo";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
+import Logo from "@/src/app/components/Logo";
+
 const DesktopNavbar = () => {
-  const [showPricingDropdown, setShowPricingDropdown] = useState(false);
-  const [showAboutDropdown, setShowAboutDropdown] = useState(false);
-  const [showServicesDropdown, setShowServicesDropdown] = useState(false);
-  const [dropdownHovered, setDropdownHovered] = useState(false);
+const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const dropdownVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   useEffect(() => {
-    let timeoutId: string | number | NodeJS.Timeout | null | undefined = null;
+    let timeoutId: string | number | NodeJS.Timeout | undefined;
 
-    if (
-      showPricingDropdown ||
-      showAboutDropdown ||
-      showServicesDropdown ||
-      dropdownHovered
-    ) {
-      setShowPricingDropdown(showPricingDropdown);
-      setShowAboutDropdown(showAboutDropdown);
-      setShowServicesDropdown(showServicesDropdown);
+    if (activeDropdown !== null) {
+      setActiveDropdown(activeDropdown);
     } else {
       timeoutId = setTimeout(() => {
-        setShowPricingDropdown(false);
-        setShowAboutDropdown(false);
-        setShowServicesDropdown(false);
+        setActiveDropdown(null);
       }, 200);
     }
 
     return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
+      clearTimeout(timeoutId);
     };
-  }, [
-    showPricingDropdown,
-    showAboutDropdown,
-    dropdownHovered,
-    showServicesDropdown,
-  ]);
+  }, [activeDropdown]);
 
-  const handlePricingHover = () => {
-    setShowPricingDropdown(true);
-  };
-
-  const handlePricingLeave = () => {
-    setShowPricingDropdown(false);
-  };
-
-  const handleAboutHover = () => {
-    setShowAboutDropdown(true);
-  };
-
-  const handleAboutLeave = () => {
-    setShowAboutDropdown(false);
-  };
-
-  const handleServicesHover = () => {
-    setShowServicesDropdown(true);
-  };
-
-  const handleServicesLeave = () => {
-    setShowServicesDropdown(false);
-  };
-
-  const handleDropdownHover = () => {
-    setDropdownHovered(true);
+  const handleDropdownHover = (dropdownName: string) => {
+    setActiveDropdown(dropdownName);
   };
 
   const handleDropdownLeave = () => {
-    setDropdownHovered(false);
+    setActiveDropdown(null);
   };
 
-  const dropdownVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0 },
+  const isDropdownActive = (dropdownName: string): boolean => {
+    return activeDropdown === dropdownName;
   };
 
   return (
@@ -90,81 +50,67 @@ const DesktopNavbar = () => {
         </div>
         <div className="flex flex-row gap-11 items-center">
           <span className="cursor-pointer hover:text-white hover:transition hover:duration-200">
-            <Link
-              href="/gallery"
-              className="animatedUnderline h-10 items-center flex justify-center"
-            >
+            <Link href="/gallery" className="animatedUnderline h-10 items-center flex justify-center">
               Gallery
             </Link>
           </span>
-
-          <div className="cursor-pointer hover:text-white hover:transition hover:duration-200 relative">
-            <span className="cursor-pointer hover:text-white hover:transition hover:duration-200 flex">
-              <Link
-                href="/pricing"
-                className="animatedUnderline h-10 items-center flex justify-center"
-              >
-                Pricing
-              </Link>
-            </span>
-          </div>
           <div
-            className="cursor-pointer hover:text-white hover:transition hover:duration-200 relative"
-            onMouseEnter={handleServicesHover}
-            onMouseLeave={handleServicesLeave}
-            onClick={() => {
-              setShowServicesDropdown(true);
-              setShowAboutDropdown(false);
-              setShowPricingDropdown(false);
-            }}
+            className={`cursor-pointer hover:text-white hover:transition hover:duration-200 relative ${
+              isDropdownActive("services") ? "active-dropdown" : ""
+            }`}
+            onMouseEnter={() => handleDropdownHover("services")}
+            onMouseLeave={handleDropdownLeave}
           >
             <span className="cursor-pointer hover:text-white hover:transition hover:duration-200 flex">
-              <Link
-                href="/pricing"
-                className="animatedUnderline h-10 items-center flex justify-center"
-              >
+              <span className="animatedUnderline h-10 items-center flex justify-center">
                 Services
-              </Link>
+              </span>
               <span className="items-center justify-center flex mt-1">
                 <FiChevronDown />
               </span>
             </span>
             <AnimatePresence>
-              {showServicesDropdown && (
+              {isDropdownActive("services") && (
                 <motion.div
                   className="absolute w-96 text-white rounded-2xl mt-4 transform translate-x-[-50%] border bg-custom-color"
                   initial="hidden"
                   animate="visible"
                   exit="hidden"
                   variants={dropdownVariants}
-                  onMouseEnter={handleDropdownHover}
+                  onMouseEnter={() => handleDropdownHover("services")}
                   onMouseLeave={handleDropdownLeave}
                 >
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mt-[10px]">
-                    <Link href="/pricing/business">
-                      UI/UX Design
-                      <br />
-                      <span className="text-gray-400 w-fit text-sm">
-                        Business solutions for your business needs
-                      </span>
+                    <Link href="/services/ui-ux" className="block w-full h-full">
+                      <div className="h-full">
+                        UI&nbsp;/&nbsp;UX Design
+                        <br />
+                        <span className="text-gray-400 w-fit text-sm">
+                          Creating Engaging User Experiences through Intuitive UI/UX Design
+                        </span>
+                      </div>
+                    </Link>
+                  </div>
+                  <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px]">
+                    <Link href="/services/web-production" className="block w-full h-full">
+                      <div className="h-full">
+                        Website Production
+                        <br />
+                        <span className="text-gray-400 w-fit text-sm">
+                          Transforming Ideas into Functional and Interactive Websites through Web Development
+                        </span>
+                      </div>
                     </Link>
                   </div>
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mb-[10px]">
-                    <Link href="/pricing/personal">
-                      Website Production
-                      <br />
-                      <span className="text-gray-400 w-fit text-sm">
-                        Business solutions for your business needs
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mb-[10px]">
-                    <Link href="/pricing/personal">
-                      Website Management
-                      <br />
-                      <span className="text-gray-400 w-fit text-sm">
-                        Business solutions for your business needs
-                      </span>
+                    <Link href="/services/web-management" className="block w-full h-full">
+                      <div className="h-full">
+                        Website Management
+                        <br />
+                        <span className="text-gray-400 w-fit text-sm">
+                          Keeping your Website Nice and Healthy
+                        </span>
+                      </div>
                     </Link>
                   </div>
                 </motion.div>
@@ -172,14 +118,74 @@ const DesktopNavbar = () => {
             </AnimatePresence>
           </div>
           <div
-            className="cursor-pointer hover:text-white hover:transition hover:duration-200 relative"
-            onMouseEnter={handleAboutHover}
-            onMouseLeave={handleAboutLeave}
-            onClick={() => {
-              setShowPricingDropdown(false);
-              setShowAboutDropdown(true);
-              setShowServicesDropdown(false);
-            }}
+            className={`cursor-pointer hover:text-white hover:transition hover:duration-200 relative ${
+              isDropdownActive("pricing") ? "active-dropdown" : ""
+            }`}
+            onMouseEnter={() => handleDropdownHover("pricing")}
+            onMouseLeave={handleDropdownLeave}
+          >
+            <span className="cursor-pointer hover:text-white hover:transition hover:duration-200 flex">
+              <span className="animatedUnderline h-10 items-center flex justify-center">
+                Pricing
+              </span>
+              <span className="items-center justify-center flex mt-1">
+                <FiChevronDown />
+              </span>
+            </span>
+            <AnimatePresence>
+              {isDropdownActive("pricing") && (
+                <motion.div
+                  className="absolute w-96 text-white rounded-2xl mt-4 transform translate-x-[-50%] border bg-custom-color"
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={dropdownVariants}
+                  onMouseEnter={() => handleDropdownHover("pricing")}
+                  onMouseLeave={handleDropdownLeave}
+                >
+                  <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mt-[10px]">
+                    <Link href="/pricing/ui-ux" className="block w-full h-full">
+                      <div className="h-full">
+                        UI&nbsp;/&nbsp;UX Design Pricing
+                        <br />
+                        <span className="text-gray-400 w-fit text-sm">
+                          Starting at $120 AUD <br /> Comes free with Website Production
+                        </span>
+                      </div>
+                    </Link>
+                  </div>
+                  <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px]">
+                    <Link href="/pricing/web-production" className="block w-full h-full">
+                      <div className="h-full">
+                        Website Production Pricing
+                        <br />
+                        <span className="text-gray-400 w-fit text-sm">
+                          Starting at $200 AUD.
+                        </span>
+                      </div>
+                    </Link>
+                  </div>
+                  <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mb-[10px]">
+                    <Link href="/pricing/web-management" className="block w-full h-full">
+                      <div className="h-full">
+                        Website Management Pricing
+                        <br />
+                        <span className="text-gray-400 w-fit text-sm">
+                          Starting at 35$ AUD per month
+                        </span>
+                      </div>
+                    </Link>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          <div
+            className={`cursor-pointer hover:text-white hover:transition hover:duration-200 relative ${
+              isDropdownActive("about") ? "active-dropdown" : ""
+            }`}
+            onMouseEnter={() => handleDropdownHover("about")}
+            onMouseLeave={handleDropdownLeave}
           >
             <span className="cursor-pointer hover:text-white hover:transition hover:duration-200 flex">
               <span className="animatedUnderline h-10 items-center flex justify-center">
@@ -190,14 +196,14 @@ const DesktopNavbar = () => {
               </span>
             </span>
             <AnimatePresence>
-              {showAboutDropdown && (
+              {isDropdownActive("about") && (
                 <motion.div
                   className="absolute w-96 text-white rounded-2xl mt-4 transform translate-x-[-50%] border bg-custom-color"
                   initial="hidden"
                   animate="visible"
                   exit="hidden"
                   variants={dropdownVariants}
-                  onMouseEnter={handleDropdownHover}
+                  onMouseEnter={() => handleDropdownHover("about")}
                   onMouseLeave={handleDropdownLeave}
                 >
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mt-[10px]">
@@ -223,10 +229,7 @@ const DesktopNavbar = () => {
             </AnimatePresence>
           </div>
           <span className="cursor-pointer hover:text-white hover:transition hover:duration-200">
-            <Link
-              href="/blog"
-              className="animatedUnderline h-10 items-center flex justify-center"
-            >
+            <Link href="/blog" className="animatedUnderline h-10 items-center flex justify-center">
               Blog
             </Link>
           </span>

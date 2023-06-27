@@ -1,13 +1,13 @@
 export const pricingPlans = [
     {
-        title: 'freelancer',
+        title: 'UI/UX Design',
         price: '20',
         upfront: '80',
         currency: 'AUD',
         frequency: '/month',
-        description: 'The essentials to provide your best work for clients.',
+        description: 'One Page. Tiny price. All yours.',
         features: [
-            '5 pages',
+            '2 pages',
             'SEO',
             '24 hour support response time',
         ],
@@ -15,14 +15,14 @@ export const pricingPlans = [
         mostPopular: false,
     },
     {
-        title: 'advanced',
+        title: 'Website Development',
         price: '35',
         upfront: '120',
         currency: 'AUD',
         frequency: '/month',
-        description: 'The essentials to provide your best work for clients.',
+        description: 'The popular choice.',
         features: [
-            '5 pages',
+            'Up to 8 pages',
             'SEO',
             '24 hour support response time',
             '5 pages',
@@ -33,7 +33,7 @@ export const pricingPlans = [
         mostPopular: true,
     },
     {
-        title: 'enterprise',
+        title: 'Website Management',
         price: '100+',
         upfront: '80',
         currency: 'AUD',
