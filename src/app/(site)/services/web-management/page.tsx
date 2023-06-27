@@ -8,8 +8,7 @@ import Accordion from "@/src/app/components/Accordion";
 import Image from "next/image";
 import Link from "next/link";
 
-import { MdOutlineWeb, MdMobileFriendly } from "react-icons/md";
-import { FaUncharted } from "react-icons/fa";
+import { MdOutlineManageHistory } from "react-icons/md";
 
 const items = [
   {
@@ -60,14 +59,14 @@ const items = [
   },
 ];
 
-export default function UIUX() {
+export default function WebManagement() {
   return (
     <div className="min-h-screen">
       <ReusableHeroNested
-        heroText="UI&nbsp;/&nbsp;UX Design"
-        secondarySubText="Creating Engaging User Experiences through Intuitive UI/UX Design            "
+        heroText="Website Management"
+        secondarySubText="Keeping your Website Nice and Healthy"
         PageLink="Services"
-        secondaryPageLink="UI&nbsp;/&nbsp;UX Design"
+        secondaryPageLink="Website Management"
       />
       <section className="text-white ml-11 mr-11 my-8">
         <div className="w-fit">
@@ -77,7 +76,7 @@ export default function UIUX() {
                 href="#contact"
                 className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
               >
-                Start designing your project
+                Contact us about your website
               </a>
             </div>
           </RevealAlways>
@@ -85,13 +84,13 @@ export default function UIUX() {
       </section>
       <section className="mt-16 ml-11 mr-11">
         <RevealOnce>
-          <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 sm:gap-y-16 md:gap-y-16 gap-x-11 pl-11 pr-11 text-white">
-            <div className="py-12 border border-dark-50 rounded-2xl flex flex-col justify-center items-center">
+          <div className="flex justify-center pl-11 pr-11 text-white">
+            <div className="py-12 border border-dark-50 rounded-2xl flex flex-col justify-center items-center px-[5.5rem]">
               <div className="flex justify-center items-center">
-                <MdOutlineWeb size={60} />
+                <MdOutlineManageHistory size={60} />
               </div>
               <div className="flex flex-col justify-center items-center text-2xl font-semibold mt-6">
-                Website Design
+                Website Management
               </div>
               <ul className="mt-8 space-y-4 flex-1 text-lg">
                 <li className="flex items-center justify-start leading-6">
@@ -102,7 +101,7 @@ export default function UIUX() {
                   >
                     <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
                   </svg>
-                  <span className="ml-3 text-white">Modern Design</span>
+                  <span className="ml-3 text-white">Monthly SEO Revision</span>
                 </li>
                 <li className="flex items-center justify-start leading-6">
                   <svg
@@ -112,7 +111,7 @@ export default function UIUX() {
                   >
                     <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
                   </svg>
-                  <span className="ml-3 text-white">Responsive Layout</span>
+                  <span className="ml-3 text-white">Content Updates and Maintenance</span>
                 </li>
                 <li className="flex items-center justify-start leading-6">
                   <svg
@@ -122,7 +121,7 @@ export default function UIUX() {
                   >
                     <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
                   </svg>
-                  <span className="ml-3 text-white">Wireframes</span>
+                  <span className="ml-3 text-white">Performance Optimisations and speed insights</span>
                 </li>
                 <li className="flex items-center justify-start leading-6">
                   <svg
@@ -132,7 +131,7 @@ export default function UIUX() {
                   >
                     <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
                   </svg>
-                  <span className="ml-3 text-white">Prototypes</span>
+                  <span className="ml-3 text-white">Unlimited Website Design Revisions</span>
                 </li>
                 <li className="flex items-center justify-start leading-6">
                   <svg
@@ -142,7 +141,7 @@ export default function UIUX() {
                   >
                     <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
                   </svg>
-                  <span className="ml-3 text-white">Market Research</span>
+                  <span className="ml-3 text-white">Integration of new features and functionality</span>
                 </li>
               </ul>
               <RevealAlways>
@@ -151,147 +150,7 @@ export default function UIUX() {
                     href="#contact"
                     className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
                   >
-                    Start designing your project
-                  </a>
-                </div>
-              </RevealAlways>
-            </div>
-            <div className="py-12 border border-dark-50 rounded-2xl flex flex-col justify-center items-center">
-              <div className="flex justify-center items-center">
-                <MdMobileFriendly size={58} />
-              </div>
-              <div className="flex flex-col justify-center items-center text-2xl font-semibold mt-6">
-                Mobile App Design
-              </div>
-              <ul className="mt-8 space-y-4 flex-1 text-lg">
-                <li className="flex items-center justify-start leading-6">
-                  <svg
-                    className="h-5 w-5 shrink-0"
-                    viewBox="0 0 20 20"
-                    fill="#FFFFFF"
-                  >
-                    <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
-                  </svg>
-                  <span className="ml-3 text-white">Modern Design</span>
-                </li>
-                <li className="flex items-center justify-start leading-6">
-                  <svg
-                    className="h-5 w-5 shrink-0"
-                    viewBox="0 0 20 20"
-                    fill="#FFFFFF"
-                  >
-                    <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
-                  </svg>
-                  <span className="ml-3 text-white">Responsive Layout</span>
-                </li>
-                <li className="flex items-center justify-start leading-6">
-                  <svg
-                    className="h-5 w-5 shrink-0"
-                    viewBox="0 0 20 20"
-                    fill="#FFFFFF"
-                  >
-                    <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
-                  </svg>
-                  <span className="ml-3 text-white">Wireframes</span>
-                </li>
-                <li className="flex items-center justify-start leading-6">
-                  <svg
-                    className="h-5 w-5 shrink-0"
-                    viewBox="0 0 20 20"
-                    fill="#FFFFFF"
-                  >
-                    <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
-                  </svg>
-                  <span className="ml-3 text-white">Prototypes</span>
-                </li>
-                <li className="flex items-center justify-start leading-6">
-                  <svg
-                    className="h-5 w-5 shrink-0"
-                    viewBox="0 0 20 20"
-                    fill="#FFFFFF"
-                  >
-                    <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
-                  </svg>
-                  <span className="ml-3 text-white">Market Research</span>
-                </li>
-              </ul>
-              <RevealAlways>
-                <div className="rounded-lg mt-10 cursor-pointer">
-                  <a
-                    href="#contact"
-                    className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
-                  >
-                    Start designing your project
-                  </a>
-                </div>
-              </RevealAlways>
-            </div>
-            <div className="py-12 border border-dark-50 rounded-2xl flex flex-col justify-center items-center backdrop-blur-2xl bg-transparent">
-              <div className="flex justify-center items-center">
-                <FaUncharted size={60} />
-              </div>
-              <div className="flex flex-col justify-center items-center text-2xl font-semibold mt-6">
-                Branding & Identity
-              </div>
-              <ul className="mt-8 space-y-4 flex-1 text-lg">
-                <li className="flex items-center justify-start leading-6">
-                  <svg
-                    className="h-5 w-5 shrink-0"
-                    viewBox="0 0 20 20"
-                    fill="#FFFFFF"
-                  >
-                    <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
-                  </svg>
-                  <span className="ml-3 text-white">Logo Design</span>
-                </li>
-                <li className="flex items-center justify-start leading-6">
-                  <svg
-                    className="h-5 w-5 shrink-0"
-                    viewBox="0 0 20 20"
-                    fill="#FFFFFF"
-                  >
-                    <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
-                  </svg>
-                  <span className="ml-3 text-white">Visual Elements</span>
-                </li>
-                <li className="flex items-center justify-start leading-6">
-                  <svg
-                    className="h-5 w-5 shrink-0"
-                    viewBox="0 0 20 20"
-                    fill="#FFFFFF"
-                  >
-                    <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
-                  </svg>
-                  <span className="ml-3 text-white">Banners</span>
-                </li>
-                <li className="flex items-center justify-start leading-6">
-                  <svg
-                    className="h-5 w-5 shrink-0"
-                    viewBox="0 0 20 20"
-                    fill="#FFFFFF"
-                  >
-                    <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
-                  </svg>
-                  <span className="ml-3 text-white">Design Mockups</span>
-                </li>
-                <li className="flex items-center justify-start leading-6">
-                  <svg
-                    className="h-5 w-5 shrink-0"
-                    viewBox="0 0 20 20"
-                    fill="#FFFFFF"
-                  >
-                    <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
-                  </svg>
-                  <span className="ml-3 text-white">Custom Requests</span>
-                </li>
-              </ul>
-              <RevealAlways>
-                <div className="rounded-lg mt-10 cursor-pointer">
-                  <a
-                    href="#contact"
-                    className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
-                  >
-                    Start designing your project
+                    Upgrade your Website Development plan
                   </a>
                 </div>
               </RevealAlways>
@@ -303,7 +162,7 @@ export default function UIUX() {
         <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
           <div className="h-full relative">
             <div className="mt-8 py-4 text-3xl font-semibold border-y-[1px] border-dark-50">
-              <RevealOnce>UI&nbsp;/&nbsp;UX Design</RevealOnce>
+              <RevealOnce>What is UI&nbsp;/&nbsp;UX Design?</RevealOnce>
             </div>
             <div className="text-base font-light pt-4 leading-relaxed">
               <RevealOnce>
@@ -368,7 +227,7 @@ export default function UIUX() {
             <RevealOnce>
               <div className="h-full relative">
                 <div className="mt-8 py-4 text-3xl font-extrabold border-y-[1px] border-dark-50">
-                  Get in touch with our team of Designers!
+                  Get in touch with our team!
                 </div>
               </div>
             </RevealOnce>
@@ -421,7 +280,7 @@ export default function UIUX() {
           </div>
           <RevealOnce>
             <div className="px-4 mt-6">
-              <ContactForm message="Hey I could do with a re-developed logo for my business." />
+              <ContactForm message="I think I need someone to proffesionally manage my website" />
             </div>
           </RevealOnce>
         </div>

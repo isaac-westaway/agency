@@ -3,7 +3,7 @@ import ReusableHero from "../../components/ReusableHero";
 import RevealOnce from "../../components/utils/RevealOnce";
 import ContactForm from "../../components/ContactForm";
 
-export default function Services() {
+export default function Pricing() {
   return (
     <div className="min-h-screen text-white">
       <ReusableHero

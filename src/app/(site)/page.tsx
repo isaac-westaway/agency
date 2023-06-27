@@ -232,18 +232,20 @@ export default function Home() {
           <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
             <div className="h-full relative">
               <div className="mt-8 py-4 text-3xl font-semibold border-y-[1px] border-dark-50">
-                We are committed to delivering the highest quality of work
+                <RevealOnce>We are committed to delivering the highest quality of work</RevealOnce>
               </div>
-              <div className="text-base font-light pt-4 leading-relaxed">
-                Transforming Brisbane&#39;s digital landscape since 2012,
-                DigiSpark is your go-to online service agency. Our team of
-                experts in web design, development, digital strategy, and
-                marketing create tailored solutions for your business. From
-                visually stunning websites to ROI-driven marketing campaigns, we
-                deliver results. Whether you&#39;re a small business or a large
-                enterprise, let&#39;s connect and embark on a digital journey
-                together.
-              </div>
+              <RevealOnce>
+                <div className="text-base font-light pt-4 leading-relaxed">
+                  Transforming Brisbane&#39;s digital landscape since 2012,
+                  DigiSpark is your go-to online service agency. Our team of
+                  experts in web design, development, digital strategy, and
+                  marketing create tailored solutions for your business. From
+                  visually stunning websites to ROI-driven marketing campaigns, we
+                  deliver results. Whether you&#39;re a small business or a large
+                  enterprise, let&#39;s connect and embark on a digital journey
+                  together.
+                </div>
+              </RevealOnce>
               <div className="flex justify-center w-full items-end pt-4 mb-4">
                 <RevealAlways>
                   <div className="rounded-lg px-3.5 py-2.5 cursor-pointer text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
@@ -282,18 +284,20 @@ export default function Home() {
             </div>
             <div className="flex-col">
               <div className="sm:mt-0 md:mt-0 lg:mt-0 mt-8 py-4 text-3xl font-semibold border-y-[1px] border-dark-50">
-                We are committed to delivering the highest quality of work
+                <RevealOnce>We are committed to delivering the highest quality of work</RevealOnce>
               </div>
-              <div className="text-base font-light pt-4 leading-relaxed">
-                Transforming Brisbane&#39;s digital landscape since 2012,
-                DigiSpark is your go-to online service agency. Our team of
-                experts in web design, development, digital strategy, and
-                marketing create tailored solutions for your business. From
-                visually stunning websites to ROI-driven marketing campaigns, we
-                deliver results. Whether you&#39;re a small business or a large
-                enterprise, let&#39;s connect and embark on a digital journey
-                together.
-              </div>
+              <RevealOnce>
+                <div className="text-base font-light pt-4 leading-relaxed">
+                  Transforming Brisbane&#39;s digital landscape since 2012,
+                  DigiSpark is your go-to online service agency. Our team of
+                  experts in web design, development, digital strategy, and
+                  marketing create tailored solutions for your business. From
+                  visually stunning websites to ROI-driven marketing campaigns, we
+                  deliver results. Whether you&#39;re a small business or a large
+                  enterprise, let&#39;s connect and embark on a digital journey
+                  together.
+                </div>
+              </RevealOnce>
               <div className="flex justify-center w-full items-end pt-4 pb-5 ">
                 <RevealAlways>
                   <div className="rounded-lg px-3.5 py-2.5 cursor-pointer text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
@@ -310,18 +314,20 @@ export default function Home() {
           <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
             <div className="h-full relative">
               <div className="mt-8 py-4 text-3xl font-semibold border-y-[1px] border-dark-50">
-                We are committed to delivering the highest quality of work
+                <RevealOnce>We are committed to delivering the highest quality of work</RevealOnce>
               </div>
-              <div className="text-base font-light pt-4 leading-relaxed">
-                Transforming Brisbane&#39;s digital landscape since 2012,
-                DigiSpark is your go-to online service agency. Our team of
-                experts in web design, development, digital strategy, and
-                marketing create tailored solutions for your business. From
-                visually stunning websites to ROI-driven marketing campaigns, we
-                deliver results. Whether you&#39;re a small business or a large
-                enterprise, let&#39;s connect and embark on a digital journey
-                together.
-              </div>
+              <RevealOnce>
+                <div className="text-base font-light pt-4 leading-relaxed">
+                  Transforming Brisbane&#39;s digital landscape since 2012,
+                  DigiSpark is your go-to online service agency. Our team of
+                  experts in web design, development, digital strategy, and
+                  marketing create tailored solutions for your business. From
+                  visually stunning websites to ROI-driven marketing campaigns, we
+                  deliver results. Whether you&#39;re a small business or a large
+                  enterprise, let&#39;s connect and embark on a digital journey
+                  together.
+                </div>
+              </RevealOnce>
               <div className="flex justify-center w-full items-end pt-4 mb-4">
                 <RevealAlways>
                   <div className="rounded-lg px-3.5 py-2.5 cursor-pointer text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">

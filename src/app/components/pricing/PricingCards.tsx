@@ -1,7 +1,22 @@
 import RevealOnce from "../utils/RevealOnce";
-import { pricingPlans } from "./data";
 
-const PricingCards = () => {
+interface PricingPlan {
+  title: string;
+  price?: string;
+  upfront?: string;
+  currency?: string;
+  frequency?: string;
+  description: string;
+  features: string[];
+  cta: string;
+  mostPopular: boolean;
+}
+
+interface PricingCardsProps {
+  pricingPlans: PricingPlan[];
+}
+
+const PricingCards: React.FC<PricingCardsProps> = ({ pricingPlans }) => {
   return (
     <div>
       <RevealOnce>
@@ -11,7 +26,7 @@ const PricingCards = () => {
               key={plan.title}
               className="relative border border-white shadow-lg p-8 bg-[#F9F9F9] rounded-2xl flex flex-col z-50"
             >
-              <h3 className="text-lg font-semibold leading-5 text-black">{plan.title}</h3>
+              <h3 className="text-lg font-semibold leading-5 text-black z-50">{plan.title}</h3>
               {plan.mostPopular && (
                 <p className="absolute top-0 -translate-y-1/2 bg-[#4A6CF7] border-[2px] text-white px-3 py-0.5 text-sm font-semibold tracking-wide rounded-full shadow-md">
                   Most Popular
@@ -55,8 +70,8 @@ const PricingCards = () => {
                 ))}
               </ul>
               <a
-                href="#"
-                className={`text-white block px-6 py-4 text-sm font-semibold leading-4 text-center rounded-2xl shadow-md ${
+                href="#contact"
+                className={`text-white block px-6 py-4 text-sm mt-4 font-semibold leading-4 text-center rounded-2xl shadow-md ${
                   plan.mostPopular ? "bg-[#4A6CF7] shadow-md" : "bg-[#4A6CF7] bg-opacity-90"
                 }`}
               >
