@@ -93,6 +93,7 @@ export default function UIUX() {
               <div className="flex flex-col justify-center items-center text-2xl font-semibold mt-6">
                 Website Design
               </div>
+              <span>Starting from $120</span>
               <ul className="mt-8 space-y-4 flex-1 text-lg">
                 <li className="flex items-center justify-start leading-6">
                   <svg
@@ -163,6 +164,7 @@ export default function UIUX() {
               <div className="flex flex-col justify-center items-center text-2xl font-semibold mt-6">
                 Mobile App Design
               </div>
+              <span>Starting from $200</span>
               <ul className="mt-8 space-y-4 flex-1 text-lg">
                 <li className="flex items-center justify-start leading-6">
                   <svg
@@ -233,6 +235,7 @@ export default function UIUX() {
               <div className="flex flex-col justify-center items-center text-2xl font-semibold mt-6">
                 Branding & Identity
               </div>
+              <span>Starting from $180</span>
               <ul className="mt-8 space-y-4 flex-1 text-lg">
                 <li className="flex items-center justify-start leading-6">
                   <svg

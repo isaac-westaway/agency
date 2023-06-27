@@ -96,18 +96,18 @@ const MobileNavbar = () => {
           <ul className="overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl">
             <li
               onClick={toggleOpen}
-              className="cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition"
+              className="cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-dark-50 py-3 ease-in duration-200 transition"
             >
               <a href="#contact" className="block w-full h-full">
                 Contact
               </a>
             </li>
-            <div className="border-b-stone-800 border-b-[3px]">
+            <div className="border-dark-50 border-b-[1px]">
               <br />
             </div>
             <li
               onClick={billingRedirect}
-              className="flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
+              className="flex flex-row transition ease-in duration-150 p-2 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <a
                 href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
@@ -123,7 +123,7 @@ const MobileNavbar = () => {
             </li>
             <li
               onClick={AccordionServicesToggle}
-              className="flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
+              className="flex flex-row transition ease-in duration-150 p-2 border-b-dark-50  border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <div className="">Services</div>
               <div className="flex flex-row items-center justify-end w-full">
@@ -139,7 +139,7 @@ const MobileNavbar = () => {
                 <>
                   <div
                     onClick={toggleOpen}
-                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]"
+                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/services/ui-ux" className="block w-full">
                       |&nbsp;&nbsp;UI/UX Design
@@ -147,7 +147,7 @@ const MobileNavbar = () => {
                   </div>
                   <div
                     onClick={toggleOpen}
-                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]"
+                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link
                       href="/services/web-development"
@@ -158,7 +158,7 @@ const MobileNavbar = () => {
                   </div>
                   <div
                     onClick={toggleOpen}
-                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]"
+                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link
                       href="/services/web-management"
@@ -172,7 +172,7 @@ const MobileNavbar = () => {
             </li>
             <li
               onClick={AccordionAboutToggle}
-              className="flex flex-row transition ease-in duration-150 p-2 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
+              className="flex flex-row transition ease-in duration-150 p-2 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <div className="">About</div>
               <div className="flex flex-row items-center justify-end w-full">
@@ -188,18 +188,18 @@ const MobileNavbar = () => {
                 <>
                   <div
                     onClick={toggleOpen}
-                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]"
+                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
-                    <Link href="/services/ui-ux" className="block w-full">
+                    <Link href="/about/team" className="block w-full">
                       |&nbsp;&nbsp;Our Agency
                     </Link>
                   </div>
                   <div
                     onClick={toggleOpen}
-                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-stone-800 border-b-[3px]"
+                    className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link
-                      href="/services/web-development"
+                      href="/about/agency"
                       className="block w-full"
                     >
                       |&nbsp;&nbsp;Our Team
@@ -210,7 +210,7 @@ const MobileNavbar = () => {
             </li>
             <li
               onClick={toggleOpen}
-              className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
+              className="p-2 transition ease-in duration-150 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/gallery" className="block w-full">
                 Gallery
@@ -218,46 +218,29 @@ const MobileNavbar = () => {
             </li>
             <li
               onClick={toggleOpen}
-              className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
+              className="p-2 transition ease-in duration-150 border-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
-              <Link href="/pricing" className="block w-full">
-                Pricing
-              </Link>
-            </li>
-            <li
-              onClick={toggleOpen}
-              className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
-            >
-              <Link href="/d-app" className="">
+              <Link href="/blog" className="">
                 Blog
               </Link>
             </li>
-            <li
+            {/**<li
               onClick={toggleOpen}
-              className="p-2 transition ease-in duration-150 border-b-stone-800 border-b-[3px] cursor-pointer hover:bg-gray-0.6"
+              className="p-2 transition ease-in duration-150 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
-              <Link href="/">/*&nbsp;Experimental&nbsp;*/</Link>
-            </li>
+              <Link href="/experimental">/*&nbsp;Experimental&nbsp ^/;</Link>
+            </li>*/}
             <br />
             <li
               onClick={toggleOpen}
-              className=" items-center cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-stone-800 py-3 ease-in duration-200 transition"
-            >
-              <Link href="/" className="items-center">
-                Request A demo
-              </Link>
-            </li>
-            <br />
-            <li
-              onClick={toggleOpen}
-              className="p-2 transition ease-in duration-150 border-t-stone-800 border-t-[3px] cursor-pointer hover:bg-gray-0.6"
+              className="p-2 transition ease-in duration-150 border-t-dark-50 border-t-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <div className="text-[#fffafa] font-semibold text-lg text-center">
                 Our Links
               </div>
             </li>
             <li>
-              <div className="flex flex-row gap-8 items-center text-center justify-evenly pt-4 pb-4 border-stone-800 border-b-[3px] border-t-[3px]">
+              <div className="flex flex-row gap-8 items-center text-center justify-evenly pt-4 pb-4 border-dark-50 border-b-[1px] border-t-[1px]">
                 <li className="cursor-pointer">
                   <BsInstagram
                     size={18}

@@ -131,7 +131,7 @@ const DesktopNavbar = () => {
               )}
             </AnimatePresence>
           </div>
-          <div
+          {/*<div
             className={`cursor-pointer hover:text-white hover:transition hover:duration-200 relative ${
               isDropdownActive("pricing") ? "active-dropdown" : ""
             }`}
@@ -201,7 +201,7 @@ const DesktopNavbar = () => {
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
+          </div>*/}
           <div
             className={`cursor-pointer hover:text-white hover:transition hover:duration-200 relative ${
               isDropdownActive("about") ? "active-dropdown" : ""

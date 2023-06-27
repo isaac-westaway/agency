@@ -87,7 +87,7 @@ export default function WebDevelopment() {
       </section>
       <section className="mt-16 ml-11 mr-11">
         <RevealOnce>
-          <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 sm:gap-y-16 md:gap-y-16 gap-11 pl-11 pr-11 text-white">
+          <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 sm:gap-y-16 md:gap-y-16 gap-11 pl-11 pr-11 text-white">
             <div className="py-12 border border-dark-50 rounded-2xl flex flex-col justify-center items-center">
               <div className="flex justify-center items-center">
                 <FaGlobe size={60} />
@@ -95,6 +95,7 @@ export default function WebDevelopment() {
               <div className="flex flex-col justify-center items-center text-2xl font-semibold mt-6">
                 Websites
               </div>
+              <span>Starting from $250</span>
               <ul className="mt-8 space-y-4 flex-1 text-lg">
                 <li className="flex items-center justify-start leading-6">
                   <svg
@@ -204,7 +205,7 @@ export default function WebDevelopment() {
                 Included in all our services
               </div>
               <span>Where Applicable</span>
-              <ul className="mt-8 space-y-4 flex-1 text-lg">
+              <ul className="mt-8 space-y-4 flex-1 text-lg px-4">
                 <li className="flex items-center justify-start leading-6">
                   <svg
                     className="h-5 w-5 shrink-0"
@@ -314,6 +315,7 @@ export default function WebDevelopment() {
               <div className="flex flex-col justify-center items-center text-2xl font-semibold mt-6">
                 E-Commerce Store
               </div>
+              <span>Starting from $300</span>
               <ul className="mt-8 space-y-4 flex-1 text-lg">
                 <li className="flex items-center justify-start leading-6">
                   <svg
@@ -374,6 +376,7 @@ export default function WebDevelopment() {
               <div className="flex flex-col justify-center items-center text-2xl font-semibold mt-6">
                 Online Menu
               </div>
+              <span>Starting from $50</span>
               <ul className="mt-8 space-y-4 flex-1 text-lg">
                 <li className="flex items-center justify-start leading-6">
                   <svg
@@ -447,10 +450,12 @@ export default function WebDevelopment() {
               </RevealOnce>
               <br />
               <RevealOnce>
-                With a keen eye for detail, a commitment to quality, and a focus
-                on delivering measurable results, we are your trusted partner in
-                building a strong online presence and achieving your digital
-                goals.
+                <div className="mb-8">
+                  With a keen eye for detail, a commitment to quality, and a focus
+                  on delivering measurable results, we are your trusted partner in
+                  building a strong online presence and achieving your digital
+                  goals.
+                </div>
               </RevealOnce>
             </div>
           </div>

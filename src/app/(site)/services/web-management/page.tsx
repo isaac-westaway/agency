@@ -85,12 +85,18 @@ export default function WebManagement() {
       <section className="mt-16 ml-11 mr-11">
         <RevealOnce>
           <div className="flex justify-center pl-11 pr-11 text-white">
-            <div className="py-12 border border-dark-50 rounded-2xl flex flex-col justify-center items-center px-[5.5rem]">
+            <div className="py-12 border border-dark-50 rounded-2xl flex flex-col justify-center items-center px-[5.5rem] sm:px-4 md:px-6 lg:px-8">
               <div className="flex justify-center items-center">
                 <MdOutlineManageHistory size={60} />
               </div>
               <div className="flex flex-col justify-center items-center text-2xl font-semibold mt-6">
                 Website Management
+              </div>
+              <span>Starting form $60&nbsp;/&nbsp;mo</span>
+              <div>
+                <i>
+                  Prices&nbsp;<b>will</b>&nbsp;vary
+                </i>
               </div>
               <ul className="mt-8 space-y-4 flex-1 text-lg">
                 <li className="flex items-center justify-start leading-6">
@@ -111,7 +117,9 @@ export default function WebManagement() {
                   >
                     <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
                   </svg>
-                  <span className="ml-3 text-white">Content Updates and Maintenance</span>
+                  <span className="ml-3 text-white">
+                    Content Updates and Maintenance
+                  </span>
                 </li>
                 <li className="flex items-center justify-start leading-6">
                   <svg
@@ -121,7 +129,9 @@ export default function WebManagement() {
                   >
                     <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
                   </svg>
-                  <span className="ml-3 text-white">Performance Optimisations and speed insights</span>
+                  <span className="ml-3 text-white">
+                    Performance Optimisations and speed insights
+                  </span>
                 </li>
                 <li className="flex items-center justify-start leading-6">
                   <svg
@@ -131,7 +141,9 @@ export default function WebManagement() {
                   >
                     <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
                   </svg>
-                  <span className="ml-3 text-white">Unlimited Website Design Revisions</span>
+                  <span className="ml-3 text-white">
+                    Unlimited Website Design Revisions
+                  </span>
                 </li>
                 <li className="flex items-center justify-start leading-6">
                   <svg
@@ -141,7 +153,9 @@ export default function WebManagement() {
                   >
                     <path d="M10.219,1.688c-4.471,0-8.094,3.623-8.094,8.094s3.623,8.094,8.094,8.094s8.094-3.623,8.094-8.094S14.689,1.688,10.219,1.688 M10.219,17.022c-3.994,0-7.242-3.247-7.242-7.241c0-3.994,3.248-7.242,7.242-7.242c3.994,0,7.241,3.248,7.241,7.242C17.46,13.775,14.213,17.022,10.219,17.022 M15.099,7.03c-0.167-0.167-0.438-0.167-0.604,0.002L9.062,12.48l-2.269-2.277c-0.166-0.167-0.437-0.167-0.603,0c-0.166,0.166-0.168,0.437-0.002,0.603l2.573,2.578c0.079,0.08,0.188,0.125,0.3,0.125s0.222-0.045,0.303-0.125l5.736-5.751C15.268,7.466,15.265,7.196,15.099,7.03"></path>
                   </svg>
-                  <span className="ml-3 text-white">Integration of new features and functionality</span>
+                  <span className="ml-3 text-white">
+                    Integration of new features and functionality
+                  </span>
                 </li>
               </ul>
               <RevealAlways>
@@ -150,7 +164,7 @@ export default function WebManagement() {
                     href="#contact"
                     className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
                   >
-                    Upgrade your Website Development plan
+                    Let us manage your site
                   </a>
                 </div>
               </RevealAlways>
@@ -162,46 +176,49 @@ export default function WebManagement() {
         <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
           <div className="h-full relative">
             <div className="mt-8 py-4 text-3xl font-semibold border-y-[1px] border-dark-50">
-              <RevealOnce>What is UI&nbsp;/&nbsp;UX Design?</RevealOnce>
+              <RevealOnce>Website Management</RevealOnce>
             </div>
             <div className="text-base font-light pt-4 leading-relaxed">
-              <RevealOnce>
-                <div>
-                  UI (User Interface) design involves designing the visual
-                  elements of a digital interface, such as layout, colors, and
-                  icons, to create an attractive and intuitive user experience.
-                  UX (User Experience) design, on the other hand, focuses on the
-                  overall usability and satisfaction of the user by
-                  understanding their needs and behaviors, and creating
-                  wireframes and prototypes to guide product development.
-                </div>
-              </RevealOnce>
-              <br />
-              <RevealOnce>
-                <div>
-                  We specialize in transforming digital experiences through
-                  exceptional UI/UX design for Websites, Mobile Appa, and PWAs. Our
-                  talented team creates visually captivating and user-friendly
-                  interfaces that make a lasting impression.
-                </div>
-              </RevealOnce>
-              <br />
-              <RevealOnce>
-                <div>
-                  We carefully consider every detail, from intuitive navigation
-                  to eye-catching visuals, ensuring seamless interactions across
-                  platforms.
-                </div>
-              </RevealOnce>
-              <br /> 
-              <RevealOnce>
-                <div>
-                  Our goal is to deliver designs that not only look great
-                  but also enhance usability and engagement. Whether you need a
-                  Website revamp, a Mobile App design, or a comprehensive UI/UX
-                  solution, we have the skills to exceed your expectations.
-                </div>
-              </RevealOnce>
+              <div>
+                <RevealOnce>
+                  At our company, we specialize in comprehensive website
+                  management services that empower businesses to maximize their
+                  online presence. Our dedicated team offers a range of
+                  solutions tailored to your specific needs, ensuring that your
+                  website remains up-to-date, optimized, and engaging.
+                </RevealOnce>
+                <br />
+                <RevealOnce>
+                  With our monthly SEO revisions, we ensure that your website
+                  maintains its visibility and ranks higher on search engine
+                  results. Our team also takes care of content updates and
+                  maintenance, keeping your website fresh and relevant for your
+                  visitors. We prioritize performance optimizations and speed
+                  insights to guarantee a seamless user experience, ensuring
+                  that your website loads quickly and efficiently.
+                </RevealOnce>
+                <br />
+                <RevealOnce>
+                  Moreover, we offer unlimited website design revisions,
+                  allowing you to refine and improve the look and feel of your
+                  website as your business evolves. Additionally, we seamlessly
+                  integrate new features and functionality into your website,
+                  enabling you to stay ahead of the competition and provide an
+                  enhanced user experience.
+                </RevealOnce>
+                <br />
+                <RevealOnce>
+                  Our goal is to provide exceptional website management services
+                  that not only maintain the functionality of your website but
+                  also enhance its performance, user engagement, and overall
+                  success. Experience the power of effective website management
+                  by partnering with us today.
+                </RevealOnce>
+                <br />
+                <RevealOnce>
+                  <div className="mb-8">If you would like a monthly newsletter of all the changes WE make to your website, just ask!</div>
+                </RevealOnce>
+              </div>
             </div>
           </div>
           <div className="flex mt-8 mb-8 sm:mt-0 md:mt-0 lg:mt-0 items-center justify-center overflow-x-hidden w-full px-4 bg-dark-50 bg-opacity-10 rounded-2xl">
@@ -280,7 +297,7 @@ export default function WebManagement() {
           </div>
           <RevealOnce>
             <div className="px-4 mt-6">
-              <ContactForm message="I think I need someone to proffesionally manage my website" />
+              <ContactForm message="I think I need someone to proffesionally manage my website :(" />
             </div>
           </RevealOnce>
         </div>
