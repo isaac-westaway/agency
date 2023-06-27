@@ -176,7 +176,7 @@ const MobileNavbar = () => {
             >
               <div className="">About</div>
               <div className="flex flex-row items-center justify-end w-full">
-                {accordionServicesOpen ? (
+                {accordionAboutOpen ? (
                   <FiChevronDown size={21} />
                 ) : (
                   <FiChevronLeft size={21} />

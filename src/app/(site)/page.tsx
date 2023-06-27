@@ -356,7 +356,7 @@ export default function Home() {
           </div>
         </RevealOnce>
       </section>
-      <section className="relative text-white border-t-[1px] border-dark-50">
+      <section className="text-white border-t-[1px] border-dark-50">
         <RevealOnce>
           <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 pb-8 select-text">
             Some of the companies weve developed for
@@ -364,6 +364,17 @@ export default function Home() {
         </RevealOnce>
         <RevealOnce>
           <CaseStudies />
+        </RevealOnce>
+        <RevealOnce>
+          <div className="mt-8 mb-8">
+            <div className="flex justify-center w-full items-end">
+              <RevealAlways>
+                <div className="rounded-lg px-3.5 py-2.5 cursor-pointer text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
+                  Check out more of our projects&nbsp;<span aria-hidden="true" className="items-center">→</span>
+                </div>
+              </RevealAlways>
+            </div>
+      </div>
         </RevealOnce>
       </section>
       <section className="relative text-white border-t-[1px] border-dark-50" style={{ scrollMarginTop: '100px' }} id="contact">

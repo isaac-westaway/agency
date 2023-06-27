@@ -18,7 +18,7 @@ const CaseStudies = () => {
     setHoveredCard(null);
   };
   return (
-    <div className="w-full grid grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 border-t-[1px] border-dark-50 mb-8">
+    <div className="w-full grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 border-t-[1px] border-dark-50 mb-8">
       <RevealOnce>
         <div
           className="mx-4 mt-8 flex items-center justify-center"
@@ -271,19 +271,7 @@ const CaseStudies = () => {
           </div>
         </div>
       </RevealOnce>
-      <div className="col-span-3">
-        <RevealOnce>
-          <div className="mt-8">
-            <div className="flex justify-center w-full items-end">
-              <RevealAlways>
-                <div className="rounded-lg px-3.5 py-2.5 cursor-pointer text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
-                  Check out more of our projects&nbsp;<span aria-hidden="true" className="items-center">→</span>
-                </div>
-              </RevealAlways>
-            </div>
-          </div>
-        </RevealOnce>
-      </div>
+
     </div>
   );
 };
