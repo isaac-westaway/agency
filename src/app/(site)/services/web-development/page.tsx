@@ -71,7 +71,7 @@ export default function WebDevelopment() {
         PageLink="Services"
         secondaryPageLink="Website Development"
       />
-      <section className="text-white ml-11 mr-11 my-8">
+      <section className="text-white ml-11 mr-11 mt-8 mb-8 sm:-mt-28 md:-mt-28 lg:-mt-28 sm:flex sm:justify-center md:flex md:justify-center lg:flex lg:justify-center ">
         <div className="w-fit">
           <RevealAlways>
             <div className="rounded-lg mt-10 py-2.5 cursor-pointer">
@@ -87,7 +87,7 @@ export default function WebDevelopment() {
       </section>
       <section className="mt-16 ml-11 mr-11">
         <RevealOnce>
-          <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 sm:gap-y-16 md:gap-y-16 gap-11 pl-11 pr-11 text-white">
+          <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 sm:gap-y-16 md:gap-y-16 gap-11 sm:pl-0 sm:pr-0 text-white">
             <div className="py-12 border border-dark-50 rounded-2xl flex flex-col justify-center items-center">
               <div className="flex justify-center items-center">
                 <FaGlobe size={60} />
@@ -153,7 +153,7 @@ export default function WebDevelopment() {
               <div className="flex justify-center items-center">
                 <FaAppStoreIos size={60} />
               </div>
-              <div className="flex flex-col justify-center items-center text-2xl font-semibold mt-6">
+              <div className="flex flex-col justify-center items-center text-center text-2xl font-semibold mt-6">
                 Web Applications (PWAs)
               </div>
               <span className="italic">Currently Not Available</span>
@@ -201,7 +201,7 @@ export default function WebDevelopment() {
               <div className="flex justify-center items-center">
                 <BsFillClipboardCheckFill size={58} />
               </div>
-              <div className="flex flex-col justify-center items-center text-2xl font-semibold mt-6">
+              <div className="flex flex-col justify-center items-center text-center text-2xl font-semibold mt-6 sm:text-center">
                 Included in all our services
               </div>
               <span>Where Applicable</span>
@@ -534,7 +534,7 @@ export default function WebDevelopment() {
             </RevealOnce>
           </div>
           <RevealOnce>
-            <div className="px-4 mt-6">
+            <div className="px-4 sm:px-0 mt-6">
               <ContactForm message="I WANT A WEBSITE!!!" />
             </div>
           </RevealOnce>

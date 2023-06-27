@@ -13,7 +13,6 @@ export default function Gallery() {
         subText="Here you will find our flagship projects"
         secondarySubText=" If you would like your project here shoot us an Email!"
         PageLink="Gallery"
-        actionButton="Get in touch"
       />
       <section className="mt-4 lg:-mt-14 md:-mt-16 sm:-mt-14 mr-11 ml-11 border-t-[1px] border-dark-50 text-white z-50">
         <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 px-4 gap-x-8 z-50">
@@ -302,7 +301,7 @@ export default function Gallery() {
             </RevealOnce>
           </div>
           <RevealOnce>
-            <div className="px-4 mt-6">
+            <div className="px-4 sm:px-0 mt-6">
               <ContactForm message="Your digital services look great! I really want to learn more!"/>
             </div>
           </RevealOnce>

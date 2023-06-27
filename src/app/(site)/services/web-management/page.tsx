@@ -68,7 +68,7 @@ export default function WebManagement() {
         PageLink="Services"
         secondaryPageLink="Website Management"
       />
-      <section className="text-white ml-11 mr-11 my-8">
+      <section className="text-white ml-11 mr-11 mt-8 mb-8 sm:-mt-28 md:-mt-28 lg:-mt-28 sm:flex sm:justify-center md:flex md:justify-center lg:flex lg:justify-center ">
         <div className="w-fit">
           <RevealAlways>
             <div className="rounded-lg mt-10 py-2.5 cursor-pointer">
@@ -84,7 +84,7 @@ export default function WebManagement() {
       </section>
       <section className="mt-16 ml-11 mr-11">
         <RevealOnce>
-          <div className="flex justify-center pl-11 pr-11 text-white">
+          <div className="flex justify-center pl-11 pr-11 sm:pl-0 sm:pr-0 text-white">
             <div className="py-12 border border-dark-50 rounded-2xl flex flex-col justify-center items-center px-[5.5rem] sm:px-4 md:px-6 lg:px-8">
               <div className="flex justify-center items-center">
                 <MdOutlineManageHistory size={60} />
@@ -302,7 +302,7 @@ export default function WebManagement() {
           </RevealOnce>
         </div>
       </section>
-      <section className="relative text-white border-t-[1px] border-dark-50">
+      <section className="relative text-white border-t-[1px] border-dark-50 ml-11 mr-11">
         <RevealOnce>
           <div className="text-3xl flex w-full justify-center font-extrabold sm:leading-tight sm:tracking-tight text-center mt-8 mb-8 text-white">
             <span className="sm:w-full md:w-full">

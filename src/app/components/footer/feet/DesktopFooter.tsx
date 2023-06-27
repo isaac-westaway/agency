@@ -38,18 +38,49 @@ const DesktopFooter = () => {
                 </div>
                 <div className="pt-3 leading-6 tracking-wider">
                   <div className="font-light flex flex-row w-full">
-                    <div className="w-max flex items-center animatedUnderline hover:cursor-pointer">
+                    <a
+                      href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-max flex items-center animatedUnderline hover:cursor-pointer"
+                    >
                       Billing Portal
-                    </div>
+                    </a>
                     <div className="flex items-center w-1/3 justify-end">
                       <FiExternalLink />
                     </div>
                   </div>
-                  <div className="font-light my-2 animatedUnderline w-max hover:cursor-pointer">
-                    Blog
+                  <div className="my-2">
+                    <Link
+                      href="/gallery"
+                      className="font-light my-2 animatedUnderline w-max hover:cursor-pointer"
+                    >
+                      Gallery
+                    </Link>
                   </div>
-                  <div className="font-light my-2  animatedUnderline w-max hover:cursor-pointer">
-                    Gallery
+                  <div className="my-2">
+                    <Link
+                      href="/services/ui-ux"
+                      className="font-light my-2  animatedUnderline w-max hover:cursor-pointer"
+                    >
+                      UI&nbsp;/&nbsp;UX Design
+                    </Link>
+                  </div>
+                  <div className="my-2">
+                    <Link
+                      href="/services/web-development"
+                      className="font-light my-2  animatedUnderline w-max hover:cursor-pointer"
+                    >
+                      Web Development
+                    </Link>
+                  </div>
+                  <div className="my-2">
+                    <Link
+                      href="/services/web-management"
+                      className="font-light my-2  animatedUnderline w-max hover:cursor-pointer"
+                    >
+                      Web Management
+                    </Link>
                   </div>
                 </div>
               </div>

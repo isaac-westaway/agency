@@ -26,13 +26,43 @@ const MobileFooter = () => {
           </div>
           <div className="flex flex-col justify-center p-2 tracking-wider font-light ml-11 mr-11">
             <div className="w-full flex flex-row">
-              <div className="shrink-0">Billing Portal</div>
+              <a href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE" className="shrink-0 my-2">Billing Portal</a>
               <div className="h-full flex items-center w-full justify-end">
                 <FiExternalLink />
               </div>
             </div>
-            <div className="my-2">Blog</div>
-            <div className="mb-2">Gallery</div>
+            <div className="my-2">
+                    <Link
+                      href="/gallery"
+                      className="font-light my-2 animatedUnderline w-max hover:cursor-pointer"
+                    >
+                      Gallery
+                    </Link>
+                  </div>
+                  <div className="my-2">
+                    <Link
+                      href="/services/ui-ux"
+                      className="font-light my-2  animatedUnderline w-max hover:cursor-pointer"
+                    >
+                      UI&nbsp;/&nbsp;UX Design
+                    </Link>
+                  </div>
+                  <div className="my-2">
+                    <Link
+                      href="/services/web-development"
+                      className="font-light my-2  animatedUnderline w-max hover:cursor-pointer"
+                    >
+                      Web Development
+                    </Link>
+                  </div>
+                  <div className="my-2">
+                    <Link
+                      href="/services/web-management"
+                      className="font-light my-2  animatedUnderline w-max hover:cursor-pointer"
+                    >
+                      Web Management
+                    </Link>
+                  </div>
           </div>
         </div>
         <div className="sm:-mt-4 relative flex flex-col border-l-[0px] border-dark-50">
