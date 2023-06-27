@@ -53,7 +53,7 @@ const ReusableHero: React.FC<ReusableHeroProps> = ({
                   </div>
                   <div className="flex justify-end sm:justify-center sm:pt-4 w-full mt-1">
                     <RevealAlways>
-                      <div className="rounded-lg cursor-pointer px-3.5 text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
+                      <div className="rounded-lg cursor-pointer px-3.5 sm:py-2.5 text-white bg-[#4A6CF7] hover:bg-white hover:text-black transition ease-in-out duration-200">
                         {actionButton}
                       </div>
                     </RevealAlways>

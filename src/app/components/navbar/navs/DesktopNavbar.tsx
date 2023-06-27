@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import { FiExternalLink, FiChevronDown } from "react-icons/fi";
@@ -8,7 +8,7 @@ import Link from "next/link";
 import Logo from "@/src/app/components/Logo";
 
 const DesktopNavbar = () => {
-const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const dropdownVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0 },
@@ -50,7 +50,10 @@ const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
         </div>
         <div className="flex flex-row gap-11 items-center">
           <span className="cursor-pointer hover:text-white hover:transition hover:duration-200">
-            <Link href="/gallery" className="animatedUnderline h-10 items-center flex justify-center">
+            <Link
+              href="/gallery"
+              className="animatedUnderline h-10 items-center flex justify-center"
+            >
               Gallery
             </Link>
           </span>
@@ -72,8 +75,8 @@ const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
             <AnimatePresence>
               {isDropdownActive("services") && (
                 <motion.div
-                  className="absolute w-96 text-white rounded-2xl mt-4 transform translate-x-[-50%] border bg-custom-color"
-                  initial="hidden"
+                className="absolute w-96 text-white rounded-2xl mt-4 transform translate-x-[-50%] border bg-opacity-90  bg-black backdrop-blur-sm"
+                initial="hidden"
                   animate="visible"
                   exit="hidden"
                   variants={dropdownVariants}
@@ -81,29 +84,40 @@ const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
                   onMouseLeave={handleDropdownLeave}
                 >
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mt-[10px]">
-                    <Link href="/services/ui-ux" className="block w-full h-full">
+                    <Link
+                      href="/services/ui-ux"
+                      className="block w-full h-full"
+                    >
                       <div className="h-full">
                         UI&nbsp;/&nbsp;UX Design
                         <br />
                         <span className="text-gray-400 w-fit text-sm">
-                          Creating Engaging User Experiences through Intuitive UI/UX Design
+                          Creating Engaging User Experiences through Intuitive
+                          UI/UX Design
                         </span>
                       </div>
                     </Link>
                   </div>
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px]">
-                    <Link href="/services/web-production" className="block w-full h-full">
+                    <Link
+                      href="/services/web-development"
+                      className="block w-full h-full"
+                    >
                       <div className="h-full">
-                        Website Production
+                        Website Development
                         <br />
                         <span className="text-gray-400 w-fit text-sm">
-                          Transforming Ideas into Functional and Interactive Websites through Web Development
+                          Transforming Ideas into Functional and Interactive
+                          Websites through Web Development
                         </span>
                       </div>
                     </Link>
                   </div>
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mb-[10px]">
-                    <Link href="/services/web-management" className="block w-full h-full">
+                    <Link
+                      href="/services/web-management"
+                      className="block w-full h-full"
+                    >
                       <div className="h-full">
                         Website Management
                         <br />
@@ -135,13 +149,14 @@ const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
             <AnimatePresence>
               {isDropdownActive("pricing") && (
                 <motion.div
-                  className="absolute w-96 text-white rounded-2xl mt-4 transform translate-x-[-50%] border bg-custom-color"
+                  className="absolute w-96 text-white rounded-2xl mt-4 transform translate-x-[-50%] border bg-opacity-90  bg-black backdrop-blur-sm"
                   initial="hidden"
                   animate="visible"
                   exit="hidden"
                   variants={dropdownVariants}
                   onMouseEnter={() => handleDropdownHover("pricing")}
                   onMouseLeave={handleDropdownLeave}
+                  style={{ backdropFilter: "blur(10px)" }} // Apply backdrop-filter for blur effect
                 >
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mt-[10px]">
                     <Link href="/pricing/ui-ux" className="block w-full h-full">
@@ -149,15 +164,19 @@ const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
                         UI&nbsp;/&nbsp;UX Design Pricing
                         <br />
                         <span className="text-gray-400 w-fit text-sm">
-                          Starting at $120 AUD <br /> Comes free with Website Production
+                          Starting at $120 AUD <br /> Comes free with Website
+                          Development
                         </span>
                       </div>
                     </Link>
                   </div>
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px]">
-                    <Link href="/pricing/web-production" className="block w-full h-full">
+                    <Link
+                      href="/pricing/web-production"
+                      className="block w-full h-full"
+                    >
                       <div className="h-full">
-                        Website Production Pricing
+                        Website Development Pricing
                         <br />
                         <span className="text-gray-400 w-fit text-sm">
                           Starting at $200 AUD.
@@ -166,7 +185,10 @@ const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
                     </Link>
                   </div>
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mb-[10px]">
-                    <Link href="/pricing/web-management" className="block w-full h-full">
+                    <Link
+                      href="/pricing/web-management"
+                      className="block w-full h-full"
+                    >
                       <div className="h-full">
                         Website Management Pricing
                         <br />
@@ -198,8 +220,8 @@ const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
             <AnimatePresence>
               {isDropdownActive("about") && (
                 <motion.div
-                  className="absolute w-96 text-white rounded-2xl mt-4 transform translate-x-[-50%] border bg-custom-color"
-                  initial="hidden"
+                className="absolute w-96 text-white rounded-2xl mt-4 transform translate-x-[-50%] border bg-opacity-90  bg-black backdrop-blur-sm"
+                initial="hidden"
                   animate="visible"
                   exit="hidden"
                   variants={dropdownVariants}
@@ -229,14 +251,25 @@ const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
             </AnimatePresence>
           </div>
           <span className="cursor-pointer hover:text-white hover:transition hover:duration-200">
-            <Link href="/blog" className="animatedUnderline h-10 items-center flex justify-center">
+            <Link
+              href="/blog"
+              className="animatedUnderline h-10 items-center flex justify-center"
+            >
               Blog
             </Link>
           </span>
-          <a href="#contact" className="shrink-0 cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">
+          <a
+            href="#contact"
+            className="shrink-0 cursor-pointer special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]"
+          >
             Contact
           </a>
-          <a href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE" target="_blank" rel="noopener noreferrer" className="shrink-0 cursor-pointer flex items-center special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]">
+          <a
+            href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 cursor-pointer flex items-center special-border-name border-[2px] border-stone-800 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]"
+          >
             Billing portal&nbsp;
             <span className="flex flex-row items-center h-full pb-1">
               <FiExternalLink />
