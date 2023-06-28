@@ -4,11 +4,16 @@ import RevealOnce from "../../components/utils/RevealOnce";
 import ContactForm from "../../components/ContactForm";
 import ContactSection from "../../components/ContactSection";
 
+export const metadata = {
+  title: "Services Wynnum Web Services",
+};
+
+
 export default function Services() {
   return (
     <div className="min-h-screen text-white">
       <ReusableHero
-        heroText="You shouldn't be here!"
+        heroText="There is nothing here!"
         subText="You probably meant to visit UI/UX Design, Website Production, or Website Management"
         secondarySubText="Click to visit those pages:"
         PageLink="Services"

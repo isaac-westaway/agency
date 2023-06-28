@@ -69,7 +69,7 @@ const items = [
 ];
 
 export const metadata = {
-  title: "Home Digispark",
+  title: "Home Wynnum Web Services",
 };
 
 export default function Home() {

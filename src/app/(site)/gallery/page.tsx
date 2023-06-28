@@ -6,6 +6,11 @@ import RevealOnce from "../../components/utils/RevealOnce";
 import ContactForm from "../../components/ContactForm";
 import ContactSection from "../../components/ContactSection";
 
+export const metadata = {
+  title: "Gallery Wynnum Web Services",
+};
+
+
 export default function Gallery() {
   return (
     <div className="min-h-screen">

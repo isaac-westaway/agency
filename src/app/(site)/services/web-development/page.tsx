@@ -63,6 +63,11 @@ const items = [
   },
 ];
 
+export const metadata = {
+  title: "Web Development Wynnum Web Services",
+};
+
+
 export default function WebDevelopment() {
   return (
     <div className="min-h-screen">

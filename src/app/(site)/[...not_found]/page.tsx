@@ -2,6 +2,11 @@
 import { useEffect, useState } from "react";
 import ReusableHero from "../../components/ReusableHero";
 
+export const metadata = {
+  title: "404 Page Not Found!",
+};
+
+
 const NotFound = () => {
   const [randomQuote, setRandomQuote] = useState("");
 

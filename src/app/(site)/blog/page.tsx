@@ -1,5 +1,10 @@
 import ReusableHero from "../../components/ReusableHero";
 
+export const metadata = {
+    title: "Blog Wynnum Web Services",
+  };
+  
+
 export default function Blog() {
     return (
         <div className="min-h-screen">
