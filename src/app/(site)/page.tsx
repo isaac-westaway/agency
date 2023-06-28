@@ -121,10 +121,10 @@ export default function Home() {
                       <span className="flex border-b-[1px] border-dark-50 w-full p-2 mb-1 justify-center">
                         Professional UI/UX Design
                       </span>
-                      <div className="mt-2 text-gray-200 text-opacity-95 text-base">
+                      <div className="mt-2 text-gray-200 text-opacity-95">
                         We specialize in professional UI/UX design, encompassing
                         a wide range of services including website design,
-                        mobile app design, and branding design.{" "}
+                        mobile app design, and branding design.
                       </div>
                     </span>
                   </li>
@@ -155,7 +155,7 @@ export default function Home() {
                       <span className="flex border-b-[1px] border-dark-50 w-full p-2 mb-1 justify-center">
                         Industry leading web development
                       </span>
-                      <div className="mt-2 text-gray-200 text-opacity-95 text-base">
+                      <div className="mt-2 text-gray-200 text-opacity-95">
                         Our web development services are designed to deliver
                         industry-leading solutions that set your business apart.
                         With a focus on excellence, we create fully responsive
@@ -234,7 +234,7 @@ export default function Home() {
               </div>
               <div className="text-base font-light pt-4 leading-relaxed">
                 <RevealOnce>
-                  Welcome to WynnumWebServices, the leading online service
+                  Welcome to Wynnum Web Services, the leading online service
                   agency dedicated to revolutionizing Brisbane&#39;s digital
                   landscape. With our team of seasoned experts in website
                   design, development, and management, we deliver exceptional
@@ -309,7 +309,7 @@ export default function Home() {
                 </RevealOnce>
                 <br />
                 <RevealOnce>
-                  At WynnumWebServices, we specialize in devising growth
+                  At Wynnum Web Services, we specialize in devising growth
                   strategies rooted in data analysis, catering to small
                   businesses across diverse industries. In addition to offering
                   standalone Search Engine Optimization (SEO) services, we
@@ -369,7 +369,7 @@ export default function Home() {
                   <RevealOnce>
                     <div className="mt-3">
                       Embark on a transformative digital journey with
-                      WynnumWebServices today. Experience the power of a dedicated
+                      Wynnum Web Services today. Experience the power of a dedicated
                       team, cutting-edge technologies, and unparalleled expertise.
                       Let us elevate your online presence and drive your business
                       towards success in the dynamic digital world.
