@@ -2,15 +2,15 @@ import ReusableHeroNested from "@/src/app/components/ReusableHeroNested";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
 import FlyIn from "@/src/app/components/utils/FlyIn";
-import ContactForm from "@/src/app/components/ContactForm";
 import Accordion from "@/src/app/components/Accordion";
+import ContactSection from "@/src/app/components/ContactSection";
+import SmoothButton from "@/src/app/components/SmoothButton";
 
 import Image from "next/image";
 import Link from "next/link";
 
 import { MdOutlineWeb, MdMobileFriendly } from "react-icons/md";
 import { FaUncharted } from "react-icons/fa";
-import ContactSection from "@/src/app/components/ContactSection";
 
 const items = [
   {
@@ -74,12 +74,7 @@ export default function UIUX() {
         <div className="w-fit">
           <RevealAlways>
             <div className="rounded-lg mt-10 py-2.5 cursor-pointer">
-              <a
-                href="#contact"
-                className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
-              >
-                Start designing your project
-              </a>
+              <SmoothButton cta="Launch your project!" href="#contact" />
             </div>
           </RevealAlways>
         </div>
@@ -149,12 +144,10 @@ export default function UIUX() {
               </ul>
               <RevealAlways>
                 <div className="rounded-lg mt-10 cursor-pointer">
-                  <a
+                  <SmoothButton
+                    cta="Start designing your project"
                     href="#contact"
-                    className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
-                  >
-                    Start designing your project
-                  </a>
+                  />
                 </div>
               </RevealAlways>
             </div>
@@ -220,12 +213,10 @@ export default function UIUX() {
               </ul>
               <RevealAlways>
                 <div className="rounded-lg mt-10 cursor-pointer">
-                  <a
+                  <SmoothButton
+                    cta="Start designing your project"
                     href="#contact"
-                    className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
-                  >
-                    Start designing your project
-                  </a>
+                  />
                 </div>
               </RevealAlways>
             </div>
@@ -291,12 +282,10 @@ export default function UIUX() {
               </ul>
               <RevealAlways>
                 <div className="rounded-lg mt-10 cursor-pointer">
-                  <a
+                  <SmoothButton
+                    cta="Start designing your project"
                     href="#contact"
-                    className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
-                  >
-                    Start designing your project
-                  </a>
+                  />
                 </div>
               </RevealAlways>
             </div>
@@ -349,7 +338,7 @@ export default function UIUX() {
               </RevealOnce>
             </div>
           </div>
-          <div className="flex mt-8 mb-8 sm:mt-8 md:mt-8 lg:mt-8 items-center justify-center overflow-x-hidden w-full px-4 bg-dark-50 bg-opacity-10 rounded-2xl">
+          <div className="flex mt-8 mb-8 sm:mt-8 md:mt-8 lg:mt-8 items-center justify-center overflow-x-hidden w-full px-4 rounded-2xl">
             <FlyIn flyInRight={true}>
               <Image
                 src="/images/design.webp"

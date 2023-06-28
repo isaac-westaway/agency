@@ -2,8 +2,9 @@ import ReusableHeroNested from "@/src/app/components/ReusableHeroNested";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
 import FlyIn from "@/src/app/components/utils/FlyIn";
-import ContactForm from "@/src/app/components/ContactForm";
 import Accordion from "@/src/app/components/Accordion";
+import SmoothButton from "@/src/app/components/SmoothButton";
+import ContactSection from "@/src/app/components/ContactSection";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +13,6 @@ import { MdOutlineWeb, MdMobileFriendly } from "react-icons/md";
 import { BsFillClipboardCheckFill } from "react-icons/bs";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { FaAppStoreIos, FaGlobe, FaStore } from "react-icons/fa";
-import ContactSection from "@/src/app/components/ContactSection";
 
 const items = [
   {
@@ -68,7 +68,7 @@ export default function WebDevelopment() {
     <div className="min-h-screen">
       <ReusableHeroNested
         heroText="Website Development"
-        secondarySubText="Transforming Ideas into Functional and Interactive Websites through Web Development"
+        secondarySubText="Transforming Ideas into Functional and Interactive Websites"
         PageLink="Services"
         secondaryPageLink="Website Development"
       />
@@ -76,12 +76,8 @@ export default function WebDevelopment() {
         <div className="w-fit">
           <RevealAlways>
             <div className="rounded-lg mt-10 py-2.5 cursor-pointer">
-              <a
-                href="#contact"
-                className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
-              >
-                Start developing your website
-              </a>
+            <SmoothButton cta="Launch your project!" href="#contact" />
+
             </div>
           </RevealAlways>
         </div>
@@ -141,12 +137,7 @@ export default function WebDevelopment() {
               </ul>
               <RevealAlways>
                 <div className="rounded-lg mt-10 py-2.5 cursor-pointer text-base">
-                  <a
-                    href="#contact"
-                    className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
-                  >
-                    Start developing your website
-                  </a>
+                  <SmoothButton cta="Start developing your website" href="#contact" />
                 </div>
               </RevealAlways>
             </div>
@@ -366,12 +357,8 @@ export default function WebDevelopment() {
               </ul>
               <RevealAlways>
                 <div className="rounded-lg mt-10 py-2.5 px-3.5 cursor-pointer">
-                  <a
-                    href="#contact"
-                    className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
-                  >
-                    Start developing your store
-                  </a>
+                <SmoothButton cta="Start developing your store" href="#contact" />
+
                 </div>
               </RevealAlways>
             </div>
@@ -417,12 +404,8 @@ export default function WebDevelopment() {
               </ul>
               <RevealAlways>
                 <div className="rounded-lg mt-10 py-2.5 cursor-pointer">
-                  <a
-                    href="#contact"
-                    className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
-                  >
-                    Start developing your menu
-                  </a>
+                <SmoothButton cta="Start developing your menu" href="#contact" />
+
                 </div>
               </RevealAlways>
             </div>
@@ -465,7 +448,7 @@ export default function WebDevelopment() {
               </RevealOnce>
             </div>
           </div>
-          <div className="flex mt-8 mb-8 sm:mt-0 md:mt-0 lg:mt-0 items-center justify-center overflow-x-hidden w-full px-4 bg-dark-50 bg-opacity-10 rounded-2xl">
+          <div className="flex mt-8 mb-8 sm:mt-0 md:mt-0 lg:mt-0 items-center justify-center overflow-x-hidden w-full px-4 rounded-2xl">
             <FlyIn flyInRight={true}>
               <Image
                 src="/images/gallery/website.png"

@@ -10,6 +10,7 @@ import Link from "next/link";
 
 import { MdOutlineManageHistory } from "react-icons/md";
 import ContactSection from "@/src/app/components/ContactSection";
+import SmoothButton from "@/src/app/components/SmoothButton";
 
 const items = [
   {
@@ -73,12 +74,7 @@ export default function WebManagement() {
         <div className="w-fit">
           <RevealAlways>
             <div className="rounded-lg mt-10 py-2.5 cursor-pointer">
-              <a
-                href="#contact"
-                className="block w-full text-white bg-[#4A6CF7] hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
-              >
-                Contact us about your website
-              </a>
+              <SmoothButton cta="Launch your project!" href="#contact" />
             </div>
           </RevealAlways>
         </div>
@@ -225,7 +221,7 @@ export default function WebManagement() {
               </div>
             </div>
           </div>
-          <div className="flex mt-8 mb-8 sm:mt-0 md:mt-0 lg:mt-0 items-center justify-center overflow-x-hidden w-full px-4 bg-dark-50 bg-opacity-10 rounded-2xl">
+          <div className="flex mt-8 mb-8 sm:mt-0 md:mt-0 lg:mt-0 items-center justify-center overflow-x-hidden w-full px-4 rounded-2xl">
             <FlyIn flyInRight={true}>
               <Image
                 src="/images/design.webp"

@@ -5,6 +5,8 @@ const nextConfig = {
       'https://images.unsplash.com',
       'images.unsplash.com',
       'https://tailwindui.com',
+      'localhost:3000',
+      'https://sparkdigital.vercel.app',
     ],
   },
   async rewrites() {

@@ -31,29 +31,27 @@ const CaseStudies = () => {
               width={100}
               height={100}
               layout="responsive"
-              className={`object-contain transition-opacity duration-200 rounded-2xl ${
-                hoveredCard === 1 ? "opacity-50" : "opacity-100"
+              className={`object-contain transition-opacity duration-300 rounded-2xl ${
+                hoveredCard === 1 ? "opacity-30" : "opacity-100"
               }`}
               alt=""
             />
             {hoveredCard === 1 && (
               <>
                 <HoverAnimation speed={0.3}>
-                  <div className="absolute top-0 w-full justify-center flex py-4">
-                    Website Development
-                  </div>
-                </HoverAnimation>
-                <HoverAnimation speed={0.6}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-black bg-opacity-50 p-4 text-white hover:cursor-pointer">
-                      <div>Visit Website</div>
-                    </div>
-                  </div>
-                </HoverAnimation>
-                <HoverAnimation speed={0.9}>
-                  <div className="absolute top-3/4 flex w-full px-4">
-                    This website was yes This website was yes This website was
-                    yes
+                  <div className="absolute flex flex-col h-full top-0 items-start justify-center px-5">
+                    <HoverAnimation speed={0.5}>
+                      <span className="self-start text-lg font-semibold">
+                        Modern Green
+                      </span>
+                    </HoverAnimation>
+                    <HoverAnimation speed={0.6}>
+                      <p className="text-sm">
+                        We used a refreshing color palette inspired by nature,
+                        coupled with intuitive navigation and visually pleasing
+                        layouts.
+                      </p>
+                    </HoverAnimation>
                   </div>
                 </HoverAnimation>
               </>
@@ -74,28 +72,25 @@ const CaseStudies = () => {
               height={100}
               layout="responsive"
               className={`object-contain transition-opacity duration-200 rounded-2xl ${
-                hoveredCard === 2 ? "opacity-50" : "opacity-100"
+                hoveredCard === 2 ? "opacity-30" : "opacity-100"
               }`}
               alt=""
             />
             {hoveredCard === 2 && (
               <>
                 <HoverAnimation speed={0.3}>
-                  <div className="absolute top-0 w-full justify-center flex py-4">
-                    Website Development & Management
-                  </div>
-                </HoverAnimation>
-                <HoverAnimation speed={0.6}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-black bg-opacity-50 p-4 text-white hover:cursor-pointer">
-                      <div>Visit Website</div>
-                    </div>
-                  </div>
-                </HoverAnimation>
-                <HoverAnimation speed={0.9}>
-                  <div className="absolute top-3/4 flex w-full px-4">
-                    This website was yes This website was yes This website was
-                    yes
+                  <div className="absolute flex flex-col h-full top-0 items-start justify-center px-5">
+                    <HoverAnimation speed={0.5}>
+                      <span className="self-start text-lg font-semibold">
+                        Celestial Night
+                      </span>
+                    </HoverAnimation>
+                    <HoverAnimation speed={0.6}>
+                      <p className="text-sm">
+                        Every element is thoughtfully designed to enhance your
+                        browsing experience while using a dark theme.
+                      </p>
+                    </HoverAnimation>
                   </div>
                 </HoverAnimation>
               </>
@@ -116,28 +111,25 @@ const CaseStudies = () => {
               height={100}
               layout="responsive"
               className={`object-contain transition-opacity duration-200 rounded-2xl ${
-                hoveredCard === 3 ? "opacity-50" : "opacity-100"
+                hoveredCard === 3 ? "opacity-30" : "opacity-100"
               }`}
               alt=""
             />
             {hoveredCard === 3 && (
               <>
                 <HoverAnimation speed={0.3}>
-                  <div className="absolute top-0 w-full justify-center flex py-4">
-                    UI/UX Design
-                  </div>
-                </HoverAnimation>
-                <HoverAnimation speed={0.6}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-black bg-opacity-50 p-4 text-white hover:cursor-pointer">
-                      <div>Visit Website</div>
-                    </div>
-                  </div>
-                </HoverAnimation>
-                <HoverAnimation speed={0.9}>
-                  <div className="absolute top-3/4 flex w-full px-4">
-                    This website was yes This website was yes This website was
-                    yes
+                  <div className="absolute flex flex-col h-full top-0 items-start justify-center px-5">
+                    <HoverAnimation speed={0.5}>
+                      <span className="self-start text-lg font-semibold">
+                        Elegance
+                      </span>
+                    </HoverAnimation>
+                    <HoverAnimation speed={0.6}>
+                      <p className="text-sm">
+                        Embracing a clean and minimalist design, our website
+                        exudes elegance and clarity.
+                      </p>
+                    </HoverAnimation>
                   </div>
                 </HoverAnimation>
               </>
@@ -153,33 +145,31 @@ const CaseStudies = () => {
         >
           <div className="relative">
             <Image
-              src="/images/swiper/card-2.webp"
+              src="/images/swiper/card-4.webp"
               width={100}
               height={100}
               layout="responsive"
               className={`object-contain transition-opacity duration-200 rounded-2xl ${
-                hoveredCard === 4 ? "opacity-50" : "opacity-100"
+                hoveredCard === 4 ? "opacity-30" : "opacity-100"
               }`}
               alt=""
             />
             {hoveredCard === 4 && (
               <>
                 <HoverAnimation speed={0.3}>
-                  <div className="absolute top-0 w-full justify-center flex py-4">
-                    Website Development
-                  </div>
-                </HoverAnimation>
-                <HoverAnimation speed={0.6}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-black bg-opacity-50 p-4 text-white hover:cursor-pointer">
-                      <div>Visit Website</div>
-                    </div>
-                  </div>
-                </HoverAnimation>
-                <HoverAnimation speed={0.9}>
-                  <div className="absolute top-3/4 flex w-full px-4">
-                    This website was yes This website was yes This website was
-                    yes
+                  <div className="absolute flex flex-col h-full top-0 items-start justify-center px-5">
+                    <HoverAnimation speed={0.5}>
+                      <span className="self-start text-lg font-semibold">
+                        Playful Modern
+                      </span>
+                    </HoverAnimation>
+                    <HoverAnimation speed={0.6}>
+                      <p className="text-sm">
+                        We used a colorful and dynamic experience. The website
+                        is a visual delight, bursting with an array of lively
+                        hues and energetic designs. .
+                      </p>
+                    </HoverAnimation>
                   </div>
                 </HoverAnimation>
               </>
@@ -195,33 +185,30 @@ const CaseStudies = () => {
         >
           <div className="relative">
             <Image
-              src="/images/swiper/card-1.webp"
+              src="/images/swiper/card-5.webp"
               width={100}
               height={100}
               layout="responsive"
               className={`object-contain transition-opacity duration-200 rounded-2xl ${
-                hoveredCard === 5 ? "opacity-50" : "opacity-100"
+                hoveredCard === 5 ? "opacity-30" : "opacity-100"
               }`}
               alt=""
             />
             {hoveredCard === 5 && (
               <>
                 <HoverAnimation speed={0.3}>
-                  <div className="absolute top-0 w-full justify-center flex py-4">
-                    Website Development
-                  </div>
-                </HoverAnimation>
-                <HoverAnimation speed={0.6}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-black bg-opacity-50 p-4 text-white hover:cursor-pointer">
-                      <div>Visit Website</div>
-                    </div>
-                  </div>
-                </HoverAnimation>
-                <HoverAnimation speed={0.9}>
-                  <div className="absolute top-3/4 flex w-full px-4">
-                    This website was yes This website was yes This website was
-                    yes
+                  <div className="absolute flex flex-col h-full top-0 items-start justify-center px-5">
+                    <HoverAnimation speed={0.5}>
+                      <span className="self-start text-lg font-semibold">
+                        Simple
+                      </span>
+                    </HoverAnimation>
+                    <HoverAnimation speed={0.6}>
+                      <p className="text-sm">
+                        Using modern colors, we created this simple but modern
+                        feel.
+                      </p>
+                    </HoverAnimation>
                   </div>
                 </HoverAnimation>
               </>
@@ -237,33 +224,32 @@ const CaseStudies = () => {
         >
           <div className="relative">
             <Image
-              src="/images/swiper/card-3.webp"
+              src="/images/swiper/card-6.webp"
               width={100}
               height={100}
               layout="responsive"
               className={`object-contain transition-opacity duration-200 rounded-2xl ${
-                hoveredCard === 6 ? "opacity-50" : "opacity-100"
+                hoveredCard === 6 ? "opacity-30" : "opacity-100"
               }`}
               alt=""
             />
             {hoveredCard === 6 && (
               <>
                 <HoverAnimation speed={0.3}>
-                  <div className="absolute top-0 w-full justify-center flex py-4">
-                    Website Development
-                  </div>
-                </HoverAnimation>
-                <HoverAnimation speed={0.6}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-black bg-opacity-50 p-4 text-white hover:cursor-pointer">
-                      <div>Visit Website</div>
-                    </div>
-                  </div>
-                </HoverAnimation>
-                <HoverAnimation speed={0.9}>
-                  <div className="absolute top-3/4 flex w-full px-4">
-                    This website was yes This website was yes This website was
-                    yes
+                  <div className="absolute flex flex-col h-full top-0 items-start justify-center px-5">
+                    <HoverAnimation speed={0.5}>
+                      <span className="self-start text-lg font-semibold">
+                        Eco Green
+                      </span>
+                    </HoverAnimation>
+                    <HoverAnimation speed={0.6}>
+                      <p className="text-sm">
+                        Our modern green website, where sustainability meets
+                        style. With a sleek and clean design, we&#39;ve created an
+                        inviting digital space that reflects our commitment to
+                        the environment.
+                      </p>
+                    </HoverAnimation>
                   </div>
                 </HoverAnimation>
               </>
@@ -271,7 +257,6 @@ const CaseStudies = () => {
           </div>
         </div>
       </RevealOnce>
-
     </div>
   );
 };
