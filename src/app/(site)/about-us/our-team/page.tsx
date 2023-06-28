@@ -6,7 +6,7 @@ export default function AboutOurTeam() {
             <ReusableHeroNested
                 heroText="About Our Talented Team"
                 secondarySubText="Our team of designers & developers"
-                PageLink="About Us"
+                PageLink="About-Us"
                 secondaryPageLink="Our Team"
             />
         </div>

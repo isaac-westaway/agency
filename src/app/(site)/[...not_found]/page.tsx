@@ -1,20 +1,13 @@
-"use client"
-
+"use client";
 import { useEffect, useState } from "react";
-import ReusableHero from "@/src/app/components/ReusableHero";
+import ReusableHero from "../../components/ReusableHero";
 
-interface NotFoundProps {
-    initialQuote: string;
-}
-
-const NotFound: React.FC<NotFoundProps> = ({ initialQuote }) => {
-  const [randomQuote, setRandomQuote] = useState(initialQuote);
+const NotFound = () => {
+  const [randomQuote, setRandomQuote] = useState("");
 
   useEffect(() => {
-    if (!randomQuote) {
-      fetchRandomQuote();
-    }
-  }, [randomQuote]);
+    fetchRandomQuote();
+  }, []);
 
   const fetchRandomQuote = async () => {
     try {
@@ -33,8 +26,9 @@ const NotFound: React.FC<NotFoundProps> = ({ initialQuote }) => {
         subText="You aren't meant to be here!"
         PageLink="Unknown Page"
       />
-      <section className="text-white ml-11 mr-11 mt-2 mb-0 sm:-mt-20 md:-mt-16 lg:-mt-16 sm:flex sm:justify-center md:flex md:justify-center lg:flex lg:justify-center border-t-[1px] border-dark-50">
+      <section className="text-white ml-11 mr-11 mt-2 mb-0 sm:-mt-20 md:-mt-16 lg:-mt-16 sm:flex sm:justify-center md:flex md:justify-center lg:flex lg:justify-center border-dark-50 border-t-[1px]">
         <div className="text-center mt-4">
+          <h2 className="text-4xl font-bold mb-4">Random Quote Generator</h2>
           {randomQuote ? (
             <p className="text-lg">{`"${randomQuote}"`}</p>
           ) : (
@@ -51,26 +45,5 @@ const NotFound: React.FC<NotFoundProps> = ({ initialQuote }) => {
     </div>
   );
 };
-
-export async function getStaticProps() {
-  try {
-    const response = await fetch("https://api.quotable.io/random");
-    const { content } = await response.json();
-
-    return {
-      props: {
-        initialQuote: content,
-      },
-    };
-  } catch (error) {
-    console.error("Failed to fetch random quote:", error);
-
-    return {
-      props: {
-        initialQuote: null,
-      },
-    };
-  }
-}
 
 export default NotFound;
