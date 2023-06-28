@@ -387,7 +387,7 @@ export default function Home() {
             <div className="flex mt-8 mb-8 sm:mt-0 md:mt-0 lg:mt-0 items-center justify-center overflow-x-hidden w-full px-4  rounded-2xl">
               <FlyIn flyInRight={true}>
                 <Image
-                  src="/images/design.webp"
+                  src="/images/gallery/second.png"
                   alt="UI/UX"
                   width="600"
                   height="800"
