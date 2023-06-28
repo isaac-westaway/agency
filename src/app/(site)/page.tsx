@@ -221,7 +221,11 @@ export default function Home() {
           </div>
         </RevealAlways>
       </section>
-      <section className="relative text-white overflow-x-hidden border-t-[1px] border-dark-50" id="introduction" style={{ scrollMarginTop: "100px" }}>
+      <section
+        className="relative text-white overflow-x-hidden border-t-[1px] border-dark-50"
+        id="introduction"
+        style={{ scrollMarginTop: "100px" }}
+      >
         <div className="relative overflow-y-hidden">
           <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
             <div className="h-full relative">
@@ -272,7 +276,61 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative text-white overflow-x-hidden border-t-[1px] border-dark-50">
+      <section className="relative text-white border-t-[1px] border-dark-50">
+        <div className="absolute top-0 -ml-11 left-0">
+          <svg
+            width="239"
+            height="601"
+            viewBox="0 0 239 601"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              opacity="0.3"
+              x="-184.451"
+              y="600.973"
+              width="196"
+              height="541.607"
+              rx="2"
+              transform="rotate(-128.7 -184.451 600.973)"
+              fill="url(#paint0_linear_93:235)"
+            ></rect>
+            <rect
+              opacity="0.3"
+              x="-188.201"
+              y="385.272"
+              width="59.7544"
+              height="541.607"
+              rx="2"
+              transform="rotate(-128.7 -188.201 385.272)"
+              fill="url(#paint1_linear_93:235)"
+            ></rect>
+            <defs>
+              <linearGradient
+                id="paint0_linear_93:235"
+                x1="-90.1184"
+                y1="420.414"
+                x2="-90.1184"
+                y2="1131.65"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#4A6CF7"></stop>
+                <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_93:235"
+                x1="-159.441"
+                y1="204.714"
+                x2="-159.441"
+                y2="915.952"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#4A6CF7"></stop>
+                <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
         <div className="relative overflow-y-hidden">
           <div className="grid grid-cols-2 sm:flex sm:flex-col-reverse md:flex md:flex-col-reverse lg:flex lg:flex-col-reverse gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
             <div className="flex mt-8 mb-8 sm:mt-0 md:mt-0 lg:mt-0 flex-col items-center justify-center overflow-x-hidden w-full px-4  rounded-2xl">
@@ -368,12 +426,11 @@ export default function Home() {
                   </RevealOnce>
                   <RevealOnce>
                     <div className="mt-3">
-                      Embark on a transformative digital journey with
-                      Wynnum Web Services today. Experience the power of a dedicated
-                      team, cutting-edge technologies, and unparalleled expertise.
-                      Let us elevate your online presence and drive your business
-                      towards success in the dynamic digital world.
-                      now.
+                      Embark on a transformative digital journey with Wynnum Web
+                      Services today. Experience the power of a dedicated team,
+                      cutting-edge technologies, and unparalleled expertise. Let
+                      us elevate your online presence and drive your business
+                      towards success in the dynamic digital world. now.
                     </div>
                   </RevealOnce>
                 </div>
@@ -399,6 +456,60 @@ export default function Home() {
         </div>
       </section>
       <section className="relative text-white border-t-[1px] border-dark-50">
+        <div className="absolute -mr-11 top-0 right-0">
+          <svg
+            width="238"
+            height="531"
+            viewBox="0 0 238 531"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              opacity="0.3"
+              x="422.819"
+              y="-70.8145"
+              width="196"
+              height="541.607"
+              rx="2"
+              transform="rotate(51.2997 422.819 -70.8145)"
+              fill="url(#paint0_linear_83:2)"
+            ></rect>
+            <rect
+              opacity="0.3"
+              x="426.568"
+              y="144.886"
+              width="59.7544"
+              height="541.607"
+              rx="2"
+              transform="rotate(51.2997 426.568 144.886)"
+              fill="url(#paint1_linear_83:2)"
+            ></rect>
+            <defs>
+              <linearGradient
+                id="paint0_linear_83:2"
+                x1="517.152"
+                y1="-251.373"
+                x2="517.152"
+                y2="459.865"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#4A6CF7"></stop>
+                <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_83:2"
+                x1="455.327"
+                y1="-35.673"
+                x2="455.327"
+                y2="675.565"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#4A6CF7"></stop>
+                <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
         <RevealOnce>
           <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 pb-8 select-text">
             What small businesses are saying about us
@@ -410,7 +521,7 @@ export default function Home() {
           </div>
         </RevealOnce>
       </section>
-      <section className="text-white border-t-[1px] border-dark-50">
+      <section className="relative text-white border-t-[1px] border-dark-50">
         <RevealOnce>
           <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 pb-8 select-text">
             Some of the websites we&#39;ve created

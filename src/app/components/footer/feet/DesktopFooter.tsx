@@ -38,15 +38,17 @@ const DesktopFooter = () => {
                 </div>
                 <div className="pt-3 leading-6 tracking-wider">
                   <div className="font-light flex flex-row w-full">
-                    <a
-                      href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-max flex items-center animatedUnderline hover:cursor-pointer"
-                    >
-                      Billing Portal
-                    </a>
-                    <div className="flex items-center w-1/3 justify-end">
+                    <div className="flex-grow">
+                      <a
+                        href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-max flex items-center animatedUnderline hover:cursor-pointer"
+                      >
+                        Billing Portal
+                      </a>
+                    </div>
+                    <div className="flex items-center">
                       <FiExternalLink />
                     </div>
                   </div>

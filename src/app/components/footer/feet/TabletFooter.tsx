@@ -1,13 +1,21 @@
 "use client";
 
 import Logo from "../../Logo";
+
+import Image from "next/image";
 import Link from "next/link";
 
 import { FiExternalLink } from "react-icons/fi";
 
 const TabletFooter = () => {
   return (
-    <div className="border-t-[1px] border-dark-50 w-full text-sm">
+    <div className="border-t-[1px] border-dark-50 w-full text-sm relative">
+            <div className="absolute -bottom-5 right-0  -z-50 pointer-events-none ">
+        <Image src="/svg/footer-shape-1.svg" alt="" width="187" height="254" />
+      </div>
+      <div className="absolute -top-10 left-0  -z-50 pointer-events-none">
+        <Image src="/svg/footer-shape-2.svg" alt="" width="158" height="392" />
+      </div>
       <div className="w-full grid grid-cols-2 text-white tracking-wider">
         <div className="pt-4 pl-11 row-span-1">
           <Logo />

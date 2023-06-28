@@ -1,13 +1,21 @@
 "use client";
 
 import Logo from "../../Logo";
+
+import Image from "next/image";
 import Link from "next/link";
 
 import { FiExternalLink } from "react-icons/fi";
 
 const MobileFooter = () => {
   return (
-    <div className="border-t-[1px] border-dark-50 w-full text-sm">
+    <div className="border-t-[1px] border-dark-50 w-full text-sm relative">
+      <div className="absolute -bottom-5 right-0  -z-50 pointer-events-none ">
+        <Image src="/svg/footer-shape-1.svg" alt="" width="187" height="254" />
+      </div>
+      <div className="absolute -top-10 left-0  -z-50 pointer-events-none">
+        <Image src="/svg/footer-shape-2.svg" alt="" width="158" height="392" />
+      </div>
       <div className="flex w-full justify-center py-4">
         <Logo />
       </div>
@@ -26,43 +34,48 @@ const MobileFooter = () => {
           </div>
           <div className="flex flex-col justify-center p-2 tracking-wider font-light ml-11 mr-11">
             <div className="w-full flex flex-row">
-              <a href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE" className="shrink-0 my-2">Billing Portal</a>
+              <a
+                href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
+                className="shrink-0 my-2"
+              >
+                Billing Portal
+              </a>
               <div className="h-full flex items-center w-full justify-end">
                 <FiExternalLink />
               </div>
             </div>
             <div className="my-2">
-                    <Link
-                      href="/gallery"
-                      className="font-light my-2 animatedUnderline w-max hover:cursor-pointer"
-                    >
-                      Gallery
-                    </Link>
-                  </div>
-                  <div className="my-2">
-                    <Link
-                      href="/services/ui-ux"
-                      className="font-light my-2  animatedUnderline w-max hover:cursor-pointer"
-                    >
-                      UI&nbsp;/&nbsp;UX Design
-                    </Link>
-                  </div>
-                  <div className="my-2">
-                    <Link
-                      href="/services/web-development"
-                      className="font-light my-2  animatedUnderline w-max hover:cursor-pointer"
-                    >
-                      Web Development
-                    </Link>
-                  </div>
-                  <div className="my-2">
-                    <Link
-                      href="/services/web-management"
-                      className="font-light my-2  animatedUnderline w-max hover:cursor-pointer"
-                    >
-                      Web Management
-                    </Link>
-                  </div>
+              <Link
+                href="/gallery"
+                className="font-light my-2 animatedUnderline w-max hover:cursor-pointer"
+              >
+                Gallery
+              </Link>
+            </div>
+            <div className="my-2">
+              <Link
+                href="/services/ui-ux"
+                className="font-light my-2  animatedUnderline w-max hover:cursor-pointer"
+              >
+                UI&nbsp;/&nbsp;UX Design
+              </Link>
+            </div>
+            <div className="my-2">
+              <Link
+                href="/services/web-development"
+                className="font-light my-2  animatedUnderline w-max hover:cursor-pointer"
+              >
+                Web Development
+              </Link>
+            </div>
+            <div className="my-2">
+              <Link
+                href="/services/web-management"
+                className="font-light my-2  animatedUnderline w-max hover:cursor-pointer"
+              >
+                Web Management
+              </Link>
+            </div>
           </div>
         </div>
         <div className="sm:-mt-4 relative flex flex-col border-l-[0px] border-dark-50">
