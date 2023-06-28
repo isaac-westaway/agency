@@ -52,13 +52,15 @@ const Testimonials = () => {
               </svg>
             </div>
             <div className="flex flex-col items-center">
-              <Image
-                className="mx-auto mt-4 prevent-select"
-                src={testimonial.logo}
-                height="200"
-                width="200"
-                alt=""
-              />
+              <div className="bg-white mt-4 rounded-2xl">
+                <Image
+                  className="mx-4 mt-4 mb-4 prevent-select "
+                  src={testimonial.logo}
+                  height="200"
+                  width="200"
+                  alt=""
+                />
+              </div>
               <div className="text-center text-xl sm:text-sm leading-8 sm:leading-5 h-full px-4">
                 <span className="text-center overflow-clip h-20 flex-1 flex items-center justify-center p-1 prevent-select">
                   {testimonial.quote}
@@ -67,9 +69,9 @@ const Testimonials = () => {
               <div className="mt-5 prevent-select">
                 <Image
                   height="100"
-                  width="100"
-                  className="mx-auto h-10 w-10 rounded-full prevent-select"
-                  src={testimonial.profile}
+                  width="80"
+                  className="mx-auto h-14 w-14 rounded-full prevent-select"
+                  src={`${testimonial.profile}`}
                   alt=""
                 />
                 <div className="mt-5 flex items-center justify-center space-x-3 text-base mb-8">

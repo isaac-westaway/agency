@@ -28,8 +28,10 @@ export default function Gallery() {
                 className={`object-contain transition-opacity duration-200 rounded-2xl`}
               />
               <div className="absolute bottom-0 w-full bg-white rounded-b-2xl text-black px-4 py-4 flex flex-col">
-                <Link
-                  href="#"
+                <a
+                  href="https://sensational-caramel-9e9acf.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex flex-row font-semibold hover:underline cursor-pointer text-lg w-full shrink-0 items-center"
                 >
                   <span className="flex-grow">Constra Constructions</span>
@@ -37,7 +39,7 @@ export default function Gallery() {
                     className="ml-2"
                     style={{ stroke: "black", strokeWidth: "3" }}
                   />
-                </Link>
+                </a>
                 <p className="text-sm">Website Development</p>
               </div>
             </div>
@@ -53,8 +55,10 @@ export default function Gallery() {
                 className={`object-contain transition-opacity duration-200 rounded-2xl`}
               />
               <div className="absolute bottom-0 w-full bg-white border-t-[1px] border-dark-50 rounded-b-2xl text-black px-4 py-4 flex flex-col">
-                <Link
-                  href="#"
+                <a
+                  href="https://chipper-flan-9d4d59.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex flex-row font-semibold hover:underline cursor-pointer text-lg w-full shrink-0 items-center"
                 >
                   <span className="flex-grow">BigSpring</span>
@@ -62,13 +66,13 @@ export default function Gallery() {
                     className="ml-2"
                     style={{ stroke: "black", strokeWidth: "3" }}
                   />
-                </Link>
+                </a>
                 <p className="text-sm">UI/UX Design</p>
               </div>
             </div>
           </RevealOnce>
           <RevealOnce>
-            <div className="mt-8 relative z-50">
+            <div className="mt-8 mb-8 relative z-50">
               <Image
                 src="/images/gallery/gymfit.webp"
                 width={100}
@@ -78,8 +82,10 @@ export default function Gallery() {
                 className={`object-contain transition-opacity duration-200 rounded-2xl z-50`}
               />
               <div className="absolute bottom-0 w-full bg-white rounded-b-2xl border-t-[1px] border-dark-50 text-black px-4 py-4 flex flex-col">
-                <Link
-                  href="#"
+                <a
+                  href="https://main--deft-figolla-4e9571.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex flex-row font-semibold hover:underline cursor-pointer text-lg w-full shrink-0 items-center"
                 >
                   <span className="flex-grow">Gymfit</span>
@@ -87,157 +93,7 @@ export default function Gallery() {
                     className="ml-2"
                     style={{ stroke: "black", strokeWidth: "3" }}
                   />
-                </Link>
-                <p className="text-sm">Website Development</p>
-              </div>
-            </div>
-          </RevealOnce>
-          <RevealOnce>
-            <div className="mt-8 mb-8 relative">
-              <Image
-                src="/images/gallery/constra.webp"
-                width={100}
-                height={100}
-                alt=""
-                layout="responsive"
-                className={`object-contain transition-opacity duration-200 rounded-2xl`}
-              />
-              <div className="absolute bottom-0 w-full bg-white rounded-b-2xl text-black px-4 py-4 flex flex-col">
-                <Link
-                  href="#"
-                  className="flex flex-row font-semibold hover:underline cursor-pointer text-lg w-full shrink-0 border items-center"
-                >
-                  <span className="flex-grow">Constra Constructions</span>
-                  <FiExternalLink
-                    className="ml-2"
-                    style={{ stroke: "black", strokeWidth: "3" }}
-                  />
-                </Link>
-                <p className="text-sm">Website Development</p>
-              </div>
-            </div>
-          </RevealOnce>
-          <RevealOnce>
-            <div className="mt-8 sm:mt-0 md:mt-0 mb-8 relative">
-              <Image
-                src="/images/gallery/constra.webp"
-                width={100}
-                height={100}
-                alt=""
-                layout="responsive"
-                className={`object-contain transition-opacity duration-200 rounded-2xl`}
-              />
-              <div className="absolute bottom-0 w-full bg-white rounded-b-2xl text-black px-4 py-4 flex flex-col">
-                <Link
-                  href="#"
-                  className="flex flex-row font-semibold hover:underline cursor-pointer text-lg w-full shrink-0 border items-center"
-                >
-                  <span className="flex-grow">Constra Constructions</span>
-                  <FiExternalLink
-                    className="ml-2"
-                    style={{ stroke: "black", strokeWidth: "3" }}
-                  />
-                </Link>
-                <p className="text-sm">Website Development</p>
-              </div>
-            </div>
-          </RevealOnce>
-          <RevealOnce>
-            <div className="mt-8 sm:mt-0 md:mt-0 mb-8 relative">
-              <Image
-                src="/images/gallery/constra.webp"
-                width={100}
-                height={100}
-                alt=""
-                layout="responsive"
-                className={`object-contain transition-opacity duration-200 rounded-2xl`}
-              />
-              <div className="absolute bottom-0 w-full bg-white rounded-b-2xl text-black px-4 py-4 flex flex-col">
-                <Link
-                  href="#"
-                  className="flex flex-row font-semibold hover:underline cursor-pointer text-lg w-full shrink-0 border items-center"
-                >
-                  <span className="flex-grow">Constra Constructions</span>
-                  <FiExternalLink
-                    className="ml-2"
-                    style={{ stroke: "black", strokeWidth: "3" }}
-                  />
-                </Link>
-                <p className="text-sm">Website Development</p>
-              </div>
-            </div>
-          </RevealOnce>
-          <RevealOnce>
-            <div className="mb-8 relative">
-              <Image
-                src="/images/gallery/constra.webp"
-                width={100}
-                height={100}
-                alt=""
-                layout="responsive"
-                className={`object-contain transition-opacity duration-200 rounded-2xl`}
-              />
-              <div className="absolute bottom-0 w-full bg-white rounded-b-2xl text-black px-4 py-4 flex flex-col">
-                <Link
-                  href="#"
-                  className="flex flex-row font-semibold hover:underline cursor-pointer text-lg w-full shrink-0 border items-center"
-                >
-                  <span className="flex-grow">Constra Constructions</span>
-                  <FiExternalLink
-                    className="ml-2"
-                    style={{ stroke: "black", strokeWidth: "3" }}
-                  />
-                </Link>
-                <p className="text-sm">Website Development</p>
-              </div>
-            </div>
-          </RevealOnce>
-          <RevealOnce>
-            <div className="mb-8 relative">
-              <Image
-                src="/images/gallery/constra.webp"
-                width={100}
-                height={100}
-                alt=""
-                layout="responsive"
-                className={`object-contain transition-opacity duration-200 rounded-2xl`}
-              />
-              <div className="absolute bottom-0 w-full bg-white rounded-b-2xl text-black px-4 py-4 flex flex-col">
-                <Link
-                  href="#"
-                  className="flex flex-row font-semibold hover:underline cursor-pointer text-lg w-full shrink-0 border items-center"
-                >
-                  <span className="flex-grow">Constra Constructions</span>
-                  <FiExternalLink
-                    className="ml-2"
-                    style={{ stroke: "black", strokeWidth: "3" }}
-                  />
-                </Link>
-                <p className="text-sm">Website Development</p>
-              </div>
-            </div>
-          </RevealOnce>
-          <RevealOnce>
-            <div className="mb-8 relative">
-              <Image
-                src="/images/gallery/constra.webp"
-                width={100}
-                height={100}
-                alt=""
-                layout="responsive"
-                className={`object-contain transition-opacity duration-200 rounded-2xl`}
-              />
-              <div className="absolute bottom-0 w-full bg-white rounded-b-2xl text-black px-4 py-4 flex flex-col">
-                <Link
-                  href="#"
-                  className="flex flex-row font-semibold hover:underline cursor-pointer text-lg w-full shrink-0 border items-center"
-                >
-                  <span className="flex-grow">Constra Constructions</span>
-                  <FiExternalLink
-                    className="ml-2"
-                    style={{ stroke: "black", strokeWidth: "3" }}
-                  />
-                </Link>
+                </a>
                 <p className="text-sm">Website Development</p>
               </div>
             </div>

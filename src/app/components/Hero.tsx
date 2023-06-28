@@ -295,13 +295,13 @@ const Hero = () => {
               </div>
               <div className="mt-9 flex items-center justify-center gap-x-6">
                 <a
-                  href="#"
+                  href="#contact"
                   className="rounded-lg bg-[#4A6CF7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition ease-in-out duration-200"
                 >
                   Get started
                 </a>
                 <a
-                  href="#"
+                  href="#introduction"
                   className="text-sm font-semibold leading-6 text-white"
                 >
                   Learn more <span aria-hidden="true">→</span>

@@ -221,7 +221,7 @@ export default function Home() {
           </div>
         </RevealAlways>
       </section>
-      <section className="relative text-white overflow-x-hidden border-t-[1px] border-dark-50">
+      <section className="relative text-white overflow-x-hidden border-t-[1px] border-dark-50" id="introduction" style={{ scrollMarginTop: "100px" }}>
         <div className="relative overflow-y-hidden">
           <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
             <div className="h-full relative">
