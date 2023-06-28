@@ -1,11 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import ReusableHero from "../../components/ReusableHero";
-
-export const metadata = {
-  title: "404 Page Not Found!",
-};
-
+import Head from "next/head";
 
 const NotFound = () => {
   const [randomQuote, setRandomQuote] = useState("");
@@ -26,6 +22,9 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>404 Page Not Found!</title>
+      </Head>
       <ReusableHero
         heroText="Error 404"
         subText="You aren't meant to be here!"

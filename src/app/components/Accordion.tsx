@@ -31,7 +31,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
     return (
       <div
         key={index}
-        className={`border border-gray-300 rounded p-2 cursor-pointer ${
+        className={`border border-gray-300 rounded-2xl p-2 cursor-pointer ${
           isActive ? "bg-black" : ""
         }`}
       >
