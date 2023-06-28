@@ -40,7 +40,7 @@ export default function Gallery() {
                     style={{ stroke: "black", strokeWidth: "3" }}
                   />
                 </a>
-                <p className="text-sm">Website Development</p>
+                <p className="text-sm">Website Development & Management</p>
               </div>
             </div>
           </RevealOnce>
