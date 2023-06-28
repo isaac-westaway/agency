@@ -57,6 +57,7 @@ const Testimonials = () => {
                   className="mx-4 mt-4 mb-4 prevent-select "
                   src={testimonial.logo}
                   height="200"
+                  loading="lazy"
                   width="200"
                   alt=""
                 />
@@ -71,6 +72,7 @@ const Testimonials = () => {
                   height="100"
                   width="80"
                   className="mx-auto h-14 w-14 rounded-full prevent-select"
+                  loading="lazy"
                   src={`${testimonial.profile}`}
                   alt=""
                 />
