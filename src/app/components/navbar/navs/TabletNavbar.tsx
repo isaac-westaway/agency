@@ -208,7 +208,7 @@ const TabletNavbar = () => {
           >
             <span className="cursor-pointer hover:text-white hover:transition hover:duration-200 flex">
               <span className="animatedUnderline h-10 items-center flex justify-center">
-                About
+                About Us
               </span>
               <span className="items-center justify-center flex mt-1">
                 <FiChevronDown />
@@ -226,7 +226,7 @@ const TabletNavbar = () => {
                   onMouseLeave={handleDropdownLeave}
                 >
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mt-[10px]">
-                    <Link href="/about/team">
+                    <Link href="/about-us/our-team">
                       Our Team
                       <br />
                       <span className="text-gray-400 w-fit text-sm">
@@ -235,7 +235,7 @@ const TabletNavbar = () => {
                     </Link>
                   </div>
                   <div className="block hover:bg-dark-custom rounded-lg p-3 mx-[10px] mb-[10px]">
-                    <Link href="/about/agency">
+                    <Link href="/about-us/our-agency">
                       Our Agency
                       <br />
                       <span className="text-gray-400 w-fit text-sm">

@@ -14,7 +14,7 @@ export const testimonialData = [
         position: 'Chief Technical Officer',
     },
     {
-        logo: 'https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg',
+        logo: '/images/logos/bigspring.png',
         quote: "Isaac's professional design expertise re-designed my logo, and I could not be happier with it!",
         profile: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
         name: 'Judith Black',

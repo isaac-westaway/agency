@@ -174,7 +174,7 @@ const MobileNavbar = () => {
               onClick={AccordionAboutToggle}
               className="flex flex-row transition ease-in duration-150 p-2 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
-              <div className="">About</div>
+              <div className="">About Us</div>
               <div className="flex flex-row items-center justify-end w-full">
                 {accordionAboutOpen ? (
                   <FiChevronDown size={21} />
@@ -190,7 +190,7 @@ const MobileNavbar = () => {
                     onClick={toggleOpen}
                     className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
-                    <Link href="/about/team" className="block w-full">
+                    <Link href="/about-us/our-team" className="block w-full">
                       |&nbsp;&nbsp;Our Agency
                     </Link>
                   </div>
@@ -199,7 +199,7 @@ const MobileNavbar = () => {
                     className="p-2 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link
-                      href="/about/agency"
+                      href="/about-us/our-agency"
                       className="block w-full"
                     >
                       |&nbsp;&nbsp;Our Team

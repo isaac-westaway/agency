@@ -72,17 +72,16 @@ export default function WebDevelopment() {
         PageLink="Services"
         secondaryPageLink="Website Development"
       />
-      <section className="text-white ml-11 mr-11 mt-8 mb-8 sm:-mt-28 md:-mt-28 lg:-mt-28 sm:flex sm:justify-center md:flex md:justify-center lg:flex lg:justify-center ">
+      <section className="text-white ml-11 mr-11 -mt-4 mb-0 sm:-mt-24 md:-mt-20 lg:-mt-20 sm:flex sm:justify-center md:flex md:justify-center lg:flex lg:justify-center ">
         <div className="w-fit">
           <RevealAlways>
-            <div className="rounded-lg mt-10 py-2.5 cursor-pointer">
-            <SmoothButton cta="Launch your project!" href="#contact" />
-
+            <div className="rounded-lg mt-2 md:mt-0 lg:mt-0 sm:mt-0 py-2.5 cursor-pointer">
+              <SmoothButton cta="Launch your project!" href="#contact" />
             </div>
           </RevealAlways>
         </div>
       </section>
-      <section className="mt-16 ml-11 mr-11">
+      <section className="mt-3 sm:mt-4 ml-11 mr-11">
         <RevealOnce>
           <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 sm:gap-y-16 md:gap-y-16 gap-11 sm:pl-0 sm:pr-0 text-white">
             <div className="py-12 border border-dark-50 rounded-2xl flex flex-col justify-center items-center">
