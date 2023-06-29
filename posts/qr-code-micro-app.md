@@ -1,7 +1,7 @@
 ---
 title: "Building a QR code micro-app"
 subtitle: "Build a serverless 'hello-world' QR code app with Python and AWS."
-date: "2021-08-14"
+date: "2023-04-14"
 ---
 
 Ever since the pandemic started, I've noticed QR codes creeping into my daily life. Venue check-ins, digital menus at restaurants, and online payments.
@@ -9,8 +9,6 @@ Ever since the pandemic started, I've noticed QR codes creeping into my daily li
 I thought it'd be fun to explore the technology a little bit, so I've built a micro web-app that lets you save messages and view them later using a QR code. Sort of a "Hello World" QR code project.
 
 In this post, I'll be sharing how I built this using Python and AWS free tier.
-
-You can try out the [app itself here](https://qr.pixegami.com/). The [source code](https://github.com/pixegami/qr-code-webapp) is also available on GitHub.
 
 ![images/qr-code-demo.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1628899108564/NGWiGc3-w.gif)
 
@@ -48,24 +46,15 @@ So after breaking these requirements into technical tasks, here is the strategy:
 - **Database**: DynamoDB
 - **Image Storage**: Amazon S3
 
-## Implementation
-
-Most of the app's 'meaty' logic lives in the [`qr-code-infrastructure/compute/api`](https://github.com/pixegami/qr-code-webapp/tree/main/qr-code-infrastructure/compute/api) folder, as a bunch
-of Python functions.
-
 ### Generating a `tag` and a URL
 
 When a user sends a message, it generates a random tag using `uuid4` (which I truncated to 12
 characters to keep it a bit shorter). A URL to view this message will then be used to create a QR code.
 
 ```python
-
 # uuid is a built-in Python library to generate random IDs with, with low chance of collision.
 qr_id = uuid.uuid4().hex[:12]
 qr_tag = f"qr-{qr_id}"
-
-# We'll later have to implement this page so that it can load our message with the given tag.
-content = f"https://qr.pixegami.com/view?tag={qr_tag}"
 ```
 
 ### Generating the QR code image
@@ -138,9 +127,7 @@ self.database.put_item(item)
 
 ### Scanning the QR image to load the content
 
-On the front-end, it's simple just a page for this URL we generated earlier `https://qr.pixegami.com/view?tag={qr_tag}` to look up the table value for the item with that `tag`.
-
-I [used](https://github.com/pixegami/qr-code-webapp/blob/main/qr-code-site/src/components/pages/ViewPage.tsx#L19) a [React `useEffect` hook](https://reactjs.org/docs/hooks-effect.html), which lets me make an API call once the page loads.
+I [used](https://github.com/wynnumwebservices/) a [React `useEffect` hook](https://reactjs.org/docs/hooks-effect.html), which lets me make an API call once the page loads.
 
 I have another API on the back-end, which receives this `tag` and looks up the saved message. It then sends it back for the front-end to display.
 
@@ -156,4 +143,4 @@ message = item.message
 
 That's pretty much it! Now if I ever need to use QR codes as part of an application in the future I'll just dig this up 😅
 
-And if you're keen to try this out yourself, feel free to check out the [source](https://github.com/pixegami/qr-code-webapp). It's a small project so you can probably build it out in a few hours (or a few days, if you're new to AWS as well).
+And if you're keen to try this out yourself, feel free to check out the [source](https://github.com/wynnumwebservices). It's a small project so you can probably build it out in a few hours (or a few days, if you're new to AWS as well).

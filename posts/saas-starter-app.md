@@ -1,7 +1,7 @@
 ---
 title: "Building a serverless SaaS product"
 subtitle: "A full-stack SaaS project with authentication and payments."
-date: "2021-07-12"
+date: "2023-03-12"
 ---
 
 The [SaaS (software as a service)](https://en.wikipedia.org/wiki/Software_as_a_service) model underpins many of today's successful new businesses. Knowing how to build one from start to finish is probably a useful addition to any software developer's skill set.
@@ -21,7 +21,7 @@ My implementation is opinionated (as you'll see), and intended to serve as a sta
 - [CRUD operations](#crud-operations)
 - [Lessons Learnt](#lessons-learnt)
 
-You can view the example at https://saas-starter-stack.com/app/ and the source on [GitHub](https://github.com/pixegami/saas-starter). In this post, I'll be reflecting on my choices and experience for each of the above features.
+You can view the example at https://saas-starter-stack.com/app/ and the source on [GitHub](https://github.com/wynnumwebservices). In this post, I'll be reflecting on my choices and experience for each of the above features.
 
 ### Authentication
 
@@ -66,8 +66,6 @@ However, this implies that the choice of database must be serverless as well. I 
 ### Infrastructure as code
 
 Configuring infrastructure is time-consuming and error prone. If I want to be able to deploy a copy of this service quickly, I'd have to [model it as code (IaC)](https://en.wikipedia.org/wiki/Infrastructure_as_code). In keeping theme with my AWS integration so far, I've modeled this project with [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/home.html) in Typescript.
-
-With this the entire frontend and backend can be deployed to a brand new account or domain in less than 30 minutes with just a [few configuration changes](https://github.com/pixegami/saas-starter/blob/master/saas-infrastructure/service.config.json).
 
 ### CRUD operations
 

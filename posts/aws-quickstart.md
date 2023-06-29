@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with AWS"
 subtitle: "Create an AWS account and set up CLI/SDK access."
-date: "2020-12-27"
+date: "2023-05-08"
 ---
 
 "Cloud computing" plays a vital role in the creation of software products and services. It's also one of the most highly sought-after skills in the tech industry.
@@ -90,7 +90,7 @@ Now you should be able to use your CLI to access AWS. For example, I should be a
 ```bash
 aws s3 ls
 
-2020-12-09 22:36:32 blog.pixegami.com
+2020-12-09 22:36:32 wynnumwebservices.com/blog
 2020-12-27 00:04:52 cloud-archiver.5dac84a54677.archivetest
 ```
 
