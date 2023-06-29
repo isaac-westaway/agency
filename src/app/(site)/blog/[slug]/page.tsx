@@ -4,6 +4,7 @@ import getPostMetadata from "@/src/app/components/posts/getPostMetadata";
 import fs from "fs";
 import matter from "gray-matter";
 import Markdown from "markdown-to-jsx";
+import { NextPage } from "next";
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
@@ -26,7 +27,7 @@ export const generateStaticParams = async () => {
   }));
 };
 
-export const PostPage = (props: any) => {
+export const PostPage: NextPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   const truncatedTitle = truncateTitle(post.data.title, 15);
