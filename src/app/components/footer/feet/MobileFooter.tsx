@@ -146,10 +146,8 @@ const MobileFooter = () => {
             <div className="justify-center text-center flex py-2 border-b-[1px] border-dark-50 ml-11 mr-11 font-semibold tracking-wider text-sm">
               &copy; 2023 DigiSpark Australia
             </div>
-            <div className="flex flex-row sm:flex-col justify-evenly p-2 tracking-wider font-light ml-11 mr-11">
-              <div className="my-2">Acknowledgement of Country</div>
-              <div className="my-2">Terms & Conditions</div>
-              <div className="my-2">Privacy Policy</div>
+            <div className="flex flex-row sm:flex-col justify-evenly p-2 tracking-wider font-light ml-11 mr-11 text-center">
+              <Link href="/acknowledgement-of-country" className="hover:underline hover:cursor-pointer">Acknowledgement of Country</Link>
             </div>
           </div>
         </div>

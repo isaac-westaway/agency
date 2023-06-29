@@ -162,9 +162,7 @@ const DesktopFooter = () => {
                 &copy; 2023 DigiSpark Australia. All rights reserved.
               </div>
               <div className="flex gap-4">
-                <div>Acknowledgement of country</div>
-                <div>Terms &amp; Conditions</div>
-                <div>Privacy Policy</div>
+                <Link href="/acknowledgement-of-country" className="hover:underline hover:cursor-pointer">Acknowledgement of country</Link>
               </div>
             </div>
           </div>

@@ -146,9 +146,7 @@ const TabletFooter = () => {
             &copy; 2023 DigiSpark Australia
           </div>
           <div className="flex flex-row sm:flex-col justify-evenly p-2 tracking-wider font-light mx-[31px]">
-            <div className="my-2">Acknowledgement of Country</div>
-            <div className="my-2">Terms & Conditions</div>
-            <div className="my-2">Privacy Policy</div>
+            <Link href="/acknowledgement-of-country" className="my-2 hover:underline hover:cursor-pointer">Acknowledgement of Country</Link>
           </div>
         </div>
       </div>

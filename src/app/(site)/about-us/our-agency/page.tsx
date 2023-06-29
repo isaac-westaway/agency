@@ -32,7 +32,7 @@ export default function AboutOurAgency() {
       </section>
       <section className="text-white bg-black backdrop-blur-sm z-50 ml-11 mr-11 mt-3 border-t-[1px] border-dark-50">
         <RevealOnce>
-          <div className="mx-4 mt-8 mb-8 border border-dark-50 rounded-2xl text-center bg-black backdrop-blur-sm z-50 px-4 py-4 shadow-lg">
+          <div className="mx-4 mt-8 mb-8 border border-dark-50 rounded-2xl text-center bg-black backdrop-blur-sm z-50 px-4 sm:px-0 py-4 shadow-lg">
             <div className="text-3xl font-semibold mb-4">About Our Agency</div>
             <p>
               Our core principles revolve around delivering excellence in every
