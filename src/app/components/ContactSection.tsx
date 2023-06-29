@@ -47,7 +47,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   <div>+61 490 747 987</div>
                 </div>
                 <div className="relative flex flex-row w-full mt-4">
-                  <div className="h-7 w-7 mx-4">
+                  <div className="h-7 w-7 mx-4 sm:hidden">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -63,7 +63,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                       ></path>
                     </svg>
                   </div>
-                  <div className="sm:text-sm">WynnumWebServices@gmail.com</div>
+                  <div className="sm:text-sm sm:hidden">WynnumWebServices@gmail.com</div>
                 </div>
               </div>
             </RevealOnce>
