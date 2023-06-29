@@ -217,7 +217,7 @@ const MobileNavbar = () => {
               onClick={toggleOpen}
               className="p-2 transition ease-in duration-150 border-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
-              <Link href="/blog" className="">
+              <Link href="/blog" className="block w-full">
                 Blog
               </Link>
             </li>
