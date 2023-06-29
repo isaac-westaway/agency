@@ -4,7 +4,7 @@ import PostPreview from "@/src/app/components/posts/PostPreview";
 import ContactSection from "@/src/app/components/ContactSection";
 
 export const metadata = {
-  title: "Blog Wynnum Web Services",
+  title: "Blog ● Wynnum Web Services",
 };
 
 export default function Blog() {

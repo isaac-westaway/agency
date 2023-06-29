@@ -3,11 +3,11 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 
 import { Analytics } from "@vercel/analytics/react";
-import { KBarProvider } from "kbar";
 
 import ClientOnly from "@/src/app/components/ClientOnly";
 import Navbar from "@/src/app/components/navbar/Navbar";
 import Footer from "@/src/app/components/footer/Footer";
+import ClientKBarProvider from "@/src/app/components/providers/ClientKBarProvider";
 
 import ToasterProvider from "../components/providers/ToasterProvider";
 
