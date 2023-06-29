@@ -50,7 +50,7 @@ export default function AckOfCountry() {
                 href="http://www.qyac.net.au/"
                 className="text-[#4A6CF7] hover:underline hover:cursor-pointer"
               >
-                please visit their website
+                &nbsp;please visit their website
               </Link>
             </div>
             <div className="w-fit mt-4">
