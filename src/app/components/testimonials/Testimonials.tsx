@@ -63,8 +63,8 @@ const Testimonials = () => {
                   alt=""
                 />
               </div>
-              <div className="text-center text-xl sm:text-sm leading-8 sm:leading-5 h-full px-4 mt-2">
-                <span className="text-center overflow-clip h-20 flex-1 flex items-center justify-center p-1 prevent-select">
+              <div className="text-center text-xl sm:text-sm leading-8 sm:leading-5 h-full px-4 mt-2 sm:mt-8 z-50">
+                <span className="text-center overflow-x-clip h-20 flex-1 flex items-center justify-center p-1 prevent-select z-50">
                   {testimonial.quote}
                 </span>
               </div>

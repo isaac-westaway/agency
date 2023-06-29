@@ -103,7 +103,7 @@ export default function Home() {
           </RevealOnce>
           <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
             <RevealOnce>
-              <div className="testimonial-container group relative shadow-lg p-8 flex flex-col text-2xl border-[2px] border-dark-50 overflow-hidden rounded-2xl hover:border-[#FBFAF6] hover:text-[#FBFAF6] transition ease-in-out duration-500 h-[28rem] backdrop-blur-sm">
+              <div className="testimonial-container group relative shadow-lg p-8 flex flex-col text-2xl border-[2px] border-dark-50 overflow-hidden rounded-2xl hover:border-[#FBFAF6] hover:text-[#FBFAF6] transition ease-in-out duration-500 h-[28rem] sm:h-[30rem] backdrop-blur-sm">
                 <div className="absolute top-5 right-12">
                   <Image
                     src={Design}
@@ -137,7 +137,7 @@ export default function Home() {
               </div>
             </RevealOnce>
             <RevealOnce>
-              <div className="testimonial-container group relative shadow-lg p-8 flex flex-col text-2xl border-[2px] border-dark-50 overflow-hidden rounded-2xl hover:border-[#FBFAF6] hover:text-[#FBFAF6] transition ease-in-out duration-500 h-[28rem] backdrop-blur-sm">
+              <div className="testimonial-container group relative shadow-lg p-8 flex flex-col text-2xl border-[2px] border-dark-50 overflow-hidden rounded-2xl hover:border-[#FBFAF6] hover:text-[#FBFAF6] transition ease-in-out duration-500 h-[28rem] sm:h-[30rem] backdrop-blur-sm">
                 <div className="absolute top-5 right-12">
                   <Image
                     src={Develop}
@@ -173,7 +173,7 @@ export default function Home() {
               </div>
             </RevealOnce>
             <RevealOnce>
-              <div className="testimonial-container group shadow-lg p-8 flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[28rem] backdrop-blur-sm">
+              <div className="testimonial-container group shadow-lg p-8 flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[28rem] sm:h-[30rem] backdrop-blur-sm">
                 <div className="absolute top-[1.3rem] right-11">
                   <Image
                     src={Deploy}
@@ -192,7 +192,7 @@ export default function Home() {
                       <span className="flex border-b-[1px] border-dark-50 w-full p-2 mb-1 justify-center">
                         Streamlined launch
                       </span>
-                      <div className="mt-2 text-gray-200 text-opacity-95">
+                      <div className="mt-2 text-gray-200 text-opacity-95 mb-2">
                         From setting up hosting environments to configuring
                         databases and servers, we handle the technical aspects
                         of deployment with precision and expertise. Our team
@@ -203,7 +203,7 @@ export default function Home() {
                     </span>
                   </li>
                 </ul>
-                <div className="mt-4 items-center text-center z-50">
+                <div className="mt-4 items-center text-center z-50 my-4">
                   <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white group-hover:text-orange-600 group-hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
                     <Button cta="Read More" href="/services/web-development" />
                   </span>
@@ -215,7 +215,7 @@ export default function Home() {
         <RevealAlways>
           <div className="flex items-center justify-center py-8">
             <SmoothButton
-              cta="start building your online presence"
+              cta="Start building your presence!"
               href="#contact"
             />
           </div>
