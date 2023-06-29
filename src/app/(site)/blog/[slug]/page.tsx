@@ -27,7 +27,7 @@ export const generateStaticParams = async () => {
   }));
 };
 
-export const PostPage: NextPage = (props: any) => {
+export const PostPage: React.FC = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   const truncatedTitle = truncateTitle(post.data.title, 15);
