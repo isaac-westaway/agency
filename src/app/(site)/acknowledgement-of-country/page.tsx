@@ -1,5 +1,5 @@
 import Button from "../../components/Button";
-import ReusableHero from "../../components/ReusableHero";
+import ReusableHero from "../../components/AcknowledgementOfCountryHero";
 import RevealOnce from "../../components/utils/RevealOnce";
 
 import Link from "next/link";
