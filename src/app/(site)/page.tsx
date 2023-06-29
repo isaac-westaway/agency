@@ -74,7 +74,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="scroll-smooth snap-x overscroll-x-none min-h-screen ml-11 mr-11 sm:ml-6 sm:mr-6 ">
+    <div className="scroll-smooth snap-x overscroll-x-none min-h-screen ml-11 mr-11 ">
       <section id="top" className="snap-start">
         <Hero />
       </section>
