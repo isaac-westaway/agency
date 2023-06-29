@@ -57,7 +57,8 @@ const Testimonials = () => {
                   className="mx-4 mt-4 mb-4 prevent-select "
                   src={testimonial.logo}
                   height="200"
-                  loading="lazy"
+                  loading="eager"
+                  priority={true}
                   width="200"
                   alt=""
                 />
