@@ -27,7 +27,7 @@ const ReusableHeroNested: React.FC<ReusableHeroNestedProps> = ({
   return (
     <div className="ml-11 mr-11">
       <div className="relative z-10 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
-        <div className="absolute top-0 -right-11 -z-50">
+        <div className="absolute top-0 -right-11 -z-50 pointer-events-none">
           <svg
             width="450"
             height="556"
@@ -173,13 +173,13 @@ const ReusableHeroNested: React.FC<ReusableHeroNestedProps> = ({
             </defs>
           </svg>
         </div>
-        <div className="absolute top-12 -left-11 -z-50">
-        <Image src={Hero1} alt="" />
+        <div className="absolute top-12 -left-11 -z-50 pointer-events-none">
+          <Image src={Hero1} alt="" />
         </div>
         <div className="absolute top-0 -left-11"></div>
         <div className="mx-auto pt-44 sm:pt-48 lg:pt-56">
           <RevealAlways>
-          <div className="flex flex-col justify-start sm:justify-center text-center w-full">
+            <div className="flex flex-col justify-start sm:justify-center text-center w-full">
               <div className="text-5xl font-bold text-white sm:text-4xl tracking-wider">
                 {heroText}
               </div>
@@ -192,7 +192,7 @@ const ReusableHeroNested: React.FC<ReusableHeroNestedProps> = ({
                 </div>
                 <div className="mr-1">
                   <div className="flex justify-end sm:justify-center md:justify-center lg:justify-center sm:text-sm pt-4 w-full items-center">
-                    <Link href="/" className="hover:text-[#4A6CF7]"> 
+                    <Link href="/" className="hover:text-[#4A6CF7]">
                       Home
                     </Link>
                     <span className="block w-2 h-2 border-t-2 border-r-2 rotate-45 ml-3 mr-4 border-gray-400"></span>

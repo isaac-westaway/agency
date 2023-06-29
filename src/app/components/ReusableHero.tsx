@@ -28,7 +28,7 @@ const ReusableHero: React.FC<ReusableHeroProps> = ({
     <div className="ml-11 mr-11 -z-50">
       <div className="relative z-10 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
         <div className="absolute top-0 -right-11 -z-50"></div>
-        <div className="absolute top-12 -left-11 -z-50">
+        <div className="absolute top-12 -left-11 -z-50 pointer-events-none">
         <Image src={Hero1} alt="" />
         </div>
         <div className="absolute top-0 -left-11"></div>
