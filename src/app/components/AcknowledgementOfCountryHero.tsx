@@ -35,7 +35,7 @@ const ReusableHero: React.FC<ReusableHeroProps> = ({
         <div className="mx-auto pt-44 sm:pt-48 lg:pt-56">
           <RevealAlways>
             <div className="flex flex-col justify-start sm:justify-center text-center w-full">
-              <div className="text-5xl font-bold text-white sm:text-xl tracking-wider">
+              <div className="text-5xl font-bold text-white sm:text-3xl tracking-wider">
                 {heroText}
               </div>
               <div className="text-start sm:text-center md:text-center lg:text-center mt-6 text-lg leading-8 sm:leading-normal text-gray-400 font-medium w-full grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
