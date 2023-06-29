@@ -7,55 +7,6 @@ import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
 import Link from "next/link";
 
-const items = [
-  {
-    title: "Why are websites important for small businesses?",
-    content: (
-      <>
-        <p>Websites are important for several reasons:</p>
-        <br />
-        <p>
-          <b>Online Presence:</b> A professionally crafted website acts as a
-          virtual storefront, ensuring your business is discoverable to
-          potential customers.
-        </p>
-        <p className="mt-1">
-          <b>Credibility and Trust: </b>A well-designed website establishes
-          trust and credibility, enhancing your business&#39;s reputation.
-        </p>
-        <p className="mt-1">
-          <b>Expanded Reach:</b> Websites break geographical barriers, allowing
-          customers to access your
-        </p>
-        <br />
-        <Link href="/blog" className="flex w-full justify-center ">
-          <div className="">Read more about this in our blog.</div>
-        </Link>
-      </>
-    ),
-    contentClassName: "landing-class-1",
-  },
-  {
-    title: "How long does it take to produce a website?",
-    content: (
-      <div>
-        The duration of creating a website can vary depending on several
-        factors, such as the complexity of the website, the number of pages, the
-        functionality needs and the number of resources available for the
-        project. In general, a simple website with just a few pages can be built
-        in a few days, while a more complex website with more features can take
-        weeks to complete. We will establish a detailed project plan before
-        starting the development of the site, so that we can accurately estimate
-        the duration of the project and take into account any delays or
-        problems. It is important to keep in mind that developing a website is
-        an ongoing process, and after launch, you will need to maintain and
-        update it regularly to make it efficient and secure for visitors.
-      </div>
-    ),
-    contentClassname: "landing-class-2",
-  },
-];
-
 export const metadata = {
   title: "Our Team Wynnum Web Services",
 };
@@ -115,20 +66,6 @@ export default function AboutOurTeam() {
           subcta="We'll temporarily deploy your website on a preview server for 7 days. Contact us for the full specifics."
           message="Show me what you got!"
         />
-      </section>
-      <section className="relative text-white border-t-[1px] border-dark-50 ml-11 mr-11">
-        <RevealOnce>
-          <div className="text-3xl flex w-full justify-center font-extrabold sm:leading-tight sm:tracking-tight text-center mt-8 mb-8 text-white">
-            <span className="sm:w-full md:w-full">
-              Frequently Asked Questions (FAQs)
-            </span>
-          </div>
-        </RevealOnce>
-        <div className="flex w-full justify-center mb-8">
-          <div className="w-1/2 sm:w-full md:w-3/4 lg:w-3/4 sm:max-w-prose">
-            <Accordion items={items} />
-          </div>
-        </div>
       </section>
     </div>
   );

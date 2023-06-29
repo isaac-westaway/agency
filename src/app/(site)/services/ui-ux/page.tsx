@@ -14,57 +14,81 @@ import { FaUncharted } from "react-icons/fa";
 
 const items = [
   {
-    title: "Why are websites important for small businesses?",
+    title: "What is UI / UX Design?",
     content: (
       <>
-        <p>Websites are important for several reasons:</p>
-        <br />
         <p>
-          <b>Online Presence:</b> A professionally crafted website acts as a
-          virtual storefront, ensuring your business is discoverable to
-          potential customers.
+          In today’s competitive digital landscape, delivering an exceptional
+          user experience is key to capturing and retaining customers. Our UI/UX
+          design service combines creativity, research, and strategic thinking
+          to transform your digital presence. By carefully crafting intuitive
+          and visually stunning interfaces, we ensure that every interaction
+          with your website or application is seamless and delightful. From
+          enhancing usability to optimizing conversions, our UI/UX design
+          expertise empowers your business to stand out, engage users, and
+          achieve remarkable success in the digital realm.
         </p>
-        <p className="mt-1">
-          <b>Credibility and Trust: </b>A well-designed website establishes
-          trust and credibility, enhancing your business&#39;s reputation.
-        </p>
-        <p className="mt-1">
-          <b>Expanded Reach:</b> Websites break geographical barriers, allowing
-          customers to access your
-        </p>
-        <br />
-        <Link href="/blog" className="flex w-full justify-center ">
-          <div className="">Read more about this in our blog.</div>
-        </Link>
       </>
     ),
-    contentClassName: "landing-class-1",
+    contentClassName: "uiux-landing-class-1",
   },
   {
-    title: "How long does it take to produce a website?",
+    title:
+      "How does UI / UX Design contribute to the success of a website, and ultimately the business?",
     content: (
-      <div>
-        The duration of creating a website can vary depending on several
-        factors, such as the complexity of the website, the number of pages, the
-        functionality needs and the number of resources available for the
-        project. In general, a simple website with just a few pages can be built
-        in a few days, while a more complex website with more features can take
-        weeks to complete. We will establish a detailed project plan before
-        starting the development of the site, so that we can accurately estimate
-        the duration of the project and take into account any delays or
-        problems. It is important to keep in mind that developing a website is
-        an ongoing process, and after launch, you will need to maintain and
-        update it regularly to make it efficient and secure for visitors.
-      </div>
+      <>
+        <p>
+          Effective UI/UX design is a critical driver of business success, with
+          the ability to boost user satisfaction, engagement, conversions, and
+          sales while reducing customer support inquiries. By creating intuitive
+          and enjoyable experiences, businesses can differentiate themselves in
+          a competitive market, fostering brand loyalty and driving positive
+          outcomes such as ROI, customer retention, and natural growth. A
+          well-crafted UI/UX design not only enhances the user journey but also
+          contributes to a seamless purchase process, higher conversion rates,
+          and increased revenue. Moreover, by addressing user pain points and
+          providing exceptional experiences, businesses can minimize support
+          requests, increase customer retention rates, and benefit from
+          satisfied customers advocating for their brand.
+        </p>
+        <br />
+        <p className="mt-1">
+          Investing in UI/UX design enables businesses to stand out, attract a
+          larger customer base, and ultimately achieve sustained success.
+        </p>
+      </>
     ),
-    contentClassname: "landing-class-2",
+    contentClassname: "uiux-landing-class-2",
   },
+  {
+    title: "How important is Market Research in UI / UX Design?",
+    content: (
+      <p>
+        User research plays a crucial role in UI/UX design as it helps designers
+        gain a deep understanding of users’ needs, behaviors, and preferences.
+        It involves techniques like interviews, surveys, usability testing, and
+        analytics analysis to gather insights and inform design decisions. User
+        research ensures that the design is user-centered and aligns with the
+        target audience, leading to more effective and satisfying user
+        experiences.
+      </p>
+    ),
+    contentClassName: "landing-class-3",
+  },
+  {
+    title: "How can I get in contact with Wynnum Web Services",
+    content: (
+      <>
+        <p>If you are contacting us within Australia, shoot a message to a <a href="#contact" className="hover:underline cursor-pointer">phone number</a>. If you are contacting internationally, please, <a href="#contact" className="hover:underline hover:cursor-pointer">Email Us.</a></p>
+      </>
+    ),
+    contentClassName: "uiux-landing-class-3"
+  }
 ];
 
 export const metadata = {
   title: "UI / UX Design Wynnum Web Services",
 };
-
 
 export default function UIUX() {
   return (

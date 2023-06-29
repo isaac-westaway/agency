@@ -30,35 +30,62 @@ const items = [
         </p>
         <p className="mt-1">
           <b>Expanded Reach:</b> Websites break geographical barriers, allowing
-          customers to access your
+          customers to access your products or services from anywhere in the
+          world, broadening your customer base.
         </p>
         <br />
-        <Link href="/blog" className="flex w-full justify-center ">
-          <div className="">Read more about this in our blog.</div>
-        </Link>
+        <p className="mt-1">
+          A well-designed website is vital for small businesses, as it provides
+          an online presence, establishes credibility and trust, and enables
+          expanded reach to a broader customer base.
+        </p>
       </>
     ),
-    contentClassName: "landing-class-1",
+    contentClassName: "webmanagement-landing-class-1",
   },
   {
-    title: "How long does it take to produce a website?",
+    title: "Generally, how much does it cost to manage a website?",
     content: (
-      <div>
-        The duration of creating a website can vary depending on several
-        factors, such as the complexity of the website, the number of pages, the
-        functionality needs and the number of resources available for the
-        project. In general, a simple website with just a few pages can be built
-        in a few days, while a more complex website with more features can take
-        weeks to complete. We will establish a detailed project plan before
-        starting the development of the site, so that we can accurately estimate
-        the duration of the project and take into account any delays or
-        problems. It is important to keep in mind that developing a website is
-        an ongoing process, and after launch, you will need to maintain and
-        update it regularly to make it efficient and secure for visitors.
-      </div>
+      <>
+        <p>
+          The costs of managing a website can vary depending on several factors,
+          such as the complexity of the website, the functionality needs, the
+          number of resources required and the frequency of updates.
+        </p>
+        <br />
+        <p className="mt-1">Basic costs for managing a website can include:</p>
+        <br />
+        <li className="mt-1">
+          Paying for web hosting and <b>yearly</b> domain name registration
+        </li>
+        <li className="mt-1">
+          Costs for technical support and website maintenance
+        </li>
+        <li className="mt-1">Costs for site security monitoring</li>
+        <li className="mt-1">Costs for SEO optimization</li>
+        <br />
+        <p className="mt-1">
+          In general, a simple website may have lower monthly administration
+          costs, while a more complex website may have higher costs.
+        </p>
+        <br />
+        <p className="mt-1">
+          You can request a quote for the estimated monthly costs for a website
+          of your specific size, and popularity.
+        </p>
+      </>
     ),
-    contentClassname: "landing-class-2",
+    contentClassName: "webmanagement-class-3",
   },
+  {
+    title: "How can I get in contact with Wynnum Web Services",
+    content: (
+      <>
+        <p>If you are contacting us within Australia, shoot a message to a <a href="#contact" className="hover:underline cursor-pointer">phone number</a>. If you are contacting internationally, please, <a href="#contact" className="hover:underline hover:cursor-pointer">Email Us.</a></p>
+      </>
+    ),
+    contentClassName: "webmanagement-class-3"
+  }
 ];
 
 export const metadata = {

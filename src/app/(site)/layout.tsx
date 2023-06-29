@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 
 import { Analytics } from "@vercel/analytics/react";
+import { KBarProvider } from "kbar";
 
 import ClientOnly from "@/src/app/components/ClientOnly";
 import Navbar from "@/src/app/components/navbar/Navbar";
@@ -21,7 +22,7 @@ const font = Inter({
 });
 
 export default function RootLayout({
-  children
+  children,
 }: {
   children: React.ReactNode;
 }) {
@@ -38,15 +39,13 @@ export default function RootLayout({
           <span className="text-white">
             <noscript>Please enable javascript!</noscript>
           </span>
-            <div className="mb-auto flex-1 flex-grow">
-              {children}
-            </div>
-            <Analytics />
-            <footer className="static bottom-0">
-              <ClientOnly>
-                <Footer />
-              </ClientOnly>
-            </footer>
+          <div className="mb-auto flex-1 flex-grow">{children}</div>
+          <Analytics />
+          <footer className="static bottom-0">
+            <ClientOnly>
+              <Footer />
+            </ClientOnly>
+          </footer>
         </div>
       </body>
     </html>

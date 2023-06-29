@@ -37,35 +37,119 @@ const items = [
         </p>
         <p className="mt-1">
           <b>Expanded Reach:</b> Websites break geographical barriers, allowing
-          customers to access your
+          customers to access your products or services from anywhere in the
+          world, broadening your customer base.
         </p>
         <br />
-        <Link href="/blog" className="flex w-full justify-center ">
-          <div className="">Read more about this in our blog.</div>
-        </Link>
+        <p className="mt-1">
+          A well-designed website is vital for small businesses, as it provides
+          an online presence, establishes credibility and trust, and enables
+          expanded reach to a broader customer base.
+        </p>
       </>
     ),
-    contentClassName: "landing-class-1",
+    contentClassName: "home-landing-class-1",
   },
   {
     title: "How long does it take to produce a website?",
     content: (
-      <div>
-        The duration of creating a website can vary depending on several
-        factors, such as the complexity of the website, the number of pages, the
-        functionality needs and the number of resources available for the
-        project. In general, a simple website with just a few pages can be built
-        in a few days, while a more complex website with more features can take
-        weeks to complete. We will establish a detailed project plan before
-        starting the development of the site, so that we can accurately estimate
-        the duration of the project and take into account any delays or
-        problems. It is important to keep in mind that developing a website is
-        an ongoing process, and after launch, you will need to maintain and
-        update it regularly to make it efficient and secure for visitors.
-      </div>
+      <>
+        <p>
+          The duration of creating a website can vary depending on several
+          factors, such as the complexity of the website, the number of pages,
+          the functionality needs and the number of resources available for the
+          project.
+        </p>
+        <br />
+        <p className="mt-1">
+          In general, a simple website with just a few pages can be built in a
+          few days, while a more complex website with more features can take
+          weeks to complete. We will establish a detailed project plan before
+          starting the development of the site, so that we can accurately
+          estimate the duration of the project and take into account any delays
+          or problems. It is important to keep in mind that developing a website
+          is an ongoing process, and after launch, you will need to maintain and
+          update it regularly to make it efficient and secure for visitors.
+        </p>
+      </>
     ),
-    contentClassname: "landing-class-2",
+    contentClassname: "home-landing-class-2",
   },
+  {
+    title: "Generally, how much does it cost to manage a website?",
+    content: (
+      <>
+        <p>
+          The costs of managing a website can vary depending on several factors,
+          such as the complexity of the website, the functionality needs, the
+          number of resources required and the frequency of updates.
+        </p>
+        <br />
+        <p className="mt-1">Basic costs for managing a website can include:</p>
+        <br />
+        <li className="mt-1">
+          Paying for web hosting and <b>yearly</b> domain name registration
+        </li>
+        <li className="mt-1">
+          Costs for technical support and website maintenance
+        </li>
+        <li className="mt-1">Costs for site security monitoring</li>
+        <li className="mt-1">Costs for SEO optimization</li>
+        <br />
+        <p className="mt-1">
+          In general, a simple website may have lower monthly administration
+          costs, while a more complex website may have higher costs.
+        </p>
+        <br />
+        <p className="mt-1">
+          You can request a quote for the estimated monthly costs for a website
+          of your specific size, and popularity.
+        </p>
+      </>
+    ),
+    contentClassName: "home-landing-class-3",
+  },
+  {
+    title: "What is UI / UX Design?",
+    content: (
+      <p>
+        In today’s competitive digital landscape, delivering an exceptional user
+        experience is key to capturing and retaining customers. Our UI/UX design
+        service combines creativity, research, and strategic thinking to
+        transform your digital presence. By carefully crafting intuitive and
+        visually stunning interfaces, we ensure that every interaction with your
+        website or application is seamless and delightful. From enhancing
+        usability to optimizing conversions, our UI/UX design expertise empowers
+        your business to stand out, engage users, and achieve remarkable success
+        in the digital realm.
+      </p>
+    ),
+    contentClassName: "home-landing-class-4",
+  },
+  {
+    title: "Does Wynnum Web Services work internationally?",
+    content: (
+      <>
+        <p>Yes we do!</p>
+        <br />
+        <p className="mt-1">
+          If you need international work done, contact us like normal. We do not
+          speak every language however, only <b>English</b>, and a tiny bit of{" "}
+          <b>German</b>.
+        </p>
+      </>
+    ),
+    contentClassName: "home-landing-class-5",
+  },
+  {
+    title: "How can I get in contact with Wynnum Web Services",
+    content: (
+      <>
+        <p>If you are contacting us within Australia, shoot a message to a <a href="#contact" className="hover:underline cursor-pointer">phone number</a>. If you are contacting internationally, please, <a href="#contact" className="hover:underline hover:cursor-pointer">Email Us.</a></p>
+      </>
+    ),
+    contentClassName: "home-landing-class-6"
+  }
 ];
 
 export const metadata = {
@@ -80,7 +164,12 @@ export default function Home() {
       </section>
       <section className="relative mt-[11.4rem] sm:-mt-[13.7rem] md:mt-[0.4rem] lg:mt-[2rem] xl:mt-[5rem] border-t-[1px] border-dark-50 text-white">
         <div className="absolute top-1/12 -top-12 -right-11 sm:-right-4 -z-50">
-          <Image src={BodyShape1} style={{ transform: "scaleX(-1)" }} alt="" className="sm:hidden" />
+          <Image
+            src={BodyShape1}
+            style={{ transform: "scaleX(-1)" }}
+            alt=""
+            className="sm:hidden"
+          />
         </div>
         <div className="w-full">
           <RevealOnce>
@@ -214,10 +303,7 @@ export default function Home() {
         </div>
         <RevealAlways>
           <div className="flex items-center justify-center py-8">
-            <SmoothButton
-              cta="Start building your presence!"
-              href="#contact"
-            />
+            <SmoothButton cta="Start building your presence!" href="#contact" />
           </div>
         </RevealAlways>
       </section>
@@ -486,7 +572,6 @@ export default function Home() {
               transform="rotate(51.2997 426.568 144.886)"
               fill="url(#paint1_linear_83:2)"
               className="overflow-x-hidden"
-
             ></rect>
             <defs>
               <linearGradient
@@ -496,7 +581,6 @@ export default function Home() {
                 x2="517.152"
                 y2="459.865"
                 gradientUnits="userSpaceOnUse"
-                
               >
                 <stop stop-color="#4A6CF7"></stop>
                 <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
