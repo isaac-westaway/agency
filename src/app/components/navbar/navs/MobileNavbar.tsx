@@ -56,26 +56,11 @@ const MobileNavbar = () => {
 
   return (
     <div className="pt-4 py-4 w-full  text-neutral-500">
-      <div className="flex flex-row justify-around w-full items-center">
-        <div onClick={toggleDarkMode} className="z-50 cursor-pointer">
-          {darkMode ? (
-            <BiSun
-              size={27}
-              style={{ color: "white" }}
-              onClick={toggleDarkMode}
-            />
-          ) : (
-            <BiMoon
-              size={27}
-              style={{ color: "white" }}
-              onClick={toggleDarkMode}
-            />
-          )}
-        </div>
-        <div className="z-50">
+      <div className="flex flex-row justify-between w-full items-center">
+        <div className="z-50 ml-11">
           <Logo />
         </div>
-        <div onClick={toggleOpen} className="z-50 cursor-pointer">
+        <div onClick={toggleOpen} className="z-50 cursor-pointer mr-11">
           {NavOpen ? (
             <AiOutlineClose size={25} style={{ color: "white" }} />
           ) : (
