@@ -27,7 +27,7 @@ export const generateStaticParams = async () => {
   }));
 };
 
-export const PostPage: React.FC = (props: any) => {
+export default function PostPage(props: any) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   const truncatedTitle = truncateTitle(post.data.title, 15);
@@ -46,5 +46,3 @@ export const PostPage: React.FC = (props: any) => {
     </div>
   );
 };
-
-export default PostPage;
