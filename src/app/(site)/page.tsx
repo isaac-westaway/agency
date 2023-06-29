@@ -74,13 +74,13 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="scroll-smooth snap-x overscroll-x-none min-h-screen ml-11 mr-11 ">
+    <div className="scroll-smooth snap-x overscroll-x-none min-h-screen ml-11 mr-11 sm:ml-11 sm:mr-11">
       <section id="top" className="snap-start">
         <Hero />
       </section>
       <section className="relative mt-[11.4rem] sm:-mt-[13.7rem] md:mt-[0.4rem] lg:mt-[2rem] xl:mt-[5rem] border-t-[1px] border-dark-50 text-white">
-        <div className="absolute top-1/12 -top-12 -right-11 sm:-right-6 -z-50 overflow-x-hidden">
-          <Image src={BodyShape1} style={{ transform: "scaleX(-1)" }} alt="" />
+        <div className="absolute top-1/12 -top-12 -right-11 sm:-right-4 -z-50">
+          <Image src={BodyShape1} style={{ transform: "scaleX(-1)" }} alt="" className="sm:hidden" />
         </div>
         <div className="w-full">
           <RevealOnce>
@@ -456,13 +456,14 @@ export default function Home() {
         </div>
       </section>
       <section className="relative text-white border-t-[1px] border-dark-50">
-        <div className="absolute -mr-11 top-0 right-0">
+        <div className="absolute -mr-11 top-0 right-0 sm:-mr-11">
           <svg
             width="238"
             height="531"
             viewBox="0 0 238 531"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="overflow-hidden"
           >
             <rect
               opacity="0.3"
@@ -473,6 +474,7 @@ export default function Home() {
               rx="2"
               transform="rotate(51.2997 422.819 -70.8145)"
               fill="url(#paint0_linear_83:2)"
+              className="overflow-x-hidden"
             ></rect>
             <rect
               opacity="0.3"
@@ -483,6 +485,8 @@ export default function Home() {
               rx="2"
               transform="rotate(51.2997 426.568 144.886)"
               fill="url(#paint1_linear_83:2)"
+              className="overflow-x-hidden"
+
             ></rect>
             <defs>
               <linearGradient
@@ -492,6 +496,7 @@ export default function Home() {
                 x2="517.152"
                 y2="459.865"
                 gradientUnits="userSpaceOnUse"
+                
               >
                 <stop stop-color="#4A6CF7"></stop>
                 <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>

@@ -9,7 +9,7 @@ import { FiExternalLink } from "react-icons/fi";
 
 const MobileFooter = () => {
   return (
-    <div className="border-t-[1px] border-dark-50 w-full text-sm relative">
+    <div className="border-t-[1px] border-dark-50 w-full text-sm relative overflow-clip">
       <div className="absolute -bottom-5 right-0  -z-50 pointer-events-none ">
         <Image src="/svg/footer-shape-1.svg" alt="" width="187" height="254" />
       </div>
