@@ -187,7 +187,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
           </div>
           <div className="border h-40">
           <ReCAPTCHA
-              sitekey="6LdTKuMmAAAAAE_KD0O51mZMnuYLs6gAflwqHK7L"
+              sitekey="6LdsNuMmAAAAAKgZX-WZ-lTYDdzvaEikJKIOc19O"
               onChange={handleRecaptchaChange}
             />
           </div>
