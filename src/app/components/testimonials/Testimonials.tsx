@@ -73,7 +73,8 @@ const Testimonials = () => {
                   height="100"
                   width="80"
                   className="mx-auto h-14 w-14 rounded-full prevent-select"
-                  loading="lazy"
+                  loading="eager"
+                  priority={true}
                   src={`${testimonial.profile}`}
                   alt=""
                 />

@@ -10,7 +10,8 @@ const Logo = () => {
       width="100"
       height="100"
       src="/images/logo.webp"
-      loading="lazy"
+      loading="eager"
+      priority={true}
       onClick={() => router.push("/")}
     />
   );
