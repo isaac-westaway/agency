@@ -2,6 +2,8 @@
 
 import { useState, ChangeEvent, FocusEvent } from "react";
 import { sendContactForm } from "@/src/app/components/libs/api";
+
+import ReCAPTCHA from "react-google-recaptcha";
 import toast from "react-hot-toast";
 
 interface Placeholders {
@@ -36,7 +38,14 @@ const initState: FormState = {
 
 const ContactForm: React.FC<Placeholders> = ({ message }) => {
   const [state, setState] = useState<FormState>(initState);
-  const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [touched, setTouched] = useState<Record<string, boolean>>({});  
+  const [isRecaptchaChecked, setRecaptchaChecked] = useState(false);
+
+  const handleRecaptchaChange = (value: string | null) => {
+    setRecaptchaChecked(!!value);
+  };
+
+  
 
   const { values, isLoading, error } = state;
 
@@ -176,9 +185,16 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
               )}
             </div>
           </div>
+          <div className="border h-40">
+          <ReCAPTCHA
+              sitekey="6LdTKuMmAAAAAE_KD0O51mZMnuYLs6gAflwqHK7L"
+              onChange={handleRecaptchaChange}
+            />
+          </div>
           <div className="px-1 w-full col-span-2 sm:mt-4 sm:mb-8 mt-8 mb-8">
             <button
               className={`bg-blue text-white px-4 py-2 rounded-md w-full text-base font-medium bg-[#4a6cf7] transition duration-200 ease-in-out ${
+                !isRecaptchaChecked ||
                 !values.name ||
                 !values.email ||
                 !values.business ||
@@ -188,6 +204,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                   : "hover:bg-white hover:text-black hover:fill-black hover:stroke-black stroke-[#fff]"
               }`}
               disabled={
+                !isRecaptchaChecked ||
                 !values.name ||
                 !values.email ||
                 !values.business ||
