@@ -63,7 +63,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                       ></path>
                     </svg>
                   </div>
-                  <div className="sm:text-sm sm:hidden">WynnumWebServices@gmail.com</div>
+                  <div className="sm:text-sm sm:hidden">wynnumwebervices@gmail.com</div>
                 </div>
               </div>
             </RevealOnce>

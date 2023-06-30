@@ -27,6 +27,9 @@ const DesktopFooter = () => {
               <p className="text-sm text-neutral-400  tracking-wider">
                 Phone: +61 490 747 987
               </p>
+              <p className="text-sm text-neutral-400  tracking-wider">
+                Email: wynnumwebervices@gmail.com
+              </p>
             </div>
           </div>
           <div className="w-full mr-[2.75rem]">
@@ -95,10 +98,20 @@ const DesktopFooter = () => {
                   </div>
                 </div>
                 <div className="pt-3 leading-6 tracking-wider">
-                  <div className="font-light mb-2">LinkedIn</div>
-                  <div className="font-light my-2">Facebook</div>
-                  <div className="font-light my-2">Instagram</div>
-                  <div className="font-light my-2">Github</div>
+                  <a
+                    href="https://github.com/Wynnum-Web-Services"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-light my-2 hover:cursor-pointer"
+                  >
+                    Github
+                  </a>
+                </div>
+                <div className="pt-3 leading-6 tracking-wider">
+                  <a href="mailto:wynnumwebervices@gmail.com">Email</a>
+                </div>
+                <div className="pt-3 leading-6 tracking-wider">
+                  <a href="tel:+0490747987">Phone</a>
                 </div>
               </div>
               <div className="pl-11 pr-11 col-span-2 border-r-[1px] border-dark-50">
@@ -162,7 +175,12 @@ const DesktopFooter = () => {
                 &copy; 2023 DigiSpark Australia. All rights reserved.
               </div>
               <div className="flex gap-4">
-                <Link href="/acknowledgement-of-country" className="hover:underline hover:cursor-pointer">Acknowledgement of country</Link>
+                <Link
+                  href="/acknowledgement-of-country"
+                  className="hover:underline hover:cursor-pointer"
+                >
+                  Acknowledgement of country
+                </Link>
               </div>
             </div>
           </div>

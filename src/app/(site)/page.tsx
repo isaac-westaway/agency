@@ -134,8 +134,7 @@ const items = [
         <br />
         <p className="mt-1">
           If you need international work done, contact us like normal. We do not
-          speak every language however, only <b>English</b>, and a tiny bit of{" "}
-          <b>German</b>.
+          speak every language however, only <b>English</b>.
         </p>
       </>
     ),
