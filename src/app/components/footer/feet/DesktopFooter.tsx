@@ -102,16 +102,23 @@ const DesktopFooter = () => {
                     href="https://github.com/Wynnum-Web-Services"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-light my-2 hover:cursor-pointer"
+                    className="font-light my-2 hover:cursor-pointer animatedUnderline"
                   >
                     Github
                   </a>
                 </div>
                 <div className="pt-3 leading-6 tracking-wider">
-                  <a href="mailto:wynnumwebervices@gmail.com">Email</a>
+                  <a
+                    href="mailto:wynnumwebervices@gmail.com"
+                    className="animatedUnderline"
+                  >
+                    Email
+                  </a>
                 </div>
                 <div className="pt-3 leading-6 tracking-wider">
-                  <a href="tel:+0490747987">Phone</a>
+                  <a href="tel:+0490747987" className="animatedUnderline">
+                    Phone
+                  </a>
                 </div>
               </div>
               <div className="pl-11 pr-11 col-span-2 border-r-[1px] border-dark-50">

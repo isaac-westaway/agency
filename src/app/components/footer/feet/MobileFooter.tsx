@@ -36,7 +36,7 @@ const MobileFooter = () => {
             <div className="w-full flex flex-row">
               <a
                 href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
-                className="shrink-0 my-2"
+                className="shrink-0 my-2 animatedUnderline"
               >
                 Billing Portal
               </a>
@@ -86,12 +86,29 @@ const MobileFooter = () => {
             </div>
           </div>
           <div className="flex flex-col justify-center p-2 tracking-wider font-light ml-11 mr-11">
-            <div className="w-full flex flex-row">
-              <div className="shrink-0">LinkedIn</div>
+            <div>
+              <a
+                href="https://github.com/Wynnum-Web-Services"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="animatedUnderline"
+              >
+                Github
+              </a>
             </div>
-            <div className="my-2">Facebook</div>
-            <div className="mb-2">Instagram</div>
-            <div>Github</div>
+            <div className="pt-3 leading-6 tracking-wider">
+              <a
+                href="mailto:wynnumwebervices@gmail.com"
+                className="animatedUnderline"
+              >
+                Email
+              </a>
+            </div>
+            <div className="pt-3 leading-6 tracking-wider">
+              <a href="tel:+0490747987" className="animatedUnderline">
+                Phone
+              </a>
+            </div>
           </div>
         </div>
         <div className="sm:-mt-4 relative flex flex-col border-l-[0px] border-dark-50 col-span-2 sm:col-span-1">
@@ -147,7 +164,12 @@ const MobileFooter = () => {
               &copy; 2023 DigiSpark Australia
             </div>
             <div className="flex flex-row sm:flex-col justify-evenly p-2 tracking-wider font-light ml-11 mr-11 text-center">
-              <Link href="/acknowledgement-of-country" className="hover:underline hover:cursor-pointer">Acknowledgement of Country</Link>
+              <Link
+                href="/acknowledgement-of-country"
+                className="hover:underline hover:cursor-pointer"
+              >
+                Acknowledgement of Country
+              </Link>
             </div>
           </div>
         </div>

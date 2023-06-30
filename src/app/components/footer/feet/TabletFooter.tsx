@@ -35,13 +35,15 @@ const TabletFooter = () => {
             </div>
             <div className="pt-3 leading-6 tracking-wider">
               <div className="font-light flex flex-row w-full">
-                <a
-                  href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
-                  className="w-full flex items-center animatedUnderline hover:cursor-pointer"
-                >
-                  Billing Portal
-                </a>
-                <div className="flex items-center w-1/3 justify-end">
+                <div className="flex flex-grow">
+                  <a
+                    href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
+                    className="flex items-center animatedUnderline hover:cursor-pointer"
+                  >
+                    Billing Portal
+                  </a>
+                </div>
+                <div className="flex items-center justify-end">
                   <FiExternalLink />
                 </div>
               </div>
@@ -126,7 +128,7 @@ const TabletFooter = () => {
           </div>
         </div>
         <div className="">
-          <div className="pl-11 pr-11 border-l-[1px] h-full border-dark-50">
+          <div className="pl-11 pr-11 border-l-[1px] h-full border-dark-50 tracking-wider">
             <div className="font-semibold flex flex-row border-b-[1px] border-dark-50 pb-3  tracking-wider pt-4">
               <div className="w-full flex items-center">Get in touch</div>
               <div className="flex items-center justify-end ">
@@ -134,10 +136,29 @@ const TabletFooter = () => {
               </div>
             </div>
             <div className="pt-3 leading-6 tracking-wider">
-              <div className="font-light mb-2">LinkedIn</div>
-              <div className="font-light my-2">Facebook</div>
-              <div className="font-light my-2">Instagram</div>
-              <div className="font-light my-2">Github</div>
+              <div className="font-light">
+                <a
+                  href="https://github.com/Wynnum-Web-Services"
+                  className="animatedUnderline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github
+                </a>
+              </div>
+              <div className="my-2">
+                <a
+                  href="mailto:wynnumwebervices@gmail.com"
+                  className="animatedUnderline"
+                >
+                  Email
+                </a>
+              </div>
+              <div className="my-2">
+                <a href="tel:+0490747987" className="animatedUnderline">
+                  Phone
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -146,7 +167,12 @@ const TabletFooter = () => {
             &copy; 2023 DigiSpark Australia
           </div>
           <div className="flex flex-row sm:flex-col justify-evenly p-2 tracking-wider font-light mx-[31px]">
-            <Link href="/acknowledgement-of-country" className="my-2 hover:underline hover:cursor-pointer">Acknowledgement of Country</Link>
+            <Link
+              href="/acknowledgement-of-country"
+              className="my-2 hover:underline hover:cursor-pointer"
+            >
+              Acknowledgement of Country
+            </Link>
           </div>
         </div>
       </div>

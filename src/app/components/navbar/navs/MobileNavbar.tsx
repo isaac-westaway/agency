@@ -40,7 +40,7 @@ const MobileNavbar = () => {
   }, [NavOpen]);
 
   function billingRedirect() {
-    Router.push("https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE");
+    window.open("https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE", "_blank");
   }
 
   function AccordionServicesToggle() {
@@ -212,43 +212,6 @@ const MobileNavbar = () => {
             >
               <Link href="/experimental">/*&nbsp;Experimental&nbsp ^/;</Link>
             </li>*/}
-            <br />
-            <li
-              onClick={toggleOpen}
-              className="p-3 transition ease-in duration-150 border-t-dark-50 border-t-[1px] cursor-pointer hover:bg-gray-0.6"
-            >
-              <div className="text-gray-400 font-semibold text-lg text-center">
-                Our Links
-              </div>
-            </li>
-            <li>
-              <div className="flex flex-row gap-8 items-center text-center justify-evenly pt-4 pb-4 border-dark-50 border-b-[1px] border-t-[1px]">
-                <li className="cursor-pointer">
-                  <BsInstagram
-                    size={18}
-                    className="hover:text-white hover:transition hover:duration-300"
-                  />
-                </li>
-                <li className="cursor-pointer">
-                  <BsFacebook
-                    size={18}
-                    className="hover:text-white hover:transition hover:duration-300"
-                  />
-                </li>
-                <li className="cursor-pointer">
-                  <BsLinkedin
-                    size={18}
-                    className="hover:text-white hover:transition hover:duration-300"
-                  />
-                </li>
-                <li className="cursor-pointer">
-                  <BsGithub
-                    size={18}
-                    className="hover:text-white hover:transition hover:duration-300"
-                  />
-                </li>
-              </div>
-            </li>
             <div className="flex flex-col pb-[170px]"></div>
           </ul>
         )}
