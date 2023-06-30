@@ -56,7 +56,7 @@ const MobileNavbar = () => {
         >
           <div
       className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
-          NavOpen ? "transform rotate-60 translate-y-2 opacity-100" : ""
+          NavOpen ? "transform -rotate-90 translate-y-2 opacity-100" : ""
         }`}
       ></div>
       <div
@@ -66,7 +66,7 @@ const MobileNavbar = () => {
       ></div>
       <div
         className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
-          NavOpen ? "transform -rotate-90 -translate-y-2 opacity-100" : ""
+          NavOpen ? "transform rotate-60 -translate-y-2 opacity-100" : ""
         }`}
       ></div>
         </div>
