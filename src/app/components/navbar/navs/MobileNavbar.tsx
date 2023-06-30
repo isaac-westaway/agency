@@ -14,19 +14,9 @@ import Logo from "../../Logo";
 import React from "react";
 
 const MobileNavbar = () => {
-  const Router = useRouter();
   const [NavOpen, setNavOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-
-  const toggleOpen = useCallback(() => {
-    setTimeout(() => {
-      setNavOpen((value) => !value);
-    }, 0);
-  }, []);
+  const [accordionServicesOpen, setAccordionServicesOpen] = useState(false);
+  const [accordionAboutOpen, setAccordionAboutOpen] = useState(false);
 
   useEffect(() => {
     if (NavOpen) {
@@ -40,7 +30,10 @@ const MobileNavbar = () => {
   }, [NavOpen]);
 
   function billingRedirect() {
-    window.open("https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE", "_blank");
+    window.open(
+      "https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE",
+      "_blank"
+    );
   }
 
   function AccordionServicesToggle() {
@@ -50,37 +43,45 @@ const MobileNavbar = () => {
   function AccordionAboutToggle() {
     setAccordionAboutOpen(!accordionAboutOpen);
   }
-
-  const [accordionServicesOpen, setAccordionServicesOpen] = useState(false);
-  const [accordionAboutOpen, setAccordionAboutOpen] = useState(false);
-
   return (
     <div className="pt-4 py-4 w-full  text-gray-400">
       <div className="flex flex-row justify-between w-full items-center">
         <div className="z-50 ml-11">
           <Logo />
         </div>
-        <div onClick={toggleOpen} className="z-50 cursor-pointer mr-11">
-          {NavOpen ? (
-            <AiOutlineClose size={25} style={{ color: "white" }} />
-          ) : (
-            <div>
-              <AiOutlineMenu size={25} style={{ color: "white" }} />
-            </div>
-          )}
+        <div
+          onClick={() => setNavOpen((prev) => !prev)}
+          className={`z-50 cursor-pointer mr-11 transition-all flex-col ${
+            NavOpen ? "transform rotate-45" : ""}`}
+        >
+          <div
+      className={`bg-white h-1 w-6 mb-1 transition-all ${
+          NavOpen ? "transform rotate-60 translate-y-2 opacity-100" : ""
+        }`}
+      ></div>
+      <div
+        className={`bg-white h-1 w-6 mb-1 transition-all ${
+          NavOpen ? "opacity-0" : ""
+        }`}
+      ></div>
+      <div
+        className={`bg-white h-1 w-6 mb-1 transition-all ${
+          NavOpen ? "transform -rotate-90 -translate-y-2 opacity-100" : ""
+        }`}
+      ></div>
         </div>
       </div>
       <div
         className={
           NavOpen
-            ? "absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-start ease-in duration-150 bg-black bg-opacity-95 transition overflow-hidden"
+            ? "absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-start ease-in-out duration-150 bg-black bg-opacity-95 transition overflow-hidden"
             : ""
         }
       >
         {NavOpen && (
           <ul className="overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl">
             <li
-              onClick={toggleOpen}
+              onClick={() => setNavOpen((prev) => !prev)}
               className="cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-dark-50 py-3 ease-in duration-200 transition"
             >
               <a href="#contact" className="block w-full h-full">
@@ -123,15 +124,15 @@ const MobileNavbar = () => {
               {accordionServicesOpen && (
                 <>
                   <div
-                    onClick={toggleOpen}
+                    onClick={() => setNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/services/ui-ux" className="block w-full">
-                    &nbsp;&nbsp;&nbsp;UI/UX Design
+                      &nbsp;&nbsp;&nbsp;UI/UX Design
                     </Link>
                   </div>
                   <div
-                    onClick={toggleOpen}
+                    onClick={() => setNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link
@@ -142,7 +143,7 @@ const MobileNavbar = () => {
                     </Link>
                   </div>
                   <div
-                    onClick={toggleOpen}
+                    onClick={() => setNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link
@@ -172,7 +173,7 @@ const MobileNavbar = () => {
               {accordionAboutOpen && (
                 <>
                   <div
-                    onClick={toggleOpen}
+                    onClick={() => setNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/about-us/our-agency" className="block w-full">
@@ -180,18 +181,18 @@ const MobileNavbar = () => {
                     </Link>
                   </div>
                   <div
-                    onClick={toggleOpen}
+                    onClick={() => setNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/about-us/our-team" className="block w-full">
-                    &nbsp;&nbsp;&nbsp; Our Team
+                      &nbsp;&nbsp;&nbsp; Our Team
                     </Link>
                   </div>
                 </>
               )}
             </li>
             <li
-              onClick={toggleOpen}
+              onClick={() => setNavOpen((prev) => !prev)}
               className="p-3 transition ease-in duration-150 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/gallery" className="block w-full">
@@ -199,7 +200,7 @@ const MobileNavbar = () => {
               </Link>
             </li>
             <li
-              onClick={toggleOpen}
+              onClick={() => setNavOpen((prev) => !prev)}
               className="p-3 transition ease-in duration-150 border-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/blog" className="block w-full">
@@ -212,7 +213,7 @@ const MobileNavbar = () => {
             >
               <Link href="/experimental">/*&nbsp;Experimental&nbsp ^/;</Link>
             </li>*/}
-            <div className="flex flex-col pb-[170px]"></div>
+            <div className="flex flex-col pb-[170px]" onClick={() => {}}></div>
           </ul>
         )}
       </div>
