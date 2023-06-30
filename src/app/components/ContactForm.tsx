@@ -185,13 +185,13 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
               )}
             </div>
           </div>
-          <div className="border h-40">
-          <ReCAPTCHA
-              sitekey="6LdsNuMmAAAAAKgZX-WZ-lTYDdzvaEikJKIOc19O"
-              onChange={handleRecaptchaChange}
-            />
-          </div>
           <div className="px-1 w-full col-span-2 sm:mt-4 sm:mb-8 mt-8 mb-8">
+            <ReCAPTCHA
+                sitekey="6LdsNuMmAAAAAKgZX-WZ-lTYDdzvaEikJKIOc19O"
+                onChange={handleRecaptchaChange}
+              />
+          </div>
+          <div className="px-1 w-full col-span-2 sm:mt-4 sm:mb-8 mt-2 mb-8">
             <button
               className={`bg-blue text-white px-4 py-2 rounded-md w-full text-base font-medium bg-[#4a6cf7] transition duration-200 ease-in-out ${
                 !isRecaptchaChecked ||
