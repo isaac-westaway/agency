@@ -6,6 +6,8 @@ import { sendContactForm } from "@/src/app/components/libs/api";
 import ReCAPTCHA from "react-google-recaptcha";
 import toast from "react-hot-toast";
 
+const options = ["Option 1", "Option 2"];
+
 interface Placeholders {
   message: string;
 }
@@ -15,6 +17,7 @@ interface FormValues {
   email: string;
   business: string;
   message: string;
+  service: string;
 }
 
 interface FormState {
@@ -27,6 +30,7 @@ const initValues: FormValues = {
   name: "",
   email: "",
   business: "",
+  service: "",
   message: "",
 };
 
@@ -38,14 +42,12 @@ const initState: FormState = {
 
 const ContactForm: React.FC<Placeholders> = ({ message }) => {
   const [state, setState] = useState<FormState>(initState);
-  const [touched, setTouched] = useState<Record<string, boolean>>({});  
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [isRecaptchaChecked, setRecaptchaChecked] = useState(false);
 
   const handleRecaptchaChange = (value: string | null) => {
     setRecaptchaChecked(!!value);
   };
-
-  
 
   const { values, isLoading, error } = state;
 
@@ -68,13 +70,30 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
       },
     }));
 
+  const handleSelectChange = (
+    event: ChangeEvent<HTMLSelectElement> // Update the type to HTMLSelectElement
+  ) =>
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [event.target.name]: event.target.value,
+      },
+    }));
+
   const onSubmit = async () => {
     setState((prev) => ({
       ...prev,
       isLoading: true,
     }));
     try {
-      await sendContactForm(values);
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
       setTouched({});
       setState(initState);
       toast.success("Successfully sent email!", {
@@ -113,9 +132,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
             )}
           </div>
           <div className="relative w-full sm:col-span-2 sm:mt-4 sm:mb-3">
-            <label className="block text-lg font-semibold">
-              Email Address
-            </label>
+            <label className="block text-lg font-semibold">Email Address</label>
             <input
               type="email"
               name="email"
@@ -161,13 +178,40 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
           </div>
           <div className="w-full col-span-2 sm:mb-3">
             <div className="mt-8 sm:mt-0 relative">
-              <label className="block mb-3 text-lg font-semibold">
-                Message
+              <label className="block text-lg mb-3 font-semibold">
+                Interested Service
               </label>
-              <textarea
-                name="message"
-                rows={4}
+              <select
+                name="service"
+                id="service"
+                value={values.service}
                 className={`
+    w-full ring-dark-50 ring-1 mt-1 border-dark-50 border-[1px] ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+  `}
+                onChange={handleSelectChange} // Add the onChange event handler
+              >
+                <option value="" className="text-base p-3">
+                  Select an option
+                </option>
+                {options.map((option, index) => (
+                  <option className="text-base" key={index} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+              {touched.service && !values.service && (
+                <p className="text-red-300 absolute">Required</p>
+              )}
+            </div>
+            <div className="w-full col-span-2 sm:mb-3">
+              <div className="mt-8 sm:mt-0 relative">
+                <label className="block mb-3 text-lg font-semibold">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  rows={4}
+                  className={`
               w-full ring-dark-50 ring-1 ring-inset border-dark-50 border focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl bg-black py-3 px-6 text-base
               ${
                 touched.message && !values.message
@@ -175,88 +219,87 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                   : ""
               }
             `}
-                placeholder={message}
-                value={values.message}
-                onChange={handleChange}
-                onBlur={onBlur}
-              ></textarea>
-              {touched.message && !values.message && (
-                <p className="text-red-300 absolute -mt-[0.4rem]">Required</p>
-              )}
+                  placeholder={message}
+                  value={values.message}
+                  onChange={handleChange}
+                  onBlur={onBlur}
+                ></textarea>
+                {touched.message && !values.message && (
+                  <p className="text-red-300 absolute -mt-[0.4rem]">Required</p>
+                )}
+              </div>
             </div>
-          </div>
-          <div className="px-1 w-full col-span-2 sm:mt-4 sm:mb-8 mt-8 mb-8">
+            {/**<div className="px-1 w-full col-span-2 sm:mt-4 sm:mb-8 mt-8 mb-8">
             <ReCAPTCHA
                 sitekey="6LdsNuMmAAAAAKgZX-WZ-lTYDdzvaEikJKIOc19O"
                 onChange={handleRecaptchaChange}
               />
-          </div>
-          <div className="px-1 w-full col-span-2 sm:mt-4 sm:mb-8 mt-2 mb-8">
-            <button
-              className={`bg-blue text-white px-4 py-2 rounded-md w-full text-base font-medium bg-[#4a6cf7] transition duration-200 ease-in-out ${
-                !isRecaptchaChecked ||
-                !values.name ||
-                !values.email ||
-                !values.business ||
-                !values.message ||
-                !isValidEmail(values.email)
-                  ? "cursor-not-allowed hover:bg-red-300 transition duration-200 ease-in-out "
-                  : "hover:bg-white hover:text-black hover:fill-black hover:stroke-black stroke-[#fff]"
-              }`}
-              disabled={
-                !isRecaptchaChecked ||
-                !values.name ||
-                !values.email ||
-                !values.business ||
-                !values.message ||
-                !isValidEmail(values.email)
-              }
-              onClick={onSubmit}
-            >
-              {isLoading && (
-                <div className="cursor-not-allowed flex items-center justify-center">
-                  <span className="relative flex items-center justify-center">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 38 38"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="-left-9 absolute"
-                    >
-                      <g fill="none" fill-rule="evenodd">
-                        <g transform="translate(1 1)" stroke-width="2">
-                          <circle
-                            className="loader-circle stroke-white stroke-opacity-50"
-                            cx="18"
-                            cy="18"
-                            r="18"
-                          />
-                          <path d="M36 18c0-9.94-8.06-18-18-18">
-                            <animateTransform
-                              attributeName="transform"
-                              type="rotate"
-                              from="0 18 18"
-                              to="360 18 18"
-                              dur="1s"
-                              repeatCount="indefinite"
+              </div>*/}
+            <div className="px-1 w-full col-span-2 sm:mt-4 sm:mb-8 mt-8 mb-8">
+              <button
+                className={`bg-blue text-white px-4 py-2 rounded-md w-full text-base font-medium bg-[#4a6cf7] transition duration-200 ease-in-out ${
+                  !values.name ||
+                  !values.email ||
+                  !values.business ||
+                  !values.message ||
+                  !isValidEmail(values.email)
+                    ? "cursor-not-allowed hover:bg-red-300 transition duration-200 ease-in-out "
+                    : "hover:bg-white hover:text-black hover:fill-black hover:stroke-black stroke-[#fff]"
+                }`}
+                disabled={
+                  !values.name ||
+                  !values.email ||
+                  !values.business ||
+                  !values.message ||
+                  !isValidEmail(values.email)
+                }
+                onClick={onSubmit}
+              >
+                {isLoading && (
+                  <div className="cursor-not-allowed flex items-center justify-center">
+                    <span className="relative flex items-center justify-center">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 38 38"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="-left-9 absolute"
+                      >
+                        <g fill="none" fill-rule="evenodd">
+                          <g transform="translate(1 1)" stroke-width="2">
+                            <circle
+                              className="loader-circle stroke-white stroke-opacity-50"
+                              cx="18"
+                              cy="18"
+                              r="18"
                             />
-                          </path>
+                            <path d="M36 18c0-9.94-8.06-18-18-18">
+                              <animateTransform
+                                attributeName="transform"
+                                type="rotate"
+                                from="0 18 18"
+                                to="360 18 18"
+                                dur="1s"
+                                repeatCount="indefinite"
+                              />
+                            </path>
+                          </g>
                         </g>
-                      </g>
-                    </svg>
-                  </span>
-                  <span className="ml-2">Loading...</span>
-                </div>
-              )}
-              {!isLoading && (
-                <span className="shadow-2xl drop-shadow-2xl">Submit</span>
-              )}
-            </button>
+                      </svg>
+                    </span>
+                    <span className="ml-2">Loading...</span>
+                  </div>
+                )}
+                {!isLoading && (
+                  <span className="shadow-2xl drop-shadow-2xl">Submit</span>
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default ContactForm
+export default ContactForm;
