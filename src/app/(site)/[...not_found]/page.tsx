@@ -3,10 +3,6 @@ import { useEffect, useState } from "react";
 import ReusableHero from "../../components/ReusableHero";
 import Head from "next/head";
 
-export const metadata = {
-  title: "Error 404 – Wynnum Web Services"
-}
-
 const NotFound = () => {
   const [randomQuote, setRandomQuote] = useState("");
 
