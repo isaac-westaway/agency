@@ -1,6 +1,6 @@
 import ReusableHero from "@/src/app/components/ReusableHero";
-import getPostMetadata from "@/src/posts/getPostMetadata";
-import PostPreview from "@/src/posts/PostPreview";
+import getPostMetadata from "@/src/app/components/blog/getPostMetadata";
+import PostPreview from "@/src/app/components/blog/PostPreview";
 import ContactSection from "@/src/app/components/contact/ContactSection";
 
 export const metadata = {

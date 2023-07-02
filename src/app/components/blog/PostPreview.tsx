@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PostMetadata } from "./PostMetadata";
-import RevealOnce from "../app/components/utils/RevealOnce";
+import RevealOnce from "../utils/RevealOnce";
 
 import { formatDate } from "@/src/app/components/utils/formateDate"
 

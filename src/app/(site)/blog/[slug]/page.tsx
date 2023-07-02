@@ -1,7 +1,7 @@
 import Button from "@/src/app/components/Button";
 import ReusableHeroNested from "@/src/app/components/ReusableHeroNested";
 import SmoothButton from "@/src/app/components/SmoothButton";
-import getPostMetadata from "@/src/posts/getPostMetadata";
+import getPostMetadata from "@/src/app/components/blog/getPostMetadata";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
 
 import { formatDate } from "@/src/app/components/utils/formateDate";
@@ -14,7 +14,7 @@ import { useEffect } from "react";
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
-  const file = `${folder}${slug}.md`;
+  const file = `src/${folder}${slug}.md`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
   return matterResult;

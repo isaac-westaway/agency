@@ -53,7 +53,13 @@ const ContactForm = () => {
 
   return (
     <Formik
-      initialValues={{ name: "", business: "", service: "", email: "", message: "" }}
+      initialValues={{
+        name: "",
+        business: "",
+        service: "",
+        email: "",
+        message: "",
+      }}
       validationSchema={toFormikValidationSchema(validationSchema)}
       onSubmit={handleSubmit}
     >
@@ -116,7 +122,7 @@ const ContactForm = () => {
                 </div>
               </div>
               <div className="w-full col-span-2 sm:mb-3">
-              <div className="mt-8 sm:mt-0 relative">
+                <div className="mt-8 sm:mt-0 relative">
                   <label className="block text-lg mb-3 font-semibold">
                     Interested Service
                   </label>
@@ -128,7 +134,9 @@ const ContactForm = () => {
                         w-full ring-dark-50 ring-1 mt-1 border-dark-50 border-[1px] ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
                       `}
                   >
-                    <option value="" className="text-base p-3">Select an option</option>
+                    <option value="" className="text-base p-3">
+                      Select an option
+                    </option>
                     {options.map((option, index) => (
                       <option className="text-base" key={index} value={option}>
                         {option}
