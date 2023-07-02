@@ -1,8 +1,11 @@
 'use client' // Error components must be Client Components
 
-"use client"
-
 import { useEffect } from 'react'
+
+export const metadata = {
+  title: "Error 404 – Wynnum Web Services"
+}
+
 
 export default function Error({
   error,

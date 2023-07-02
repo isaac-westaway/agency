@@ -39,7 +39,7 @@ export default function PostPage(props: any) {
   const truncatedTitle = truncateTitle(post.data.title, 15);
   const formattedDate = formatDate(post.data.date);
 
-  metadata.title = `${post.data.title} ● ${agencyName}`;
+  metadata.title = `${post.data.title} – ${agencyName}`;
 
   return (
       <div className="min-h-screen">

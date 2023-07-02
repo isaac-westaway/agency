@@ -87,7 +87,7 @@ const items = [
 ];
 
 export const metadata = {
-  title: "UI / UX Design ● Wynnum Web Services",
+  title: "UI / UX Design – Wynnum Web Services",
 };
 
 export default function UIUX() {

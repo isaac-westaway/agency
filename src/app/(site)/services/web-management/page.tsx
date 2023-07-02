@@ -89,7 +89,7 @@ const items = [
 ];
 
 export const metadata = {
-  title: "Web Management ● Wynnum Web Services",
+  title: "Web Management – Wynnum Web Services",
 };
 
 

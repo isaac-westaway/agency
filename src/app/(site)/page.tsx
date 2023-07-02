@@ -152,7 +152,7 @@ const items = [
 ];
 
 export const metadata = {
-  title: "Home ● Wynnum Web Services",
+  title: "Home – Wynnum Web Services",
 };
 
 export default function Home() {

@@ -7,7 +7,7 @@ import Image from "next/image";
 import ContactSection from "../../components/ContactSection";
 
 export const metadata = {
-  title: "Acknowledgement of Country ● Wynnum Web Services",
+  title: "Acknowledgement of Country – Wynnum Web Services",
 };
 
 export default function AckOfCountry() {
