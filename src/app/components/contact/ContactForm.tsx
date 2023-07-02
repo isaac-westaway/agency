@@ -6,7 +6,12 @@ import { sendContactForm } from "@/src/app/components/libs/api";
 import ReCAPTCHA from "react-google-recaptcha";
 import toast from "react-hot-toast";
 
-const options = ["Option 1", "Option 2"];
+const options = [
+  "UI / UX Design",
+  "Website Development",
+  "Website Management",
+  "Development & Management",
+];
 
 interface Placeholders {
   message: string;
@@ -152,7 +157,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
             )}
           </div>
           <div className="w-full col-span-2 sm:mb-3">
-            <div className="mt-8 sm:mt-4 sm:mb-4 relative">
+            <div className="mt-8 sm:mt-4 sm:mb-0 relative">
               <label className="block mb-3 text-lg font-semibold">
                 Business Name
               </label>
@@ -177,7 +182,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
             </div>
           </div>
           <div className="w-full col-span-2 sm:mb-3">
-            <div className="mt-8 sm:mt-0 relative">
+          <div className="mt-8 sm:mt-4 sm:mb-4 relative">
               <label className="block text-lg mb-3 font-semibold">
                 Interested Service
               </label>
