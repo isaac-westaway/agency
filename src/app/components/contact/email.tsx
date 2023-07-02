@@ -38,7 +38,7 @@ const EmailComponent: React.FC<Readonly<EmailProps>> = ({
             </Text>
             <Text className="text-[14px] leading-[24px] text-black">
               You got an email from <strong>{name}</strong>. <br />
-              Their email is &nbsp;{email} and their business name is
+              Their email is &nbsp;{email} and their business name is&nbsp;
               <b>{business}</b>. Their message is: <br />
               {message}
               <br />
