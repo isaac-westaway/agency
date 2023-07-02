@@ -2,14 +2,14 @@ import ReusableHeroNested from "@/src/app/components/ReusableHeroNested";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
 import FlyIn from "@/src/app/components/utils/FlyIn";
-import ContactForm from "@/src/app/components/ContactForm";
+import ContactForm from "@/src/app/components/contact/ContactForm";
 import Accordion from "@/src/app/components/Accordion";
 
 import Image from "next/image";
 import Link from "next/link";
 
 import { MdOutlineManageHistory } from "react-icons/md";
-import ContactSection from "@/src/app/components/ContactSection";
+import ContactSection from "@/src/app/components/contact/ContactSection";
 import SmoothButton from "@/src/app/components/SmoothButton";
 
 const items = [

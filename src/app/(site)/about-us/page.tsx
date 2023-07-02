@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ContactSection from "@/src/app/components/ContactSection";
+import ContactSection from "@/src/app/components/contact/ContactSection";
 import ReusableHero from "@/src/app/components/ReusableHero";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
 

@@ -9,14 +9,6 @@ const nextConfig = {
       'https://sparkdigital.vercel.app',
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: '/src/pages/api/:path*',
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;

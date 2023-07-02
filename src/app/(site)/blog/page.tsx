@@ -1,7 +1,7 @@
 import ReusableHero from "@/src/app/components/ReusableHero";
-import getPostMetadata from "@/src/app/components/posts/getPostMetadata";
-import PostPreview from "@/src/app/components/posts/PostPreview";
-import ContactSection from "@/src/app/components/ContactSection";
+import getPostMetadata from "@/src/posts/getPostMetadata";
+import PostPreview from "@/src/posts/PostPreview";
+import ContactSection from "@/src/app/components/contact/ContactSection";
 
 export const metadata = {
   title: "Blog – Wynnum Web Services",

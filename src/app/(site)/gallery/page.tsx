@@ -3,8 +3,8 @@ import ReusableHero from "../../components/ReusableHero";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
 import RevealOnce from "../../components/utils/RevealOnce";
-import ContactForm from "../../components/ContactForm";
-import ContactSection from "../../components/ContactSection";
+import ContactForm from "../../components/contact/ContactForm";
+import ContactSection from "../../components/contact/ContactSection";
 
 export const metadata = {
   title: "Gallery – Wynnum Web Services",

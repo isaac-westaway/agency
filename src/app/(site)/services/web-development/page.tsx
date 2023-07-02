@@ -4,7 +4,7 @@ import RevealOnce from "@/src/app/components/utils/RevealOnce";
 import FlyIn from "@/src/app/components/utils/FlyIn";
 import Accordion from "@/src/app/components/Accordion";
 import SmoothButton from "@/src/app/components/SmoothButton";
-import ContactSection from "@/src/app/components/ContactSection";
+import ContactSection from "@/src/app/components/contact/ContactSection";
 
 import Image from "next/image";
 import Link from "next/link";

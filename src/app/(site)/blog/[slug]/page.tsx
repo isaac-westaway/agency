@@ -1,7 +1,7 @@
 import Button from "@/src/app/components/Button";
 import ReusableHeroNested from "@/src/app/components/ReusableHeroNested";
 import SmoothButton from "@/src/app/components/SmoothButton";
-import getPostMetadata from "@/src/app/components/posts/getPostMetadata";
+import getPostMetadata from "@/src/posts/getPostMetadata";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
 
 import { formatDate } from "@/src/app/components/utils/formateDate";

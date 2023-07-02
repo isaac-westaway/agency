@@ -4,7 +4,7 @@ import RevealOnce from "../../components/utils/RevealOnce";
 
 import Link from "next/link";
 import Image from "next/image";
-import ContactSection from "../../components/ContactSection";
+import ContactSection from "../../components/contact/ContactSection";
 
 export const metadata = {
   title: "Acknowledgement of Country – Wynnum Web Services",

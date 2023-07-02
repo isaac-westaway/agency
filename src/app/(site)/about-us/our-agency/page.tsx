@@ -1,6 +1,6 @@
 import Accordion from "@/src/app/components/Accordion";
 import CaseStudies from "@/src/app/components/CaseStudies";
-import ContactSection from "@/src/app/components/ContactSection";
+import ContactSection from "@/src/app/components/contact/ContactSection";
 import ReusableHeroNested from "@/src/app/components/ReusableHeroNested";
 import SmoothButton from "@/src/app/components/SmoothButton";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";

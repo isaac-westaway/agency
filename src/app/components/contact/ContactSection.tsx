@@ -1,5 +1,5 @@
 import ContactForm from "./ContactForm";
-import RevealOnce from "./utils/RevealOnce";
+import RevealOnce from "../utils/RevealOnce";
 
 interface ContactSectionProps {
     message: string;
