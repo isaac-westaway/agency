@@ -1,3 +1,5 @@
+"use client"
+
 import Accordion from "@/src/app/components/Accordion";
 import CaseStudies from "@/src/app/components/CaseStudies";
 import ContactSection from "@/src/app/components/contact/ContactSection";
@@ -5,14 +7,21 @@ import ReusableHeroNested from "@/src/app/components/ReusableHeroNested";
 import SmoothButton from "@/src/app/components/SmoothButton";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
-import Link from "next/link";
+import MobileGlobe from "@/src/app/components/Globes/MobileGlobe"
+import TabletGlobe from "@/src/app/components/Globes/TabletGlobe";
+import DesktopGlobe from "@/src/app/components/Globes/DesktopGlobe"
+
+import { useDesktop, useMobile, useTablet } from "@/src/app/components/hooks/mediaQueries";
 
 export const metadata = {
   title: "Our Agency – Wynnum Web Services",
 };
 
-
 export default function AboutOurAgency() {
+  const Mobile = useMobile();
+  const Desktop = useDesktop();
+  const Tablet = useTablet();
+
   return (
     <div className="min-h-screen">
       <ReusableHeroNested
@@ -58,6 +67,12 @@ export default function AboutOurAgency() {
         </RevealOnce>
         <CaseStudies />
       </section>
+      <section className="ml-11 mr-11 text-white border-t-[1px] border-dark-50 flex justify-center items-center">
+        {Mobile && <MobileGlobe />}
+        {Tablet && <TabletGlobe />}
+        {Desktop && <DesktopGlobe />}
+      </section>
+
       <section
         className="ml-11 mr-11 text-white border-t-[1px] border-dark-50"
         id="contact"

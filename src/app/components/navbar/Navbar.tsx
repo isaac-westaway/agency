@@ -10,7 +10,7 @@ import {
   useDesktop,
   useMobile,
   useTablet,
-} from "@/src/app/components/utils/mediaQueries";
+} from "@/src/app/components/hooks/mediaQueries";
 import TabletNavbar from "./navs/TabletNavbar";
 
 const Navbar: React.FC = () => {

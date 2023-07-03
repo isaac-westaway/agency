@@ -1,3 +1,5 @@
+/** This is no longer used */
+
 export const sendContactForm = async (data: { name: string; email: string; business: string; message: string; }) =>
   fetch("/api/contact", {
     method: "POST",

@@ -4,7 +4,7 @@ import {
   useDesktop,
   useMobile,
   useTablet,
-} from "@/src/app/components/utils/mediaQueries";
+} from "@/src/app/components/hooks/mediaQueries";
 import Container from "../Container";
 
 import DesktopFooter from "./feet/DesktopFooter";

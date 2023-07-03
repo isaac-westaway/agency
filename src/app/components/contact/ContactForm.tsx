@@ -1,9 +1,6 @@
 "use client";
 
-import { useState, ChangeEvent, FocusEvent } from "react";
-import { sendContactForm } from "@/src/app/components/libs/api";
-
-import ReCAPTCHA from "react-google-recaptcha";
+import React, { useState, ChangeEvent, FocusEvent } from "react";
 import toast from "react-hot-toast";
 
 const options = [
@@ -75,9 +72,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
       },
     }));
 
-  const handleSelectChange = (
-    event: ChangeEvent<HTMLSelectElement> // Update the type to HTMLSelectElement
-  ) =>
+  const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) =>
     setState((prev) => ({
       ...prev,
       values: {
@@ -86,9 +81,9 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
       },
     }));
 
-    const handleSelectBlur = (event: FocusEvent<HTMLSelectElement>) => {
-      setTouched((prev) => ({ ...prev, [event.target.name]: true }));
-    };
+  const handleSelectBlur = (event: FocusEvent<HTMLSelectElement>) => {
+    setTouched((prev) => ({ ...prev, [event.target.name]: true }));
+  };
   const onSubmit = async () => {
     setState((prev) => ({
       ...prev,
@@ -114,7 +109,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
         isLoading: false,
         error: error.message,
       }));
-      console.log("fail");
+      toast.error("Error sending email");
     }
   };
 
@@ -127,6 +122,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
             <input
               type="text"
               name="name"
+              aria-label="Contact form name input field for  Wynnum Web Services"
               className={`
               w-full ring-dark-50 border-dark-50 border ring-1 sm:ring-1 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${touched.name && !values.name ? "ring-red-300 ring-inset" : ""}
@@ -144,6 +140,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
             <input
               type="email"
               name="email"
+              aria-label="Email input field"
               className={`
               w-full ring-dark-50 ring-1 mt-1 border-dark-50 border-[1px] ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${touched.email && !values.email ? "ring-red-300 ring-inset" : ""}
@@ -167,6 +164,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
               <input
                 type="text"
                 name="business"
+                aria-label="Business Name input field"
                 className={`
               w-full ring-dark-50 ring-1 ring-inset border-dark-50 border focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${
@@ -192,14 +190,16 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
               <div className="relative">
                 <select
                   name="service"
+                  aria-label="Service selection dropdown input field"
                   id="service"
                   value={values.service}
                   className={`
         w-full ring-dark-50 ring-1 mt-1 border-dark-50 border-[1px] ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6 pr-10 text-base
                   ${
-                    touched.service && !values.service ? "ring-red-300 ring-inset" : ""
+                    touched.service && !values.service
+                      ? "ring-red-300 ring-inset"
+                      : ""
                   }
-      
         `}
                   onChange={handleSelectChange}
                   onBlur={handleSelectBlur}
@@ -253,6 +253,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                   placeholder={message}
                   value={values.message}
                   onChange={handleChange}
+                  aria-label="Message textarea input field"
                   onBlur={onBlur}
                 ></textarea>
                 {touched.message && !values.message && (
@@ -287,6 +288,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                   !isValidEmail(values.email)
                 }
                 onClick={onSubmit}
+                aria-label="Submit button for the contact form"
               >
                 {isLoading && (
                   <div className="cursor-not-allowed flex items-center justify-center">
