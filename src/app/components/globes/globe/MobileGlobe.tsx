@@ -20,8 +20,8 @@ const MobileGlobe: React.FC = () => {
       className="relative"
     >
         <Globe
-          width={390}
-          height={500}
+          width={320}
+          height={440}
           ref={GlobeEl as React.MutableRefObject<GlobeMethods>}
           globeImageUrl="https://www.solidity.io/static/images/world.jpg"
           backgroundColor="rgba(0,0,0,0)"

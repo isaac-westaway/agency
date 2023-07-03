@@ -6,14 +6,11 @@ import SmoothButton from "@/src/app/components/SmoothButton";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
 import Globe from "@/src/app/components/globes/Globe";
-import Container from "@/src/app/components/Container";
 import ClientOnly from "@/src/app/components/ClientOnly";
 
-import {
-  useDesktop,
-  useMobile,
-  useTablet,
-} from "@/src/app/components/hooks/mediaQueries";
+export const metadata = {
+  title: "Our Agency – Wynnum Web Services",
+};
 
 export default function AboutOurAgency() {
   return (
