@@ -7,10 +7,11 @@ import ReusableHeroNested from "@/src/app/components/ReusableHeroNested";
 import SmoothButton from "@/src/app/components/SmoothButton";
 import RevealAlways from "@/src/app/components/utils/RevealAlways";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
-import MobileGlobe from "@/src/app/components/Globes/MobileGlobe"
-import TabletGlobe from "@/src/app/components/Globes/TabletGlobe";
-import DesktopGlobe from "@/src/app/components/Globes/DesktopGlobe"
+import MobileGlobe from "@/src/app/components/globes/MobileGlobe"
+import TabletGlobe from "@/src/app/components/globes/TabletGlobe";
+import DesktopGlobe from "@/src/app/components/globes/DesktopGlobe"
 import Container from "@/src/app/components/Container";
+import ClientOnly from "@/src/app/components/ClientOnly";
 
 import { useDesktop, useMobile, useTablet } from "@/src/app/components/hooks/mediaQueries";
 
@@ -67,9 +68,11 @@ export default function AboutOurAgency() {
             <CaseStudies />
           </section>
           <section className="ml-11 mr-11 text-white border-t-[1px] border-dark-50 flex justify-center items-center">
-            {Mobile && <MobileGlobe />}
-            {Tablet && <TabletGlobe />}
-            {Desktop && <DesktopGlobe />}
+            <ClientOnly>
+              {Mobile && <MobileGlobe />}
+              {Tablet && <TabletGlobe />}
+              {Desktop && <DesktopGlobe />}
+            </ClientOnly>
           </section>
           <section
             className="ml-11 mr-11 text-white border-t-[1px] border-dark-50"
