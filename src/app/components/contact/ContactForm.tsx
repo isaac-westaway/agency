@@ -235,7 +235,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
               )}
             </div>
             <div className="w-full col-span-2 sm:mb-3">
-              <div className="mt-8 sm:mt-0 relative">
+              <div className="mt-8 sm:mt-4 relative">
                 <label className="block mb-3 text-lg font-semibold">
                   Message
                 </label>
