@@ -50,14 +50,6 @@ export default function AboutOurAgency() {
           </div>
         </RevealOnce>
       </section>
-      <section className=" text-white ml-11 mr-11 border-t-[1px] border-dark-50">
-        <RevealOnce>
-          <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 pb-8 select-text">
-            Some of the websites we&#39;ve created
-          </div>
-        </RevealOnce>
-        <CaseStudies />
-      </section>
       <section className="ml-11 mr-11 text-white border-t-[1px] border-dark-50 flex justify-center items-center">
         <ClientOnly>
           <Globe />
