@@ -86,6 +86,9 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
       },
     }));
 
+    const handleSelectBlur = (event: FocusEvent<HTMLSelectElement>) => {
+      setTouched((prev) => ({ ...prev, [event.target.name]: true }));
+    };
   const onSubmit = async () => {
     setState((prev) => ({
       ...prev,
@@ -182,28 +185,51 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
             </div>
           </div>
           <div className="w-full col-span-2 sm:mb-3">
-          <div className="mt-8 sm:mt-4 sm:mb-4 relative">
+            <div className="mt-8 sm:mt-4 sm:mb-4 relative">
               <label className="block text-lg mb-3 font-semibold">
                 Interested Service
               </label>
-              <select
-                name="service"
-                id="service"
-                value={values.service}
-                className={`
-    w-full ring-dark-50 ring-1 mt-1 border-dark-50 border-[1px] ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
-  `}
-                onChange={handleSelectChange} // Add the onChange event handler
-              >
-                <option value="" className="text-base p-3">
-                  Select an option
-                </option>
-                {options.map((option, index) => (
-                  <option className="text-base" key={index} value={option}>
-                    {option}
+              <div className="relative">
+                <select
+                  name="service"
+                  id="service"
+                  value={values.service}
+                  className={`
+        w-full ring-dark-50 ring-1 mt-1 border-dark-50 border-[1px] ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6 pr-10 text-base
+                  ${
+                    touched.service && !values.service ? "ring-red-300 ring-inset" : ""
+                  }
+      
+        `}
+                  onChange={handleSelectChange}
+                  onBlur={handleSelectBlur}
+                >
+                  <option value="" className="text-base p-3">
+                    Select an option
                   </option>
-                ))}
-              </select>
+                  {options.map((option, index) => (
+                    <option className="text-base" key={index} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <svg
+                    className="w-5 h-5 text-gray-500"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 7l3-3 3 3m0 6l-3 3-3-3"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
               {touched.service && !values.service && (
                 <p className="text-red-300 absolute">Required</p>
               )}
@@ -242,7 +268,8 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
               </div>*/}
             <div className="px-1 w-full col-span-2 sm:mt-4 sm:mb-8 mt-8 mb-8">
               <button
-                className={`bg-blue text-white px-4 py-2 rounded-md w-full text-base font-medium bg-[#4a6cf7] transition duration-200 ease-in-out ${
+                className={`bg-blue text-white px-4 py-2 rounded-md w-full text-base font-medium bg-[#4a6cf7] transition duration-200 ease-in-out 
+                ${
                   !values.name ||
                   !values.email ||
                   !values.business ||
@@ -250,7 +277,8 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                   !isValidEmail(values.email)
                     ? "cursor-not-allowed hover:bg-red-300 transition duration-200 ease-in-out "
                     : "hover:bg-white hover:text-black hover:fill-black hover:stroke-black stroke-[#fff]"
-                }`}
+                }
+                ${isLoading ? "cursor-not-allowed" : ""}`}
                 disabled={
                   !values.name ||
                   !values.email ||

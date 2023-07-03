@@ -12,6 +12,13 @@ body {
   height: 100%;
 
 }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
