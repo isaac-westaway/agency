@@ -124,7 +124,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
               name="name"
               aria-label="Contact form name input field for  Wynnum Web Services"
               className={`
-              w-full ring-dark-50 border-dark-50 border ring-1 sm:ring-1 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+              w-full ring-dark-50 border-dark-50 border ring-1 sm:ring-1 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] focus:transition focus:duration-300 focus:ease-in-out duration-300 transition ease-in-out outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${touched.name && !values.name ? "ring-red-300 ring-inset" : ""}
             `}
               value={values.name}
@@ -142,7 +142,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
               name="email"
               aria-label="Email input field"
               className={`
-              w-full ring-dark-50 ring-1 mt-1 border-dark-50 border-[1px] ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+              w-full ring-dark-50 border-dark-50 border ring-1 sm:ring-1 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] focus:transition focus:duration-300 focus:ease-in-out duration-300 transition ease-in-out outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${touched.email && !values.email ? "ring-red-300 ring-inset" : ""}
             `}
               value={values.email}
@@ -158,7 +158,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
           </div>
           <div className="w-full col-span-2 sm:mb-3">
             <div className="mt-8 sm:mt-4 sm:mb-0 relative">
-              <label className="block mb-3 text-lg font-semibold">
+              <label className="block text-lg font-semibold">
                 Business Name
               </label>
               <input
@@ -166,8 +166,8 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                 name="business"
                 aria-label="Business Name input field"
                 className={`
-              w-full ring-dark-50 ring-1 ring-inset border-dark-50 border focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
-              ${
+                w-full ring-dark-50 border-dark-50 mt-1 border ring-1 sm:ring-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] focus:transition focus:duration-300 focus:ease-in-out duration-300 transition ease-in-out outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+                ${
                 touched.business && !values.business
                   ? "ring-red-300 ring-inset"
                   : ""
@@ -183,8 +183,8 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
             </div>
           </div>
           <div className="w-full col-span-2 sm:mb-3">
-            <div className="mt-8 sm:mt-4 sm:mb-4 relative">
-              <label className="block text-lg mb-3 font-semibold">
+            <div className="mt-8 sm:mt-4 sm:mb-8 relative">
+              <label className="block text-lg font-semibold">
                 Interested Service
               </label>
               <div className="relative">
@@ -194,7 +194,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                   id="service"
                   value={values.service}
                   className={`
-        w-full ring-dark-50 ring-1 mt-1 border-dark-50 border-[1px] ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6 pr-10 text-base
+                  w-full ring-dark-50 border-dark-50 border ring-1 sm:ring-1 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] focus:transition focus:duration-300 focus:ease-in-out duration-300 transition ease-in-out outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
                   ${
                     touched.service && !values.service
                       ? "ring-red-300 ring-inset"
@@ -235,16 +235,16 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
               )}
             </div>
             <div className="w-full col-span-2 sm:mb-3">
-              <div className="mt-8 sm:mt-4 relative">
-                <label className="block mb-3 text-lg font-semibold">
+            <div className="mt-8 sm:mt-4 sm:mb-4 relative">
+                <label className="block text-lg font-semibold">
                   Message
                 </label>
                 <textarea
                   name="message"
                   rows={4}
                   className={`
-              w-full ring-dark-50 ring-1 ring-inset border-dark-50 border focus:ring-[#4A6CF7] focus:ring-[3px] outline-none rounded-2xl bg-black py-3 px-6 text-base
-              ${
+                  w-full ring-dark-50 border-dark-50 border ring-1 sm:ring-1 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] focus:transition focus:duration-300 focus:ease-in-out duration-300 transition ease-in-out outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+                  ${
                 touched.message && !values.message
                   ? "ring-red-300 ring-inset"
                   : ""
@@ -267,7 +267,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                 onChange={handleRecaptchaChange}
               />
               </div>*/}
-            <div className="px-1 w-full col-span-2 sm:mt-4 sm:mb-8 mt-8 mb-8">
+            <div className="px-1 w-full col-span-2 sm:mt-6 sm:mb-8 mt-8 mb-8">
               <button
                 className={`bg-blue text-white px-4 py-2 rounded-md w-full text-base font-medium bg-[#4a6cf7] transition duration-200 ease-in-out 
                 ${
