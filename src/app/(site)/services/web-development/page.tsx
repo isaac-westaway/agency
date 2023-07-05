@@ -13,6 +13,7 @@ import { MdOutlineWeb, MdMobileFriendly } from "react-icons/md";
 import { BsFillClipboardCheckFill } from "react-icons/bs";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { FaAppStoreIos, FaGlobe, FaStore } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 const items = [
   {
@@ -240,7 +241,8 @@ export default function WebDevelopment() {
                   </li>
                 </ul>
                 <RevealAlways>
-                  <div className="rounded-lg mt-10 py-2.5 cursor-pointer text-base">
+                  <div className="rounded-lg mt-10 py-2.5 text-base">
+                    <Link className="text-center flex justify-center my-2 text-base items-center hover:underline" rel="noopener noreferrer" target="_blank" href="https://dashboard.wyndigital.net">Check out our dashboard <FiExternalLink className="ml-2 mb-[0.1rem]" /></Link>
                     <a
                       href="#"
                       className="block w-full text-white bg-red-300 cursor-not-allowed hover:bg-white hover:text-black hover:z-50 transition ease-in-out duration-200 rounded-lg px-3.5 py-2.5"
