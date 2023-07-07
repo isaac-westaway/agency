@@ -46,7 +46,7 @@ const MobileNavbar = () => {
   return (
     <div className="pt-4 py-4 w-full  text-gray-400">
       <div className="flex flex-row justify-between w-full items-center">
-        <div className="z-50 ml-11">
+        <div className="z-50 ml-11 flex items-center">
           <Logo />
         </div>
         <div
@@ -74,12 +74,12 @@ const MobileNavbar = () => {
       <div
         className={
           NavOpen
-            ? "absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-start ease-in-out duration-150 bg-black bg-opacity-95 transition overflow-hidden"
+            ? "absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[100px] h-screen text-start ease-in-out duration-150 bg-black bg-opacity-95 transition overflow-hidden"
             : ""
         }
       >
         {NavOpen && (
-          <ul className="overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl">
+          <ul className="overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl text-gray-400">
             <li
               onClick={() => setNavOpen((prev) => !prev)}
               className="cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-dark-50 py-3 ease-in duration-200 transition"
@@ -213,7 +213,7 @@ const MobileNavbar = () => {
             >
               <Link href="/experimental">/*&nbsp;Experimental&nbsp ^/;</Link>
             </li>*/}
-            <div className="flex flex-col pb-[170px]" onClick={() => {}}></div>
+            <div className="flex flex-col pb-[20px]" onClick={() => {}}></div>
           </ul>
         )}
       </div>

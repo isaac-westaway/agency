@@ -257,7 +257,7 @@ const TabletNavbar = () => {
           </span>
           <a
             href="#contact"
-            className="shrink-0 cursor-pointer special-border-name border-[2px] border-dark-50 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]"
+            className="shrink-0 cursor-pointer special-border-name border-[2px] border-dark-50 transition ease-in duration-200 bg-custom-color0.1 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]"
           >
             Contact
           </a>
@@ -265,7 +265,7 @@ const TabletNavbar = () => {
             href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 cursor-pointer flex items-center special-border-name border-[2px] border-dark-50 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]"
+            className="shrink-0 cursor-pointer flex items-center special-border-name border-[2px] border-dark-50 bg-custom-color0.1 transition ease-in duration-200 rounded-2xl p-2 px-[24px] hover:border-[#FBFAF6] hover:text-[#FBFAF6]"
           >
             Billing portal&nbsp;
             <span className="flex flex-row items-center h-full pb-1">
