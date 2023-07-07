@@ -5,7 +5,7 @@ import ContactForm from "../../components/contact/ContactForm";
 import ContactSection from "../../components/contact/ContactSection";
 
 export const metadata = {
-  title: "Services – Wynnum Web Services",
+  title: "Services –  WynDigital",
 };
 
 

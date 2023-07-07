@@ -28,7 +28,7 @@ const DesktopFooter = () => {
                 Phone: +61 490 747 987
               </p>
               <p className="text-sm text-neutral-400  tracking-wider">
-                Email: wynnumwebervices@gmail.com
+                Email: wyndigitalagency@gmail.com
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ const DesktopFooter = () => {
                 </div>
                 <div className="pt-3 leading-6 tracking-wider">
                   <a
-                    href="https://github.com/Wynnum-Web-Services"
+                    href="https://github.com/WynDigitalAgency"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-light my-2 hover:cursor-pointer animatedUnderline"
@@ -109,7 +109,7 @@ const DesktopFooter = () => {
                 </div>
                 <div className="pt-3 leading-6 tracking-wider">
                   <a
-                    href="mailto:wynnumwebervices@gmail.com"
+                    href="mailto:wyndigitalagency@gmail.com"
                     className="animatedUnderline"
                   >
                     Email
@@ -179,7 +179,7 @@ const DesktopFooter = () => {
           <div className="border-t-[1px] border-dark-50 ">
             <div className="flex justify-between items-center my-2 text-normal text-white font-medium mt-6">
               <div className="text-neutral-400 font-normal">
-                &copy; 2023 DigiSpark Australia. All rights reserved.
+                &copy; 2023 WynDigital Australia. All rights reserved.
               </div>
               <div className="flex gap-4">
                 <Link

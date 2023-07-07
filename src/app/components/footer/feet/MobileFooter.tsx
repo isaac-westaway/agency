@@ -88,7 +88,7 @@ const MobileFooter = () => {
           <div className="flex flex-col justify-center p-2 tracking-wider font-light ml-11 mr-11">
             <div>
               <a
-                href="https://github.com/Wynnum-Web-Services"
+                href="https://github.com/WynDigitalAgency"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="animatedUnderline"
@@ -98,7 +98,7 @@ const MobileFooter = () => {
             </div>
             <div className="pt-3 leading-6 tracking-wider">
               <a
-                href="mailto:wynnumwebervices@gmail.com"
+                href="mailto:wyndigitalagency@gmail.com"
                 className="animatedUnderline"
               >
                 Email
@@ -161,7 +161,7 @@ const MobileFooter = () => {
           </div>
           <div className="relative flex flex-col col-span-2 sm:col-span-1 pb-2">
             <div className="justify-center text-center flex py-2 border-b-[1px] border-dark-50 ml-11 mr-11 font-semibold tracking-wider text-sm">
-              &copy; 2023 DigiSpark Australia
+              &copy; 2023 WynDigital Australia
             </div>
             <div className="flex flex-row sm:flex-col justify-evenly p-2 tracking-wider font-light ml-11 mr-11 text-center">
               <Link

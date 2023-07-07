@@ -4,7 +4,7 @@ import PostPreview from "@/src/app/components/blog/PostPreview";
 import ContactSection from "@/src/app/components/contact/ContactSection";
 
 export const metadata = {
-  title: "Blog – Wynnum Web Services",
+  title: "Blog – WynDigital",
 };
 
 export default function Blog() {
@@ -36,7 +36,7 @@ export default function Blog() {
         <ContactSection
           cta="Get in touch with us!"
           subcta="We will endeavour to respond as fast as possible. Usually this means 6 - 18 Hours."
-          message="Hey Wynnum Web Services!"
+          message="Hey WynDigital!"
         />
       </section>
     </div>

@@ -138,7 +138,7 @@ const TabletFooter = () => {
             <div className="pt-3 leading-6 tracking-wider">
               <div className="font-light">
                 <a
-                  href="https://github.com/Wynnum-Web-Services"
+                  href="https://github.com/WynDigitalAgency"
                   className="animatedUnderline"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -148,7 +148,7 @@ const TabletFooter = () => {
               </div>
               <div className="my-2">
                 <a
-                  href="mailto:wynnumwebervices@gmail.com"
+                  href="mailto:wyndigitalagencys@gmail.com"
                   className="animatedUnderline"
                 >
                   Email
@@ -164,7 +164,7 @@ const TabletFooter = () => {
         </div>
         <div className="relative flex flex-col border-r-[1px] border-dark-50 col-span-2 sm:col-span-1 pb-2">
           <div className="justify-center text-center flex py-2 border-b-[1px] border-dark-50 mx-[31px] font-semibold tracking-wider text-sm">
-            &copy; 2023 DigiSpark Australia
+            &copy; 2023 WynDigital Australia
           </div>
           <div className="flex flex-row sm:flex-col justify-evenly p-2 tracking-wider font-light mx-[31px]">
             <Link

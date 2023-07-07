@@ -106,7 +106,7 @@ const items = [
     contentClassName: "webdevelopment-class-3",
   },
   {
-    title: "How can I get in contact with Wynnum Web Services",
+    title: "How can I get in contact with WynDigital",
     content: (
       <>
         <p>If you are contacting us within Australia, shoot a message to a <a href="#contact" className="hover:underline cursor-pointer">phone number</a>. If you are contacting internationally, please, <a href="#contact" className="hover:underline hover:cursor-pointer">Email Us.</a></p>
@@ -117,7 +117,7 @@ const items = [
 ];
 
 export const metadata = {
-  title: "Web Development – Wynnum Web Services",
+  title: "Web Development – WynDigital",
 };
 
 

@@ -285,7 +285,7 @@ const Hero = () => {
                 Design. Develop. Deploy.
               </div>
               <div className="mt-6 text-lg leading-8 sm:leading-normal text-gray-400 font-medium">
-                DigiSpark is Wynnum-Manly&#8217;s top-ranking web services
+                WynDigital is Wynnum-Manly&#8217;s top-ranking web services
                 provider.
                 <br />
                 <div className="font-light mt-1 sm:leading-normal">

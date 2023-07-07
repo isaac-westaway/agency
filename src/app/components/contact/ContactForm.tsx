@@ -122,7 +122,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
             <input
               type="text"
               name="name"
-              aria-label="Contact form name input field for  Wynnum Web Services"
+              aria-label="Contact form name input field for WynDigital"
               className={`
               w-full ring-dark-50 border-dark-50 border ring-1 sm:ring-1 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] focus:transition focus:duration-300 focus:ease-in-out duration-300 transition ease-in-out outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
               ${touched.name && !values.name ? "ring-red-300 ring-inset" : ""}

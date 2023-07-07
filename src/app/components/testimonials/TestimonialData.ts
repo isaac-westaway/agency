@@ -1,14 +1,14 @@
 export const testimonialData = [
     {
         logo: 'https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg',
-        quote: 'Wynnum Web Services made the design process insanely easy. Sent them my design ideas and they had a website ready for me in 8 days!',
+        quote: "WynDigital's made the design process insanely easy. Sent them my design ideas and they had a website ready for me in 8 days!",
         profile: '/images/profiles/irina-hoffner.jpg',
         name: 'Irina Hoffner',
         position: 'Chief Executive Officer',
     },
     {
         logo: '/images/logos/constra.png',
-        quote: "Wynnum Web Services' expertise took my website to the next level. They created a sleek, user-friendly design that keeps pulling in good reviews. ",
+        quote: "WynDigital's expertise took my website to the next level. They created a sleek, user-friendly design that keeps pulling in good reviews. ",
         profile: '/images/profiles/robert-carter.jpg',
         name: 'Robert Carter',
         position: 'Chief Technical Officer',

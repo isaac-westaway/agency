@@ -31,7 +31,7 @@ export const metadata = {
   title: "",
 };
 
-const agencyName = "Wynnum Web Services";
+const agencyName = "WynDigital";
 
 export default function PostPage(props: any) {
   const slug = props.params.slug;

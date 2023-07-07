@@ -4,7 +4,7 @@ import ReusableHero from "@/src/app/components/ReusableHero";
 import RevealOnce from "@/src/app/components/utils/RevealOnce";
 
 export const metadata = {
-  title: "About – Wynnum Web Services",
+  title: "About – WynDigital",
 };
 
 export default function AboutUs() {

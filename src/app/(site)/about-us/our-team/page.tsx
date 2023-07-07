@@ -8,7 +8,7 @@ import RevealOnce from "@/src/app/components/utils/RevealOnce";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Our Team – Wynnum Web Services",
+  title: "Our Team – WynDigital",
 };
 
 

@@ -9,7 +9,7 @@ import Globe from "@/src/app/components/globes/Globe";
 import ClientOnly from "@/src/app/components/ClientOnly";
 
 export const metadata = {
-  title: "Our Agency – Wynnum Web Services",
+  title: "Our Agency –  WynDigital",
 };
 
 export default function AboutOurAgency() {

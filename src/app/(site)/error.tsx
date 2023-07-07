@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 
 export const metadata = {
-  title: "Error 404 – Wynnum Web Services"
+  title: "Error 404 – WynDigital"
 }
 
 

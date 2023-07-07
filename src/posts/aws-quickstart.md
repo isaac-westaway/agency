@@ -90,7 +90,7 @@ Now you should be able to use your CLI to access AWS. For example, I should be a
 ```bash
 aws s3 ls
 
-2020-12-09 22:36:32 wynnumwebservices.com/blog
+2020-12-09 22:36:32 wyndigitalagency.net/blog
 2020-12-27 00:04:52 cloud-archiver.5dac84a54677.archivetest
 ```
 

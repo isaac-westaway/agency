@@ -7,7 +7,7 @@ import Image from "next/image";
 import ContactSection from "../../components/contact/ContactSection";
 
 export const metadata = {
-  title: "Acknowledgement of Country – Wynnum Web Services",
+  title: "Acknowledgement of Country –  WynDigital",
 };
 
 export default function AckOfCountry() {
@@ -24,14 +24,14 @@ export default function AckOfCountry() {
           </div>
           <RevealOnce>
             <div className="mt-2">
-              Wynnum Web Services respectfully acknowledges Aboriginals and
+            WynDigital respectfully acknowledges Aboriginals and
               Torres Strait Islanders as the first peoples of Australia and the
               Quandamooka People as the traditional owners of the land on which
               we lay our agency. We respect and value Australia’s First Nations
               peoples’ resilience, courage, determination and contribution to
               this country’s social and economic development, while recognising
               the immense cultural, spiritual and linguistic diversity that has
-              existed in these lands for thousands of years. Wynnum Web Services
+              existed in these lands for thousands of years. WynDigital
               pays respect to leaders past, present and emerging. Quandamooka
               Country, comprises the waters and lands of and around Mulgumpin
               (Moreton Island), Minjerribah (North Stradbroke Island), the
@@ -70,7 +70,7 @@ export default function AckOfCountry() {
         <ContactSection
           cta="Learn more about our team!"
           subcta="We will endeavour to respond as fast as possible. Usually this means 6 - 18 Hours."
-          message="Hey Wynnum Web Services!"
+          message="Hey WynDigital!"
         />
       </section>
     </div>

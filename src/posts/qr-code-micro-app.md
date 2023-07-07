@@ -127,7 +127,7 @@ self.database.put_item(item)
 
 ### Scanning the QR image to load the content
 
-I [used](https://github.com/wynnumwebservices/) a [React `useEffect` hook](https://reactjs.org/docs/hooks-effect.html), which lets me make an API call once the page loads.
+I [used](https://github.com/wyndigitalagency/) a [React `useEffect` hook](https://reactjs.org/docs/hooks-effect.html), which lets me make an API call once the page loads.
 
 I have another API on the back-end, which receives this `tag` and looks up the saved message. It then sends it back for the front-end to display.
 
@@ -143,4 +143,4 @@ message = item.message
 
 That's pretty much it! Now if I ever need to use QR codes as part of an application in the future I'll just dig this up 😅
 
-And if you're keen to try this out yourself, feel free to check out the [source](https://github.com/wynnumwebservices). It's a small project so you can probably build it out in a few hours (or a few days, if you're new to AWS as well).
+And if you're keen to try this out yourself, feel free to check out the [source](https://github.com/wyndigitalagency). It's a small project so you can probably build it out in a few hours (or a few days, if you're new to AWS as well).

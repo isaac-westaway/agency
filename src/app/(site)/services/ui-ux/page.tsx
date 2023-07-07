@@ -76,7 +76,7 @@ const items = [
     contentClassName: "landing-class-3",
   },
   {
-    title: "How can I get in contact with Wynnum Web Services",
+    title: "How can I get in contact with  WynDigital",
     content: (
       <>
         <p>If you are contacting us within Australia, shoot a message to a <a href="#contact" className="hover:underline cursor-pointer">phone number</a>. If you are contacting internationally, please, <a href="#contact" className="hover:underline hover:cursor-pointer">Email Us.</a></p>
@@ -87,7 +87,7 @@ const items = [
 ];
 
 export const metadata = {
-  title: "UI / UX Design – Wynnum Web Services",
+  title: "UI / UX Design – WynDigital",
 };
 
 export default function UIUX() {

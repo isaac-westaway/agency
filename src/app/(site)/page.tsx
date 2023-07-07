@@ -127,7 +127,7 @@ const items = [
     contentClassName: "home-landing-class-4",
   },
   {
-    title: "Does Wynnum Web Services work internationally?",
+    title: "Does WynDigital work internationally?",
     content: (
       <>
         <p>Yes we do!</p>
@@ -141,7 +141,7 @@ const items = [
     contentClassName: "home-landing-class-5",
   },
   {
-    title: "How can I get in contact with Wynnum Web Services",
+    title: "How can I get in contact with WynDigital",
     content: (
       <>
         <p>If you are contacting us within Australia, shoot a message to a <a href="#contact" className="hover:underline cursor-pointer">phone number</a>. If you are contacting internationally, please, <a href="#contact" className="hover:underline hover:cursor-pointer">Email Us.</a></p>
@@ -152,7 +152,7 @@ const items = [
 ];
 
 export const metadata = {
-  title: "Home – Wynnum Web Services",
+  title: "Home –  WynDigital",
 };
 
 export default function Home() {
@@ -309,7 +309,7 @@ export default function Home() {
       <section
         className="relative text-white overflow-x-hidden border-t-[1px] border-dark-50"
         id="introduction"
-        style={{ scrollMarginTop: "100px" }}
+        style={{ scrollMarginTop: "250px" }}
       >
         <div className="relative overflow-y-hidden">
           <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-0 md:gap-0 lg:gap-0 px-4">
@@ -323,7 +323,7 @@ export default function Home() {
               </div>
               <div className="text-base font-light pt-4 leading-relaxed">
                 <RevealOnce>
-                  Welcome to Wynnum Web Services, the leading online service
+                  Welcome to WynDigital the leading online service
                   agency dedicated to revolutionizing Brisbane&#39;s digital
                   landscape. With our team of seasoned experts in website
                   design, development, and management, we deliver exceptional
@@ -452,7 +452,7 @@ export default function Home() {
                 </RevealOnce>
                 <br />
                 <RevealOnce>
-                  At Wynnum Web Services, we specialize in devising growth
+                  At  WynDigital, we specialize in devising growth
                   strategies rooted in data analysis, catering to small
                   businesses across diverse industries. In addition to offering
                   standalone Search Engine Optimization (SEO) services, we
@@ -511,8 +511,7 @@ export default function Home() {
                   </RevealOnce>
                   <RevealOnce>
                     <div className="mt-3">
-                      Embark on a transformative digital journey with Wynnum Web
-                      Services today. Experience the power of a dedicated team,
+                      Embark on a transformative digital journey with WynDigital today. Experience the power of a dedicated team,
                       cutting-edge technologies, and unparalleled expertise. Let
                       us elevate your online presence and drive your business
                       towards success in the dynamic digital world. now.
