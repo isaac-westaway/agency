@@ -285,7 +285,8 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                   !values.email ||
                   !values.business ||
                   !values.message ||
-                  !isValidEmail(values.email)
+                  !isValidEmail(values.email) || 
+                  isLoading
                 }
                 onClick={onSubmit}
                 aria-label="Submit button for the contact form"
