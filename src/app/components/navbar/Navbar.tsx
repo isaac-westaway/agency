@@ -31,7 +31,6 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <Suspense fallback={<LoadingNavbar />}>
       <div
         className={`fixed w-full backdrop-blur-md z-50 shadow-2xl scroll-smooth ${
           scrolled
@@ -49,7 +48,6 @@ const Navbar: React.FC = () => {
           </Container>
         </header>
       </div>
-    </Suspense>
   );
 };
 
