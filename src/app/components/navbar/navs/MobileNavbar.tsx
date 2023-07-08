@@ -29,12 +29,9 @@ const MobileNavbar = () => {
     };
   }, [NavOpen]);
 
-  function billingRedirect() {
-    window.open(
-      "https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE",
-      "_blank"
-    );
-  }
+    function toggleNavOpen() {
+      setNavOpen((prev) => !prev)
+    }
   return (
     <div className="pt-4 py-4 w-full  text-gray-400">
       <div className="flex flex-row justify-between w-full items-center">
@@ -42,7 +39,7 @@ const MobileNavbar = () => {
           <Logo />
         </div>
         <div
-          onClick={() => setNavOpen((prev) => !prev)}
+          onClick={toggleNavOpen}
           className={`z-50 cursor-pointer mr-11 transition-all flex-col ${
             NavOpen ? "transform rotate-45" : ""}`}
         >
@@ -73,7 +70,7 @@ const MobileNavbar = () => {
         {NavOpen && (
           <ul className="overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl text-gray-400">
             <li
-              onClick={() => setNavOpen((prev) => !prev)}
+              onClick={toggleNavOpen}
               className="cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-dark-50 py-3 ease-in duration-200 transition"
             >
               <a href="#contact" className="block w-full h-full">
@@ -83,22 +80,23 @@ const MobileNavbar = () => {
             <div className="border-dark-50 border-b-[1px]">
               <br />
             </div>
-            <li
-              onClick={billingRedirect}
-              className="flex flex-row transition ease-in duration-150 p-3 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
-            >
-              <a
-                href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-row justify-end place-items-end items-center whitespace-nowrap"
+            <a href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE">
+              <li
+                className="flex flex-row transition ease-in duration-150 p-3 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
               >
-                Billing Portal
-              </a>
-              <div className="flex flex-row items-center justify-end w-full">
-                <FiExternalLink />
-              </div>
-            </li>
+                <a
+                  href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-row justify-end place-items-end items-center whitespace-nowrap"
+                >
+                  Billing Portal
+                </a>
+                <div className="flex flex-row items-center justify-end w-full">
+                  <FiExternalLink />
+                </div>
+              </li>
+            </a>
             <li
               onClick={() => setAccordionServicesOpen((prev) => !prev)}
               className="flex flex-row transition ease-in duration-150 p-3 border-b-dark-50  border-b-[1px] cursor-pointer hover:bg-gray-0.6"
@@ -116,7 +114,7 @@ const MobileNavbar = () => {
               {accordionServicesOpen && (
                 <>
                   <div
-                    onClick={() => setNavOpen((prev) => !prev)}
+                    onClick={toggleNavOpen}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/services/ui-ux" className="block w-full">
@@ -124,7 +122,7 @@ const MobileNavbar = () => {
                     </Link>
                   </div>
                   <div
-                    onClick={() => setNavOpen((prev) => !prev)}
+                    onClick={toggleNavOpen}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link
@@ -135,7 +133,7 @@ const MobileNavbar = () => {
                     </Link>
                   </div>
                   <div
-                    onClick={() => setNavOpen((prev) => !prev)}
+                    onClick={toggleNavOpen}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link
@@ -165,7 +163,7 @@ const MobileNavbar = () => {
               {accordionAboutOpen && (
                 <>
                   <div
-                    onClick={() => setNavOpen((prev) => !prev)}
+                    onClick={toggleNavOpen}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/about-us/our-agency" className="block w-full">
@@ -173,7 +171,7 @@ const MobileNavbar = () => {
                     </Link>
                   </div>
                   <div
-                    onClick={() => setNavOpen((prev) => !prev)}
+                    onClick={toggleNavOpen}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/about-us/our-team" className="block w-full">
@@ -184,16 +182,16 @@ const MobileNavbar = () => {
               )}
             </li>
             <li
-              onClick={() => setNavOpen((prev) => !prev)}
-              className="p-3 transition ease-in duration-150 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
+                    onClick={toggleNavOpen}
+                    className="p-3 transition ease-in duration-150 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/gallery" className="block w-full">
                 Gallery
               </Link>
             </li>
             <li
-              onClick={() => setNavOpen((prev) => !prev)}
-              className="p-3 transition ease-in duration-150 border-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
+                    onClick={toggleNavOpen}
+                    className="p-3 transition ease-in duration-150 border-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/blog" className="block w-full">
                 Blog

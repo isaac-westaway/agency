@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 import {
   useMobile,
@@ -8,7 +7,6 @@ import {
 } from "@/src/app/components/hooks/mediaQueries";
 
 const Logo = () => {
-  const router = useRouter();
 
   const Tablet = useTablet();
   const Desktop = useDesktop();
