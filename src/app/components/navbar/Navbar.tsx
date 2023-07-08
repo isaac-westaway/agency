@@ -7,10 +7,6 @@ const DesktopNavbar = lazy(() => import("./navs/DesktopNavbar"));
 const MobileNavbar = lazy(() => import("./navs/MobileNavbar"));
 const TabletNavbar = lazy(() => import("./navs/TabletNavbar"));
 
-const LoadingNavbar = () => {
-  return <div className="text-white pt-8 pb-8 pl-11">Loading Navbar...</div>;
-};
-
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
