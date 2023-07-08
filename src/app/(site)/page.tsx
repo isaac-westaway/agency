@@ -528,7 +528,7 @@ export default function Home() {
               </div>
             </RevealOnce>
             <RevealOnce>
-              <div className="testimonial-container group relative shadow-lg p-8 flex flex-col text-2xl border-[2px] border-dark-50 overflow-hidden rounded-2xl hover:border-[#FBFAF6] hover:text-[#FBFAF6] transition ease-in-out duration-500 h-[28rem] sm:h-[30rem] backdrop-blur-sm">
+              <div className="testimonial-container group relative shadow-lg p-8 flex flex-col text-2xl border-[2px] border-dark-50 overflow-hidden rounded-2xl hover:border-[#FBFAF6] hover:text-[#FBFAF6] transition ease-in-out duration-500 h-[28rem] sm:h-[33rem] backdrop-blur-sm">
                 <div className="absolute top-5 right-12">
                   <Image
                     src={Develop}
@@ -564,7 +564,7 @@ export default function Home() {
               </div>
             </RevealOnce>
             <RevealOnce>
-              <div className="testimonial-container group shadow-lg p-8 flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[28rem] sm:h-[30rem] backdrop-blur-sm">
+              <div className="testimonial-container group shadow-lg p-8 flex flex-col relative text-2xl border-[2px] border-dark-50 hover:border-[#FBFAF6] hover:text-[#FBFAF6] rounded-2xl transition ease-in-out duration-500 h-[28rem] sm:h-[35rem] backdrop-blur-sm">
                 <div className="absolute top-[1.3rem] right-11">
                   <Image
                     src={Deploy}
