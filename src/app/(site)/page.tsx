@@ -416,7 +416,6 @@ export default function Home() {
         </svg>
       </div>
       <div className="absolute top-[26.8rem] lg:top-[24.8rem] left-1/2 sm:hidden md:hidden lg:hidden xl:hidden">
-        <>
           <svg xmlns="http://www.w3.org/2000/svg" width="1" height="350">
             <line
               x1="1"
@@ -427,7 +426,6 @@ export default function Home() {
               strokeWidth="2"
             />
           </svg>
-        </>
       </div>
       <div className="absolute top-0 left-0 sm:hidden">
         <Image src="/svg/hero-shape-1.svg" alt="" width="411" height="276" loading="eager" priority={true} />
@@ -659,8 +657,8 @@ export default function Home() {
                 <Image
                   src="/images/design.webp"
                   alt="UI/UX"
-                  loading="eager"
-                  priority={true}
+                  loading="lazy"
+                  priority={false}
                   width={600}
                   height={800}
                   layout="responsive"
@@ -734,8 +732,8 @@ export default function Home() {
                   src="/images/develop.webp"
                   alt="UI/UX"
                   width={600}
-                  loading="eager"
-                  priority={true}
+                  loading="lazy"
+                  priority={false}
                   height={800}
                   layout="responsive"
                   className="z-[1000] object-contain mx-auto sm:w-[400px]"
@@ -844,8 +842,8 @@ export default function Home() {
                   src="/images/gallery/second.png"
                   alt="UI/UX"
                   width="600"
-                  loading="eager"
-                  priority={true}
+                  loading="lazy"
+                  priority={false}
                   height="800"
                   layout="responsive"
                   className="z-[1000] mx-auto"

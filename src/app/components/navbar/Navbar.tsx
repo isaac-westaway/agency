@@ -31,21 +31,19 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-      <div
-        className={`fixed w-full backdrop-blur-md z-50 shadow-2xl scroll-smooth ${
-          scrolled
-            ? "border-b-[1px] backdrop-blur-md bg-custom-color0.3 bg-opacity-5 border-dark-50 transition duration-500 ease-in-out"
-            : "transition duration-500 ease-in-out border-b-[1px] border-transparent"
-        }`}
-      >
-        <header className="backdrop-blur-3xl">
-          <Suspense fallback={<LoadingNavbar />}>
-              {isMobile && <MobileNavbar />}
-              {isTablet && <TabletNavbar />}
-              {isDesktop && <DesktopNavbar />}
-              </Suspense>
-        </header>
-      </div>
+    <header
+      className={`backdrop-blur-3xl fixed w-full z-50 shadow-2xl scroll-smooth ${
+        scrolled
+          ? "border-b-[1px] backdrop-blur-md bg-custom-color0.3 bg-opacity-5 border-dark-50 transition duration-500 ease-in-out"
+          : "transition duration-500 ease-in-out border-b-[1px] border-transparent"
+      }`}
+    >
+      <Suspense fallback={<LoadingNavbar />}>
+        {isMobile && <MobileNavbar />}
+        {isTablet && <TabletNavbar />}
+        {isDesktop && <DesktopNavbar />}
+      </Suspense>
+    </header>
   );
 };
 
