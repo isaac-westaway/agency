@@ -23,7 +23,12 @@ const Navbar: React.FC = () => {
     setScrolled(scrollTop > 0);
   };
 
-
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
       <div
