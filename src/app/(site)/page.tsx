@@ -219,7 +219,7 @@ export default function Home() {
                 </ul>
                 <div className="mt-4 items-center text-center z-50">
                   <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white group-hover:text-orange-600 group-hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
-                    <Button cta="Read More" href="/services/web-development" />
+                    <Button cta="Read More" href="/services/ui-ux" />
                   </span>
                 </div>
               </div>
@@ -293,7 +293,7 @@ export default function Home() {
                 </ul>
                 <div className="mt-4 items-center text-center z-50 my-4">
                   <span className="text-[16px] border-b-[2px] pb-[1px] z-50 font-extrabold text-white group-hover:text-orange-600 group-hover:border-b-orange-600 hover:cursor-pointer transition duration-200 ease-in-out">
-                    <Button cta="Read More" href="/services/web-development" />
+                    <Button cta="Read More" href="/services/web-management" />
                   </span>
                 </div>
               </div>
@@ -352,6 +352,8 @@ export default function Home() {
                 <Image
                   src="/images/design.webp"
                   alt="UI/UX"
+                  loading="eager"
+                  priority={true}
                   width="600"
                   height="800"
                   className="z-[1000] object-contain mx-auto"
@@ -424,6 +426,8 @@ export default function Home() {
                   src="/images/develop.webp"
                   alt="UI/UX"
                   width="600"
+                  loading="eager"
+                  priority={true}
                   height="800"
                   className="z-[1000] object-contain mx-auto"
                 />
@@ -531,6 +535,8 @@ export default function Home() {
                   src="/images/gallery/second.png"
                   alt="UI/UX"
                   width="600"
+                  loading="eager"
+                  priority={true}
                   height="800"
                   className="z-[1000] mx-auto"
                 />
