@@ -2,6 +2,8 @@ import "./globals.css";
 
 import { Inter } from "next/font/google";
 import { SessionProvider } from "next-auth/react";
+import dynamic from 'next/dynamic'
+
 
 import { Analytics } from "@vercel/analytics/react";
 
@@ -11,6 +13,9 @@ import Footer from "@/src/app/components/footer/Footer";
 import ToasterProvider from "@/src/app/components/providers/ToasterProvider";
 import ClientSessionProvider from "@/src/app/components/providers/ClientSessionProvider";
 import Head from "next/head";
+
+const NavbarComponent = dynamic(() => import('@/src/app/components/navbar/Navbar'))
+
 
 export const metadata = {
   title: "WynDigital",
@@ -38,7 +43,7 @@ export default function RootLayout({
             <header>
               <ClientOnly>
                 <ToasterProvider />
-                <Navbar />
+                <NavbarComponent />
               </ClientOnly>
             </header>
             <span className="text-white">
