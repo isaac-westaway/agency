@@ -1,27 +1,27 @@
 import "./globals.css";
 
 import { Inter } from "next/font/google";
-import { SessionProvider } from "next-auth/react";
-import dynamic from 'next/dynamic'
-
+import dynamic from "next/dynamic";
+import Head from "next/head";
 
 import { Analytics } from "@vercel/analytics/react";
 
 import ClientOnly from "@/src/app/components/ClientOnly";
-import Navbar from "@/src/app/components/navbar/Navbar";
 import Footer from "@/src/app/components/footer/Footer";
-import ToasterProvider from "@/src/app/components/providers/ToasterProvider";
-import ClientSessionProvider from "@/src/app/components/providers/ClientSessionProvider";
-import Head from "next/head";
 
-const NavbarComponent = dynamic(() => import('@/src/app/components/navbar/Navbar'))
-
+const NavbarComponent = dynamic(
+  () => import("@/src/app/components/navbar/Navbar")
+);
+const ToastComponent = dynamic(
+  () => import("@/src/app/components/providers/ToasterProvider")
+);
 
 export const metadata = {
   title: "WynDigital",
   description:
     "Affordable website design, development & deployment for small businesses and personal projects in the Wynnum-Manly area.",
-  keywords: "Website Development, Website Design, Website Management, Business website hosting."
+  keywords:
+    "Website Development, Website Design, Website Management, Business website hosting.",
 };
 
 const font = Inter({
@@ -39,24 +39,20 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <body className={font.className}>
-          <div className="flex flex-col h-screen justify-between">
-            <header>
-              <ClientOnly>
-                <ToasterProvider />
-                <NavbarComponent />
-              </ClientOnly>
-            </header>
-            <span className="text-white">
-              <noscript>Please enable javascript!</noscript>
-            </span>
-            <div className="mb-auto flex-1 flex-grow">{children}</div>
-            <Analytics />
-            <footer className="static bottom-0">
-              <ClientOnly>
-                <Footer />
-              </ClientOnly>
-            </footer>
-          </div>
+          <ClientOnly>
+            <ToastComponent />
+            <NavbarComponent />
+          </ClientOnly>
+        <div className="flex flex-col h-screen justify-between">
+          <span className="text-white">
+            <noscript>Please enable javascript!</noscript>
+          </span>
+          <div className="mb-auto flex-1 flex-grow">{children}</div>
+          <Analytics />
+            <ClientOnly>
+              <Footer />
+            </ClientOnly>
+        </div>
       </body>
     </html>
   );

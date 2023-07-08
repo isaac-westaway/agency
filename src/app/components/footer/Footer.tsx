@@ -5,7 +5,6 @@ import {
   useMobile,
   useTablet,
 } from "@/src/app/components/hooks/mediaQueries";
-import Container from "../Container";
 
 import DesktopFooter from "./feet/DesktopFooter";
 import MobileFooter from "./feet/MobileFooter";
@@ -18,23 +17,9 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="backdrop-blur-3xl w-full h-52">
-      <Container>
-        {Mobile && (
-          <div>
-            <MobileFooter />
-          </div>
-        )}
-        {Tablet && (
-          <div>
-            <TabletFooter />
-          </div>
-        )}
-        {Desktop && (
-          <div className="">
-            <DesktopFooter />
-          </div>
-        )}
-      </Container>
+      {Mobile && <MobileFooter />}
+      {Tablet && <TabletFooter />}
+      {Desktop && <DesktopFooter />}
     </footer>
   );
 };
