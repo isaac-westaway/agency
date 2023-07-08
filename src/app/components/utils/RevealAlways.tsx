@@ -1,4 +1,5 @@
 "use client"
+
 import React, { FC, ReactNode, useEffect, useRef } from 'react';
 
 interface RevealAlwaysProps {
@@ -9,62 +10,47 @@ const RevealAlways: FC<RevealAlwaysProps> = ({ children }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-          animateIn();
-        } else {
-          animateOut();
-        }
-      },
-      { rootMargin: "0px", threshold: 0.2 } // Adjust the threshold and rootMargin as desired
-    );
-
     const element = ref.current;
 
     if (element) {
-      observer.observe(element);
-    }
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const [entry] = entries;
+          if (entry.isIntersecting) {
+            animateIn(element);
+          } else {
+            animateOut(element);
+          }
+        },
+        { rootMargin: '0px', threshold: 0.01 }
+      );
 
-    return () => {
-      if (element) {
+      observer.observe(element);
+
+      return () => {
         observer.unobserve(element);
-      }
-    };
+      };
+    }
   }, []);
 
-  const animateIn = () => {
-    const element = ref.current;
-
-    if (element) {
-      element.style.opacity = "1";
-      element.style.transform = "translateY(0)";
-      element.style.transition = "opacity 1.2s, transform 1.2s";
-    }
+  const animateIn = (element: HTMLDivElement) => {
+    element.style.opacity = '1';
+    element.style.transform = 'translateY(0)';
+    element.style.transition = 'opacity 1.2s, transform 1.2s';
   };
 
-  const animateOut = () => {
-    const element = ref.current;
-
-    if (element) {
-      element.style.opacity = "0";
-      element.style.transform = "translateY(40px)";
-      element.style.transition = "opacity 1.2s, transform 1.2s";
-    }
+  const animateOut = (element: HTMLDivElement) => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(40px)';
+    element.style.transition = 'opacity 1.2s, transform 1.2s';
   };
-
-  // Exclude the button container from the animation
-  const childrenWithProps = React.Children.map(children, (child, index) => {
-    if (index === 1) {
-      return child;
-    }
-    return React.cloneElement(child as React.ReactElement);
-  });
 
   return (
-    <div ref={ref} style={{ opacity: 0, transform: "translateY(40px)" }}>
-      {childrenWithProps}
+    <div
+      ref={ref}
+      style={{ opacity: 0, transform: 'translateY(40px)', willChange: 'transform, opacity' }}
+    >
+      {children}
     </div>
   );
 };

@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
     >
       <header className="backdrop-blur-3xl">
         <Container>
-          <Suspense fallback={<div className="text-white z-50 w-full pt-8 pb-8">Loading Navbar...</div>}>
+          <Suspense fallback={<div className="text-white z-50 w-full pt-8 pb-8 pl-11">Loading Navbar...</div>}>
             {isMobile && <MobileNavbar />}
             {isTablet && <TabletNavbar />}
             {isDesktop && <DesktopNavbar />}
