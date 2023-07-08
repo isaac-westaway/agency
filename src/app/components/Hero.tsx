@@ -262,7 +262,7 @@ const Hero = () => {
         </svg>
       </div>
       <div className="absolute top-[26.8rem] lg:top-[24.8rem] left-1/2 sm:hidden md:hidden lg:hidden xl:hidden">
-        <>
+        <RevealOnce>
           <svg xmlns="http://www.w3.org/2000/svg" width="1" height="350">
             <line
               x1="1"
@@ -273,7 +273,7 @@ const Hero = () => {
               strokeWidth="2"
             />
           </svg>
-        </>
+        </RevealOnce>
       </div>
       <div className="absolute top-0 left-0 sm:hidden">
         <Image src={Hero1} alt="" loading="eager" priority={true} />

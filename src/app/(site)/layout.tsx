@@ -41,6 +41,7 @@ export default function RootLayout({
       <body className={font.className}>
           <ClientOnly>
             <ToastComponent />
+            <NavbarComponent />
           </ClientOnly>
         <div className="flex flex-col h-screen justify-between">
           <span className="text-white">
