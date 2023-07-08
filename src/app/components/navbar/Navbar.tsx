@@ -41,15 +41,11 @@ const Navbar: React.FC = () => {
       >
         <header className="backdrop-blur-3xl">
           <Container>
-            <Suspense fallback={<LoadingNavbar />}>
+          <Suspense fallback={<LoadingNavbar />}>
               {isMobile && <MobileNavbar />}
-            </Suspense>
-            <Suspense fallback={<LoadingNavbar />}>
-              {isTablet && <TabletNavbar />}{" "}
-            </Suspense>
-            <Suspense fallback={<LoadingNavbar />}>
-              {isDesktop && <DesktopNavbar />}{" "}
-            </Suspense>
+              {isTablet && <TabletNavbar />}
+              {isDesktop && <DesktopNavbar />}
+              </Suspense>
           </Container>
         </header>
       </div>
