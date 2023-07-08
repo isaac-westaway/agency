@@ -1,70 +1,56 @@
-"use client"
+/* eslint-disable react/jsx-no-comment-textnodes */
+"use client";
 
 import { useState, useCallback, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+
+import { FiChevronDown, FiChevronLeft, FiExternalLink } from "react-icons/fi";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { BiSun, BiMoon } from "react-icons/bi";
+import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
+
 import Logo from "../../Logo";
 import React from "react";
-import { FiChevronDown, FiChevronLeft } from "react-icons/fi";
 
-const MobileNavbar = React.memo(() => {
-  const [NavOpen, toggleNavOpen] = useState(false);
-  const [accordionServicesOpen, toggleAccordionServices] = useState(false);
-  const [accordionAboutOpen, toggleAccordionAbout] = useState(false);
+const MobileNavbar = () => {
+  const [NavOpen, setNavOpen] = useState(false);
+  const [accordionServicesOpen, setAccordionServicesOpen] = useState(false);
+  const [accordionAboutOpen, setAccordionAboutOpen] = useState(false);
 
-  useEffect(() => {
-    if (NavOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [NavOpen]);
 
-  const billingRedirect = useCallback(() => {
+  function billingRedirect() {
     window.open(
       "https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE",
       "_blank"
     );
-  }, []);
-
-  const toggleServicesAccordion = useCallback(() => {
-    toggleAccordionServices((prevState) => !prevState);
-  }, []);
-
-  const toggleAboutAccordion = useCallback(() => {
-    toggleAccordionAbout((prevState) => !prevState);
-  }, []);
-
+  }
   return (
-    <div className="pt-4 py-4 w-full  text-gray-400">
-      <div className="flex flex-row justify-between w-full items-center">
+    <div className={`pt-4 py-4 w-full  text-gray-400 ${NavOpen ? 'overflow-hidden' : ''}`}>
+      <div className={`flex flex-row justify-between w-full items-cente ${NavOpen ? 'overflow-y-hidden' : ''}`}>
         <div className="z-50 ml-11 flex items-center">
           <Logo />
         </div>
         <div
-          onClick={() => toggleNavOpen((prev) => !prev)}
+          onClick={() => setNavOpen((prev) => !prev)}
           className={`z-50 cursor-pointer mr-11 transition-all flex-col ${
-            NavOpen ? "transform rotate-45" : ""
-          }`}
+            NavOpen ? "transform rotate-45" : ""}`}
         >
           <div
-            className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
-              NavOpen ? "transform -rotate-90 translate-y-2 opacity-100" : ""
-            }`}
-          ></div>
-          <div
-            className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
-              NavOpen ? "opacity-0" : ""
-            }`}
-          ></div>
-          <div
-            className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
-              NavOpen ? "transform rotate-60 -translate-y-2 opacity-100" : ""
-            }`}
-          ></div>
+      className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
+          NavOpen ? "transform -rotate-90 translate-y-2 opacity-100" : ""
+        }`}
+      ></div>
+      <div
+        className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
+          NavOpen ? "opacity-0" : ""
+        }`}
+      ></div>
+      <div
+        className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
+          NavOpen ? "transform rotate-60 -translate-y-2 opacity-100" : ""
+        }`}
+      ></div>
         </div>
       </div>
       <div
@@ -77,7 +63,7 @@ const MobileNavbar = React.memo(() => {
         {NavOpen && (
           <ul className="overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl text-gray-400">
             <li
-              onClick={() => toggleNavOpen((prev) => !prev)}
+              onClick={() => setNavOpen((prev) => !prev)}
               className="cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-dark-50 py-3 ease-in duration-200 transition"
             >
               <a href="#contact" className="block w-full h-full">
@@ -100,11 +86,11 @@ const MobileNavbar = React.memo(() => {
                 Billing Portal
               </a>
               <div className="flex flex-row items-center justify-end w-full">
-                {/* Render the FiExternalLink icon lazily */}
+                <FiExternalLink />
               </div>
             </li>
             <li
-              onClick={toggleServicesAccordion}
+              onClick={() => setAccordionServicesOpen((prev) => !prev)}
               className="flex flex-row transition ease-in duration-150 p-3 border-b-dark-50  border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <div className="">Services</div>
@@ -120,7 +106,7 @@ const MobileNavbar = React.memo(() => {
               {accordionServicesOpen && (
                 <>
                   <div
-                    onClick={() => toggleNavOpen((prev) => !prev)}
+                    onClick={() => setNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/services/ui-ux" className="block w-full">
@@ -128,7 +114,7 @@ const MobileNavbar = React.memo(() => {
                     </Link>
                   </div>
                   <div
-                    onClick={() => toggleNavOpen((prev) => !prev)}
+                    onClick={() => setNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link
@@ -139,11 +125,11 @@ const MobileNavbar = React.memo(() => {
                     </Link>
                   </div>
                   <div
-                    onClick={() => toggleNavOpen((prev) => !prev)}
+                    onClick={() => setNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link
-                     href="/services/web-management"
+                      href="/services/web-management"
                       className="block w-full"
                     >
                       &nbsp;&nbsp;&nbsp;Website Management
@@ -153,7 +139,7 @@ const MobileNavbar = React.memo(() => {
               )}
             </li>
             <li
-              onClick={toggleAboutAccordion}
+              onClick={() => setAccordionAboutOpen((prev) => !prev)}
               className="flex flex-row transition ease-in duration-150 p-3 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <div className="flex-grow">About Us</div>
@@ -169,7 +155,7 @@ const MobileNavbar = React.memo(() => {
               {accordionAboutOpen && (
                 <>
                   <div
-                    onClick={() => toggleNavOpen((prev) => !prev)}
+                    onClick={() => setNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/about-us/our-agency" className="block w-full">
@@ -177,7 +163,7 @@ const MobileNavbar = React.memo(() => {
                     </Link>
                   </div>
                   <div
-                    onClick={() => toggleNavOpen((prev) => !prev)}
+                    onClick={() => setNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/about-us/our-team" className="block w-full">
@@ -188,7 +174,7 @@ const MobileNavbar = React.memo(() => {
               )}
             </li>
             <li
-              onClick={() => toggleNavOpen((prev) => !prev)}
+              onClick={() => setNavOpen((prev) => !prev)}
               className="p-3 transition ease-in duration-150 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/gallery" className="block w-full">
@@ -196,21 +182,19 @@ const MobileNavbar = React.memo(() => {
               </Link>
             </li>
             <li
-              onClick={() => toggleNavOpen((prev) => !prev)}
+              onClick={() => setNavOpen((prev) => !prev)}
               className="p-3 transition ease-in duration-150 border-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/blog" className="block w-full">
                 Blog
               </Link>
             </li>
-            <div className="flex flex-col pb-[20px]" onClick={() => {}}></div>
+            <div className="flex flex-col pb-[20px]"></div>
           </ul>
         )}
       </div>
     </div>
   );
-});
-
-MobileNavbar.displayName = "MobileNavbar";
+};
 
 export default MobileNavbar;
