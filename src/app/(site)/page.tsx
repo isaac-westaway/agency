@@ -432,7 +432,6 @@ export default function Home() {
       </div>
       <div className="relative z-10 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
         <div className="mx-auto py-44 sm:py-48 lg:pt-56">
-          <>
             <div className="text-center flex flex-col justify-center">
               <div className="text-5xl font-bold text-white sm:text-6xl tracking-wider sm:text-center">
                 Design. Develop. Deploy.
@@ -461,7 +460,6 @@ export default function Home() {
                 </a>
               </div>
             </div>
-          </>
         </div>
       </div>
     </div>
@@ -476,14 +474,11 @@ export default function Home() {
           />
         </div>
         <div className="w-full">
-          <RevealOnce>
             <div className="flex justify-center text-center items-center font-extrabold text-3xl pt-8 select-text">
               <span className="sm:w-full md:w-full">
                 A full tech and creative team at your fingertips.
               </span>
             </div>
-          </RevealOnce>
-          <RevealOnce>
             <div className="flex justify-center text-center items-center font-normal text-lg py-8 select-text">
               <span className="text-gray-400">
                 We specialise in UI/UX design, website development and website
@@ -493,7 +488,6 @@ export default function Home() {
                 </div>
               </span>
             </div>
-          </RevealOnce>
           <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
             <RevealOnce>
               <div className="testimonial-container group relative shadow-lg p-8 flex flex-col text-2xl border-[2px] border-dark-50 overflow-hidden rounded-2xl hover:border-[#FBFAF6] hover:text-[#FBFAF6] transition ease-in-out duration-500 h-[28rem] sm:h-[30rem] backdrop-blur-sm">
