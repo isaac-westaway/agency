@@ -29,7 +29,7 @@ const ReusableHero: React.FC<ReusableHeroProps> = ({
       <div className="relative z-10 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
         <div className="absolute top-0 -right-11 -z-50"></div>
         <div className="absolute top-12 -left-11 -z-50 pointer-events-none">
-        <Image src={Hero1} alt="" />
+        <Image src={Hero1} alt="" loading="eager" priority={true} />
         </div>
         <div className="absolute top-0 -left-11"></div>
         <div className="mx-auto pt-44 sm:pt-48 lg:pt-56">

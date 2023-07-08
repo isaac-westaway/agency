@@ -2,6 +2,7 @@ import RevealAlways from "./utils/RevealAlways";
 
 import Image from "next/image";
 import Hero1 from "@/public/svg/hero-shape-1.svg";
+import RevealOnce from "./utils/RevealOnce";
 
 const Hero = () => {
   return (
@@ -279,7 +280,7 @@ const Hero = () => {
       </div>
       <div className="relative z-10 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
         <div className="mx-auto py-44 sm:py-48 lg:pt-56">
-          <>
+          <RevealOnce>
             <div className="text-center flex flex-col justify-center">
               <div className="text-5xl font-bold text-white sm:text-6xl tracking-wider sm:text-center">
                 Design. Develop. Deploy.
@@ -308,7 +309,7 @@ const Hero = () => {
                 </a>
               </div>
             </div>
-          </>
+          </RevealOnce>
         </div>
       </div>
     </div>

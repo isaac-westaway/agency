@@ -17,9 +17,9 @@ const RevealAlways: FC<RevealAlwaysProps> = ({ children }) => {
         (entries) => {
           const [entry] = entries;
           if (entry.isIntersecting) {
-            animateIn(element);
+            element.classList.add('reveal-animation');
           } else {
-            animateOut(element);
+            element.classList.remove('reveal-animation');
           }
         },
         { rootMargin: '0px', threshold: 0.01 }
@@ -33,23 +33,8 @@ const RevealAlways: FC<RevealAlwaysProps> = ({ children }) => {
     }
   }, []);
 
-  const animateIn = (element: HTMLDivElement) => {
-    element.style.opacity = '1';
-    element.style.transform = 'translateY(0)';
-    element.style.transition = 'opacity 1.2s, transform 1.2s';
-  };
-
-  const animateOut = (element: HTMLDivElement) => {
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(40px)';
-    element.style.transition = 'opacity 1.2s, transform 1.2s';
-  };
-
   return (
-    <div
-      ref={ref}
-      style={{ opacity: 0, transform: 'translateY(40px)', willChange: 'transform, opacity' }}
-    >
+    <div ref={ref} className="reveal-container">
       {children}
     </div>
   );
