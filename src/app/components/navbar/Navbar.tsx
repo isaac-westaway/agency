@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect, lazy, Suspense } from "react";
-import { useMediaQuery } from "react-responsive";
-import Container from "../Container";
+import { useMobile, useTablet, useDesktop } from "../hooks/mediaQueries";
 
 const DesktopNavbar = lazy(() => import("./navs/DesktopNavbar"));
 const MobileNavbar = lazy(() => import("./navs/MobileNavbar"));
@@ -14,21 +13,17 @@ const LoadingNavbar = () => {
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const isMobile = useMediaQuery({ minWidth: 0, maxWidth: 849.9 });
-  const isTablet = useMediaQuery({ minWidth: 850, maxWidth: 1299.9 });
-  const isDesktop = useMediaQuery({ minWidth: 1300 });
+
+  const isMobile = useMobile();
+  const isTablet = useTablet();
+  const isDesktop = useDesktop();
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
     setScrolled(scrollTop > 0);
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+
 
   return (
       <div
@@ -39,13 +34,11 @@ const Navbar: React.FC = () => {
         }`}
       >
         <header className="backdrop-blur-3xl">
-          <Container>
           <Suspense fallback={<LoadingNavbar />}>
               {isMobile && <MobileNavbar />}
               {isTablet && <TabletNavbar />}
               {isDesktop && <DesktopNavbar />}
               </Suspense>
-          </Container>
         </header>
       </div>
   );

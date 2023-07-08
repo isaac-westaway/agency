@@ -18,6 +18,16 @@ const MobileNavbar = () => {
   const [accordionServicesOpen, setAccordionServicesOpen] = useState(false);
   const [accordionAboutOpen, setAccordionAboutOpen] = useState(false);
 
+  useEffect(() => {
+    if (NavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [NavOpen]);
 
   function billingRedirect() {
     window.open(
@@ -26,8 +36,8 @@ const MobileNavbar = () => {
     );
   }
   return (
-    <div className={`pt-4 py-4 w-full  text-gray-400 ${NavOpen ? 'overflow-hidden' : ''}`}>
-      <div className={`flex flex-row justify-between w-full items-cente ${NavOpen ? 'overflow-y-hidden' : ''}`}>
+    <div className="pt-4 py-4 w-full  text-gray-400">
+      <div className="flex flex-row justify-between w-full items-center">
         <div className="z-50 ml-11 flex items-center">
           <Logo />
         </div>
