@@ -28,6 +28,8 @@ export default function Gallery() {
                 src="/images/gallery/constra.webp"
                 width={100}
                 height={100}
+                priority={true}
+                loading="eager"
                 alt=""
                 layout="responsive"
                 className={`object-contain transition-opacity duration-200 rounded-2xl`}
@@ -55,6 +57,8 @@ export default function Gallery() {
                 src="/images/gallery/bigspring-light.webp"
                 width={100}
                 height={100}
+                priority={true}
+                loading="eager"
                 alt=""
                 layout="responsive"
                 className={`object-contain transition-opacity duration-200 rounded-2xl`}
@@ -82,6 +86,8 @@ export default function Gallery() {
                 src="/images/gallery/gymfit.webp"
                 width={100}
                 height={100}
+                priority={true}
+                loading="eager"
                 alt=""
                 layout="responsive"
                 className={`object-contain transition-opacity duration-200 rounded-2xl z-50`}

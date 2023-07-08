@@ -30,6 +30,8 @@ const CaseStudies = () => {
               src="/images/swiper/card-1.webp"
               width={100}
               height={100}
+              priority={true}
+              loading="eager"
               layout="responsive"
               className={`object-contain transition-opacity duration-300 rounded-2xl ${
                 hoveredCard === 1 ? "opacity-30" : "opacity-100"
@@ -71,6 +73,8 @@ const CaseStudies = () => {
               width={100}
               height={100}
               layout="responsive"
+              priority={true}
+              loading="eager"
               className={`object-contain transition-opacity duration-200 rounded-2xl ${
                 hoveredCard === 2 ? "opacity-30" : "opacity-100"
               }`}
@@ -110,6 +114,8 @@ const CaseStudies = () => {
               width={100}
               height={100}
               layout="responsive"
+              priority={true}
+              loading="eager"
               className={`object-contain transition-opacity duration-200 rounded-2xl ${
                 hoveredCard === 3 ? "opacity-30" : "opacity-100"
               }`}
@@ -149,6 +155,8 @@ const CaseStudies = () => {
               width={100}
               height={100}
               layout="responsive"
+              priority={true}
+              loading="eager"
               className={`object-contain transition-opacity duration-200 rounded-2xl ${
                 hoveredCard === 4 ? "opacity-30" : "opacity-100"
               }`}
@@ -189,6 +197,8 @@ const CaseStudies = () => {
               width={100}
               height={100}
               layout="responsive"
+              priority={true}
+              loading="eager"
               className={`object-contain transition-opacity duration-200 rounded-2xl ${
                 hoveredCard === 5 ? "opacity-30" : "opacity-100"
               }`}
@@ -228,6 +238,8 @@ const CaseStudies = () => {
               width={100}
               height={100}
               layout="responsive"
+              priority={true}
+              loading="eager"
               className={`object-contain transition-opacity duration-200 rounded-2xl ${
                 hoveredCard === 6 ? "opacity-30" : "opacity-100"
               }`}
