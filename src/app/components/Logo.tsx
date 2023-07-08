@@ -17,28 +17,30 @@ const Logo = () => {
   return (
     <>
       {(Tablet || Mobile) && (
-        <Image
-          alt="WynDigital Logo Image"
-          width={150}
-          height={150}
-          src="/logo/fulllogo.png"
-          loading="eager"
-          priority={true}
-          className="w-[150px] sm:w-[120px] md:w-[120px] lg:w-[130px] p-0 md:block cursor-pointer shrink-0"
-          onClick={() => router.push("/")}
-        />
+        <a href="/">
+          <Image
+            alt="WynDigital Logo Image"
+            width={150}
+            height={150}
+            src="/logo/fulllogo.png"
+            loading="eager"
+            priority={true}
+            className="w-[150px] sm:w-[120px] md:w-[120px] lg:w-[130px] p-0 md:block cursor-pointer shrink-0"
+          />
+        </a>
       )}
-      {Desktop && (
-        <Image
-          alt="WynDigital Logo Image"
-          width={150}
-          height={150}
-          src="/logo/fulllogo.svg"
-          loading="eager"
-          priority={true}
-          className="w-[160px] sm:w-[120px] md:w-[120px] lg:w-[130px] p-0 md:block cursor-pointer shrink-0"
-          onClick={() => router.push("/")}
-        />
+        {Desktop && (
+          <a href="/">
+            <Image
+              alt="WynDigital Logo Image"
+              width={150}
+              height={150}
+              src="/logo/fulllogo.svg"
+              loading="eager"
+              priority={true}
+              className="w-[160px] sm:w-[120px] md:w-[120px] lg:w-[130px] p-0 md:block cursor-pointer shrink-0"
+            />
+          </a>
       )}
     </>
   );
