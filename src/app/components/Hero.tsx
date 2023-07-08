@@ -261,7 +261,7 @@ const Hero = () => {
         </svg>
       </div>
       <div className="absolute top-[26.8rem] lg:top-[24.8rem] left-1/2 sm:hidden md:hidden lg:hidden xl:hidden">
-        <RevealAlways>
+        <>
           <svg xmlns="http://www.w3.org/2000/svg" width="1" height="350">
             <line
               x1="1"
@@ -272,14 +272,14 @@ const Hero = () => {
               strokeWidth="2"
             />
           </svg>
-        </RevealAlways>
+        </>
       </div>
       <div className="absolute top-0 left-0 sm:hidden">
         <Image src={Hero1} alt="" loading="eager" priority={true} />
       </div>
       <div className="relative z-10 pt-4 sm:pt-1 sm:-translate-y-20 md:-translate-y-20 lg:-translate-y-20 md:pt-3 lg:pt-6">
         <div className="mx-auto py-44 sm:py-48 lg:pt-56">
-          <RevealAlways>
+          <>
             <div className="text-center flex flex-col justify-center">
               <div className="text-5xl font-bold text-white sm:text-6xl tracking-wider sm:text-center">
                 Design. Develop. Deploy.
@@ -308,7 +308,7 @@ const Hero = () => {
                 </a>
               </div>
             </div>
-          </RevealAlways>
+          </>
         </div>
       </div>
     </div>
