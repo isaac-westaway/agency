@@ -33,7 +33,7 @@ const ReusableHero: React.FC<ReusableHeroProps> = ({
         </div>
         <div className="absolute top-0 -left-11"></div>
         <div className="mx-auto pt-44 sm:pt-48 lg:pt-56">
-          <RevealAlways>
+          <>
             <div className="flex flex-col justify-start sm:justify-center text-center w-full">
               <div className="text-5xl font-bold text-white sm:text-5xl tracking-wider">
                 {heroText}
@@ -68,7 +68,7 @@ const ReusableHero: React.FC<ReusableHeroProps> = ({
                 </div>
               </div>
             </div>
-          </RevealAlways>
+          </>
         </div>
       </div>
     </div>
