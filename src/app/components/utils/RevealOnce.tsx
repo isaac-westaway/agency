@@ -42,7 +42,7 @@ const RevealOnce: FC<RevealOnceProps> = ({ children }) => {
     if (element) {
       element.style.opacity = "1";
       element.style.transform = "translateY(0)";
-      element.style.transition = "opacity 0.3s, transform 0.5s"; // Shortened animation duration
+      element.style.transition = "opacity 0.3s, transform 1.2s"; // Shortened animation duration
     }
   };
 

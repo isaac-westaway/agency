@@ -354,9 +354,10 @@ export default function Home() {
                   alt="UI/UX"
                   loading="eager"
                   priority={true}
-                  width="600"
-                  height="800"
-                  className="z-[1000] object-contain mx-auto"
+                  width={600}
+                  height={800}
+                  layout="responsive"
+                  className="z-[1000] object-contain mx-auto sm:w-[400px]"
                 />
               </FlyIn>
             </div>
@@ -425,11 +426,12 @@ export default function Home() {
                 <Image
                   src="/images/develop.webp"
                   alt="UI/UX"
-                  width="600"
+                  width={600}
                   loading="eager"
                   priority={true}
-                  height="800"
-                  className="z-[1000] object-contain mx-auto"
+                  height={800}
+                  layout="responsive"
+                  className="z-[1000] object-contain mx-auto sm:w-[400px]"
                 />
               </FlyIn>
             </div>
@@ -538,6 +540,7 @@ export default function Home() {
                   loading="eager"
                   priority={true}
                   height="800"
+                  layout="responsive"
                   className="z-[1000] mx-auto"
                 />
               </FlyIn>
