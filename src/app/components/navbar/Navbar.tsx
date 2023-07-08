@@ -32,13 +32,13 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`backdrop-blur-3xl fixed w-full z-50 shadow-2xl scroll-smooth ${
+      className={`backdrop-blur-md fixed w-full z-50 shadow-2xl scroll-smooth ${
         scrolled
           ? "border-b-[1px] backdrop-blur-md bg-custom-color0.3 bg-opacity-5 border-dark-50 transition duration-500 ease-in-out"
           : "transition duration-500 ease-in-out border-b-[1px] border-transparent"
       }`}
     >
-      <Suspense fallback={<LoadingNavbar />}>
+      <Suspense fallback={<div className='text-white pt-8 pb-8 pl-11'>Loading Navbar...</div>}>
         {isMobile && <MobileNavbar />}
         {isTablet && <TabletNavbar />}
         {isDesktop && <DesktopNavbar />}
