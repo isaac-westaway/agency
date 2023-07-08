@@ -1,23 +1,18 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import Container from '../Container';
 
-import DesktopNavbar from "./navs/DesktopNavbar";
-import MobileNavbar from "./navs/MobileNavbar";
-import Container from "../Container";
-
-import {
-  useDesktop,
-  useMobile,
-  useTablet,
-} from "@/src/app/components/hooks/mediaQueries";
-import TabletNavbar from "./navs/TabletNavbar";
+const DesktopNavbar = lazy(() => import('./navs/DesktopNavbar'));
+const MobileNavbar = lazy(() => import('./navs/MobileNavbar'));
+const TabletNavbar = lazy(() => import('./navs/TabletNavbar'));
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const Mobile = useMobile();
-  const Tablet = useTablet();
-  const Desktop = useDesktop();
+  const isMobile = useMediaQuery({ minWidth: 0, maxWidth: 849.9 });
+  const isTablet = useMediaQuery({ minWidth: 850, maxWidth: 1299.9 });
+  const isDesktop = useMediaQuery({ minWidth: 1300 });
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
@@ -29,9 +24,9 @@ const Navbar: React.FC = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -39,27 +34,17 @@ const Navbar: React.FC = () => {
     <div
       className={`fixed w-full backdrop-blur-md z-50 shadow-2xl scroll-smooth ${
         scrolled
-          ? "border-b-[1px] backdrop-blur-md bg-custom-color0.3 bg-opacity-5 border-dark-50 transition duration-500 ease-in-out"
-          : "transition duration-500 ease-in-out border-b-[1px] border-transparent"
+          ? 'border-b-[1px] backdrop-blur-md bg-custom-color0.3 bg-opacity-5 border-dark-50 transition duration-500 ease-in-out'
+          : 'transition duration-500 ease-in-out border-b-[1px] border-transparent'
       }`}
     >
       <header className="backdrop-blur-3xl">
         <Container>
-          {Mobile && (
-            <div>
-              <MobileNavbar />
-            </div>
-          )}
-          {Tablet && (
-            <div>
-              <TabletNavbar />
-            </div>
-          )}
-          {Desktop && (
-            <div>
-              <DesktopNavbar />
-            </div>
-          )}
+          <Suspense fallback={<div className="text-white z-50 w-full pt-8 pb-8">Loading Navbar...</div>}>
+            {isMobile && <MobileNavbar />}
+            {isTablet && <TabletNavbar />}
+            {isDesktop && <DesktopNavbar />}
+          </Suspense>
         </Container>
       </header>
     </div>
