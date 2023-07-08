@@ -1,22 +1,16 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
-"use client";
+"use client"
 
 import { useState, useCallback, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
-import { FiChevronDown, FiChevronLeft, FiExternalLink } from "react-icons/fi";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { BiSun, BiMoon } from "react-icons/bi";
-import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
-
 import Logo from "../../Logo";
 import React from "react";
+import { FiChevronDown, FiChevronLeft } from "react-icons/fi";
 
-const MobileNavbar = () => {
-  const [NavOpen, setNavOpen] = useState(false);
-  const [accordionServicesOpen, setAccordionServicesOpen] = useState(false);
-  const [accordionAboutOpen, setAccordionAboutOpen] = useState(false);
+const MobileNavbar = React.memo(() => {
+  const [NavOpen, toggleNavOpen] = useState(false);
+  const [accordionServicesOpen, toggleAccordionServices] = useState(false);
+  const [accordionAboutOpen, toggleAccordionAbout] = useState(false);
 
   useEffect(() => {
     if (NavOpen) {
@@ -29,20 +23,21 @@ const MobileNavbar = () => {
     };
   }, [NavOpen]);
 
-  function billingRedirect() {
+  const billingRedirect = useCallback(() => {
     window.open(
       "https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE",
       "_blank"
     );
-  }
+  }, []);
 
-  function AccordionServicesToggle() {
-    setAccordionServicesOpen(!accordionServicesOpen);
-  }
+  const toggleServicesAccordion = useCallback(() => {
+    toggleAccordionServices((prevState) => !prevState);
+  }, []);
 
-  function AccordionAboutToggle() {
-    setAccordionAboutOpen(!accordionAboutOpen);
-  }
+  const toggleAboutAccordion = useCallback(() => {
+    toggleAccordionAbout((prevState) => !prevState);
+  }, []);
+
   return (
     <div className="pt-4 py-4 w-full  text-gray-400">
       <div className="flex flex-row justify-between w-full items-center">
@@ -50,25 +45,26 @@ const MobileNavbar = () => {
           <Logo />
         </div>
         <div
-          onClick={() => setNavOpen((prev) => !prev)}
+          onClick={() => toggleNavOpen((prev) => !prev)}
           className={`z-50 cursor-pointer mr-11 transition-all flex-col ${
-            NavOpen ? "transform rotate-45" : ""}`}
+            NavOpen ? "transform rotate-45" : ""
+          }`}
         >
           <div
-      className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
-          NavOpen ? "transform -rotate-90 translate-y-2 opacity-100" : ""
-        }`}
-      ></div>
-      <div
-        className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
-          NavOpen ? "opacity-0" : ""
-        }`}
-      ></div>
-      <div
-        className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
-          NavOpen ? "transform rotate-60 -translate-y-2 opacity-100" : ""
-        }`}
-      ></div>
+            className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
+              NavOpen ? "transform -rotate-90 translate-y-2 opacity-100" : ""
+            }`}
+          ></div>
+          <div
+            className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
+              NavOpen ? "opacity-0" : ""
+            }`}
+          ></div>
+          <div
+            className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
+              NavOpen ? "transform rotate-60 -translate-y-2 opacity-100" : ""
+            }`}
+          ></div>
         </div>
       </div>
       <div
@@ -81,7 +77,7 @@ const MobileNavbar = () => {
         {NavOpen && (
           <ul className="overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl text-gray-400">
             <li
-              onClick={() => setNavOpen((prev) => !prev)}
+              onClick={() => toggleNavOpen((prev) => !prev)}
               className="cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-dark-50 py-3 ease-in duration-200 transition"
             >
               <a href="#contact" className="block w-full h-full">
@@ -104,11 +100,11 @@ const MobileNavbar = () => {
                 Billing Portal
               </a>
               <div className="flex flex-row items-center justify-end w-full">
-                <FiExternalLink />
+                {/* Render the FiExternalLink icon lazily */}
               </div>
             </li>
             <li
-              onClick={AccordionServicesToggle}
+              onClick={toggleServicesAccordion}
               className="flex flex-row transition ease-in duration-150 p-3 border-b-dark-50  border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <div className="">Services</div>
@@ -124,7 +120,7 @@ const MobileNavbar = () => {
               {accordionServicesOpen && (
                 <>
                   <div
-                    onClick={() => setNavOpen((prev) => !prev)}
+                    onClick={() => toggleNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/services/ui-ux" className="block w-full">
@@ -132,7 +128,7 @@ const MobileNavbar = () => {
                     </Link>
                   </div>
                   <div
-                    onClick={() => setNavOpen((prev) => !prev)}
+                    onClick={() => toggleNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link
@@ -143,11 +139,11 @@ const MobileNavbar = () => {
                     </Link>
                   </div>
                   <div
-                    onClick={() => setNavOpen((prev) => !prev)}
+                    onClick={() => toggleNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link
-                      href="/services/web-management"
+                     href="/services/web-management"
                       className="block w-full"
                     >
                       &nbsp;&nbsp;&nbsp;Website Management
@@ -157,7 +153,7 @@ const MobileNavbar = () => {
               )}
             </li>
             <li
-              onClick={AccordionAboutToggle}
+              onClick={toggleAboutAccordion}
               className="flex flex-row transition ease-in duration-150 p-3 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <div className="flex-grow">About Us</div>
@@ -173,7 +169,7 @@ const MobileNavbar = () => {
               {accordionAboutOpen && (
                 <>
                   <div
-                    onClick={() => setNavOpen((prev) => !prev)}
+                    onClick={() => toggleNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/about-us/our-agency" className="block w-full">
@@ -181,7 +177,7 @@ const MobileNavbar = () => {
                     </Link>
                   </div>
                   <div
-                    onClick={() => setNavOpen((prev) => !prev)}
+                    onClick={() => toggleNavOpen((prev) => !prev)}
                     className="p-3 transition ease-in duration-150  cursor-pointer hover:bg-gray-0.6 border-b-dark-50 border-b-[1px]"
                   >
                     <Link href="/about-us/our-team" className="block w-full">
@@ -192,7 +188,7 @@ const MobileNavbar = () => {
               )}
             </li>
             <li
-              onClick={() => setNavOpen((prev) => !prev)}
+              onClick={() => toggleNavOpen((prev) => !prev)}
               className="p-3 transition ease-in duration-150 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/gallery" className="block w-full">
@@ -200,25 +196,21 @@ const MobileNavbar = () => {
               </Link>
             </li>
             <li
-              onClick={() => setNavOpen((prev) => !prev)}
+              onClick={() => toggleNavOpen((prev) => !prev)}
               className="p-3 transition ease-in duration-150 border-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/blog" className="block w-full">
                 Blog
               </Link>
             </li>
-            {/**<li
-              onClick={toggleOpen}
-              className="p-2 transition ease-in duration-150 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
-            >
-              <Link href="/experimental">/*&nbsp;Experimental&nbsp ^/;</Link>
-            </li>*/}
             <div className="flex flex-col pb-[20px]" onClick={() => {}}></div>
           </ul>
         )}
       </div>
     </div>
   );
-};
+});
+
+MobileNavbar.displayName = "MobileNavbar";
 
 export default MobileNavbar;
