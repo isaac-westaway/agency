@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useState, useEffect, lazy, Suspense } from 'react';
-import { useMediaQuery } from 'react-responsive';
-import Container from '../Container';
+import { useState, useEffect, lazy, Suspense } from "react";
+import { useMediaQuery } from "react-responsive";
+import Container from "../Container";
 
-const DesktopNavbar = lazy(() => import('./navs/DesktopNavbar'));
-const MobileNavbar = lazy(() => import('./navs/MobileNavbar'));
-const TabletNavbar = lazy(() => import('./navs/TabletNavbar'));
+const DesktopNavbar = lazy(() => import("./navs/DesktopNavbar"));
+const MobileNavbar = lazy(() => import("./navs/MobileNavbar"));
+const TabletNavbar = lazy(() => import("./navs/TabletNavbar"));
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,9 +24,9 @@ const Navbar: React.FC = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -34,15 +34,38 @@ const Navbar: React.FC = () => {
     <div
       className={`fixed w-full backdrop-blur-md z-50 shadow-2xl scroll-smooth ${
         scrolled
-          ? 'border-b-[1px] backdrop-blur-md bg-custom-color0.3 bg-opacity-5 border-dark-50 transition duration-500 ease-in-out'
-          : 'transition duration-500 ease-in-out border-b-[1px] border-transparent'
+          ? "border-b-[1px] backdrop-blur-md bg-custom-color0.3 bg-opacity-5 border-dark-50 transition duration-500 ease-in-out"
+          : "transition duration-500 ease-in-out border-b-[1px] border-transparent"
       }`}
     >
       <header className="backdrop-blur-3xl">
         <Container>
-          <Suspense fallback={<div className="text-white z-50 w-full pt-8 pb-8 pl-11">Loading Navbar...</div>}>
+          <Suspense
+            fallback={
+              <div className="text-white z-50 w-full pt-8 pb-8 pl-11">
+                Loading Navbar...
+              </div>
+            }
+          >
             {isMobile && <MobileNavbar />}
+          </Suspense>
+          <Suspense
+            fallback={
+              <div className="text-white z-50 w-full pt-8 pb-8 pl-11">
+                Loading Navbar...
+              </div>
+            }
+          >
             {isTablet && <TabletNavbar />}
+          </Suspense>
+
+          <Suspense
+            fallback={
+              <div className="text-white z-50 w-full pt-8 pb-8 pl-11">
+                Loading Navbar...
+              </div>
+            }
+          >
             {isDesktop && <DesktopNavbar />}
           </Suspense>
         </Container>
