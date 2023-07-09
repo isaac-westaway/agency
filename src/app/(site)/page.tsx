@@ -655,7 +655,7 @@ export default function Home() {
                 <Image
                   src="/images/design.webp"
                   alt="UI/UX"
-                  loading="lazy"
+                  loading="eager"
                   priority={false}
                   width={600}
                   height={800}

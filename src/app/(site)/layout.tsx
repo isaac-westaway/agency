@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 import ClientOnly from "@/src/app/components/ClientOnly";
 import Footer from "@/src/app/components/footer/Footer";
+import Script from "next/script";
 
 const NavbarComponent = dynamic(
   () => import("@/src/app/components/navbar/Navbar")
@@ -39,19 +40,30 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <body className={font.className}>
-          <ClientOnly>
-            <ToastComponent />
-            <NavbarComponent />
-          </ClientOnly>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-706LWCT1C8"
+        ></Script>
+        <Script id="google-analytics">
+          {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-706LWCT1C8');`}
+        </Script>
+        <ClientOnly>
+          <ToastComponent />
+          <NavbarComponent />
+        </ClientOnly>
         <div className="flex flex-col h-screen justify-between">
           <span className="text-white">
             <noscript>Please enable javascript!</noscript>
           </span>
           <div className="mb-auto flex-1 flex-grow">{children}</div>
           <Analytics />
-            <ClientOnly>
-              <Footer />
-            </ClientOnly>
+          <ClientOnly>
+            <Footer />
+          </ClientOnly>
         </div>
       </body>
     </html>
