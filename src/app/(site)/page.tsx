@@ -656,7 +656,7 @@ export default function Home() {
                   src="/images/design.webp"
                   alt="UI/UX"
                   loading="eager"
-                  priority={false}
+                  priority={true}
                   width={600}
                   height={800}
                   layout="responsive"
@@ -730,8 +730,8 @@ export default function Home() {
                   src="/images/develop.webp"
                   alt="UI/UX"
                   width={600}
-                  loading="lazy"
-                  priority={false}
+                  loading="eager"
+                  priority={true}
                   height={800}
                   layout="responsive"
                   className="z-[1000] object-contain mx-auto sm:w-[400px]"
@@ -840,8 +840,8 @@ export default function Home() {
                   src="/images/gallery/second.png"
                   alt="UI/UX"
                   width="600"
-                  loading="lazy"
-                  priority={false}
+                  loading="eager"
+                  priority={true}
                   height="800"
                   layout="responsive"
                   className="z-[1000] mx-auto"

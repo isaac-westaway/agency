@@ -40,7 +40,7 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <body className={font.className}>
-        <Script
+        {/**<Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-706LWCT1C8"
         ></Script>
@@ -50,7 +50,7 @@ export default function RootLayout({
   gtag('js', new Date());
 
   gtag('config', 'G-706LWCT1C8');`}
-        </Script>
+  </Script>**/}
         <ClientOnly>
           <ToastComponent />
           <NavbarComponent />
