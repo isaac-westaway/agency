@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 "use client";
 
 import { useState, useCallback, useEffect, Suspense } from "react";
@@ -68,7 +67,8 @@ const MobileNavbar = () => {
         }
       >
         {NavOpen && (
-          <ul className="overflow-x-hidden scrollAdd w-10/12 transition ease-in duration-1000 text-xl text-gray-400">
+          <ul             className={`scrollAdd overflow-y-auto w-10/12 transition ease-in duration-1000 text-xl text-gray-400`}
+          >
             <li
               onClick={toggleNavOpen}
               className="cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-dark-50 py-3 ease-in duration-200 transition"
@@ -197,7 +197,7 @@ const MobileNavbar = () => {
                 Blog
               </Link>
             </li>
-            <div className="flex flex-col pb-[20px]"></div>
+            <div className="flex flex-col pb-[90px]"></div>
           </ul>
         )}
       </div>
