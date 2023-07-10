@@ -28,9 +28,9 @@ const MobileNavbar = () => {
     };
   }, [NavOpen]);
 
-    function toggleNavOpen() {
-      setNavOpen((prev) => !prev)
-    }
+  function toggleNavOpen() {
+    setNavOpen((prev) => !prev);
+  }
   return (
     <div className="pt-4 py-4 w-full  text-gray-400">
       <div className="flex flex-row justify-between w-full items-center">
@@ -40,38 +40,40 @@ const MobileNavbar = () => {
         <div
           onClick={toggleNavOpen}
           className={`z-50 cursor-pointer mr-11 transition-all flex-col ${
-            NavOpen ? "transform rotate-45" : ""}`}
+            NavOpen ? "transform rotate-45" : ""
+          }`}
         >
           <div
-      className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
-          NavOpen ? "transform -rotate-90 translate-y-2 opacity-100" : ""
-        }`}
-      ></div>
-      <div
-        className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
-          NavOpen ? "opacity-0" : ""
-        }`}
-      ></div>
-      <div
-        className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
-          NavOpen ? "transform rotate-60 -translate-y-2 opacity-100" : ""
-        }`}
-      ></div>
+            className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
+              NavOpen ? "transform -rotate-90 translate-y-2 opacity-100" : ""
+            }`}
+          ></div>
+          <div
+            className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
+              NavOpen ? "opacity-0" : ""
+            }`}
+          ></div>
+          <div
+            className={`bg-gray-400 h-1 w-6 mb-1 transition-all ${
+              NavOpen ? "transform rotate-60 -translate-y-2 opacity-100" : ""
+            }`}
+          ></div>
         </div>
       </div>
       <div
         className={
           NavOpen
-            ? "absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[100px] h-screen text-start ease-in-out duration-150 bg-black bg-opacity-95 transition overflow-x-hidden"
+            ? "absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[80px] h-screen text-start ease-in-out duration-150 bg-black bg-opacity-95 transition overflow-x-hidden"
             : ""
         }
       >
         {NavOpen && (
-          <ul             className={`scrollAdd overflow-y-auto w-10/12 transition ease-in duration-1000 text-xl text-gray-400`}
+          <ul
+            className={`scrollAdd overflow-y-auto w-10/12 transition ease-in duration-1000 text-xl text-gray-400`}
           >
             <li
               onClick={toggleNavOpen}
-              className="cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] hover:border-[2px] border-dark-50 py-3 ease-in duration-200 transition"
+              className="cursor-pointer p-4 border-[2px] hover:text-[#FBFAF6] rounded-2xl text-center hover:border-[#FBFAF6] inset-0 hover:border-[2px] border-dark-50 py-3 ease-in duration-200 transition"
             >
               <a href="#contact" className="block w-full h-full">
                 Contact
@@ -81,9 +83,7 @@ const MobileNavbar = () => {
               <br />
             </div>
             <a href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE">
-              <li
-                className="flex flex-row transition ease-in duration-150 p-3 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
-              >
+              <li className="flex flex-row transition ease-in duration-150 p-3 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6">
                 <a
                   href="https://billing.stripe.com/p/login/7sI7sJeI4eTm8X6aEE"
                   target="_blank"
@@ -182,22 +182,22 @@ const MobileNavbar = () => {
               )}
             </li>
             <li
-                    onClick={toggleNavOpen}
-                    className="p-3 transition ease-in duration-150 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
+              onClick={toggleNavOpen}
+              className="p-3 transition ease-in duration-150 border-b-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/gallery" className="block w-full">
                 Gallery
               </Link>
             </li>
             <li
-                    onClick={toggleNavOpen}
-                    className="p-3 transition ease-in duration-150 border-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
+              onClick={toggleNavOpen}
+              className="p-3 transition ease-in duration-150 border-dark-50 border-b-[1px] cursor-pointer hover:bg-gray-0.6"
             >
               <Link href="/blog" className="block w-full">
                 Blog
               </Link>
             </li>
-            <div className="flex flex-col pb-[90px]"></div>
+            <div className="flex flex-col pb-[170px]"></div>
           </ul>
         )}
       </div>
