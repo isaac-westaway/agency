@@ -63,7 +63,7 @@ const MobileNavbar = () => {
       <div
         className={
           NavOpen
-            ? "absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[100px] h-screen text-start ease-in-out duration-150 bg-black bg-opacity-95 transition overflow-hidden"
+            ? "absolute top-0 left-0 right-0 bottom-0 flex justify-center w-full pt-[100px] h-screen text-start ease-in-out duration-150 bg-black bg-opacity-95 transition overflow-x-hidden"
             : ""
         }
       >
