@@ -525,7 +525,7 @@ export default function WebDevelopment() {
         <ContactSection
           cta="Get in touch with our team of Developers!"
           subcta="We will endeavour to respond as fast as possible. Usually this means 6 - 18 Hours."
-          message="I WANT A WEBSITE!!!"
+          message="I'm interested in a developing a website for my small business!"
         />
       </section>
       <section className="relative text-white border-t-[1px] border-dark-50 ml-11 mr-11">

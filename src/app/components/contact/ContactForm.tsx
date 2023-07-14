@@ -47,10 +47,6 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [isRecaptchaChecked, setRecaptchaChecked] = useState(false);
 
-  const handleRecaptchaChange = (value: string | null) => {
-    setRecaptchaChecked(!!value);
-  };
-
   const { values, isLoading, error } = state;
 
   const isValidEmail = (email: string) => {
@@ -198,7 +194,12 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                   ${
                     touched.service && !values.service
                       ? "ring-red-300 ring-inset"
-                      : ""
+                      : "text-gray-400"
+                  }
+                  ${
+                    !values.service
+                      ? "text-gray-400"
+                      : "text-white"
                   }
         `}
                   onChange={handleSelectChange}
@@ -242,8 +243,8 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                 <textarea
                   name="message"
                   rows={4}
-                  className={`
-                  w-full ring-dark-50 border-dark-50 border ring-1 sm:ring-1 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] focus:transition focus:duration-300 focus:ease-in-out duration-300 transition ease-in-out outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
+                  className={` custom-placeholder
+                  w-full ring-dark-50 text-white border-dark-50 border ring-1 sm:ring-1 mt-1 ring-inset focus:ring-[#4A6CF7] focus:ring-[3px] focus:transition focus:duration-300 focus:ease-in-out duration-300 transition ease-in-out outline-none rounded-2xl shadow-2xl drop-shadow-2xl bg-black py-3 px-6  text-base
                   ${
                 touched.message && !values.message
                   ? "ring-red-300 ring-inset"
@@ -330,7 +331,7 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                   <span className="shadow-2xl drop-shadow-2xl">Submit</span>
                 )}
               </button>
-              <div className="text-white mt-2 text-sm italic font-semibold">
+              <div className="text-gray-400 mt-2 text-sm italic font-semibold">
               You will recieve a copy of the Email upon submission.
             </div>
             </div>

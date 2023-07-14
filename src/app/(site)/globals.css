@@ -17,16 +17,31 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  color: #9ca3af;
+}
+
+select option {
+  color: #9ca3af;
+}
+
+select option:checked {
+  color: white;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
+textarea::placeholder {
+  color: #9ca3af;
+}
+
 @layer components {
   html {
     scroll-behavior: smooth;
   }
+
+
 
   .bgBackground {
     background: linear-gradient(360deg, #080321, #0a0625, #0c0928, #0d0c2c, #0d0f30, #0d1134, #0e1338, #0f153c, #101640, #111845, #121949, #131b4d);
