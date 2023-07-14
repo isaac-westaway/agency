@@ -16,7 +16,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
   const options = {
     from: smtpEmail,
-    to: smtpEmail,
+    to: ["wyndigitalagency@gmail.com", email],
     subject: "New Contact Message",
     html: emailHtml,
   };

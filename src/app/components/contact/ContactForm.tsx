@@ -330,6 +330,9 @@ const ContactForm: React.FC<Placeholders> = ({ message }) => {
                   <span className="shadow-2xl drop-shadow-2xl">Submit</span>
                 )}
               </button>
+              <div className="text-white mt-2 text-sm italic font-semibold">
+              You will recieve a copy of the Email upon submission.
+            </div>
             </div>
           </div>
         </div>
