@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="smooth-scrolling">
       <Head>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={font.className}>
         {/**<Script

@@ -14,6 +14,7 @@ import { BsFillClipboardCheckFill } from "react-icons/bs";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { FaAppStoreIos, FaGlobe, FaStore } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
+import Head from "next/head";
 
 const items = [
   {
@@ -124,6 +125,10 @@ export const metadata = {
 export default function WebDevelopment() {
   return (
     <div className="min-h-screen">
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico"></link>
+      </Head>
       <ReusableHeroNested
         heroText="Website Development"
         secondarySubText="Transforming Ideas into Functional and Interactive Websites"
